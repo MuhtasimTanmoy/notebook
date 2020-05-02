@@ -62,6 +62,11 @@ ping addr repeat 1
 - Table, Chain, Target
 - Firewall
 
+# Netcut
+- TCP UDP packet generate
+- Or ping for control packet
+
+
 ## Reference 
 
 - https://github.com/tamalsaha/bpf-notes/blob/master/README.md
