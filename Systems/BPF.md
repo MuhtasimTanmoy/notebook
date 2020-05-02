@@ -19,6 +19,7 @@
 - tcpdump less 32 ( PACKET size )
 - tcpdump greater 64
 - tcpdump <= 128
+- -d to get assembly line
 - To limit no of packet capture -c
 - -nn to ip reveal
 - tcpdump port 80 -w capture_file ( Writing to pcap file )
@@ -49,9 +50,17 @@
 
 # ICMP
     - Type - Code - Checksum
-    - 
 
 ping addr repeat 1
+
+- Kprobes / Uprobes
+- Static tracepoint
+- Debugging replaces instruction with jump
+- Anything platform independent introduce virtual machine
+
+# IPtable
+- Table, Chain, Target
+- Firewall
 
 ## Reference 
 
@@ -62,4 +71,6 @@ ping addr repeat 1
 - https://opensource.com/article/18/10/introduction-tcpdump
 - https://www.youtube.com/watch?v=jQm-J-8iPVw
 - https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages
-
+- https://en.wikipedia.org/wiki/Network_socket
+- https://www.cs.dartmouth.edu/~sergey/cs258/2016/kprobes-2016.pdf
+- https://sebymiano.github.io/documents/19-eBPF-Iptables-Demo.pdf
