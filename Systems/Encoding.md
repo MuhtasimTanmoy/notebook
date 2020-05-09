@@ -15,8 +15,6 @@ Many routers of the day put the parity check and byte translation into hardware,
 - Strings stored in the database wont be human readable
 - Essentially each 6 bits of the input is encoded in a 64-character alphabet. The "standard" alphabet uses A-Z, a-z, 0-9 and + and /, with = as a padding character. There are URL-safe variants.
 - UTF-8 is a compromise character encoding that can be as compact as ASCII (if the file is just plain English text) but can also contain any unicode characters (with some increase in file size).
-- Code pages
-- double byte character set
 - In Unicode, a letter maps to something called a code point which is still just a theoretical concept. Platonic letter
 - Every platonic letter in every alphabet is assigned a magic number by the Unicode consortium which is written like this: U+0639.  This magic number is called a code point
 - Unicode Byte Order Mark
