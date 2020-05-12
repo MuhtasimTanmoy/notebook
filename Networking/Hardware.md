@@ -20,5 +20,60 @@ Another downside of hubs is that only one computer can talk at a time through a 
 
 
 
+# Router
+The main role of a Router is to route data traffic. The router knows in which directions different destinations are, and when it receives data traffic it will forward the traffic in the direction of the destination. A router always picks the best route it has knowledge about for the data traffic that it is forwarding.
 
-   
+In a home network, the router plays a vital role. It connects its two end points: outside and inside.
+
+A home router has the following parts:
+
+- Switch
+- Access point
+- Modem
+- Router
+- DHCP
+- Address translation
+- Port Forward
+- Firewall
+- DNS
+- Web interface
+
+From the picture we can see, internal computers can communicate through switch alone. No need to go through router. Same for wifi communication: access point to switch.
+
+# Switch
+When two computers on same ip network communicate with each other directly, the communication is dealt by the switch.
+
+The task performed by switch is called Switching. Routers forward traffic based on IP address, switches forward traffic based on MAC address.
+
+A switch is an intelligent device.
+
+What a switch does is that it constantly monitors the traffic which is entering the switch from connected devices. It then learns about where the different MAC addresses of those devices are connected. It does this by looking at the traffic that arrives from computers to read the source MAC address of the traffic.
+
+If it doesn't know where a particular device is, it acts like sends them to all unknown devices and waits for reply for them.
+
+Switch is like a HUB + Cache.
+
+
+# ARP
+It sends a broadcast request known as ARP asking "Who has the default gateway IP? Send me your MAC address." Then once computer gets the address, it stores it in a cache for few minutes (refreshing after every successful packet transfer). The cache allows the computer to send packets without broadcasting for MAC address every time.
+
+
+# Mac Address
+All equipments that can be connected to computer networks (computers, routers, servers, printers and etc) have a MAC address. It is an address which is written into the network interface of the device during manufacturing.
+
+A MAC address consists of 12 hexadecimal characters and could look like this:
+
+- 01:23:45:67:89:ab
+- 00:fe:19:2a:73:dc
+- 02:0a:95:9d:68:16
+
+Each time a computer sends out network traffic the traffic has both a source and destination IP address, but it also has a source and destination MAC address.
+
+IP addresses are relevant on a global scale. They hold the final destination of the packet and can tell us which address the packet is originally coming from. In contrast, MAC addresses are used on a more local scale, and hold information about the next hop destination in the local LAN network.
+
+
+# Broadcast
+
+The computer sends out a broadcast which will reach every other device on the LAN to ask any available DHCP servers to reply back with an IP address.
+
+When a computer sends out a broadcast it will use a special destination MAC address, FF:FF:FF:FF:FF:FF. That address is called the Broadcast Address and is used specifically for this purpose. All other equipment on the LAN will then understand that the traffic is a broadcast that is directed at everybody else within the LAN.

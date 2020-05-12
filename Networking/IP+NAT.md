@@ -1,3 +1,22 @@
+## Ip address
+IP Address consists of two parts: IP Network and Host address.
+
+
+
+IP Network
+On a LAN, computers can talk with each other as long as they are under the same ip network. If the computers belong to different IP networks then they have to communicate with each other via a router.
+
+The main purpose of a router is to be able to forward traffic to different destinations. Within computer networking, those destinations are different IP networks.
+
+
+## Subnet Mask
+An IP address is always combined with a Subnet Mask, and it is the Subnet Mask that determines which part of the IP address that belongs to the IP network and which part that belongs to host addresses.
+
+IP = Network + Host Address
+ 
+ # Default gateway
+ In the local network, there must be a router for inter-network communication and the address of that router is configured to all clients of the LAN network. The address of the router is called Default Gateway. We could have just called it "Router Address".
+
 # Private IP
 
 - 10.0.0.0 - 10.255.255.255
@@ -27,3 +46,4 @@ What about when there are multiple clients? Well, the router keeps track about w
 
 # Port forward
 There is no way for the router to know. We have to configure the router such that when traffic from outside hits a particular port of the router, the router will send it to a host that we configured. This is called port forwarding.
+
