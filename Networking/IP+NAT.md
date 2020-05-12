@@ -44,6 +44,29 @@ When the router sends the packet on to the Internet the packet will appear to co
 What about when there are multiple clients? Well, the router keeps track about which packet belongs to which client. You don't have to worry.
 
 
+**NAT**
+
+NAT works in network layer
+PAT works in transport layer
+
+Also, it does the translation of port numbers i.e. masks the port number of the host with another port number, in the packet that will be routed to the destination.
+
+Suppose, in a network, two hosts A and B are connected. Now, both of them request for the same destination, on the same port number, say 1000, on the host side, at the same time. If NAT does an only translation of IP addresses, then when their packets will arrive at the NAT, both of their IP addresses would be masked by the public IP address of the network and sent to the destination. Destination will send replies on the public IP address of the router. Thus, on receiving a reply, it will be unclear to NAT as to which reply belongs to which host (because source port numbers for both A and B are same). Hence, to avoid such a problem, NAT masks the source port number as well and makes an entry in the NAT table.
+
+NAT Hole Punching
+1.  Peers Behind  **Common NAT**
+2.  Peers Behind  **Different NATs**
+3.  Peers Behind  **Multiple levels of NATs**
+
+**Steps:**
+
+1.  A send S a requests connection to B.
+2.  S sends A’s address to B and B’s address to A.
+3.  A sends garbage message to B and B sends garbage message to A. (Both Get discarded by their respective NATs)
+4.  Step 3 is repeated.
+5.  Connection Established.
+
+
 # Port forward
 There is no way for the router to know. We have to configure the router such that when traffic from outside hits a particular port of the router, the router will send it to a host that we configured. This is called port forwarding.
 

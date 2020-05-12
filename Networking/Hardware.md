@@ -53,6 +53,19 @@ If it doesn't know where a particular device is, it acts like sends them to all 
 
 Switch is like a HUB + Cache.
 
+ Switch
+	- A **Switch** is a network device whose **primary purpose is to facilitate communication _within_  networks**.
+	- The **Layer 2 header** contains information that enables [_hop to hop_  delivery](https://www.practicalnetworking.net/series/packet-traveling/osi-model/#osi-layer-23), such as the **Source and Destination MAC address**.
+	- A Switch operates by maintaining what is known as a  **MAC Address table**. This is a table that  **maps MAC addresses of devices plugged into each switch port**. A typical switch has many ports, from 24 to 48, up to 96, or more. The  **MAC Address Table is populated by looking at the Source MAC** address field of any  **received frames**.
+	- [https://www.practicalnetworking.net/series/packet-traveling/key-players/#arp](https://www.practicalnetworking.net/series/packet-traveling/key-players/#arp)
+
+There are three methods by which a Switch can forward frames. They are briefly described below.
+
+Switch frame forwarding-
+
+- Store and Forward – The Switch copies the entire frame (header + data) into a memory buffer and inspects the frame for errors before forwarding it along. This method is the slowest, but allows for the best error detection and additional features like prioritizing certain types of traffic for faster processing.
+- Cut-Through – The Switch stores nothing, and inspects only the bare minimum required to read the Destination MAC address and forward the frame. This method is the quickest, but provides no error detection or potential for additional features.
+- Fragment Free – This method is a blend of the prior two. The Switch inspects only the first portion of the frame (64 bytes) before forwarding the frame along. If a transmission error occurred, it is typically noticed within the first 64 bytes. As such, this method provides “good enough” error detection, while gaining the speed and efficiency of avoiding storing the entire frame in its memory before forwarding it.    
 
 # ARP
 It sends a broadcast request known as ARP asking "Who has the default gateway IP? Send me your MAC address." Then once computer gets the address, it stores it in a cache for few minutes (refreshing after every successful packet transfer). The cache allows the computer to send packets without broadcasting for MAC address every time.
