@@ -50,30 +50,7 @@ server {
 }
 ```
 
-# Adding SSL
 
-Adding ssl protection is very easy now. We just need to install certbot and use it.
-
-```
-# First install certbot
-$ sudo apt-get update
-$ sudo apt-get install software-properties-common
-$ sudo add-apt-repository ppa:certbot/certbot
-$ sudo apt-get update
-$ sudo apt-get install python-certbot-nginx
-
-# Next run it
-sudo certbot --nginx
-
-certbot will handle the rest.
-
-# Renew Certificate
-sudo apt upgrade certbot
-sudo certbot renew --dry-run
-sudo certbot renew
-
-# Check expiration dates
-certbot certificates
 ```
 
 # How to enforce https?
