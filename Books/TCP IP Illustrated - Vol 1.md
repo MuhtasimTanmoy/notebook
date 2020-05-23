@@ -54,7 +54,21 @@
 
 # The Internet Address Architecture
 - IP Address = Net Numbner + Host Number 
-- 
+- Subnet Addressing
+    - One of the earliest difficulties encountered when the Internet began to grow was the inconvenience of having to allocate a new network number for any new net- work segment that was to be attached to the Internet. This became especially cumbersome with the development and increasing use of local area networks (LANs) in the early 1980s. To address the problem, it was natural to consider a way that a site attached to the Internet could be allocated a network number cen- trally that could then be subdivided locally by site administrators.
+- Directed broadcasts were found to be such a big problem from a security point of view that they are effectively disabled on the Internet today
+- The special-use address 255.255.255.255 is reserved as the local net broadcast (also called limited broadcast), which is never forwarded by routers.
+- Broadcast addresses are typically used with protocols such as UDP/IP (Chapter 10) or ICMP (Chapter 8) because these protocols do not involve two-party conversations as in TCP/IP. IPv6 lacks any broadcast addresses; for places where broadcast addresses might be used in IPv4, IPv6 instead uses exclusively multicast addresses
+- Important examples of scopes include node- local (the address can be used only for communication on the same computer), link-local (used only among nodes on the same network link or IPv6 prefix), or global (Internet-wide). - 2.3.6.1
+- Classless Inter-Domain Routing (CIDR)
+    - Using CIDR, any address range is not predefined as being part of a class but instead requires a mask similar to a subnet mask, sometimes called a CIDR mask. CIDR masks are not limited to a site but are instead visible to the global routing system.
+- To dramatically reduce the number of routing table entrie s while maintaining shortest-path routes to all destinations in the Internet. The best-known approach was published in a study of hierarchical routing
+- The hierarchical routing idea can be used in a specific way to reduce the number of Internet routing entries that would be required other- wise. This is accomplished by a procedure known as route aggregation.
+- The network topology were arranged as a tree1 and addresses were assigned in a way that was “sensitive” to this topology, very small routing tables could be used while still maintaining shortest-path routes to all destinations.
+-  scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administra- tive.
+
+# Link Layer
+-  
 
 
 > Designing an architecture is more art than science
