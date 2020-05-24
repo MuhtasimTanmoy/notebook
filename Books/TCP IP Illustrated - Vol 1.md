@@ -68,7 +68,39 @@
 -  scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administra- tive.
 
 # Link Layer
--  
+-  Frame as PDU
+- Link-layer protocols can be carried inside other (link- or higher-layer) protocols, a technique known as tunneling.
+- The particular method, known as carrier sense, multiple access with collision detection (CSMA/CD), mediates which computers can access the shared medium (cable) without any other special agree- ment or synchronization. 
+- With CSMA/CD, a station (e.g., computer) first looks for a signal currently being sent on the network and sends its own frame when the network is free. This is the “carrier sense” portion of the protocol. If some other station happens to send at the same time, the resulting overlapping electrical signal is detected as a collision. In this case, each station waits a random amount of time before try- ing again. The amount of time is selected by drawing from a uniform probability distribution that doubles in length each time a subsequent collision is detected.
+- A switched Ethernet network consists of one or more stations, each of which is attached to a switch port using a dedicated wiring path. In most cases where switched Ethernet is used, the network operates in a full-duplex fashion and the CSMA/CD algorithm is not required. Switches may be cascaded to form larger Ethernet LANs by interconnecting switch ports, sometimes called “uplink” ports.
+- LLC and MAC are “sublayers” of the link layer, where the LLC (mostly frame format) is generally common to each type of network and the MAC layer may be somewhat different. While the original Ethernet made use of CSMA/CD, for example, WLANs often make use of CSMA/CA
+- The original Ethernet encoded bits using a Manchester Phase Encoding (MPE) with two voltage levels.
+- “MAC address,” “link-layer address,” “802 address,” “hardware address,” or “physical address.”
+- VLAN to divide network into smaller broadcast domain
+- When multiple VLANs must span multiple switches (trunking), it becomes necessary to label Ethernet frames with the VLAN to which they belong before they are sent to another switch. Support for this capability uses a tag called the VLAN tag
+    - vconfig add eth1 2
+    - ethtool
+- In Linux, the Wake-On values are zero or more bits indicating whether receiv- ing the following types of frames trigger a wake-up from a low-power state: any physical-layer (PHY) activity (p), unicast frames destined for the station (u), mul- ticast frames (m), broadcast frames (b), ARP frames (a), magic packet frames (g), and magic packet frames including a password.
+    - ethtool –s eth0 wol umgb
+    -  brctl addbr br0 
+    -  brctl addif br0 eth0 
+    -  brctl addif br0 eth1 
+    -  ifconfig eth0 up 
+    -  ifconfig eth1 up 
+    -  ifconfig br0 up
+-  clients may wish to communicate with servers on the same computer using Internet protocols such as TCP/IP. To enable this, most implementations support a network-layer loopback capability that typically takes the form of a virtual loopback network interface.
+- maximum transmission unit (MTU) is the size of the largest protocol data unit (PDU) that can be communicated in a single network
+- **Tunneling** In some cases it is useful to establish a virtual link between one computer and another across the Internet or other network. VPNs, for example, offer this type of service. The method most commonly used to implement these types of services is called tunneling    
 
+# ARP
+- ARP is used with IPv4 only; IPv6 uses the Neigh- bor Discovery Protocol, which is incorporated into ICMPv6
+- ARP Broadcast
+- 
+
+# IP
+
+
+
+![IEEE Packet](screenshots/IEEE_Packet.png)
 
 > Designing an architecture is more art than science
