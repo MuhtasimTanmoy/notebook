@@ -97,9 +97,13 @@
 - ARP Broadcast
 - 
 
-# IP
+# TCP
+- https://www.youtube.com/watch?v=F27PLin3TV0
+- Handshake
+- WireShark to capture TCP Traffic
 
-
+![TCP](screenshots/TCP.png)
+![WireShark](screenshots/WireShark.png)
 
 ![IEEE Packet](screenshots/IEEE_Packet.png)
 

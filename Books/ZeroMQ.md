@@ -14,3 +14,21 @@ Many applications these days consist of components that stretch across some kind
 - It lets your applications talk to each other over arbitrary transports: TCP, multicast, in-process, inter-process.
 - It lets you route messages using a variety of patterns, such as request-reply and publish-subscribe.
 - It does not impose any format on messages. They are blobs of zero bytes to gigabytes large. When you want to represent data you choose some other product on top, such as Google’s protocol buffers, XDR, and others.
+
+
+## Socket and Patterns
+ØMQ sockets are easy to digest. These sockets have a life in four parts, just like BSD sockets:
+
+• We can create and destroy them, which go together to form a karmic circle of socket life (see zmq_socket(), zmq_close()).
+
+• We can configure them by setting options on them and checking them if necessary (see zmq_setsockopt(), zmq_getsockopt()).
+
+• We can plug them into the network topology by creating ØMQ connections to and from them (see zmq_bind(), zmq_connect()).
+
+• We can use them to carry data by writing and receiving messages on them (see zmq_msg_send(), zmq_msg_recv()).
+
+- To create a connection between two nodes, you use zmq_bind() in one node and zmq_connect() in the other. As a general rule of thumb, the node that does zmq_bind() is a “server,” sitting on a well-known network address, and the node that does zmq_con nect() is a “client,” with unknown or arbitrary network addresses.
+
+- We “bind a socket to an endpoint” and “connect a socket to an endpoint,” the endpoint being that well-known network address.
+
+- One socket may have many outgoing and many incoming connections.
