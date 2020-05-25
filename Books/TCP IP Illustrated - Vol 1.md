@@ -65,7 +65,7 @@
 - To dramatically reduce the number of routing table entrie s while maintaining shortest-path routes to all destinations in the Internet. The best-known approach was published in a study of hierarchical routing
 - The hierarchical routing idea can be used in a specific way to reduce the number of Internet routing entries that would be required other- wise. This is accomplished by a procedure known as route aggregation.
 - The network topology were arranged as a tree1 and addresses were assigned in a way that was “sensitive” to this topology, very small routing tables could be used while still maintaining shortest-path routes to all destinations.
--  scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administra- tive.
+-  Scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administra- tive.
 
 # Link Layer
 -  Frame as PDU
