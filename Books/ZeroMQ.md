@@ -3,7 +3,6 @@
 - ZeroMQ comes with culture of minimalism.
 - It’s sockets on steroids. It’s like mailboxes with routing. It’s fast!
 - PUB-SUB sockets: you do not know precisely when a subscriber starts to get messages. Even if you start a subscriber, wait a while, and then start the publisher, the subscriber will always miss the first messages that the publisher sends. This is because as the subscriber connects to the publisher (some‐ thing that takes a small but nonzero amount of time), the publisher may already be sending messages out.
-This “slow joiner” symptom hits enough people, often enough, that we’re going to ex‐ plain it in detail. Remember that ØMQ does asynchronous I/O (i.e., in the background). Say you have two nodes doing this, in this order:
 
 ### Why ZeroMQ
 Many applications these days consist of components that stretch across some kind of network, either a LAN or the Internet. So, many application developers end up doing some kind of messaging. Some developers use message queuing products, but most of the time they do it themselves, using TCP or UDP. These protocols are not hard to use, but there is a great difference between sending a few bytes from A to B and doing messaging in any kind of reliable way.
@@ -19,7 +18,7 @@ Many applications these days consist of components that stretch across some kind
 ## Socket and Patterns
 ØMQ sockets are easy to digest. These sockets have a life in four parts, just like BSD sockets:
 
-• We can create and destroy them, which go together to form a karmic circle of socket life (see zmq_socket(), zmq_close()).
+• We can create and destroy them, which go together to form a circle of socket life (see zmq_socket(), zmq_close()).
 
 • We can configure them by setting options on them and checking them if necessary (see zmq_setsockopt(), zmq_getsockopt()).
 
@@ -32,3 +31,18 @@ Many applications these days consist of components that stretch across some kind
 - We “bind a socket to an endpoint” and “connect a socket to an endpoint,” the endpoint being that well-known network address.
 
 - One socket may have many outgoing and many incoming connections.
+
+- ØMQ provides a set of unicast transports (inproc, ipc, and tcp) and multicast trans‐ ports (epgm, pgm).
+
+- The HTTP request uses CRLF (carriage return line feed) as its simplest framing delimiter, whereas ØMQ uses a length-specified frame.
+
+The built-in core ØMQ patterns are:
+
+• Request-reply, which connects a set of clients to a set of services. This is a remote procedure call and task distribution pattern.
+
+• Publish-subscribe, which connects a set of publishers to a set of subscribers. This is a data distribution pattern.
+
+• Pipeline, which connects nodes in a fan-out/fan-in pattern that can have multiple steps and loops. This is a parallel task distribution and collection pattern.
+
+
+# Advanced Request Reply pattern
