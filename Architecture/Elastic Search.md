@@ -1,14 +1,25 @@
 # Elastic Search
 
 ## Structure
-- Elastic Search index
-- Index -> Divided into Shrads
+- Elastic Search forms with Index
+- Index (Logical namespace/ DB Name) -> Divided into Shrads (Types/ Table/ Schema)
 - Each shrad has replica
 - Each shrad is Lucene index > for inverted search
-- Divided into segments > inverted index
+- Divided into Segments > Inverted index
 - Segments immutable
 - Apache lucene
     - Powerful open-source full-text search library.
+- DB normalize
+    - Case dispose, punctuation, 
+    - Common word remove    
+    - Stop word list
+    - Lemma > Mapping different usage to one
+tokenization
+    -  Stemming > Buying > buy
+- After 1s index refresh happens > Doc indexed 
+- Translog (30 min or 512mb)
+- Master node & Data Node available
+- 
 
 - Inverted index
     - A document is the unit of data in Elasticsearch and an inverted index is created by tokenizing the terms in the document, creating a sorted list of all unique terms and associating a list of documents with where the word can be found.
@@ -19,17 +30,13 @@
 
 - Porters stemmer algo
     - The Porter stemming algorithm (or ‘Porter stemmer’) is a process for removing the commoner morphological and inflexional endings from words in English. Its main use is as part of a term normalisation process that is usually done when setting up Information Retrieval systems.
-
+- Murmur3 hash function
 -  Why indexing?
     - Database blocks stored like linked list
     - For searching  N blocks 
         - when not sorted searching requires N/2 access avg
         - when duplicates then N
         - when sorted logN
-
-
-
-
 
 # Database Indexing
 
@@ -48,11 +55,14 @@
 - Graph database which considers relation & data 
 secondary index
 
-
 ## Notes
 - Low cardinality in database - Common attribute - Easy for indexing
 - Made efficient through bitmap indexing
 - DB Normalization - Denormalization
     - A list of words contained in a document.(Forward index)
     - A list of documents containing a word.(Inverted index)
--    
+
+
+# Reference
+- https://blog.insightdatascience.com/anatomy-of-an-elasticsearch-cluster-part-i-7ac9a13b05db
+

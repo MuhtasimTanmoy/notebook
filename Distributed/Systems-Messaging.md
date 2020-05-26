@@ -2,7 +2,7 @@
 
 Reference
 - https://medium.com/hacking-talent/kafka-all-you-need-to-know-8c7251b49ad0
-- 
+
 ---
 # Nats
 

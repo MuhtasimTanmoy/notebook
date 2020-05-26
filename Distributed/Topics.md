@@ -1,5 +1,15 @@
+# Distributed Systems
+
+A distributed system is basically a network of autonomous systems/servers connected using a middleware which can share resources, capabilities, files and so on.
+
+Data replication is at the heart of making data durable and available in the presence of hardware failures such as machine crashes, disk failures, network partitions and clock skews. 
+
+Popular implementations include those from etcd and consul. Next-generation distributed databases such as YugaByte DB, CockroachDB and TiDB use Raft for both leader election and data replication
+
+The final value has to determined non-deterministically using heuristics such as Last-Writer-Wins (LWW) and Conflict Free Replicated Data Types (CRDT).
+
 # Lamport TimeStamps
-- https://towardsdatascience.com/understanding-lamport-timestamps-with-pythons-multiprocessing-library-12a6427881c6
+
 Each node knows 
 - it's events
 - communication events
@@ -13,10 +23,15 @@ c_j(d) = max(c_i(a)++, c_j(d))
 
 Cant distinguish concurrent event
 
+- https://towardsdatascience.com/understanding-lamport-timestamps-with-pythons-multiprocessing-library-12a6427881c6
+
 # vector clock
  Just array of lamport
+
  CRDT
- Causally related - One must be less and others equal or less
+
+ Causally Related - One must be less and others equal or less
+
  Concurrent - One less , one more, one less / more
 
 # Interval Tree Clock
@@ -30,8 +45,11 @@ Actor explosion - All unique identifier coming together modifying
 - Version Vectors or Interval Tree Clocks
 
 # Christian Algorithm
-- https://www.youtube.com/watch?v=yvuy0rPkv8Q
+
 Time Sync
+
+- https://www.youtube.com/watch?v=yvuy0rPkv8Q
+
 
 # CRDT
  - Much of distributed computing focuses on the problem of how to prevent concurrent updates to replicated data. But another possible approach is optimistic replication, where all concurrent updates are allowed to go through, with inconsistencies possibly created, and the results are merged or "resolved" later. In this approach, consistency between the replicas is eventually re-established via "merges" of differing replicas.
@@ -41,10 +59,18 @@ Time Sync
 
 
 # Network Time Protocol
-Netdate - update instantly
-NTP gradually update - one provider can be also a consumer
-Stratum 1 -> stratum 2 -> ...... -> stratum 256
-As category 1 is not publicly available, we can get from 2
+
+NTP stands for Network Time Protocol. It is used to synchronize the clocks on our computer to one standard time source. It is very useful in situations like bank transactions. Assume the following situation without the presence of NTP. Suppose you carry out a transaction, where your computer reads the time at 2:30 PM while the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
+
+- Netdate - update instantly ( A unix package) 
+
+- NTP gradually update 
+- One provider can be also a consumer
+
+Stratum 1 -> Stratum 2 -> ...... -> Stratum 256
+
+As category 1 Stratum is not publicly available, we can get from 2
+
 - Stepping > once every minute
 - Slewing > once every 17 minutes
 - Insane Time > 17 minutes > not touching
@@ -52,3 +78,6 @@ As category 1 is not publicly available, we can get from 2
 - Jitter >   difference between time provider & time consumer since the last time polling
 - conf - server pool.ntp.org
 - ntpdate to update in reasonable window
+
+
+
