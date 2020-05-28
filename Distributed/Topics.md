@@ -8,6 +8,10 @@ Popular implementations include those from etcd and consul. Next-generation dist
 
 The final value has to determined non-deterministically using heuristics such as Last-Writer-Wins (LWW) and Conflict Free Replicated Data Types (CRDT).
 
+- Distributed systems are kept weakly consistent for performance
+  - Input Speculation
+  - Lag Compensation
+
 # Lamport TimeStamps
 
 Each node knows 
@@ -62,6 +66,8 @@ Time Sync
 
 NTP stands for Network Time Protocol. It is used to synchronize the clocks on our computer to one standard time source. It is very useful in situations like bank transactions. Assume the following situation without the presence of NTP. Suppose you carry out a transaction, where your computer reads the time at 2:30 PM while the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
 
+- Google's spanner database uses GPS syncronized atomic clock
+
 - Netdate - update instantly ( A unix package) 
 
 - NTP gradually update 
@@ -78,6 +84,8 @@ As category 1 Stratum is not publicly available, we can get from 2
 - Jitter >   difference between time provider & time consumer since the last time polling
 - conf - server pool.ntp.org
 - ntpdate to update in reasonable window
+
+
 
 
 

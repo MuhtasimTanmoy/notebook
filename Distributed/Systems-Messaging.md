@@ -1,3 +1,5 @@
+
+
 # Kafka
 
 Reference
@@ -16,6 +18,7 @@ Reference
 - Zookeeper solves these problems using its magical tree structure file system called znodes, somewhat similar to the Unix file system. These znodes are analogous to folders and files in a Unix file system with some additional magical abilities :) Zookeeper provides primitive operations to manipulate these znodes, through which we will solve our distributed system problems.
 
 - Split Brain Problem
+    - 
 
 Reference -
 - https://zookeeper.apache.org/doc/r3.5.7/zookeeperOver.html
