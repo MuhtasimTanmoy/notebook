@@ -7,19 +7,24 @@
 - Optimize communication
 - Game data is compressed using delta compression to reduce network load. That means the server doesn't send a full world snapshot each time, but rather only changes (a delta snapshot) that happened since the last acknowledged update. With each packet sent between the client and server, acknowledge numbers are attached to keep track of their data flow. Usually full (non-delta) snapshots are only sent when a game starts or a client suffers from heavy packet loss for a couple of seconds. Clients can request a full snapshot manually with the cl_fullupdate command.
 
+------
 
 # NAT Hole Punching
 Required for conncting peer to peer after matchmaking
 - https://keithjohnston.wordpress.com/2014/02/17/nat-punch-through-for-multiplayer-games/
 
-
+------
 # Architecture Study
+## [Research on Latency Problems and Solutions in Cloud Game!](https://www.researchgate.net/publication/337053541_Research_on_Latency_Problems_and_Solutions_in_Cloud_Game)
 
+- Layer-coding approach was proposed to separate the  game  image  into  two  layers:  base  layer  (contain  original  image  information)  and  graphics enhancement  layer,  which  contains  graphics  enhancement  instructions:  light\map  rendering,  shading command, reflection computations, etc. 
+
+------
 ## [EVE ONLINE!](http://uu.diva-portal.org/smash/get/diva2:408940/FULLTEXT01.pdf)
  - A type of shared-nothing-architecture in distributed computing, where each node is independent and does not communicate with other nodes.
  - Multiple programming paradigms, such as object oriented, imperative and functional programming styles.
 
-
+------
 ## [Colyseus_A_Distributed_Architecture_for_Online_Multiplayer_Games!](https://www.researchgate.net/publication/220831981_Colyseus_A_Distributed_Architecture_for_Online_Multiplayer_Games)
 
 - Colyseus, which primarily acts as a game object manager
@@ -55,6 +60,24 @@ migrate primary replicas
 - Experimental Setup
     - We emulate the network environment by running several virtual servers on 5-50 physical machines on Emulab. The environment does not constrain link capacity, but emulates end-to-end latencies (by delaying packets) using measured pairwise Internet latencies sampled from the MIT King dataset
 
+ - Object locating
+    - To locate objects, Colyseus implements a distributed location service on a DHT. Unlike other publish-subscribe services built on DHTs [6], the object locator in Colyseus must be able to locate objects using range queries rather than exact matches. 
+
+- Uses mercury as DHT
+
+- Colyseus enables low-latency game-play
+via three important design choices: 
+(1) decoupling object discovery and replica synchronization,
+(2) proactive replication for short-lived objects 
+(3) pre-fetching of relevant objects using interest prediction.
+
+-  Colyseus enables three new avenues for cheating: 
+(1) nodes can modify objects in their local store in
+violation of game-play logic 
+(2) nodes can withhold publications or updates of objects they own
+(3) nodes can subscribe to regions of the world that they should
+not “see.”     
+------
 ## [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf)
 
 -  The primary contribution of this paper is architectural. We take advantage of the locality of interest data exhibits in
@@ -83,7 +106,80 @@ very different from client-server communication.
 Servers subscribe to their neighboring servers much
 like players, with an area of interest of all points
 close enough to the border between the two servers.
-- Log replicated 
+- Log replicated server
+
+------ 
+
+## [A Distributed Architecture for Multiplayer Interactive Applications on the Internet!](https://www.cs.ubc.ca/~krasic/cpsc538a/papers/diot99distributed.pdf)
+
+- IP multicast protocol suite (RTP/UDP)
+- Group communication is currently
+one of the most active research domains in the Internet community.
+- Bucket synchronization. The synchronization mechanism is the
+minimum functionality required for a distributed game. Without a synchronization mechanism,
+the real-time requirements of an interactive game cannot be satisfied.
+- MiMaze  is the only game with a fully distributed architecture using IP multicast
+- Choosing a distributed architecture improves the real-time properties of the
+application, at the cost of consistency
+----
+## [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf)
+
+
+
+- A massively multiplayer online game is a networked game with two distinguishing features. First, the magnitude of the number of concurrent players is typically on the order of 104 or more. Second, MMGs have persistent state. This means that an MMG, unlike other networked games which end after some goal is completed, can continue indefinitely. Players join the game and play until they are ready to quit, at which point the state of their alter-ego in the game is saved. When they return, the state is restored. This
+also holds true for the virtual world.
+- Distributed systems are divided into two models: synchronous and asynchronous. In the synchronous model, processes execution occurs in synchronous rounds (i.e., they proceed in lockstep)[Lyn96] according to a global
+clock. The advantage of the synchronous model is that it is easier to reason
+about, with the caveat that most real distributed systems are not completely
+synchronous. In the asynchronous model, processes execute local instructions at arbitrary speeds. This model has the advantage that algorithms
+designed for it can run on all types of networks without timing guarantees.
+The disadvantage of the asynchronous model is that some problems are more
+difficult, if not impossible, in the asynchronous system [Lyn96].
+- Three fundamental problem
+    - Ordering of events
+    - Syncronization of processes
+        - Synchronization is the correct sequencing of processes to ensure mutually exclusive access to shared writable structures.
+        - A number of distributed mutual exclusion algorithms are presented in
+[CDK01]. A simple ring-based algorithm logically arranges nodes in a ring
+and passes a token that allows a member of the system access to the shared
+writable structure. Other possibilities are multicast with logical clocks or
+distributed voting
+    - Consistency of data
+-  Synchronization Techniques
+    -  The Bucket Synchronization Mechanism
+    -  Dead Reckoning
+    -  Local Lag and Timewarp
+    - Trailing State Synchronization
+    
+- The Trailing State Synchronization is a novel method for synchronization of game state, introduced in this paper. The game chosen for the proof of concept by the authors is Quake. With a fast paced First Person Shooter game like Quake, the rate of commands issued by the user with reference to time is very high. This prevents synchronization mechanisms such as Timewarp which maintains multiple copies of the game state for each executed command. This problem is addressed by maintaining more than one executing parallel game states with the leading execution having no latency and the rest of the executing states each running with a delay of a few milliseconds from its preceding states. The parallel execution synchronization is similar to the Bucket Synchronization with different delays. To detect inconsistencies, each synchronizer looks at the changes in game state that an execution of a command produced and compares it with the immediate preceding state. If inconsistency is discovered, a roll back from the trailing state to the leading state is performed. This method allows for a high degree of consistency, while allowing low latency and scalability.
+
+- The third element of the Mirrored-Server system is the CRIMP protocol. The requirement for a low latency performance has prompted the authors to introduce a receiver-based reliable multicast layer which conforms to the requirements of the architecture. Several other enhancements to increase the performance of the multicast layer is also introduced. In the receiver based protocol, the receivers detect losses and send a recovery request, which is responded to by any host that has the packet. By tweaking certain variables (such as the probability of generating a response or request etc) the protocol is optimized, allowing an efficient communication mechanism with minimal overhead. The layer also has provisions for boot strapping to allow new mirrors to join, loss detection, cancellation of recovery and server management capability.
+
+------
+# Terms
+- ADU: Application Data Unit. An ADU is a chunk of data manipulated by the application. For
+transmission efficiency purposes, it is recommended not to fragment ADUs within the communication stack.
+- Avatar: Any dynamic object in a game that is controlled either by a participant or automatically
+by the system.
+- Dead Reckoning: An extrapolation technique used in the aviation systems to compute an estimate of the current position of a plane based on the knowledge of its position in the past and on
+its trajectory.
+- DIA: Distributed Interactive Application are real-time applications where users (i.e. participants) interact in a defined environment. Examples of DIAs are distributed games, digital battlefield, shared virtual worlds, cooperative tools, etc.
+- DIS: Distributed Interactive Simulation. DIS is an IEEE standard (see references [1][2]) which
+describes the format of the packets that should be exchanged between simulation entities in a
+distributed simulation, and that defines the protocol to handle these packets.
+- IP multicast: An extension of IP to support the construction of trees (instead of point-to-point
+routes) for the delivery of data to a group of receivers.
+- Mbone: Virtual overlay installed on the Internet to implement IP multicast.
+- RTP/RTCP: Real-Time transport Protocol / Real-Time Control Protocol [9]. RTP is an encapsulation format designed to handle realtime data transmission on the Internet. RTP is generally
+used in conjunction with UDP. RTCP is a control protocol that carries statistic and control
+information for RTP data flows.
+- NTP: Network Time Protocol [6]. NTP is a protocol used to synchronize a clock signal over a
+network (in other words, to provide a global clock in a network). NTP is a client/server protocols where servers are organized in stratum. NTP is sensitive to link asymmetry.
+- PDU: Protocol Data Unit. PDU is the standard way to describe a packet constructed by a protocol for transmission purposes. In the DIS, the most popular PDU is the Entity State PDU that
+carries a description of an avatar.
+- UDP: User Datagram Protocol. UDP is an unreliable transport protocol (as opposed to TCP
+that guarantees ordered and reliable data transmission). UDP’s main functionality is to multiplex/demultiplex data. UDP has been designed to implement real-time applications on the
+Internet.
 
 ## References
 
