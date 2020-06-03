@@ -53,4 +53,6 @@ Each Server can have three states
  Zookeeper is based on Zab (a protocol similar but not the same as Paxos), and etcd is built on top of Raft – the protocol about which this blog post speaks.
 
  ## References
- - https://www.youtube.com/watch?v=YbZ3zDzDnrw&feature=youtu.be    
+ - https://www.youtube.com/watch?v=YbZ3zDzDnrw&feature=youtu.be
+ - https://blog.container-solutions.com/raft-explained-part-1-the-consenus-problem
+ - https://raft.github.io/raft.pdf

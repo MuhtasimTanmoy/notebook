@@ -121,9 +121,9 @@ the real-time requirements of an interactive game cannot be satisfied.
 - MiMaze  is the only game with a fully distributed architecture using IP multicast
 - Choosing a distributed architecture improves the real-time properties of the
 application, at the cost of consistency
-----
-## [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf)
 
+----
+## [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf) ****
 
 
 - A massively multiplayer online game is a networked game with two distinguishing features. First, the magnitude of the number of concurrent players is typically on the order of 104 or more. Second, MMGs have persistent state. This means that an MMG, unlike other networked games which end after some goal is completed, can continue indefinitely. Players join the game and play until they are ready to quit, at which point the state of their alter-ego in the game is saved. When they return, the state is restored. This
@@ -150,10 +150,15 @@ distributed voting
     -  Dead Reckoning
     -  Local Lag and Timewarp
     - Trailing State Synchronization
-    
+
 - The Trailing State Synchronization is a novel method for synchronization of game state, introduced in this paper. The game chosen for the proof of concept by the authors is Quake. With a fast paced First Person Shooter game like Quake, the rate of commands issued by the user with reference to time is very high. This prevents synchronization mechanisms such as Timewarp which maintains multiple copies of the game state for each executed command. This problem is addressed by maintaining more than one executing parallel game states with the leading execution having no latency and the rest of the executing states each running with a delay of a few milliseconds from its preceding states. The parallel execution synchronization is similar to the Bucket Synchronization with different delays. To detect inconsistencies, each synchronizer looks at the changes in game state that an execution of a command produced and compares it with the immediate preceding state. If inconsistency is discovered, a roll back from the trailing state to the leading state is performed. This method allows for a high degree of consistency, while allowing low latency and scalability.
 
 - The third element of the Mirrored-Server system is the CRIMP protocol. The requirement for a low latency performance has prompted the authors to introduce a receiver-based reliable multicast layer which conforms to the requirements of the architecture. Several other enhancements to increase the performance of the multicast layer is also introduced. In the receiver based protocol, the receivers detect losses and send a recovery request, which is responded to by any host that has the packet. By tweaking certain variables (such as the probability of generating a response or request etc) the protocol is optimized, allowing an efficient communication mechanism with minimal overhead. The layer also has provisions for boot strapping to allow new mirrors to join, loss detection, cancellation of recovery and server management capability.
+
+-----
+## [P2P matchmaking solution for online games!](https://link.springer.com/article/10.1007/s12083-019-00725-3)
+
+
 
 ------
 # Terms
@@ -180,8 +185,28 @@ carries a description of an avatar.
 - UDP: User Datagram Protocol. UDP is an unreliable transport protocol (as opposed to TCP
 that guarantees ordered and reliable data transmission). UDP’s main functionality is to multiplex/demultiplex data. UDP has been designed to implement real-time applications on the
 Internet.
+-----
 
+## [A Comparison of Architectures in Massive Multiplayer Online Games!](https://www.researchgate.net/publication/271490933_A_Comparison_of_Architectures_in_Massive_Multiplayer_Online_Games)
+
+Three  main  architectures  are  typically  used  in Massive  Multiplayer  Online  Games: 
+-  a)  client-server architecture
+-  b)  multi-server  architecture  
+-  c)  Peer-to-Peer  (P2P)  architecture 
+
+
+
+
+
+
+-----
+
+## [Peer-to-Peer Architectures for Massively Multiplayer Online Games:A Survey!](https://dl.acm.org/doi/pdf/10.1145/2522968.2522977?download=true)
+
+
+----
 ## References
 
 - https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking
 - https://gist.github.com/GkhanKINAY/5cd384b5597f04ed9750f5a9caa597f0#tutorials
+- https://www.hindawi.com/journals/ijcgt/2008/327387/
