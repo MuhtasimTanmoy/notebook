@@ -15,9 +15,12 @@ Required for conncting peer to peer after matchmaking
 
 ------
 # Architecture Study
+
 ## [Research on Latency Problems and Solutions in Cloud Game!](https://www.researchgate.net/publication/337053541_Research_on_Latency_Problems_and_Solutions_in_Cloud_Game)
 
-- Layer-coding approach was proposed to separate the  game  image  into  two  layers:  base  layer  (contain  original  image  information)  and  graphics enhancement  layer,  which  contains  graphics  enhancement  instructions:  light\map  rendering,  shading command, reflection computations, etc. 
+Layer-coding approach was proposed to separate the  game  image  into  two  layers:  
+- Base  layer  (contain  original  image  information) 
+- Graphics enhancement  layer,  which  contains  graphics  enhancement  instructions:  light\map  rendering,  shading command, reflection computations, etc. 
 
 ------
 ## [EVE ONLINE!](http://uu.diva-portal.org/smash/get/diva2:408940/FULLTEXT01.pdf)
@@ -77,6 +80,8 @@ violation of game-play logic
 (2) nodes can withhold publications or updates of objects they own
 (3) nodes can subscribe to regions of the world that they should
 not “see.”     
+
+
 ------
 ## [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf)
 

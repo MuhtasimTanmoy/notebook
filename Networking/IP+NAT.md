@@ -1,13 +1,22 @@
 ## Ip address
 IP Address consists of two parts: IP Network and Host address.
 
+There are two categories
+- Class based
+- Class less
 
+It is important to point out that IP address classes are more or less redundant now. These days subnet masks (explained later) are used to define which part of an IP address is the network ID and which is the host ID.
 
 IP Network
 On a LAN, computers can talk with each other as long as they are under the same ip network. If the computers belong to different IP networks then they have to communicate with each other via a router.
 
+
+### Router
 The main purpose of a router is to be able to forward traffic to different destinations. Within computer networking, those destinations are different IP networks.
 
+A router in its basic form is simply a network device with 2 network interfaces (NICs), each being on separate network ids. So, you may have 2 networks; 192.168.1.x and 192.168.2.x. On one NIC  the router would have the IP address 192.168.1.1 and on the other it would have an IP address of 192.168.2.1. Computers on the 192.168.1.x network can now communicate with computers on the 192.168.2.x network via the router.
+
+In summary all devices have a routing table, without it they wouldn’t know where to send packets to. When a PC sends packets to another PC it looks at it’s routing table to determine the best route possible. If it finds the destination address is “on-link” it knows it is part of the same subnet as the destination and sends the packets directly to the PC. If not it forwards the packet onto whatever is in the gateway field of the matching route entry. This same process is repeated at every router/hop along the way until it eventually arrives at a router that is part of the destination network. The router then sends the packets directly to the destination PC.
 
 ## Subnet Mask
 An IP address is always combined with a Subnet Mask, and it is the Subnet Mask that determines which part of the IP address that belongs to the IP network and which part that belongs to host addresses.
@@ -26,6 +35,7 @@ IP = Network + Host Address
 These are private addresses.
 
 The above special addresses are called Private addresses. They cannot be used on the Internet, they can only be used within local networks. If you try to use Private addresses on the Internet then your Internet Service Provider will block your traffic automatically, sensing that the traffic is coming from a Private IP address. This automatic block is being done to avoid any IP address conflicts on the Internet. These addresses are used in so many places that without the block we would have guaranteed and constant IP address conflicts all over the Internet.
+
 
 
 # NAT
@@ -69,4 +79,5 @@ NAT Hole Punching
 
 # Port forward
 There is no way for the router to know. We have to configure the router such that when traffic from outside hits a particular port of the router, the router will send it to a host that we configured. This is called port forwarding.
+
 
