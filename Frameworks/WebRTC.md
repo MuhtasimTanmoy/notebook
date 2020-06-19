@@ -79,7 +79,13 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 - While TURN is more robust than STUN in that it assist in traversal of more types of NATs, a TURN communication relays the entire communication through the server requiring far more server bandwidth than the STUN protocol, which typically only resolves the public facing IP address and relays the information to client and peer for them to use in direct communication. For this reason, the ICE protocol mandates STUN usage as a first resort, and TURN usage only when dealing with symmetric NATs or other situations where STUN cannot be used.
 
 ## SDP
-- In order to exchange media, WebRTC uses session description protocol (SDP) to initiate and execute an “offer” and “answer” mechanism between endpoints or peers. Supported codecs, connectivity, and protocols are added to the SDP so that clients can decide what media codecs “Session Traversal Utilities for NAT” (STUN) allows clients to learn what their public NAT’d IP address and port is. Once this is achieved it’s possible to provide the correct details to other clients that want to connect to your client. Typically, a STUN server is needed. A STUN client can send messages to the STUN server to get the information about public IP and ports, and retrieve that information. This protocol does not work for symmetric NATs, however. Symmetric NATs generate ports are random for bindings. STUN cannot communicate that dynamic mapping when negotiating media paths.they can send and receive, and where to send them. 
+- In order to exchange media, WebRTC uses session description protocol (SDP) to initiate and execute an “offer” and “answer” mechanism between endpoints or peers. Supported codecs, connectivity, and protocols are added to the SDP so that clients can decide what media codecs “Session Traversal Utilities for NAT” (STUN) allows clients to learn what their public NAT’d IP address and port is. Once this is achieved it’s possible to provide the correct details to other clients that want to connect to your client. Typically, a STUN server is needed. A STUN client can send messages to the STUN server to get the information about public IP and ports, and retrieve that information. This protocol does not work for symmetric NATs, however. Symmetric NATs generate ports are random for bindings. STUN cannot communicate that dynamic mapping when negotiating media paths.they can send and receive, and where to send them.
+
+ - Clients then generate a connection offer, and start to generate multiple candidates to be used to stream media to another client.
+
+ - After a handful of ICE candidates are generated, they must be properly formatted and encoded to be sent to the end client. This encoding can be placed in the offer and answer SDP or be sent standalone (trickle ICE).
+
+ - The candidates can be packed in the original offer, or can be sent independently after the offer is sent. The latter is known as trickle ICE
 
 ## Process keywords
 
@@ -99,3 +105,5 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 - https://en.wikipedia.org/wiki/UDP_hole_punching
 - https://www.viagenie.ca/publications/2008-08-cluecon-stun-turn-ice.pdf
 - https://temasys.io/webrtc-ice-sorcery/
+- https://webrtchacks.com/trickle-ice/
+- https://testrtc.com/docs/

@@ -1,12 +1,35 @@
 # Serialization
 - JSON
+    -  JSON is textual, its integers and floats can be slow to encode and decode. JSON is not designed for numbers. Also, Comparing strings in JSON can be slow.
 - BSON
-    - Primary data representation for mongodb
+    - Primary data representation for mongodb.
 - MessagePack
-    - IDL (Interface Definition Language)
-    - MessagePack supports streaming deserializers. This feature is useful for network communication
- - Protocol Buffer
+    - IDL ( Interface Definition Language )
+    - MessagePack supports streaming deserializers. This feature is useful for network communication.
+- Protocol Buffer
     - Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.    
+- XML
+- CSV
+- YAML
+
+
+
+## Marshalling vs Serialization
+
+Marshaling and serialization are loosely synonymous in the context of remote procedure call, but semantically different as a matter of intent.
+
+
+- Marshaling is about getting parameters from here to there
+- Serialization is about copying structured data to or from a primitive form such as a byte stream. In this sense, serialization is one means to perform marshaling, usually implementing pass-by-value semantics.
+
+It is also possible for an object to be marshaled by reference, in which case the data "on the wire" is simply location information for the original object. However, such an object may still be amenable to value serialization.
+
+- Marshalling
+    - To "marshal" an object means to record its state and codebase(s) in such a way that when the marshalled object is "unmarshalled", a copy of the original object is obtained.
+
+- Serialization
+    - To "serialize" an object means to convert its state into a byte stream in such a way that the byte stream can be converted back into a copy of the object.
+
 
 
 ### Which one to choose?
