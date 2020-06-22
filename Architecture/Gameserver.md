@@ -3,7 +3,7 @@
 
 ## Optimization for gameserver
 - Better predictions
-- Eliminate the server
+- Eliminate the server for network latency
 - Optimize communication
 - Game data is compressed using delta compression to reduce network load. That means the server doesn't send a full world snapshot each time, but rather only changes (a delta snapshot) that happened since the last acknowledged update. With each packet sent between the client and server, acknowledge numbers are attached to keep track of their data flow. Usually full (non-delta) snapshots are only sent when a game starts or a client suffers from heavy packet loss for a couple of seconds. Clients can request a full snapshot manually with the cl_fullupdate command.
 
@@ -198,11 +198,6 @@ Three  main  architectures  are  typically  used  in Massive  Multiplayer  Onlin
 -  a)  client-server architecture
 -  b)  multi-server  architecture  
 -  c)  Peer-to-Peer  (P2P)  architecture 
-
-
-
-
-
 
 -----
 

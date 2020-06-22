@@ -21,6 +21,7 @@
 - http://pages.cs.wisc.edu/~remzi/OSTEP/
 - https://akka.io/
 - http://css.csail.mit.edu/6.824/2014/labs/lab-1.html
+- http://jepsen.io/analyses
 
 
 ### CRDT
