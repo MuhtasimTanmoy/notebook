@@ -2,7 +2,7 @@
 - Packet filerting done in kernel space without context switch.
 - On link driver -> BPF + Protocol Stack 
 - eBBF - parse modify packet - filter before
-- 
+- TCPDump uses BPF
 
 #### TCPDUMP
 - tcpdump -nnSX port 443 (Capture HTTPS)

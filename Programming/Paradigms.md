@@ -1,5 +1,0 @@
-The difference between imperative programming and reactive programming
-
-- Imperative programming is the type of programming we all start out with. Something happens, in other words an event occurs, and your code is notified of that event. For example, a user clicked a button and where you handle the event in your code, you decide what that action should mean to your system. You might save records to a DB, call another service, send an email, or a combination of all of these. The important bit here, is that the event is directly coupled to specific actions taking place.
-
-- Reactive programming enables you to respond to events that occur, often in the form of streams. Multiple concerns can subscribe to the same event and let the event have it’s effect in it’s domain, regardless of what happens in other domains. In other words, it allows for loosely coupled code that can easily be extended with more functionality. It’s possible that various big down-stream systems coded in different stacks are affected by an event, or even a whole bunch of serverless functions executing somewhere in the cloud.

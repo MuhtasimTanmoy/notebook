@@ -96,6 +96,7 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 - If both browsers behind same NAT hole punching stablish connection that never leaves
 - In some cases hole punching fails, TURN Relay can work
 
+## RTP
 
 
 # Recources
@@ -107,3 +108,5 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 - https://temasys.io/webrtc-ice-sorcery/
 - https://webrtchacks.com/trickle-ice/
 - https://testrtc.com/docs/
+- https://www.kurento.org/blog/rtp-i-intro-rtp-and-sdp
+- https://www.kurento.org/blog/rtp-ii-streaming-ffmpeg
