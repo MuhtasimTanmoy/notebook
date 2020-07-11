@@ -59,9 +59,6 @@ Repository contains notes, takeaways, references and study summary of CS systems
     - [AMQP](./Protocols/AMQP.md)
     - [HLS](./Protocols/HLS.md)
 
-
-
-
 <style>
 
 div {

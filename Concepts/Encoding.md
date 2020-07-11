@@ -21,7 +21,13 @@ Many routers of the day put the parity check and byte translation into hardware,
 - To avoid all zeros - UTF 8
 - It does not make sense to have a string without knowing what encoding it uses
 - UTF-8 or ASCII or ISO 8859-1 (Latin 1) or Windows 1252
+- UTF-8 and UTF-16 are methods to encode Unicode strings to byte sequences.
+- Base64 is a method to encode a byte sequence to a string.
+- Not every byte sequence represents an Unicode string encoded in UTF-8 or UTF-16.
+- Not every Unicode string represents a byte sequence encoded in Base64.
 
+- One is character encoding - UTF8
+    - Then then encoded character is base64 encoded
 
 ## Reference
 - https://stackoverflow.com/questions/201479/what-is-base-64-encoding-used-for
