@@ -31,7 +31,7 @@ The files won’t be persisted after the container is deleted, and both read and
 
 - When you use the FROM command in a Dockerfile you are referring to a base image. Rather than copy everything in a new image, you will share the contents (a.k.a. fs layers); this is what is known as a **copy-on-write** (holy cow!) filesystem. The docker storage driver is just which kind of COW implementation to use (AUFS, BTRFS ...). If you imagine your images as layers and depending on each other, you get a graph.
 
-- In VM the complete image is copied.
+- In VM the complete image is copied. 
 
 - AUFS - Ubuntu, Core  OS
 - Device Mapper - Redhat 
