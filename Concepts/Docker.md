@@ -20,7 +20,9 @@
     - CLONE_NEWUSER
     - LONE_NEWCGROUP
 - /proc/self/ns/uts > type and inode number
-
+- Images contain
+    - App Metadata
+    - FileSystem
 
 
 
@@ -54,3 +56,4 @@ The files won’t be persisted after the container is deleted, and both read and
 - https://docs.docker.com/storage/storagedriver/select-storage-driver
 - https://stackoverflow.com/questions/31152263/what-is-docker-storage-driver
 - https://www.slideshare.net/Docker/docker-storage-drivers
+- https://github.com/nleiva/kubernetes-networking-links
