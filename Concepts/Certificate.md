@@ -65,9 +65,9 @@ sudo certbot renew
 certbot certificates
 ```
 
-
-
 ## Reference
 - https://tldp.org/HOWTO/SSL-Certificates-HOWTO/x64.html
 - http://www.steves-internet-guide.com/ssl-certificates-explained
 - https://serverfault.com/questions/9708/what-is-a-pem-file-and-how-does-it-differ-from-other-openssl-generated-key-file
+- https://www.youtube.com/watch?v=qXLD2UHq2vk
+- https://www.youtube.com/watch?v=kxKLYDLzuHA&feature=youtu.be

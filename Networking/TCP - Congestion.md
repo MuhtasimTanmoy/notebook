@@ -10,7 +10,6 @@ Flow control window: AdvertisedWindow (RWND)
 
 Sender-side window = minimum{CWND, RWND} 
 
-
 - TCP Tahoe
     - When a loss occurs, fast retransmit is sent, half of the current CWND is saved as ssthresh and slow start begins again from its initial CWND. Once the CWND reaches ssthresh, TCP changes to congestion avoidance algorithm where each new ACK increases the CWND by MSS / CWND. This results in a linear increase of the CWND.
 
