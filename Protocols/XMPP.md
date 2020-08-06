@@ -28,7 +28,7 @@ The original protocol for XMPP is [Transmission Control Protocol](https://www.ge
 - Like HTTP, XMPP is a client-server protocol, but it differs from HTTP by allowing either side to send data to the other asynchronously.
 - XMPP connections are long lived, and data is pushed instead of pulled.
 - Not invented here syndrome do not fall in.
-- MPP is an awful and heavyweight protocol (streaming XML?;). It's spec is so big that there is no complete implementation of it. The most complete and most scalable implementation is ejabberd.
+- XMPP is an awful and heavyweight protocol (streaming XML?;). It's spec is so big that there is no complete implementation of it. The most complete and most scalable implementation is ejabberd.
 - XMPP is essentially a streaming protocol that makes it possible to exchange XML fragments between any two network endpoints.
 
 
@@ -70,11 +70,50 @@ Stanzas have three possible names( XML tag names) in XMPP ,these can be a Messag
 
 - IQ ( Info / Query )
   - The IQ( Info/Query) stanza is used to get some information from the server ( info about the server or its registered clients) or to apply some settings to the server.
-	  - < iq type=”get”/> stanzas are used to get(ask) some information ( from the server). 
+	  - <iq type=”get”/> stanzas are used to get(ask) some information ( from the server). 
 	  - <iq type=”set”/> stanzas are used to apply some settings to the server.
-	  - When you send get/set IQ stanzas to the server ,it can reply either with an < iq type=”result”/> stanza when your request has been successfully processed by the server.
+	  - When you send get/set IQ stanzas to the server ,it can reply either with an <iq type=”result”/> stanza when your request has been successfully processed by the server.
 	  -  <iq type=”error”/> stanza when something has gone wrong with your request
 	- jabber:iq:roster XML namespace
 	- An XML namespace is a way of giving more details about what the stanza is meant to do.For example the server upon receiving the iq from the client ( the one with a C: on the left),it first sees that it is a get IQ and it knows the stanza is asking for some information. Looking the XML name space ( xmlns) it knows exactly what is being asked for :”the contact list for the JID where the stanza comes from “. The XMPP engine in the server is programmed to know that when a client sends jabber:iq:roster namespaced IQ ,it wants to retrieve its contact list.There are other namespaces in XMPP for other uses and you will surely come across them in your XMPPing journey.
 	- .A jid is valid if it contains one “@” character and passwords of more than four characters are supported.This is a simple policy that comes by default with the code that Android Studio has generated for us.We leave it that way for this tutorial.
 	- [https://www.blikoontech.com/](https://www.blikoontech.com/)
+
+
+
+## Encryption
+
+
+
+
+## Websocket Binding
+- A WebSocket binding for XMPP provides higher performance than the current HTTP binding for XMPP.
+- During the WebSocket handshake, the client MUST include the value
+   'xmpp' in the list of protocols for the 'Sec-WebSocket-Protocol'
+   header.  The reply from the server MUST also contain 'xmpp' in its
+   own 'Sec-WebSocket-Protocol' header in order for an XMPP subprotocol
+   connection to be established.
+- The process whereby a client connects to a server, exchanges XML stanzas, and ends the connection is:
+	- Determine the IP address and port at which to connect, typically
+       based on resolution of a fully qualified domain name
+       (Section 3.2)
+    - Open a Transmission Control Protocol [TCP] connection
+    - Open an XML stream over TCP (Section 4.2)
+    - Preferably negotiate Transport Layer Security [TLS] for channel
+       encryption (Section 5)
+    - Authenticate using a Simple Authentication and Security Layer
+       [SASL] mechanism (Section 6)
+    - Bind a resource to the stream (Section 7)
+    - Exchange an unbounded number of XML stanzas with other entities
+       on the network (Section 8)
+    - Close the XML stream (Section 4.4)
+    - Close the TCP connection
+- https://tools.ietf.org/html/rfc7395
+- https://tools.ietf.org/html/rfc6455
+
+## XMPP MUC
+- https://github.com/robbiehanson/XMPPFramework/issues/642
+- https://medium.com/@dylanshine/building-a-group-chat-with-the-xmppframework-59fa17ecf4a0
+
+
+
