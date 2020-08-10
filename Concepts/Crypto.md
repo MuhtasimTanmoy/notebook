@@ -1,67 +1,69 @@
 
-### Public key infrastructure
-- The framework to associate a public key with an individual
-- Trust on first sight
-- Web of trust (Omeno encryption)
-- Trust the machine (Lets encrypt)
-    - Vendor distributes CA colelction to clients
-    - Server distributes cert and intermediates
-    - Clients validate the collection
+## Diffie Hellman
 
-### x.509
+Web protocols use a combination of symmetric and asymmetric encryption to establish secure connections. Among the most prominent examples of such a hybrid system is the Transport Layer Security (TLS) cryptographic protocol used to secure large portions of the modern internet.
 
-An X.509 certificate contains a public key and an identity (a hostname, or an organization, or an individual), and is either signed by a certificate authority or self-signed.
 
-Structure
-```
-Certificate
-Version Number
-Serial Number
-Signature Algorithm ID
-Issuer Name
-Validity period
-Not Before
-Not After
-Subject name
-Subject Public Key Info
-Public Key Algorithm
-Subject Public Key
-Issuer Unique Identifier (optional)
-Subject Unique Identifier (optional)
-Extensions (optional)
-...
-Certificate Signature Algorithm
-Certificate Signature (Encrypted hash code)
+- Diffie Hellman Key Exchange
+	- Prime Modulus and Generator ( G % P ) Available to all
+	- A generates random and send G^R_A % P = SEND_IT_TO_ALL Available to all
+	- B generates random and send G^R_B % P = SEND_IT_TO_ALL Available to all
+	- Now as G ^ R_A ^ R_B % P is calculated and the secret key
+	- Others do not have R_A R_B
 
-```
-Certificate Standard
-CA - Certificate Authority issues and signs
-RA - Registration authority 
+- *Drawback*
+    - In case of multiple people communication . OVERHEAD.
+    - Extra communication
 
-Full process
 
-```
-Public Key + User Identity -> hash -> hash signed by CA -> appended with Public Key + User Identity -> Certificate
 
-```
+# RSA
 
-```bash
-openssl x509 -in test.pem -text 
-```
+Public Private key based Encryption
 
-## CSR
-In public key infrastructure (PKI) systems, a certificate signing request (also CSR or certification request) is a message sent from an applicant to a certificate authority in order to apply for a digital identity certificate. 
+**Formula**
 
-Contents & public key
+`m^(ed) % P = m`
 
-CN	Common Name
-O	Business name / Organization
-OU	Department Name / Organizational Unit
-L	Town / City
-ST	Province, Region, County or State
-C	Country
-MAIL	Email address
+here, ed = E*D*phi(N) 
+
+Prime Factorization
+- Given any number get the two primes which multiplies it. 
+- ed = very big prime factorization
+
+*Eulers Totient Function*
+
+- phi(N) = how many number less then or equal to N that do not share any common factor.
+- Example : phi(8)
+    - Numbers to consider 
+        - 1 2 3 4 5 6 7 8
+        - 1 3 5 7 -> has one factor common which is 1.
+        - So, phi(8) = 4
+- phi(prime number) = p - 1
+    - As no number less than share common factor.
+
+N = p1*p2 > big prime factorization
+
+phi (N) = (p1-1) * (p2-1)
+
+**Eulers theorem**
+
+m ^ phi(n) congruent to =  1 mod n
+
+m ^ (k * phi(n)  +1)  ==  m mod n
+
+Walkthrough
+	- Generate two prime number.           [ 3 and 11 ]
+	- Multiply > prime factorization       [ N = 33 ]
+	- phi(N) > toteint                     [ phi(N) = 20 ]
+	- Choose exponent between 1 - phi(N) 
+        - E = odd and Co prime             [ E coprime to phi(N) and N]
+	- N & E public key                     [ (E,N) ]
+	- D = ( 2 * phi (N) + 1 ) / E          [ (D,N) ]
+	- ( data ^ e ) % N = encrypted text    
+	- ( encrypted text ^ d ) % N  = data
 
 # Resources
-- https://www.youtube.com/watch?v=m-Ft2DRz4WA 
-- https://en.wikipedia.org/wiki/X.509
+- https://youtu.be/UjIPMJd6Xks
+- https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/rsa-encryption-part-4
+- https://asecuritysite.com/encryption/padding

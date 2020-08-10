@@ -80,8 +80,16 @@ Stanzas have three possible names( XML tag names) in XMPP ,these can be a Messag
 	- [https://www.blikoontech.com/](https://www.blikoontech.com/)
 
 
+ These stanza types provide three different
+   communication primitives: a "push" mechanism for generalized
+   messaging, a specialized "publish-subscribe" mechanism for
+   broadcasting information about network availability, and a "request-
+   response" mechanism for more structured exchanges of data (similar to
+   [HTTP]).
+
 
 ## Encryption
+There is no TLS usage in xmpp stream as it does not support raw data only frame. It can be enabled at websocket layer.
 
 
 
