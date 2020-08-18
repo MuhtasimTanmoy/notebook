@@ -105,7 +105,7 @@ Public Key + User Identity -> hash -> hash signed by CA -> appended with Public 
 openssl x509 -in test.pem -text 
 ```
 
-## CSR
+## CSR - Certificate Signing Request
 In public key infrastructure (PKI) systems, a certificate signing request (also CSR or certification request) is a message sent from an applicant to a certificate authority in order to apply for a digital identity certificate. 
 
 Contents & public key

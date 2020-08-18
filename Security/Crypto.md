@@ -15,17 +15,15 @@ Web protocols use a combination of symmetric and asymmetric encryption to establ
     - In case of multiple people communication . OVERHEAD.
     - Extra communication
 
-
-
 # RSA
 
 Public Private key based Encryption
 
 **Formula**
 
-`m^(ed) % P = m`
+`m^(ed) = m (mod ( N ))`
 
-here, ed = E*D*phi(N) 
+`ed == 1 (mod phi( N ))`
 
 Prime Factorization
 - Given any number get the two primes which multiplies it. 
@@ -52,7 +50,8 @@ m ^ phi(n) congruent to =  1 mod n
 
 m ^ (k * phi(n)  +1)  ==  m mod n
 
-Walkthrough
+**Walkthrough**
+
 	- Generate two prime number.           [ 3 and 11 ]
 	- Multiply > prime factorization       [ N = 33 ]
 	- phi(N) > toteint                     [ phi(N) = 20 ]
