@@ -1,27 +1,29 @@
 
-## Diffie Hellman
+# Diffie Hellman
 
-Web protocols use a combination of symmetric and asymmetric encryption to establish secure connections. Among the most prominent examples of such a hybrid system is the Transport Layer Security (TLS) cryptographic protocol used to secure large portions of the modern internet.
-
+Web protocols use a combination of symmetric and asymmetric encryption to establish secure connections. 
+Here the symmetric portion is for forward secrecy. And asymmetric for authentication.
+Example: TLS.
 
 - Diffie Hellman Key Exchange
-	- Prime Modulus and Generator ( G % P ) Available to all
-	- A generates random and send G^R_A % P = SEND_IT_TO_ALL Available to all
-	- B generates random and send G^R_B % P = SEND_IT_TO_ALL Available to all
-	- Now as G ^ R_A ^ R_B % P is calculated and the secret key
-	- Others do not have R_A R_B
+	- Prime Modulus and Generator `( G % P )`. Available to all.
+	- A generates random and send  `G ^ R_A % P` . SEND_IT_TO_ALL. Available to all.
+	- B generates random and send `G ^ R_B % P` . 
+	SEND_IT_TO_ALL. Available to all.
+	- Now as `G ^ R_A ^ R_B % P` is calculated and the secret key.
+	- Others do not have R_A R_B.
 
 - *Drawback*
     - In case of multiple people communication . OVERHEAD.
-    - Extra communication
+    - Extra communication. Round trip time.
 
 # RSA
 
-Public Private key based Encryption
+Public Private key based Encryption.
 
 **Formula**
 
-`m^(ed) = m (mod ( N ))`
+`(m^(ed) == m ) mod  N `
 
 `ed == 1 (mod phi( N ))`
 
@@ -63,6 +65,5 @@ m ^ (k * phi(n)  +1)  ==  m mod n
 	- ( encrypted text ^ d ) % N  = data
 
 # Resources
-- https://youtu.be/UjIPMJd6Xks
-- https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/rsa-encryption-part-4
-- https://asecuritysite.com/encryption/padding
+- [RSA Encryption](https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/rsa-encryption-part-4)
+- [padding](https://asecuritysite.com/encryption/padding)

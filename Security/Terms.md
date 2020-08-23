@@ -19,9 +19,6 @@ Protects against rainbow attack.
 - Here, key & message available on both end denoting integrity of data.
 
 
-
-
-
 ## Resources
 - https://en.wikipedia.org/wiki/Salt_(cryptography)
 - https://tools.ietf.org/html/rfc5869
