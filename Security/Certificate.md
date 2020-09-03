@@ -20,6 +20,21 @@ The Secure Socket Layer protocol was created by Netscape to ensure secure transa
 - Diffie hellman does the sesison shared secret key. RSA verifies it. Out put a session key which is symmetric and fast unlike RSA.
 
 
+# SSH
+- Simple TCP connection. Can be any reliable protocol.
+- Transfer packets. 
+- ssh -v server
+
+
+```
+Packet length
+padding length  -
+payload         - Encrypted    
+padding         - 
+message authentication code
+```
+
+
 ## Certificate
 How do you know that you are dealing with the right person or rather the right web site. This someone, you have to implicitly trust: you have his/her certificate loaded in your browser (a root Certificate). A certificate, contains information about the owner of the certificate, like e-mail address, owner's name, certificate usage, duration of validity, resource location or Distinguished Name (DN) which includes the Common Name (CN) (web site address or e-mail address depending of the usage) and the certificate ID of the person who certifies (signs) this information. It contains also the public key and finally a hash to ensure that the certificate has not been tampered with. As you made the choice to trust the person who signs this certificate, therefore you also trust this certificate. This is a certificate trust tree or certificate path. Usually your browser or application has already loaded the root certificate of well known Certification Authorities (CA) or root CA Certificates. The CA maintains a list of all signed certificates as well as a list of revoked certificates. A certificate is insecure until it is signed, as only a signed certificate cannot be modified. You can sign a certificate using itself, it is called a self signed certificate. All root CA certificates are self signed.
 
@@ -53,7 +68,7 @@ Root CA -> ICA ( Intermediate Certificate ) -> Certificate
 For practical, visit https site, see cert in browser and open `Keychain access` to see root that signs.
 
 So when requested two or more certificates are returned.
-![Raft](screen/TLS.png)
+![TLS](screen/TLS.png)
 
 
 ## Public key infrastructure

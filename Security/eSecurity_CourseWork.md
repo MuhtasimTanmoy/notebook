@@ -99,19 +99,15 @@ Curve 25519.
 - In case of VPN a tunnel created and cant see hop in `tracert`. 
 
 ```bash
-
 openssl s_client  -connect www.google:443 
 
 openssl dgst -md5 file
-
 
 openssl genrsa -out mykey.pem 1024
 
 openssl rsa -in mykey.pem -pubout > mykey.pub
 
- 
-
-
+echo "this is a group of words that should not be considered random anymore so never use this to generate a private key" | openssl sha256
 ```
 
 

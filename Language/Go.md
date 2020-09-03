@@ -1,9 +1,23 @@
  # Go
  - C style with garbage collector
  - In case of sending in a function
-    - If intension to modify then pass by reference - Mutation Function
+    - If intention to modify then pass by reference - Mutation Function
     - if not pass by value
 
+
+```bash
+
+# install go
+mkdir ~/go
+export GOPATH = "$HOME/go"
+echo $GOPATH
+
+mkdir -p $GOPATH/src/github.com/repo_name
+cd GOPATH/src/github.com/repo_name
+git clone repo_name
+
+
+```
 
 
 ## Code snippet
