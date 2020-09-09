@@ -47,6 +47,8 @@ y^2 = x^3 + 486662 x^2 + x
     So RSA needed. Authenticated diffie hellman key exchange.
 
 
+![Elliptic Curve ](screen/ECDH.png)
+
 ---
 
 ## Extended Tripple Diffie-Hellman x3dh
@@ -76,6 +78,10 @@ OPKb - b's One Use Public key (Chosen from a list of 100 available)
 - Forward secrecy (FS), also known as perfect forward secrecy (PFS), is a feature of specific key agreement protocols that gives assurances that session keys will not be compromised even if long-term secrets used in the session key exchange are compromised.
 For HTTPS the long-term secret is typically the private signing key of the server.
 The session key is kept different and changed over long period of time.
+
+- Forward Secracy comes from Scimp
+- Future Secrecy comes from OTR 
+- PGP lacks deniability
 
 ----
 
@@ -157,6 +163,22 @@ State is kept in the following places:
 # Omemo
 A high level intro on how Omemo works: Each device gets it’s own public/private key pair. When a message is sent, it is encrypted with a message-specific key. This key itself is encrypted with the public key of each client participating in the chat. So if you have multiple devices, the message-key is encrypted for each of your devices. Same holds true for all devices of the person you are communicating with. If you are in a group chat, then the message-key is encrypted for everyone’s device participating in the group. For decryption each device decrypts the message-key, then takes the message-key and decrypts the potentially long message. This procedure enables bandwidth-efficient multi-user multi-device encryption. Each device public key can be represented via a fingerprint. When you send a message to someone, you need to be sure that this person is actually the person they claim to be. That explains the existance and necessity of fingerprint verification. The current scheme is trust-on-first-use (TOFU), meaning the first fingerprint is trusted. New fingerprints you have to manually trust. You should check in person, or via the phone with your comunication partner if the fingerprints match.
 
+## SSL Pinning
+- Pinning certificate of one definite server in app to avoid DNS poisoning .
+-  As mobile apps are connecting to one backend everytime, it makes sense.
+- Trust on first sight
+
+```bash
+## Certificate download and save
+openssl s_client -showcerts -connect domain.com:443
+
+## public key
+openssl s_client -connect www.site.com:443 -CAfile rootcert.pem | openssl x509 -pubkey -noout | openssl rsa -pubin -outform der | openssl enc -base64 -d > publickey.der
+
+## hash 
+echo "tanmoy" | openssl dgst -sha256 -binary | openssl enc -base64
+
+```
 
 
 # Resources
@@ -170,3 +192,5 @@ A high level intro on how Omemo works: Each device gets it’s own public/privat
 - [X3DH - Extended Tripple Diffie Hellman BLog](https://medium.com/asecuritysite-when-bob-met-alice/alice-whispers-to-bob-at-the-core-of-privacy-in-the-21st-century-is-extended-triple-51736dad527d)
 - [Group message](https://www.youtube.com/watch?v=tCKd6xBqyDw)
 - [Signal - X3DH](https://signal.org/docs/specifications/x3dh/)
+- [Certificate Pinning](https://www.youtube.com/watch?v=3coPpYJgFro )
+- [Asyncronous Security](https://signal.org/blog/asynchronous-security/)
