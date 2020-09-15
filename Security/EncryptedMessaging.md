@@ -81,7 +81,7 @@ The session key is kept different and changed over long period of time.
 
 - Forward Secracy comes from Scimp
 - Future Secrecy comes from OTR 
-- PGP lacks deniability
+- PGP lacks deniability 
 
 ----
 

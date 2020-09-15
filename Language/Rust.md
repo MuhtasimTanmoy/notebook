@@ -6,6 +6,10 @@ Strong memory guarantees make writing correct concurrent Rust code easier than i
 
 Rust is a systems programming language focused on three goals: safety, speed, and concurrency. It maintains these goals without having a garbage collector.
 
+Good interfacing with wasm.
+
+No garbage collector.
+
 # Ownership
 
 ``` rust
@@ -39,6 +43,7 @@ int *i = new int;
 ```
 
 - The Rust compiler also figures out the lifetime of i, and then inserts a corresponding free call after it’s invalid, like a destructor in C++. You get all of the benefits of manually allocated heap memory without having to do all the bookkeeping yourself.
+
 - All of this checking is done at compile time, so there’s no runtime overhead. You’ll get (basically) the exact same code that you’d get if you wrote the correct C++, but it’s impossible to write the incorrect version, thanks to the compiler.
 
 
@@ -122,6 +127,13 @@ fn main() {
 - Cargo is Rust’s build system and package manager, and Rustaceans use Cargo to manage their Rust projects
 
 - 
+
+
+
+```bash
+cargo init
+ 
+```
 
 
 --- 
