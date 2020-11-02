@@ -16,6 +16,7 @@ mkdir -p $GOPATH/src/github.com/repo_name
 cd GOPATH/src/github.com/repo_name
 git clone repo_name
 
+go test folder_name/*.go
 
 ```
 
@@ -46,6 +47,12 @@ Info(test)
  ```
 
 
+
+
+
+
+
  # Resources
  - https://word.bitly.com/post/29550171827/go-go-gadget
  - https://www.youtube.com/watch?v=xSq0OdlVLRI&list=PLoiT1Gv2KR1gE-WK7dIQ5bsJ_RAVZnzP8&index=1 
+ - https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go

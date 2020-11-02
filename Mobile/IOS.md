@@ -39,9 +39,16 @@ Functions are actually a special case of closures: blocks of code that can be ca
 ARC is a compile time feature that is Apple's version of automated memory management. It stands for  _Automatic Reference Counting._ This means that it  **_only_**  frees up memory for objects when there are  **_zero strong_**  references to them.
 
 
+```swift
+collectionView.reloadItemsAtIndexPaths(collectionView.indexPathsForVisibleItems())
+```
 
 - ### NotificationCenter
 
     - When communication between two or more components of your app, that have no formal connection, needs to happen
     - When communication needs to happen repeatedly and consistently
     - When using one-to-many or many-to-many communication
+
+
+# Resources
+- [Swift Style Guide](https://google.github.io/swift/#global-constants)    
