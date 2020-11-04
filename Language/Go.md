@@ -4,7 +4,6 @@
     - If intention to modify then pass by reference - Mutation Function
     - if not pass by value
 
-
 ```bash
 
 # install go
@@ -44,10 +43,19 @@ var test *Person
 // Here reciever treated as first parameter
 test.Info()
 Info(test)
+
+
+go test foo_test.go foo.go
+
+go test server/*.go
+
  ```
 
 
 
+
+**Other Points**
+- Go vet
 
 
 

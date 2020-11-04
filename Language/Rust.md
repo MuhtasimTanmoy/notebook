@@ -16,6 +16,11 @@
 
 **Ownership**
 
+ - Ownership - The scope that will free the resource. Owned.
+ - Mutable Ref - Can be only one. No one can Read and write. Exclusive access. No responsibility to free. Only borrowing it. Exclusive.
+ - Immutable Ref - No modification. Multiple read. Shared.
+
+
 ``` rust
 // Wont work. Stack Allocated. Borrowed pointer will leave. Borrowed value will not.
 fn dangling() -> &int {
@@ -142,6 +147,7 @@ Any borrow must last for a scope no greater than that of the owner. We may have 
 - one or more references (&T) to a resource,
 - exactly one mutable reference (&mut T).
 
+Borrow checker will check you have not used anything after you have gotten rid of it. Mutable access to something shared.
 
 ```rust
 
@@ -436,6 +442,15 @@ fn print_area<T: HasArea>(shape: T) {
     println!("This shape has an area of {}", shape.area());
 }
 
+
+trait Graph {
+    type N;
+    type E;
+
+    fn has_edge(&self, &Self::N, &Self::N) -> bool;
+    fn edges(&self, &Self::N) -> Vec<Self::E>;
+}
+
 ```
 
 **Attributes**
@@ -535,21 +550,47 @@ fn main() {
 
 ```
 
+**Crates**
+
+- Demo - [Github Link]()
+
+**Concurrency**
+
+- When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
 
 
+
+**Other Points**
+- Static mut is unsafe, and so must be done in an unsafe block
+- Any type stored in a static must be Sync, and must not have a Drop implementation.
+- They follow the “read-write lock” pattern, such that one may either have only one mutable reference to some data, or any number of immutable ones, but not both.
+- Mutex gives exclusive or mutable access to a key through a shared reference to mutex
+- R/W lock, mutex either have lock for multiple read or single write
+- locks provide safe wrapper around aliased or shared pointer
+- Learning curve is borrow checking  
+- Rust Clippy
+
+```rust
+
+#[cfg(foo)]
+
+// in toml define one
+
+```
 
 **Build System**    
 
 Cargo is Rust’s build system and package manager, and Rustaceans use Cargo to manage their Rust projects.
 
+crate - library - holds module
 
 ```bash
+
 cargo init
+
+cargo new crate_name
+
 ```
-
-
-
-
 
 **incomplete**
 
@@ -557,8 +598,8 @@ cargo init
 
 **Closures**
 
+---
 
---- 
 
 RESOURCES:
 
@@ -570,3 +611,13 @@ RESOURCES:
 
 - [How Rust ownership works?](https://static.rust-lang.org/doc/master/book/ownership.html)
 
+- [Error Handling RustDoc](https://static.rust-lang.org/doc/master/book/error-handling.html)
+
+TALKS : 
+- [Rust at Speed](https://www.youtube.com/watch?v=s19G6n0UjsM&t=3s) 
+    - Expalins usage of rust on [Noria](https://github.com/mit-pdos/noria)
+    - Usage of cache inside DB, mainly materialized view, the current result for a query.
+    - Problem : Huge result table, concurrent read write on same table, partial materialized view.
+    - Lock, RWLock fails being the costly one themselves as the wrapping work is too less
+    - Maintain two maps, one for read, another for write maintaining epic counter +2 for each read and  switch for alternatively.
+    -  
