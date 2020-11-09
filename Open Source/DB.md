@@ -28,8 +28,6 @@ The leveldb library provides a persistent key value store. Keys and values are a
 
 
 
-
-
 # Resources
 - [Erlang Key value Store Talk](https://www.youtube.com/watch?v=vTzNKGbHzPc)
 - [LSM Tree](https://www.youtube.com/watch?v=_5vrfuwhvlQ)

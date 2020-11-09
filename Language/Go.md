@@ -47,7 +47,9 @@ Info(test)
 
 go test foo_test.go foo.go
 
-go test server/*.go
+go test server *.go
+
+go run --race test.go 
 
  ```
 
@@ -56,8 +58,6 @@ go test server/*.go
 
 **Other Points**
 - Go vet
-
-
 
 
  # Resources

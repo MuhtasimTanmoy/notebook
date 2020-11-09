@@ -90,3 +90,21 @@ If IPC is between your own separate apps that are signed with the same key, it i
 As said above, binder driver is a software components, which loads in the Kernel space, and is responsible for transferring the data from the memory are of one process to the other. It can be accessed by ioctl() calls.
 
 
+## Processor
+- 32 bit
+  - arm, ARMv7a or armeabi
+  - x86, x86abi 
+- 64 bit
+  - arm64v8a, AArch64 (Advanced RISC Machine.)
+    - Qualcomm’s Snapdragon, Samsung’s Exynos, and MediaTek’s mobile chips are all examples of ARM processors. Most modern chips are 64-bit, or ARM64
+  - x86_64 (CISC)
+    - Intel, AMD. x86_64 refers to 64-bit Intel chips.
+- x86 traditionally targets peak performance, Arm energy efficiency
+    
+
+**Others**
+- Simple perf toolchain
+- NDK, JNI for c/c++ bindings
+
+
+

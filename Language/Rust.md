@@ -569,13 +569,15 @@ fn main() {
 - locks provide safe wrapper around aliased or shared pointer
 - Learning curve is borrow checking  
 - Rust Clippy
+- Runtime programs - stuffs that your programming language puts that you dont write
+ 
 
 ```rust
 
 #[cfg(foo)]
 
 // in toml define one
-
+ 
 ```
 
 **Build System**    
