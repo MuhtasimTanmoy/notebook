@@ -1,5 +1,4 @@
-Erlang is a functional language and accompanying runtime designed for highly parallel, scalable applications requiring high uptime. 
-
+Erlang is a functional language and accompanying runtime designed for highly parallel, scalable applications requiring high uptime.
 - Immutable Data
 - Functional Language
 
@@ -10,7 +9,8 @@ message-passing model and hot-swappable code, meaning errors or code updates don
 - BEAM is like Java’s JVM, but for Erlang
 - Interface to outside world - NIC / Ports
 - Schedulers
-    - Beam VM - One VM per Thread
+    - Beam VM 
+    - One VM per Thread
 - Processes
 - Memory Management
     -  Process heaps
@@ -124,16 +124,10 @@ can be replaced by jump to the start of the function.
 
 
 # Shell
-
 erl - Erlang
-
 iex - Elixir
-
 rebar3 binary download and copy to /usr/local/bin/
-
 rebar3 compile
-
-
 
 ### Open source Erlang Applications :
 
@@ -149,5 +143,6 @@ rebar3 compile
 
 # Resources
 
-- http://www.erlang-factory.com/upload/presentations/708/HitchhikersTouroftheBEAM.pdf
-- http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf
+- [Beam VM](http://www.erlang-factory.com/upload/presentations/708/HitchhikersTouroftheBEAM.pdf)
+- [First Person Shooter in Erlang](http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf)
+- [The Beam Book](https://blog.stenmans.org/theBeamBook/)
