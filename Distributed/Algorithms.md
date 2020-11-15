@@ -19,4 +19,4 @@ State Machine Replication Principle:
     - raft 
 
  ## References
- 
+ - [Concensus  Algorithm](https://blog.mi.hdm-stuttgart.de/index.php/2019/03/17/consensus-protocols-a-key-to-cluster-management/)
