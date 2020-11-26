@@ -35,13 +35,57 @@
 
 # ZooKeeper
 - Raft usage requires explicit use in application which gives distributed concensus
-- Zookeeper gives same as a co oordination service
+- Zookeeper gives same as a co oord ination service
 - zookeeper zab, raft like
 - Writes linearizable, gives zxID, Read fifo client with zxID
 - Primary backup system, not state machine replication.
+- Configuration management through read locking `ready` file.
+- Mini Transaction
+    - Master state transfer, elect.
+    - Test & Set.
+- Api involves a naming system called 'zNodes'.
+    - Regular permanent zNode
+    - Ephimeral zNode - Client need to continuously end heartbeat to keep it
+    - Sequential
+- herd effect    
 
+# CRAQ
+- Chain Replication
+- Maintains linearizability unlike zookeeper
+- Uses configuration manager. Raft, Paxos, ZooKeeper.
+- No worry about partition, split brain
+  
+# Aurora
+- In each machine, Virtual machine monitor to monitor ec2
+- Website is constructed of stateless services that get persistent data from DB.
+- EC2 not good for DB. As not stateless like service.
+- EBS volume are servers using CRAQ.
+- Database on network generates lots of traffic.
+- DB
+    - Transation
+    - Crash   Recovery 
+- Instead of RDS architecture, aurora just sends log entries, ack from quoram only.    
+
+# Frangipani
+  - Cache coherence
+  - Atomicity
+  - Crash recovery
+- Shared read lock
+- Exclusive write lock 
+
+Cache coherence lock to how updated write, Transactional to delay
+  
+WAL for crash recoverable transaction, Log on petal
+ 
+# Distributed Transaction
+Transaction
+    - Concurrency control
+     - Atomic commit
+_ Serializable     
 
 # Spanner
+
+
 
 
 ## Final Project
@@ -54,5 +98,16 @@
 **Lecture 2**
 - Distributed Systems = Partial Failure + Unbounded Latency
 - Clock
+
+
+
+
+# Waterloo
+
+- Any big thing structure. Hiererchy 
+- DNS
+- Implicit hierarchy
+- Ip addr geographically dispered
+- Split up geo or data center 
 
 ----
