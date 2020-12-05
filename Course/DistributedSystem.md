@@ -78,14 +78,48 @@ Cache coherence lock to how updated write, Transactional to delay
 WAL for crash recoverable transaction, Log on petal
  
 # Distributed Transaction
-Transaction
+- Transaction
     - Concurrency control
+        - Pessimistic 
+            - Locking 
+                - More conflict then use it 
+            - Two phase locking 
+                - Lock and release at end.
+            - Two phase commit 
+                - Distributed xaction 
+                - When the content of atomic commit in different server.
+            - Transaction Coordinator 
+                - Log update as early as possible
+            - Two phase commit and raft 
+        - Optimistic
      - Atomic commit
-_ Serializable     
+- Serializable or atomic
+    - Sequence change but no intermediate state
 
 # Spanner
+- CockroachDB uses a lot of design
+- Sharding - key design
+- Transactions over multiple shrad 
+- Paxos replecated
+- Transaction
+    - Read Write Transaction
+    - Read only transaction
+        - Serializable
+        - Snapshot isolation
+            - TimeStamp 
+                - R/W Transaction - Commit Time
+                - R/O Transaction - Start Time 
+        - In case in minority paxos group, delay until
+![](./screen/Snapshot_isolation.png)                  
+        - External Consistency
+            - RO/RW transactions should not see stale data
+            - Multi version DB
+![](./screen/RW_Transaction.png)
 
 
+# Optimistic Concurrency Control
+
+# Certificate Transparency 
 
 
 ## Final Project
@@ -97,7 +131,7 @@ _ Serializable
 
 **Lecture 2**
 - Distributed Systems = Partial Failure + Unbounded Latency
-- Clock
+- Clock 
 
 
 
@@ -111,3 +145,6 @@ _ Serializable
 - Split up geo or data center 
 
 ----
+
+
+ 
