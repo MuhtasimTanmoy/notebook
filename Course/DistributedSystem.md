@@ -115,11 +115,59 @@ WAL for crash recoverable transaction, Log on petal
             - RO/RW transactions should not see stale data
             - Multi version DB
 ![](./screen/RW_Transaction.png)
+- Data across data centers
+
 
 
 # Optimistic Concurrency Control
+- FARM - Optimized for one data center
+- NVRAM
+    - Machine with battery attached
+- Kernel bypassing
+- RDMA Network Interface Card
+
+ # Spark
+ - Lineage Graph
+    - Narrow dependency
+    - Wide dependency - Distinct
+- Not good for stream processing
+- Instead of GFS writing in mapreduce, rdd can be retained in memory.
+
+
+# Cache consistency
+- Four architecture
+    - Single Server + DB Server
+    - Multiple Server + One DB Server
+    - Multiple Server + Sharded DB Server (Hotspot problem)
+    - Multiple Server + Cached
+- Look aside cache
+- Look through cache
+- In cache of memcache failure dramatic increase in DB Server
+- Asyncronous log replicated scheme for replication
+- RPC call to memcache
+    - Cache invalidate scheme - better
+    - Cache update scheme    
+ partition:
+    + more memory-efficient (one copy of each k/v)
+    + works well if no key is very popular
+    - each web server must talk to many mc servers (overhead)
+  replication:
+    + good if a few keys are very popular
+    + fewer TCP connections
+    - less total data can be cached
+- When adding a new cluster, no cache can cause a lot of problem
+    - Solution: Cold Mode
+- Thundering Herd
+    - Solve by using lease. Just a flag.
+- Gutter Server
+- Race condition
+    - Read, miss, but before set write, invalidate happens      
+
+
 
 # Certificate Transparency 
+- Merkle inclusion proof
+- Log consistency proof
 
 
 ## Final Project
