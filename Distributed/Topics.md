@@ -57,9 +57,7 @@ Actor explosion - All unique identifier coming together modifying
 - Version Vectors or Interval Tree Clocks
 
 # Christian Algorithm
-
 Time Sync
-
 - https://www.youtube.com/watch?v=yvuy0rPkv8Q
 
 
@@ -96,4 +94,19 @@ As category 1 Stratum is not publicly available, we can get from 2
 
 
 
-
+# Gossip Protocol
+- A, B has some state. A sends it's state with version/timestamp. B checks updated, update it's and send back the one A lacks. A updates and sends acknowledgement.
+- Kubernates depends on etcd
+- Kafka, elastic search on zookeeper
+- Three requirements for P2P
+  - Group Membership
+  - Failure detection/ Node status
+  - Information Dissemination / Heartbeat
+- Seed node added only at cluster setup
+- Timeout value dynamically calculated
+- Akka has cluster singleton
+- Consul extension lifeguard
+- [https://github.com/hashicorp/memberlist](HashiCorp Memberlist)
+- [https://github.com/lalithsuresh/rapid](Rapid) Gossip with concensus
+- Kafka moving away from zookeeper which used for membership, failure detection 
+- [Gossip Protocol](https://www.youtube.com/watch?v=MPfAekq4f5I&ab_channel=DistributedSystemsConference)

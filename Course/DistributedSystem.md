@@ -164,10 +164,29 @@ WAL for crash recoverable transaction, Log on petal
     - Read, miss, but before set write, invalidate happens      
 
 
+# Casual Consistency
+- Interact with only local
+- Usage - Cassandra, Dynamo
+- Versioning
+    - Wall clock
+
+- Photo put, List get example.
+- Sync to maintain order. Too slow. 
+- Better approach log server. But centralizaed log means heavy load.
+- Dependency maintain. Better approach.
+
 
 # Certificate Transparency 
 - Merkle inclusion proof
 - Log consistency proof
+
+
+# Bitcoin
+
+
+# Bitcoin
+
+
 
 
 ## Final Project
