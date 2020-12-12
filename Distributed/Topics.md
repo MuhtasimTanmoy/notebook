@@ -102,6 +102,17 @@ As category 1 Stratum is not publicly available, we can get from 2
   - Group Membership
   - Failure detection/ Node status
   - Information Dissemination / Heartbeat
+
+- State
+  - Application State
+    - Rack
+    - Schema
+    - Load
+    - Severity
+    - Status 
+  - Heartbeat state
+  - Endpoint state 
+    - Collection of above two  
 - Seed node added only at cluster setup
 - Timeout value dynamically calculated
 - Akka has cluster singleton
@@ -110,3 +121,5 @@ As category 1 Stratum is not publicly available, we can get from 2
 - [https://github.com/lalithsuresh/rapid](Rapid) Gossip with concensus
 - Kafka moving away from zookeeper which used for membership, failure detection 
 - [Gossip Protocol](https://www.youtube.com/watch?v=MPfAekq4f5I&ab_channel=DistributedSystemsConference)
+- [Gossip Protocol Attibutes](https://www.youtube.com/watch?v=FuP1Fvrv6ZQ&ab_channel=PlanetCassandra )
+- [Gossip Protocol Android](https://github.com/leonardogcsoares/Gossip-Protocol-Android)

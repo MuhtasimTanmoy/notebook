@@ -175,16 +175,14 @@ WAL for crash recoverable transaction, Log on petal
 - Better approach log server. But centralizaed log means heavy load.
 - Dependency maintain. Better approach.
 
-
 # Certificate Transparency 
 - Merkle inclusion proof
 - Log consistency proof
 
-
 # Bitcoin
 
 
-# Bitcoin
+# Blockstack
 
 
 
@@ -204,12 +202,51 @@ WAL for crash recoverable transaction, Log on petal
 
 
 # Waterloo
-
+ 
+Lecture 1
 - Any big thing structure. Hiererchy 
 - DNS
 - Implicit hierarchy
 - Ip addr geographically dispered
 - Split up geo or data center 
+- topology
+
+
+Lecture 2
+youtube pull replication
+push replication for popular
+
+DNS
+cn - Canonical name
+ns - Name Server
+a - Address
+
+
+Lecture 6
+- SOCKET TABLE
+    - SOCKET is an index to socket table, which has all information necessary.
+    - SOCKET File Descriptor is an index. Just integer.
+- SOCK ADDR_IN
+    - Address family
+        - AF_INET
+        - AF_unix (Client server on same machine)
+    - IP address
+        - From client - Server IP
+        - From server - Any
+    - Port number
+        - From client - Server's port
+        - From server - Listen on port
+- HOST ENT
+    - Destinition
+        - What is returned by DNS?
+- TCP - SOCK_STREAM - CONNECTION ORIENTED
+- UDP - SOCK_DGRAM - DATAGRAM
+
+- htons(PORT -> host byte order to network byte order
+- [Socket programming](https://www.youtube.com/watch?v=2QeL7jo_LIw&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
+
+- [SOCEKT PROGRAMMING](https://www.geeksforgeeks.org/socket-programming-cc/)        
+
 
 ----
 
