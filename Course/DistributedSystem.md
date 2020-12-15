@@ -196,8 +196,31 @@ WAL for crash recoverable transaction, Log on petal
 
 **Lecture 2**
 - Distributed Systems = Partial Failure + Unbounded Latency
-- Clock 
+- Pysical Clock 
+    - Time of day clock
+        - Synced with NTP
+        - bad for duration, time label
+    - Monototic clock
+        - counter
+        - bad for time label
+        - good for duration
+- Logical Clock
+    - only orderinig of event
 
+
+**Lecture 3**
+Lamport Diagrams/ Space Time Diagrams
+
+A -> B when,
+- A happens before B in same machine
+- A send B receive in different machine
+- transitive closure
+
+- Causal anomaly
+
+Network mode
+- Syncrobous 
+- Asyncronous
 
 
 
@@ -245,7 +268,15 @@ Lecture 6
 - htons(PORT -> host byte order to network byte order
 - [Socket programming](https://www.youtube.com/watch?v=2QeL7jo_LIw&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
 
-- [SOCEKT PROGRAMMING](https://www.geeksforgeeks.org/socket-programming-cc/)        
+- [SOCEKT PROGRAMMING](https://www.geeksforgeeks.org/socket-programming-cc/)   
+
+
+Lecture 7
+- Flow control part of transport layer
+- Congestion control part of network layer
+- Ports are 16 bits
+
+Lecture 8
 
 
 ----
