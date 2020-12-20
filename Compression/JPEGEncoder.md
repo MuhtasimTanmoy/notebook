@@ -2,13 +2,13 @@
 - Joint Photographic Expert Group
 
 The major steps in JPEG compression involve.
-• Colour space transform and subsampling.
+• Colour space transform and subsampling. Compressing at block level.
 • DCT (Discrete Cosine Transform).
 • Quantisation.
 • Zigzag scan.
 • DPCM on DC component.
-• RLE on AC Components.
-• Entropy coding — Human or arithmetic.
+• RLE(Run Length Encoding) on AC Components.
+• Entropy coding — Huffman or arithmetic.
 
 
 
