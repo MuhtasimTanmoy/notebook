@@ -207,6 +207,9 @@ const bytebits RST6 = (bytebits)0xd6;
 const bytebits RST7 = (bytebits)0xd7;
 
 ```
+
+- Baseline jepg renders line by line while progressive jpeg renders blur then makes it clear.
+
 # Resources
 - [Image Processing](https://users.cs.cf.ac.uk/Dave.Marshall/Multimedia/)
 - [Discreet cosine transform](https://www.youtube.com/watch?v=Q2aEzeMDHMA)
