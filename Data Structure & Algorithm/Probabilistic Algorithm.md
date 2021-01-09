@@ -32,10 +32,18 @@ We can calculate the false positive error rate, **_p_**, based on the size of th
     - [HashMix](http://www.google.com/codesearch/url?ct=ext&url=http://www.concentric.net/~Ttwang/tech/inthash.htm&usg=AFQjCNEBOwEAd_jb5vYSckmG7OxrkeQhLA)
 
 
-# Usage
+### Usage
 - Apache Cassandra uses SSTable
+- Used in postgres for query optimization
 - In order to skip the recommendations that are already served to you, bloom filters are used.
 - Avoid caching the items that are very rarely searched or searched only once. Only when they are searched more than once, they will get cached.
 
-# Resources
+
+----
+
+# HyperLogLog
+- Approximation: Number of zeros at end, N then 2^N
+- Use bucket, 70% average.
+
+## Resources
 - [Bloom Filter](https://hackernoon.com/probabilistic-data-structures-bloom-filter-5374112a7832)
