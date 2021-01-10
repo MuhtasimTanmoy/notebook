@@ -2,7 +2,6 @@
 
 
 ## Priority Queue
-
 Whenever dynamically need to fetch next best or worst variant.
  
 Min Queue to Max Queue Conversion
@@ -18,7 +17,6 @@ Usage -
 
 ---
 ## Union Find
-
 Usage -
 - Kruskal's minimum spanning tree
 - Grid Percolation
@@ -27,7 +25,6 @@ Usage -
 
 ---
 ##  Binary Search Tree
-
 Usage -
 - Set
 - Red Black Tree
@@ -39,12 +36,10 @@ Usage -
 
 ---
 ## Tree Traversal
-
 - Level order traversal
 
 ---
 ## Hash Collision
-
 - Linear Probing Good
     - (aX + b ) % N 
     - Relatively Prime
@@ -58,12 +53,13 @@ Usage -
 
 Given a string S, find the longest repeated sub string that occurs at least M times.
 
-Approach
-
+Approach -
 - Just get in a struct and compare string ( n^2 * logn )
 - o(nlogn) even o(n) algo available
-- For all substring get KMP to get match in total of n^3
-- Binary search length and N(logn)^2 > linear substring N + map NlogN
+
+- Generate all sub string > O(n^2) >  KMP > search
+- Binary O(n) hash calc > O(N (log(N))^2) > logn times N calc > hash logn
+
 - Find all unique substring 
 	- Generate all in o(n^2) and dump them inside set
 	- (all substring - sum of lcp)
@@ -72,12 +68,13 @@ Approach
 	- Get less ascii characters to contain the string then LCP 
 - Suffix array can do anything suffix tree can
 
+- [Suffix Array](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/suffix-arrays/tutorial/)
+
 A compressed representation of indexes sorted lexicographically.
 Longest Common Prefix Array - LCP array
 
 
 ## Queries
-
 - If the problem involve processing queries then there are online solutions and offline solution.
     - Online means that your solution can process each query as it reads it.
     - Offline means that your solution reads all queries then process them, probably you sort the queries in some order so that you can process them faster.
@@ -94,11 +91,25 @@ Longest Common Prefix Array - LCP array
 
 
 ## FENWICK TREE
+All operations ( logn )
+
+Usage -
+- Update
+- Range Sum
+
+# Segment Tree
+All operations ( logn )
+
+Usage - 
+- Update
+- Range Sum
+- Min
+- Max
+
 
 ## Kruskal
 
 ## Prim and Dijsktra same
-
 
 
 
