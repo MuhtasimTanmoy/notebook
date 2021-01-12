@@ -20,8 +20,10 @@ Key Exchange Tunnel
 - IPSec
 
 Symmetric Key
-- AES - Block Cipher
-- ChaCha20 - Stream Cipher
+- AES 
+    - Block Cipher
+- ChaCha20 
+    - Stream Cipher
 
 Hashing & MAC
 - SHA-1
@@ -36,8 +38,6 @@ Tools
 
 Github Codebase
 - https://github.com/billbuchanan/esecurity
-
-
 
 
 # Fundamentals
@@ -110,7 +110,6 @@ openssl rsa -in mykey.pem -pubout > mykey.pub
 echo "this is a group of words that should not be considered random anymore so never use this to generate a private key" | openssl sha256
 ```
 
-
 # Threat classification
 - Intrusion
 - Blocking
@@ -119,7 +118,6 @@ echo "this is a group of words that should not be considered random anymore so n
 ## Attacks
 - Buffer overflow
 - DOs
-
 
 - IP Spoofing prevention
     - `/etc/sysctl.conf` used to override default kernel param

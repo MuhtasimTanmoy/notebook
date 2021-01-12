@@ -1,4 +1,5 @@
 ## SSL/TLS Handshake
+
 The Secure Socket Layer protocol was created by Netscape to ensure secure transactions between web servers and browsers. The protocol uses a third party, a Certificate Authority (CA), to identify one end or both end of the transactions. This is in short how it works.
 
 - A browser requests a secure page (usually https://).
@@ -25,7 +26,6 @@ The Secure Socket Layer protocol was created by Netscape to ensure secure transa
 - Transfer packets. 
 - ssh -v server
 
-
 ```
 Packet length
 padding length  -
@@ -36,6 +36,7 @@ message authentication code
 
 
 ## Certificate
+
 How do you know that you are dealing with the right person or rather the right web site. This someone, you have to implicitly trust: you have his/her certificate loaded in your browser (a root Certificate). A certificate, contains information about the owner of the certificate, like e-mail address, owner's name, certificate usage, duration of validity, resource location or Distinguished Name (DN) which includes the Common Name (CN) (web site address or e-mail address depending of the usage) and the certificate ID of the person who certifies (signs) this information. It contains also the public key and finally a hash to ensure that the certificate has not been tampered with. As you made the choice to trust the person who signs this certificate, therefore you also trust this certificate. This is a certificate trust tree or certificate path. Usually your browser or application has already loaded the root certificate of well known Certification Authorities (CA) or root CA Certificates. The CA maintains a list of all signed certificates as well as a list of revoked certificates. A certificate is insecure until it is signed, as only a signed certificate cannot be modified. You can sign a certificate using itself, it is called a self signed certificate. All root CA certificates are self signed.
 
 - PEM - base64 encoded DER(Binary) cert
@@ -135,7 +136,6 @@ MAIL    Email address
 
 
 # Adding SSL in Nginx
-
 Adding ssl protection is very easy now. We just need to install certbot and use it.
 
 ```

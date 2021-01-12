@@ -53,16 +53,12 @@ y^2 = x^3 + 486662 x^2 + x
 
 ## Extended Tripple Diffie-Hellman x3dh
 
-
 IPKa - a's Identity Public Key
-
 EPKa - a's Ephimeral Public key (Generated once for usage)
 
 
 IPKb - b's Identity Public Key
-
 SPKb - b's Signed Public Key
-
 OPKb - b's One Use Public key (Chosen from a list of 100 available)
 
 
@@ -88,19 +84,17 @@ The session key is kept different and changed over long period of time.
 ## Double ratchet algorithm / Axolotl Ratchet
 
 - Once the session established then the key goes through a one way function that acts as ratchet to generate more key.
-
 - The key is gone through KDF (Key Derivation Function).
 - Even if one key is broken cant get decrypt any prevoiuosly encrypted message.
 - But can read future message as KDF available. No forward secrecy. Solution: Involve Diffie Hellman in ratchet.
 - Signal update the key every single message.
-- Each particiant has 3 rachets
+- Each particiant has 3 rachets.
     - DH Rachet
     - Sending Rachet
-    - Receiving Rachet 
-- The initial state of this chain is established by session agreement. 
+    - Receiving Rachet
+- The initial state of this chain is established by session agreement.
 
 ![Double Ratchet](screen/Ratchet.png)
-  
 ---
 
 # PreKeys
@@ -118,13 +112,16 @@ At install time, clients generate
 ---
 
 # Sessions
-Signal Protocol is session-oriented. Clients establish a "session," which is then used for all subsequent encrypt/decrypt operations. There is no need to ever tear down a session once one has been established.
+
+Signal Protocol is session-oriented. 
+Clients establish a "session," which is then used for all subsequent encrypt/decrypt operations.
+There is no need to ever tear down a session once one has been established.
 
 Sessions are established in one of three ways:
 
-- PreKeyBundles. A client that wishes to send a message to a recipient can establish a session by retrieving a PreKeyBundle for that recipient from the server.
-- PreKeySignalMessages. A client can receive a PreKeySignalMessage from a recipient and use it to establish a session.
-- KeyExchangeMessages. Two clients can exchange KeyExchange messages to establish a session.
+- PreKeyBundles: A client that wishes to send a message to a recipient can establish a session by retrieving a PreKeyBundle for that recipient from the server.
+- PreKeySignalMessages: A client can receive a PreKeySignalMessage from a recipient and use it to establish a session.
+- KeyExchangeMessages: Two clients can exchange KeyExchange messages to establish a session.
 
 ---
 
