@@ -63,6 +63,9 @@ m ^ (k * phi(n)  +1)  ==  m mod n
 	- ( data ^ e ) % N = encrypted text    
 	- ( encrypted text ^ d ) % N  = data
 
+# AES
+
+
 # Resources
 - [RSA Encryption](https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/rsa-encryption-part-4)
 - [padding](https://asecuritysite.com/encryption/padding)

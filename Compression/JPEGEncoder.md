@@ -216,3 +216,4 @@ const bytebits RST7 = (bytebits)0xd7;
 - [JPEG Compression](https://www.youtube.com/watch?v=p_YYAb0Fkuw)
 - [JPEG Playlist](https://www.youtube.com/watch?v=CPT4FSkFUgs)
 - [Specification](https://www.w3.org/Graphics/JPEG/itu-t81.pdf)
+- [JPEG](http://lad.dsc.ufcg.edu.br/multimidia/jpegmarker.pdf)

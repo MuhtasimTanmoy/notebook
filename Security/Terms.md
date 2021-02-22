@@ -19,8 +19,6 @@ Protects against rainbow attack.
 - Here, key & message available on both end denoting integrity of data.
 
 
-
-
 # Secrecy
 
 In cryptography, forward secrecy = perfect forward secrecy, backward secrecy = future secrecy.
