@@ -191,3 +191,4 @@ echo "tanmoy" | openssl dgst -sha256 -binary | openssl enc -base64
 - [Signal - X3DH](https://signal.org/docs/specifications/x3dh/)
 - [Certificate Pinning](https://www.youtube.com/watch?v=3coPpYJgFro )
 - [Asyncronous Security](https://signal.org/blog/asynchronous-security/)
+- [Whatsapp Encryption](https://scontent.whatsapp.net/v/t39.8562-34/122249142_469857720642275_2152527586907531259_n.pdf/WA_Security_WhitePaper.pdf?ccb=3&_nc_sid=2fbf2a&_nc_ohc=FBYXyKxXQBMAX_YklVe&_nc_ht=scontent.whatsapp.net&oh=4bae952a73c50372b1e01add914696c3&oe=605A5499)

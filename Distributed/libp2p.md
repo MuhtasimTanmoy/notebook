@@ -9,14 +9,16 @@ p2p network composed of four elements
     - Discover nodes on  local network, DNS, DNS-SD.
     - Bootstrap node 
 - pubsub to broadcast event
-- DHT to store data
+- `DHT` to store data
 
 p2p connection
+- [Demo Project](https://github.com/tomaka/2018-rustrush-demo)
 - open a connection
 - negotiate encryption protocol
 - on top of encryption multiplexing protocol
+    - [yamux](https://github.com/hashicorp/yamux)
 - each high level request opens up substream
-- 
+
 
 ---
 - IPFS Content addressing
@@ -39,4 +41,4 @@ Some examples:
 # Resources
 - [libp2p introduction](https://www.youtube.com/watch?v=CRe_oDtfRLw)
 - [quic](https://www.youtube.com/watch?v=4FvMed5iCb4)
-- [libp2p Rust](https://www.youtube.com/watch?v=Sss2Tl7WRDQ)
+- [libp2p R ust](https://www.youtube.com/watch?v=Sss2Tl7WRDQ)
