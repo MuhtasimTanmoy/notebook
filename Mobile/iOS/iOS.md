@@ -56,8 +56,5 @@ collectionView.reloadItemsAtIndexPaths(collectionView.indexPathsForVisibleItems(
     - When using one-to-many or many-to-many communication
 
 
-- Combine
-    - 
-
 # Resources
 - [Swift Style Guide](https://google.github.io/swift/#global-constants)    
