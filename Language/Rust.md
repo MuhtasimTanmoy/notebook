@@ -4,24 +4,27 @@
 
 - Strong memory guarantees make writing correct concurrent Rust code easier than in other languages.
 
-- Rust is a systems programming language focused on three goals: safety, speed, and concurrency. It maintains these goals without having a garbage collector.
+- It is focused on three goals: safety, speed, and concurrency. It maintains these goals without having a garbage collector.
 
 - Good interfacing with wasm.
 
 - No garbage collector.
 
 
+## **Ownership**
 
-# Code Sample
+ - Ownership 
+    - The scope that will free the resource. Owned.
 
-**Ownership**
+ - Mutable Reference
+    - Can be only one. No one can Read and write. Exclusive access. No responsibility to free. Only borrowing it. Exclusive.
 
- - Ownership - The scope that will free the resource. Owned.
- - Mutable Ref - Can be only one. No one can Read and write. Exclusive access. No responsibility to free. Only borrowing it. Exclusive.
- - Immutable Ref - No modification. Multiple read. Shared.
+ - Immutable Reference
+    - No modification. Multiple read. Shared.
 
 
 ``` rust
+
 // Wont work. Stack Allocated. Borrowed pointer will leave. Borrowed value will not.
 fn dangling() -> &int {
     let i = 1234;
@@ -40,7 +43,7 @@ fn add_one() -> int {
 }
 ```
 
-**Rust does not have the concept of null**
+## **Rust does not have the concept of null**
 
 ```rust
 // rust
@@ -59,7 +62,7 @@ int *i = new int;
 ```
 
 
-**Copy vs Reference**
+## **Copy vs Reference**
 
 ```rust
 // Copying the vector. Not efficiecnt.
@@ -116,7 +119,7 @@ fn main() {
         do spawn {
             let local_arc = port.recv();
 
-            // CLosures as arguemnt
+            // Closures as arguemnt
 
             // This acquire a mutex, and then pass the data to this closure. After the closure does its thing, the mutex is released
 
@@ -134,27 +137,23 @@ fn main() {
 }
 ```
 
-**Macro**
+## **Macro**
 
 - Rust maintains `Hygenic macro`
 
-**Trait**
+## **Trait**
 
-**Borrow**
+## **Borrow**
 
 Any borrow must last for a scope no greater than that of the owner. We may have one or the other of these two kinds of borrows, but not both at the same time:
 
-- one or more references (&T) to a resource,
-- exactly one mutable reference (&mut T).
+- One or more references (&T) to a resource,
+- Exactly one mutable reference (&mut T).
 
 Borrow checker will check you have not used anything after you have gotten rid of it. Mutable access to something shared.
 
-```rust
 
-
-```
-
-**Lifetime Operator**
+## **Lifetime Operator**
 
 ```rust
 
@@ -203,7 +202,7 @@ let x: &'static i32 = &FOO;
 
 ```
 
-**Lifetime elision**
+## **Lifetime elision**
 
 Here explicit lifetime declation is elicited. There are the three rules:
 
@@ -214,7 +213,7 @@ Here explicit lifetime declation is elicited. There are the three rules:
 - If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.
 
 
-**Mutability**
+## **Mutability**
 
 ```rust
 // Mutability is a property of either a borrow (&mut) or a binding (let mut). Mutability is a property of the binding, not of the structure itself.
@@ -229,7 +228,6 @@ struct Point {
 
 // To achive field level mutability.
 
-
 use std::cell::Cell;
 
 struct Point {
@@ -238,14 +236,13 @@ struct Point {
 }
 
 let point = Point { x: 5, y: Cell::new(6) };
-
 point.y.set(7);
 
 println!("y: {:?}", point.y);
 
 ```
 
-**Destructuring**
+## **Destructuring**
 
 ```rust
 
@@ -259,13 +256,13 @@ let Inches(integer_length) = length;
 
 ```
 
-**Enum**
+## **Enum**
 
 Also called `tagged union`
 
-**Match**
+## **Match**
 
-match is also an expression, which means we can use it on the right-hand side of a let binding or directly where an expression is used:
+Match is also an expression, which means we can use it on the right-hand side of a let binding or directly where an expression is used:
 
 ```rust
 let x = 5;
@@ -280,7 +277,7 @@ let number = match x {
 };
 ```
 
-**Pattern introduces shadowing**
+## **Pattern introduces shadowing**
 
 ```rust
 let x = 1;
@@ -304,7 +301,7 @@ Sometimes it’s a nice way of converting something from one type to another; in
 
 
 
-**Methods**
+## **Methods**
 
 This ‘associated function’ builds a new Circle for us. Note that associated functions are called with the Struct::function() syntax, rather than the ref.method() syntax. Some other languages call associated functions ‘static methods’.
 
@@ -350,7 +347,7 @@ impl Circle {
 
 ```
 
-**String**
+## **String**
 
 A ‘string’ is a sequence of Unicode scalar values encoded as a stream of UTF-8 bytes.
 
@@ -387,15 +384,19 @@ println!("");
 ```
 
 
-**Unsized type**
+## **Unsized type**
 
-Rust understands a few of these types, but they have some restrictions. There are three:
+Rust understands a few of these types, but they have some restrictions. 
+
+There are three:
 
 - We can only manipulate an instance of an unsized type via a pointer. An &[T] works fine, but a [T] does not.
-- Variables and arguments cannot have dynamically sized types.
-- Only the last field in a struct may have a dynamically sized type; the other fields must not. Enum variants must not have dynamically sized types as data.
 
-**Generic**
+- Variables and arguments cannot have dynamically sized types.
+
+- Only the last field in a struct may have a dynamically sized type, the other fields must not. Enum variants must not have dynamically sized types as data.
+
+## **Generic**
 
 ```rust
 
@@ -436,7 +437,7 @@ impl HasArea for Circle {
 }
 
 
-// With generics
+// with generics
 
 fn print_area<T: HasArea>(shape: T) {
     println!("This shape has an area of {}", shape.area());
@@ -476,7 +477,7 @@ fn main() {
 ```
 
 
-**Check last state of stuct when relesed**
+## **Check last state of stuct when relesed**
 
 
 ```rust
@@ -506,7 +507,13 @@ fn main() {
 
 **Trait objects** 
 
-When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. This is called ‘dispatch’. There are two major forms of dispatch: static dispatch and dynamic dispatch. While Rust favors static dispatch, it also supports dynamic dispatch through a mechanism called ‘trait objects’.
+When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. This is called ‘dispatch’. 
+
+There are two major forms of dispatch:
+- Static dispatch 
+- Dynamic dispatch
+
+While Rust favors static dispatch, it also supports dynamic dispatch through a mechanism called ‘trait objects’.
 
 ```rust
 
@@ -561,16 +568,25 @@ fn main() {
 
 
 **Other Points**
-- Static mut is unsafe, and so must be done in an unsafe block
+
+- Static mut is unsafe, and so must be done in an unsafe block.
+
 - Any type stored in a static must be Sync, and must not have a Drop implementation.
+
 - They follow the “read-write lock” pattern, such that one may either have only one mutable reference to some data, or any number of immutable ones, but not both.
+
 - Mutex gives exclusive or mutable access to a key through a shared reference to mutex
+
 - R/W lock, mutex either have lock for multiple read or single write
-- locks provide safe wrapper around aliased or shared pointer
-- Learning curve is borrow checking  
+
+- Locks provide safe wrapper around aliased or shared pointer.
+
+- Learning curve is borrow checking
+
 - Rust Clippy
-- Runtime programs - stuffs that your programming language puts that you dont write
- 
+
+- Runtime programs 
+    - Stuffs that your programming language puts that you dont write.
 
 ```rust
 
@@ -580,7 +596,7 @@ fn main() {
  
 ```
 
-**Build System**    
+## **Build System**    
 
 Cargo is Rust’s build system and package manager, and Rustaceans use Cargo to manage their Rust projects.
 
@@ -602,7 +618,6 @@ cargo new crate_name
 
 ---
 
-
 RESOURCES:
 
 - [Rust ownership, safety explained](https://words.steveklabnik.com/a-30-minute-introduction-to-rust)
@@ -619,7 +634,7 @@ RESOURCES:
 
 TALKS : 
 - [Rust at Speed](https://www.youtube.com/watch?v=s19G6n0UjsM&t=3s) 
-    - Expalins usage of rust on [Noria](https://github.com/mit-pdos/noria)
+    - Expalains usage of rust on [Noria](https://github.com/mit-pdos/noria)
     - Usage of cache inside DB, mainly materialized view, the current result for a query.
     - Problem : Huge result table, concurrent read write on same table, partial materialized view.
     - Lock, RWLock fails being the costly one themselves as the wrapping work is too less
