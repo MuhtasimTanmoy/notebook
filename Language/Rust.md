@@ -137,6 +137,9 @@ fn main() {
 }
 ```
 
+## **Smart Pointer**
+
+
 ## **Macro**
 
 - Rust maintains `Hygenic macro`
