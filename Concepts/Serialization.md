@@ -1,6 +1,6 @@
 # Serialization
 - JSON
-    -  JSON is textual, its integers and floats can be slow to encode and decode. JSON is not designed for numbers. Also, Comparing strings in JSON can be slow.
+    - JSON is textual, its integers and floats can be slow to encode and decode. JSON is not designed for numbers. Also, Comparing strings in JSON can be slow.
 - BSON
     - Primary data representation for mongodb.
 - MessagePack
@@ -12,12 +12,9 @@
 - CSV
 - YAML
 
-
-
 ## Marshalling vs Serialization
 
 Marshaling and serialization are loosely synonymous in the context of remote procedure call, but semantically different as a matter of intent.
-
 
 - Marshaling is about getting parameters from here to there
 - Serialization is about copying structured data to or from a primitive form such as a byte stream. In this sense, serialization is one means to perform marshaling, usually implementing pass-by-value semantics.
