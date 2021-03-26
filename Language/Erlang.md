@@ -54,10 +54,9 @@ In most other programming languages, software crashes have always been (and ofte
 
 - It also supports interpreting, directly from source code via abstract syntax tree
 
-
  # Tutorial
 
- - variables can't be variable in functional programming.
+ - Variables can't be variable in functional programming.
 
  - The first thing these commands tell us is that you can assign a value to a variable exactly once; then you can 'pretend' to assign a value to a variable if it's the same value it already has.
 
