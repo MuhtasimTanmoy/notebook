@@ -91,9 +91,6 @@ As category 1 Stratum is not publicly available, we can get from 2
 - conf - server pool.ntp.org
 - ntpdate to update in reasonable window
 
-
-
-
 # Gossip Protocol
 - A, B has some state. A sends it's state with version/timestamp. B checks updated, update it's and send back the one A lacks. A updates and sends acknowledgement.
 - Kubernates depends on etcd

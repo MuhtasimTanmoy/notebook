@@ -11,7 +11,7 @@
 - No garbage collector.
 
 
-## **Ownership**
+## Ownership
 
  - Ownership 
     - The scope that will free the resource. Owned.
@@ -62,7 +62,7 @@ int *i = new int;
 ```
 
 
-## **Copy vs Reference**
+## Copy vs Reference
 
 ```rust
 // Copying the vector. Not efficiecnt.
@@ -137,16 +137,16 @@ fn main() {
 }
 ```
 
-## **Smart Pointer**
+## Smart Pointer
 
 
-## **Macro**
+## Macro
 
 - Rust maintains `Hygenic macro`
 
-## **Trait**
+## Trait
 
-## **Borrow**
+## Borrow
 
 Any borrow must last for a scope no greater than that of the owner. We may have one or the other of these two kinds of borrows, but not both at the same time:
 
@@ -156,7 +156,7 @@ Any borrow must last for a scope no greater than that of the owner. We may have 
 Borrow checker will check you have not used anything after you have gotten rid of it. Mutable access to something shared.
 
 
-## **Lifetime Operator**
+## Lifetime Operator
 
 ```rust
 
@@ -205,7 +205,7 @@ let x: &'static i32 = &FOO;
 
 ```
 
-## **Lifetime elision**
+## Lifetime elision
 
 Here explicit lifetime declation is elicited. There are the three rules:
 
@@ -216,7 +216,7 @@ Here explicit lifetime declation is elicited. There are the three rules:
 - If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.
 
 
-## **Mutability**
+## Mutability
 
 ```rust
 // Mutability is a property of either a borrow (&mut) or a binding (let mut). Mutability is a property of the binding, not of the structure itself.
@@ -245,7 +245,7 @@ println!("y: {:?}", point.y);
 
 ```
 
-## **Destructuring**
+## Destructuring
 
 ```rust
 
@@ -259,11 +259,11 @@ let Inches(integer_length) = length;
 
 ```
 
-## **Enum**
+## Enum
 
 Also called `tagged union`
 
-## **Match**
+## Match
 
 Match is also an expression, which means we can use it on the right-hand side of a let binding or directly where an expression is used:
 
@@ -280,7 +280,7 @@ let number = match x {
 };
 ```
 
-## **Pattern introduces shadowing**
+## Pattern introduces shadowing
 
 ```rust
 let x = 1;
@@ -304,7 +304,7 @@ Sometimes it’s a nice way of converting something from one type to another; in
 
 
 
-## **Methods**
+## Methods
 
 This ‘associated function’ builds a new Circle for us. Note that associated functions are called with the Struct::function() syntax, rather than the ref.method() syntax. Some other languages call associated functions ‘static methods’.
 
@@ -350,7 +350,7 @@ impl Circle {
 
 ```
 
-## **String**
+## String
 
 A ‘string’ is a sequence of Unicode scalar values encoded as a stream of UTF-8 bytes.
 
@@ -387,7 +387,7 @@ println!("");
 ```
 
 
-## **Unsized type**
+## Unsized type
 
 Rust understands a few of these types, but they have some restrictions. 
 
@@ -399,7 +399,7 @@ There are three:
 
 - Only the last field in a struct may have a dynamically sized type, the other fields must not. Enum variants must not have dynamically sized types as data.
 
-## **Generic**
+## Generic
 
 ```rust
 
@@ -411,7 +411,7 @@ enum Option<T> {
 ```
 
 
-**Trait**
+# Trait
 
 Trait contains method signature.
 
@@ -457,7 +457,7 @@ trait Graph {
 
 ```
 
-**Attributes**
+# Attributes
 
 ```rust
 #[derive(Debug)]
@@ -481,7 +481,6 @@ fn main() {
 
 
 ## **Check last state of stuct when relesed**
-
 
 ```rust
 
@@ -508,7 +507,8 @@ fn main() {
 ```
 
 
-**Trait objects** 
+
+## Trait objects
 
 When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. This is called ‘dispatch’. 
 
@@ -559,12 +559,47 @@ fn main() {
 // The methods of the trait can be called on a trait object via a special record of function pointers traditionally called a ‘vtable’ 
 
 ```
+## Variance
 
-**Crates**
+```rust
 
-- Demo - [Github Link]()
+// Covariance
 
-**Concurrency**
+// any lifetime can be treated as static
+
+let x: &'static str // more useful
+let a: &'a str
+
+a = x 
+
+// Contravariance
+
+fn foo(&'a str) { // less usefull
+}
+
+fn foo(&'static str) { // less usefull
+}
+
+// Invariance
+
+fn foo(s: &mut &'a str, a: &'a str) {
+
+}
+let mut x = ""
+
+foo(x, ""  )
+
+use std::marker::PhantomData;
+struct Deserializer<T> {
+    _t: PhantomData<T>,
+}
+
+// Mutable references are invariant in the type they point to,
+// and covariant in their lifetime
+```
+
+
+## Concurrency
 
 - When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
 
@@ -588,8 +623,14 @@ fn main() {
 
 - Rust Clippy
 
+- Carriage return line feed used in windows, linux uses line feed.
+
+- Calling rust has no abstraction like cGo, JNI.
+
 - Runtime programs 
     - Stuffs that your programming language puts that you dont write.
+    
+- Tokio core is event loop of tokio    
 
 ```rust
 

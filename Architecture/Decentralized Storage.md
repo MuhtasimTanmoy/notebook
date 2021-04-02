@@ -23,8 +23,6 @@
 Peers in the Libri network are called Librarians, and clients of these peers are called Authors. Librarian peers never see the plaintext content of a document and deal only with encrypted chunks of one. Author clients convert a plaintext document into these encrypted chunks and back again.
 
 
-
-
 # [Sia](https://gitlab.com/NebulousLabs/Sia)
 - The Sia software divides files into 30 segments before uploading, each targeted for distribution to hosts across the world. 
 - File segments are created using a technology called Reed-Solomon erasure coding, commonly used in CDs and DVDs. Erasure coding allows Sia to divide files in a redundant manner, where any 10 of 30 segments can fully recover a user's files.
@@ -35,9 +33,7 @@ Peers in the Libri network are called Librarians, and clients of these peers are
 
 
 
-
-
 # Resources
 - [Reed Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
 - [Swarm Arweave Sia Talk ](https://www.youtube.com/watch?v=vVsHBAohsaE)
-- 
+-  
