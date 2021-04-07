@@ -17,7 +17,9 @@
     - The scope that will free the resource. Owned.
 
  - Mutable Reference
-    - Can be only one. No one can Read and write. Exclusive access. No responsibility to free. Only borrowing it. Exclusive.
+    - Can be only one. No one can Read and write. 
+    - Exclusive access. 
+    - No responsibility to free. Only borrowing it. Exclusive.
 
  - Immutable Reference
     - No modification. Multiple read. Shared.
@@ -25,7 +27,9 @@
 
 ``` rust
 
-// Wont work. Stack Allocated. Borrowed pointer will leave. Borrowed value will not.
+// Wont work. Stack Allocated. 
+// Borrowed pointer will leave. Borrowed value will not.
+
 fn dangling() -> &int {
     let i = 1234;
     return &i;
@@ -41,9 +45,28 @@ fn add_one() -> int {
     let num = dangling();
     return *num + 1;
 }
+
 ```
 
-## **Rust does not have the concept of null**
+## Rust use after free
+
+```rust
+
+fn take_ownership(s: String) {
+    println!("{}", s);
+    // s goes out of scope and freed
+}
+
+let foo = String::from("Test");
+take_ownership(foo);
+
+// Memory is freed. 
+// Using foo again would be use after free.
+// take_ownership(foo);
+
+```
+
+## Rust does not have the concept of null
 
 ```rust
 // rust
@@ -65,6 +88,7 @@ int *i = new int;
 ## Copy vs Reference
 
 ```rust
+
 // Copying the vector. Not efficiecnt.
 
 fn main() {
@@ -135,6 +159,7 @@ fn main() {
         }
     }
 }
+
 ```
 
 ## Smart Pointer
@@ -297,18 +322,18 @@ println!("x: {}", x)
 // x: c c: c
 // x: 1
 
-
 ```
 
 Sometimes it’s a nice way of converting something from one type to another; in this example the integers are converted to String.
 
 
-
 ## Methods
 
-This ‘associated function’ builds a new Circle for us. Note that associated functions are called with the Struct::function() syntax, rather than the ref.method() syntax. Some other languages call associated functions ‘static methods’.
+This ‘associated function’ builds a new Circle for us. 
+Note that associated functions are called with the Struct::function() syntax, rather than the ref.method() syntax.Some other languages call associated functions ‘static methods’.
 
 ```rust
+
 struct Circle {
     x: f64,
     y: f64,
@@ -410,7 +435,6 @@ enum Option<T> {
 
 ```
 
-
 # Trait
 
 Trait contains method signature.
@@ -438,7 +462,6 @@ impl HasArea for Circle {
         self.area() > other.area()
     }
 }
-
 
 // with generics
 
@@ -480,7 +503,7 @@ fn main() {
 ```
 
 
-## **Check last state of stuct when relesed**
+## Check last state of stuct when relesed
 
 ```rust
 
@@ -506,11 +529,10 @@ fn main() {
 
 ```
 
-
-
 ## Trait objects
 
-When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. This is called ‘dispatch’. 
+When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. 
+This is called ‘dispatch’. 
 
 There are two major forms of dispatch:
 - Static dispatch 
@@ -524,7 +546,7 @@ fn do_something<T: Foo>(x: T) {
     x.method();
 }
 
-// will be converted to this
+// Will be converted to this
 
 fn do_something_u8(x: u8) {
     x.method();
@@ -602,7 +624,6 @@ struct Deserializer<T> {
 ## Concurrency
 
 - When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
-
 
 
 **Other Points**
