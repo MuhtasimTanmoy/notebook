@@ -19,14 +19,18 @@ enum Task {
 ```
 
 How it works under the hood?
+
 - The compiler turns asyncrounous task into state machine.
+
 - Java program cant have segfault but can have data reces.
+
 - ARC gives smart pointer. Mutex lock provides another smart pointer. When it goes out of scope it is unlocked autometically.
+
 - MutexLockGuard is a smart pointer.
     - Gives multiple reference to the data inside.
 
-```rust
 
+```rust
 
 struct Database(Arc <Mutex <HashMap <String,Byte> > >)
 
@@ -50,8 +54,7 @@ async fn main() -> io::Result<()> {
             // socket.write_all(b"Hello world").await
         });
     }
-} 
-
+}
 
 fn get(db: &Db, key: String) -> Frame {
     // Lock the db while we use it
@@ -75,7 +78,6 @@ fn put(db: &Db, key: String, value: Byte) -> Frame {
 // epoll provides io events
 // kqueue bsd
 // iopc windows
-
 ```
 
 # Reference

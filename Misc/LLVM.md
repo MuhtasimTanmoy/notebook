@@ -1,7 +1,5 @@
 # LLDB
 
-
-
 ```bash
 
 lldb a.out
@@ -27,19 +25,19 @@ bt  # backtrace
 (lldb) p varname
 
 ... frame / fr var
+
 ... fr select / frame no
 
 ... watchpoint set variable globalVariable
-... watchpoint set variable -w read | write | read_write globalVariable
 
+... watchpoint set variable -w read | write | read_write globalVariable
 
 ```
 
 - gcc & llvm are toolchain
-    - Prec=process
+    - Preprocess
     - Syntax mistake
     - Assemble object
     - Link into executable
 
 # Resources
-- 
