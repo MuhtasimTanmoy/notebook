@@ -1,8 +1,11 @@
 # Docker
 
 ## Namespace
+
 - Isolation of global system resources between independent processes.
+
 - Namespaces do not restrict access to physical resources such as CPU, memory and disk. That access is metered and restricted by a kernel feature called ‘cgroups’.
+
 - 7 Namespace available
     - Mount - isolate filesystem mount points
     - UTS - isolate hostname and domainname
@@ -11,6 +14,7 @@
     - Network - isolate network interfaces
     - User - isolate UID/GID number spaces
     - Cgroup - isolate cgroup root directory
+
 - Syscall Flags corresponding to 7 Namespaces
     - CLONE_NEWNS 
     - CLONE_NEWUTS 
@@ -19,6 +23,7 @@
     - CLONE_NEWNET 
     - CLONE_NEWUSER
     - LONE_NEWCGROUP
+
 - /proc/self/ns/uts > type and inode number
 - Images contain
     - App Metadata

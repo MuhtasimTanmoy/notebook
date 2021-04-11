@@ -10,7 +10,7 @@
 - Sia
 - Storj
 - FileCoin
-- IPFS 
+- IPFS
 - Arweave - Archive of data
 
 
@@ -29,11 +29,8 @@ Peers in the Libri network are called Librarians, and clients of these peers are
 - This means that if 20 out of 30 hosts go offline, a Sia user is still able to download her files.
 - Threefish encryption algorithm.
 - Merkle construction phase requires heavy preprocessing. Logarithmic of the file size.
- 
-
 
 
 # Resources
 - [Reed Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
 - [Swarm Arweave Sia Talk ](https://www.youtube.com/watch?v=vVsHBAohsaE)
--  
