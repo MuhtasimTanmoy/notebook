@@ -10,6 +10,8 @@
 
 - No garbage collector.
 
+- No green threads given, can be a library but not runtime feature to support to write a portion.
+
 
 ## Ownership
 

@@ -11,7 +11,19 @@ Fastboot flashing unlock command unlocks your bootloader. This command is not su
 You can download the update zip file in your phone instead of waiting for the update to be pushed into the phone. To do that just download the update to your computer and connect your device to the computer. Now reboot into recovery on your phone and using the volume buttons choose to apply update from ADB. then open command line and type ADB sideload Full-Path-to-the-file.zip and hit enter.
 
 
+![](./ADB.png )
+
+
 ```sh
+
+# Prints the path to the APK of the given package.
+adb shell pm path <PACKAGE>
+
+# Downloads or pulls a specified file from an emulator/device to your computer (host).
+adb pull <remote> [local]
+unzip apk 
+
+# Use dex2jar then jd-cli
 
 # collects battery data from your device
 adb shell dumpsys batterystats	
@@ -90,7 +102,7 @@ fastboot oem device-info
 # flashes recovery image to the device
 fastboot flash recovery <file-name.img>					
 
-# boot the image file without installing or flashing on the 											device. Can be used to boot recovery image without 											flashing on the device
+# boot the image file without installing or flashing on the device. Can be used to boot recovery image without flashing on the device
 
 fastboot boot <file-name.img>
 
@@ -116,10 +128,8 @@ am start -t image/* -a android.intent.action.VIEW
 # force app to stop.
 am force-stop app.package.name						
 
-
-# To backup all the device and app data. When executed, it will 										trigger the backup, ask you to accept the action on the 										Android device and then creates “backup.adb” file in the current directory.
+# To backup all the device and app data. When executed, it will trigger the backup, ask you to accept the action on the Android device and then creates “backup.adb” file in the current directory.
 backup -all								
-
 
 # Prints a list of all attached devices with USB Debugging enabled. In response, it returns the serial number and state of the device.
 adb devices
@@ -145,14 +155,8 @@ adb uninstall [option] <PACKAGE>
 # Prints all packages installed on the device/emulator.
 adb shell pm list packages [options] <FILTER>
 
-# Prints the path to the APK of the given package.
-adb shell pm path <PACKAGE>
-
 # Deletes all the data associated with the package (clears app data and cache).
 adb shell pm clear <PACKAGE>
-
-# Downloads or pulls a specified file from an emulator/device to your computer (host).
-adb pull <remote> [local]
 
 # Upload or push or copy a file from the host (computer) to an emulator or the device.
 adb push <local> <remote>
