@@ -1,6 +1,6 @@
 # RUST
 
-- Rust is a systems programming language that focuses on strong compile-time correctness guarantees.
+- Rust is a `systems programming` language that focuses on strong compile-time correctness guarantees.
 
 - Strong memory guarantees make writing correct concurrent Rust code easier than in other languages.
 
@@ -38,6 +38,7 @@ fn dangling() -> &int {
 }
 
 // Will Work. Heap Allocated.
+
 fn dangling() -> ~int {
     let i = ~1234;
     return i;
@@ -164,20 +165,14 @@ fn main() {
 
 ```
 
-## Smart Pointer
-
-
 ## Macro
-
 - Rust maintains `Hygenic macro`
-
-## Trait
 
 ## Borrow
 
-Any borrow must last for a scope no greater than that of the owner. We may have one or the other of these two kinds of borrows, but not both at the same time:
+Any borrow must last for a scope no greater than that of the owner. We may have one or the other of these two kinds of borrows, but not both at the same time.
 
-- One or more references (&T) to a resource,
+- One or more references (&T) to a resource.
 - Exactly one mutable reference (&mut T).
 
 Borrow checker will check you have not used anything after you have gotten rid of it. Mutable access to something shared.
@@ -232,7 +227,7 @@ let x: &'static i32 = &FOO;
 
 ```
 
-## Lifetime elision
+## Lifetime Elision
 
 Here explicit lifetime declation is elicited. There are the three rules:
 
@@ -326,12 +321,12 @@ println!("x: {}", x)
 
 ```
 
-Sometimes it’s a nice way of converting something from one type to another; in this example the integers are converted to String.
+Sometimes it’s a nice way of converting something from one type to another, in this example the integers are converted to String.
 
 
 ## Methods
 
-This ‘associated function’ builds a new Circle for us. 
+This `associated function` builds a new Circle for us. 
 Note that associated functions are called with the Struct::function() syntax, rather than the ref.method() syntax.Some other languages call associated functions ‘static methods’.
 
 ```rust
@@ -345,6 +340,7 @@ struct Circle {
 // normal methods
 
 impl Circle {
+
     fn area(&self) -> f64 {
         std::f64::consts::PI * (self.radius * self.radius)
     }
@@ -355,6 +351,7 @@ impl Circle {
 }
 
 fn main() {
+
     let c = Circle { x: 0.0, y: 0.0, radius: 2.0 };
     println!("{}", c.area());
 
@@ -364,7 +361,6 @@ fn main() {
 
 
 // Asscoiated methods
-
 impl Circle {
     fn new(x: f64, y: f64, radius: f64) -> Circle {
         Circle {
@@ -623,6 +619,22 @@ struct Deserializer<T> {
 ```
 
 
+## Callback Based Future
+
+```rust
+
+// Way too many allocaiton, dynamic dispatch
+ 
+trait Future {
+    type Output;
+    fn schedule<F>(self, callback: F) 
+        where F: FnOnce(Self:: Output);
+}
+
+
+ 
+```
+
 ## Concurrency
 
 - When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
@@ -630,7 +642,7 @@ struct Deserializer<T> {
 
 **Other Points**
 
-- Static mut is unsafe, and so must be done in an unsafe block.
+- Static mutable is unsafe, and so must be done in an unsafe block.
 
 - Any type stored in a static must be Sync, and must not have a Drop implementation.
 
@@ -687,21 +699,21 @@ cargo new crate_name
 
 RESOURCES:
 
-- [Rust ownership, safety explained](https://words.steveklabnik.com/a-30-minute-introduction-to-rust)
+- [Rust Ownership, Safety Explained](https://words.steveklabnik.com/a-30-minute-introduction-to-rust)
 
-- [Rust Documentation](https://static.rust-lang.org/doc/master/book/getting-started.html)
+- [How Rust Ownership works?](https://static.rust-lang.org/doc/master/book/ownership.html)
+
+- [Rust Zero Cost Future:](https://www.youtube.com/watch?v=skos4B5x7qE) Explains future implementaion, benchmark.
 
 - [Macro Hygienic](https://en.wikipedia.org/wiki/Hygienic_macro)
 
-- [How Rust ownership works?](https://static.rust-lang.org/doc/master/book/ownership.html)
-
-- [Error Handling RustDoc](https://static.rust-lang.org/doc/master/book/error-handling.html)
+- [Error Handling Rust Documentation](https://static.rust-lang.org/doc/master/book/error-handling.html)
 
 - [Sample Library Usage](https://github.com/brson/stdx/blob/master/README.md)
 
 TALKS : 
 - [Rust at Speed](https://www.youtube.com/watch?v=s19G6n0UjsM&t=3s) 
-    - Expalains usage of rust on [Noria](https://github.com/mit-pdos/noria)
+    - Explains usage of rust on [Noria](https://github.com/mit-pdos/noria)
     - Usage of cache inside DB, mainly materialized view, the current result for a query.
     - Problem : Huge result table, concurrent read write on same table, partial materialized view.
     - Lock, RWLock fails being the costly one themselves as the wrapping work is too less

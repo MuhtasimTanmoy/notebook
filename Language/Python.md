@@ -6,3 +6,4 @@ Just In Time compilation is a method to convert, at runtime, the execution of da
 
 # Reference
 - [Jit Compilation](https://www.youtube.com/watch?v=sQTOIkOMDIw)
+- [How Do Python Coroutines Work?](https://www.youtube.com/watch?v=idLtMISlgy8) - Explains

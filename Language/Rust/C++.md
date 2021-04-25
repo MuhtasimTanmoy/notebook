@@ -28,7 +28,11 @@ There no standard package managers and repositories. If you stick to an operatin
 
 - An intrusive list is one where the pointer to the next list node is stored in the same structure as the node data. This is normally A Bad Thing, as it ties the data to the specific list implementation. Most class libraries (for example, the C++ Standard Library) use non-intrusive lists, where the data knows nothing about the list (or other container) implementation.
 
+- Vector push is defensive is case of move operation, using `no except` optimizes a lot. If not fallback to pre c++11 and use copy.
 
+- Perfect forwarding.
+
+- Reflection.
 
 ## Snippet
 
