@@ -15,16 +15,14 @@ The magnitudes in FFT bins gives you the energy of sound between different frequ
 Two main factors determining sound
 - Sample Frequency ( X axis )
 - Bit Depth ( Y axis )
-
+ 
 Bit Rate = Bit Depth * Sample Rate * Number of Channels
-
-
 
 ## Notes
 - Uncompressed raw audio format is Linear Pulse Code Modulation(LPCM)
-
 
 # Reference
 - [How digital audio works](https://www.youtube.com/watch?v=1RIA9U5oXro&ab_channel=Computerphile)
 - [Reddit Thread ](https://www.reddit.com/r/iOSProgramming/comments/2le7hq/how_do_i_make_a_spectrum_visualizer_for_my_music/)
 - [Basic Audio Workflow](https://www.youtube.com/watch?v=JyUagzvGq7Q&ab_channel=ComputerScience)
+- [Reddit Thread: ](https://www.reddit.com/r/rust/comments/aua2tb/rust_2019_rust_audio/) - discussion on various rust library.

@@ -1,6 +1,18 @@
 # Async
 
+- System Threads
+    - Kernel level threads
+- Green Threads
+    - User level threads
 
+
+- Async
+    - Transforms a block of code into a state machine that implements a trait called future.
+- Await
+    - Mechanism to run a future. It asyncronously wait for the future to complete.
+
+
+![](./screen/RustFuture.png)
 
 
 # Resources
@@ -9,4 +21,13 @@
     - First adopted `green threads`. But still performed like one to one native thread.
     - Event loop in javascript allowed asyncronous callbacks with eventing.
     - Go, ruby has blocking syntax with non blocking runtime.
-    
+    - Go has stackfull co routines compared to rust stackfull coroutine. 
+
+- [Rundown of Async/Await in Rust](https://www.youtube.com/watch?v=IE91l4kR0wo)
+    - Code walkthrough of demo future implementation.
+
+- [Rust Zero Cost Future:](https://www.youtube.com/watch?v=skos4B5x7qE) 
+    - Explains future implementaion, benchmark.
+
+- [The Talk You've Been Await-ing for](https://www.youtube.com/watch?v=NNwK5ZPAJCk&t=306s)
+    -  Implementaton of executor, Reactor.

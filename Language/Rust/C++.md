@@ -31,8 +31,8 @@ There no standard package managers and repositories. If you stick to an operatin
 - Vector push is defensive is case of move operation, using `no except` optimizes a lot. If not fallback to pre c++11 and use copy.
 
 - Perfect forwarding.
-
 - Reflection.
+- `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises.
 
 ## Snippet
 
@@ -51,7 +51,9 @@ g++ -fdump-class-heirarchy a.cpp
 - [Resource Management](https://www.youtube.com/watch?v=7Qgd9B1KuMQ)
     - Explains various c++ resource management.
     - Free in destructor
-    - Copy constructor to copy heap
+    - Copy constructor to copy heap.
     - Assignment, copy and swap
     - Should have no exception thrown between allocation and free
-    - disable logging, then enable it should have no code or return in between.
+    - Disable logging, then enable it should have no code or return in between.
+
+- [CPPCon Slide Collection: ](https://github.com/CppCon/CppCon2019) contains cpp conference presentations on variour topic.

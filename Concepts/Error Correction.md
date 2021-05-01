@@ -1,6 +1,10 @@
 # Error Correction
 
+- Repetation Code
+    - Turns 1 bit message to 3 bit codeword.
+
 - Hamming Codes
+    - Takes 4 bits and truns it into 7 bits codeword.
     - Parity bit - 1 in 16 to detect change
     - (15, 11) hamming code
     - Extended hamming code checks for parity bit as well

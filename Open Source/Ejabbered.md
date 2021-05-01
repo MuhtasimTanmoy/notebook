@@ -192,3 +192,6 @@ PORT      STATE    SERVICE
 - https://raymii.org/s/tutorials/Set_up_a_federated_XMPP_Chat_Network_with_ejabberd.html
 - https://tutslaptrinh.com/tutorial-detail/architecture-ejabberd
 - https://trisquel.info/files/ejabberd%202.1.pdf 
+
+- [Installation Guide](https://www.ejabberd.im/files/doc/guide.html#htoc2)
+    - 

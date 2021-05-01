@@ -703,8 +703,6 @@ RESOURCES:
 
 - [How Rust Ownership works?](https://static.rust-lang.org/doc/master/book/ownership.html)
 
-- [Rust Zero Cost Future:](https://www.youtube.com/watch?v=skos4B5x7qE) Explains future implementaion, benchmark.
-
 - [Macro Hygienic](https://en.wikipedia.org/wiki/Hygienic_macro)
 
 - [Error Handling Rust Documentation](https://static.rust-lang.org/doc/master/book/error-handling.html)
