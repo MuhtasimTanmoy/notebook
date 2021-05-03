@@ -1,6 +1,4 @@
 ```
-sudo -u postgres psql
-
 createdb test
 psql -d test
 ```
@@ -13,7 +11,9 @@ GRANT ALL PRIVILEGES ON DATABASE myproject TO myuser;
 
 ```
 psql -U db_user db_name < dump_name.sql
+
 sudo ls /var/lib/postgresql/10/main/base/17422/
+
 pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
 ```
 

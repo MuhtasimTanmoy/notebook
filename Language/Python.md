@@ -4,6 +4,27 @@ Just In Time compilation is a method to convert, at runtime, the execution of da
 
 
 
+## Django Project Setup Code Snippet
+- `virtualenv` activate
+
+
+```sh
+
+pip3 list -v
+pip3 install -r requirements.txt
+
+# Check for foriegn key.
+python manage.py makemigrations user
+python manage.py makemigrations adserver
+
+# Create user
+python manage.py createsuperuser
+
+# login
+
+```
+
+
 # Reference
 - [Jit Compilation](https://www.youtube.com/watch?v=sQTOIkOMDIw)
 - [How Do Python Coroutines Work?](https://www.youtube.com/watch?v=idLtMISlgy8) - Explains
