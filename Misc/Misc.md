@@ -5,5 +5,5 @@ hexdump -C test.zip
 ```
 
 
-- Coretto
-    - 
+- Amazon Coretto
+    - Amazon distribution of JDK. Faster then native one.

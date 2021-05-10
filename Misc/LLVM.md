@@ -39,5 +39,3 @@ bt  # backtrace
     - Syntax mistake
     - Assemble object
     - Link into executable
-
-# Resources
