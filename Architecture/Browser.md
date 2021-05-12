@@ -10,6 +10,7 @@ Rendering Steps
 
 
 # JS
+
 - Javascript 
     > Parsing > Compile + Optimize > Reoptimize > Execute > Garbage collection
 - JS 
@@ -18,6 +19,7 @@ Rendering Steps
 - Runtime the stuff language put that you actually dont wrote. ( translation cost occurs one )
 
 # Interpretation & Compilation
+
 - Compiled is fast interpreted is repeated.
 - Compilers can optimize ahead as they have full picture.
 - Interpreters in js introcuded monitor warm functions.
@@ -25,6 +27,7 @@ Rendering Steps
 eventually optimizing translation time.
 
 ## Notes
+
 - Polyfill backward compatibility
 - Perforamnce Measure
     - Critical rendering path
@@ -70,3 +73,26 @@ eventually optimizing translation time.
     - ui: user interface frameworks, helper classes
     -  v8: JavaScript engine
 
+- [Life of a pixel](https://www.youtube.com/watch?v=m-J-tbAlFic&ab_channel=GoogleChromeDevelopers)
+
+- WebContents
+    - The rendered page
+    - Sandboxed renderer process
+    - `Content` gets converted to `pixel`.
+    - Content
+        - HTMl
+        - CSS
+        - JS
+        - Image
+    - Graphics Library
+        - OpenGL
+        - `DirectX` for windows
+        - Vulkan - Next generation Open GL
+    - Overall goal of rendering is to turn html, css, javascript inot right opengl call.
+        - Dom
+        - Style
+        - Layout
+        - Paint
+        - Raster
+        - Gpu
+    -  
