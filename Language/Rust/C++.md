@@ -33,6 +33,7 @@ There no standard package managers and repositories. If you stick to an operatin
 - Perfect forwarding.
 - Reflection.
 - `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises.
+- Before, `move` semantics, `static_case<std::string&&>` would do the same.
 
 ## Snippet
 
@@ -51,9 +52,14 @@ g++ -fdump-class-heirarchy a.cpp
 - [Resource Management](https://www.youtube.com/watch?v=7Qgd9B1KuMQ)
     - Explains various c++ resource management.
     - Free in destructor
-    - Copy constructor to copy heap.
+    - Copy constructor to copy heap
     - Assignment, copy and swap
     - Should have no exception thrown between allocation and free
     - Disable logging, then enable it should have no code or return in between.
+
+- [C++ Memory Model](https://www.youtube.com/watch?v=UNJrgsQXvCA)
+    - Talks mainly about c++ memory model
+    - `move semantics` use case explain
+    - `byte ordering` for c++
 
 - [CPPCon Slide Collection: ](https://github.com/CppCon/CppCon2019) contains cpp conference presentations on variour topic.
