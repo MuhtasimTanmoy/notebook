@@ -1,12 +1,12 @@
 # Embedded Database
 
-
 ## Level DB
 > Architecture study, open source codebase analysis, data structure study notes for level DB.
 
 - Has too much mutex contension
 - Bitcoin core, go ethereum uses it.
-- Sqlite used in past chrome, now uses leveldb
+- Sqlite used in past chrome, now uses leveldb.
+- Has different fork `rocksdb`, `hyperLevelDB`.
 
 
 ## Rocks DB
@@ -41,4 +41,16 @@
 
 - [RocksDB Port](https://youtu.be/jGCv4r8CJEI)
     - MySQL, Mongo to use rocksdb as storage engine.
-    - 
+
+- [LSM Tree](https://www.youtube.com/watch?v=V1iqN2ie__w)
+    - `b+ tree` used when we need less search and insertion time
+    - `lsm tree` when we have write intensive dataset
+    - Write 0(1), Read logn
+    - Four key concepts
+        - wal - write ahead log
+        - memtable - batching write
+        - compaction - making efficient
+        - bloom filters - to discard , make query efficient
+
+- [LSM based Storage Techniques Strengths and Trade Offs (SDC 2019)](https://www.youtube.com/watch?v=V1iqN2ie__w)
+    - To Be Continued

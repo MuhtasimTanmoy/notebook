@@ -5,85 +5,178 @@ Repository contains notes, takeaways, references and study summary of CS systems
 
 ## Table of conents
 
-- ### Architecture
-    - [Browser](./Architecture/Browser.md)
-    - [Elastic Search](./Architecture/Elastic_Search.md)
-    - [Game Server](./Architecture/Gameserver.md)
-    - [Messaging Server](./Architecture/Messaging_Server.md)
-
-- ### Books Summary
-    - [Enterprise Integration Pattern - Addison Wisley](./Books/Enterprise%20Integration%20Pattern%20-%20Addison%20Wisley.md)
-    - [Mastering Redis](./Books/Mastering%20Redis.md)
-    - [TCP IP Illustrated - Vol 1](./Books/TCP%20IP%20Illustrated%20-%20Vol%201.md)
-    - [ZeroMQ](./Books/ZeroMQ.md)
-
-- ### Concepts
-    - [BPF](./Concepts/BPF.md)
-    - [Certificate](./Concepts/Certificate.md)
-    - [Docker](./Concepts/Docker.md)
-    - [Encoding](./Concepts/Encoding.md)
-    - [LLVM](./Concepts/LLVM.md)
-    - [Networking](./Concepts/Networking.md)
-    - [Serialization](./Concepts/Serialization.md)
-    - [Web Assembly](./Concepts/Web%20Assembly.md)
-
-- ### Devops
-    - [Docker](./Devops/Docker.md)
-    - [Hashicorp](./Devops/Hashicorp.md)
-    - [Nginx](./Devops/Nginx.md)
-    - [Postgress Snippet](./Devops/Postgres-Snippet.md)
-    - [SSH](./Devops/SSH.md)
-
+- ### From Scratch
+    - [ZooKeeper Client Rust Learning](./From%20Scratch/ZooKeeper%20Client%20Rust%20Learning.md)
+- ### Misc
+    - [LLVM](./Misc/LLVM.md)
+    - [Misc](./Misc/Misc.md)
+- ### Data Structure & Algorithm
+    - [Data Structure](./Data%20Structure%20&%20Algorithm/Data%20Structure.md)
+    - [Utility c++](./Data%20Structure%20&%20Algorithm/Utility%20c++.md)
+    - [Concepts](./Data%20Structure%20&%20Algorithm/Concepts.md)
+    - [Probabilistic Algorithm](./Data%20Structure%20&%20Algorithm/Probabilistic%20Algorithm.md)
+    - [Algorithm](./Data%20Structure%20&%20Algorithm/Algorithm.md)
+    - [Graph](./Data%20Structure%20&%20Algorithm/Graph.md)
+- ### Database
+    - [Postgres](./Database/Postgres.md)
+    - [MariaDb](./Database/MariaDb.md)
+    - [CockroachDB](./Database/CockroachDB.md)
+    - [Database](./Database/Database.png)
+    - [MySQL](./Database/MySQL.md)
+    - [Graph Database](./Database/Graph%20Database.md)
+    - [Time Series](./Database/Time%20Series.md)
+    - [Cassandra](./Database/Cassandra.md)
+    - [Decentralized Storage](./Database/Decentralized%20Storage.md)
+    - [Elastic Search](./Database/Elastic%20Search.md)
+    - [Sqlite](./Database/Sqlite.md)
+    - [Embedded Database](./Database/Embedded%20Database.md)
+    - [Database](./Database/Database.md)
+- ### Devops 
+    - [Nginx](./Devops%20/Nginx.md)
+    - [SSH](./Devops%20/SSH.md)
+    - [Hashicorp](./Devops%20/Hashicorp.md)
+    - [Postgres Snippet](./Devops%20/Postgres%20Snippet.md)
+- ### Course
+    - [Redis](./Course/Redis.md)
+    - [DistributedSystem](./Course/DistributedSystem.md)
+- ### Framework Study
+    - [Acitix](./Framework%20Study/Acitix.md)
+    - [Tokio](./Framework%20Study/Tokio.md)
+    - [Oboe](./Framework%20Study/Oboe.md)
+    - [NapaJs](./Framework%20Study/NapaJs.md)
 - ### Distributed
-    - [Distriburted Algorithms](./Distributed/Algorithms.md)
-    - [Research paper](./Distributed/Reasearch%20Paper.md)
+    - [Reading List](./Distributed/Reading%20List.md)
+    - [File System](./Distributed/File%20System.md)
+    - [Consensus](./Distributed/Consensus.md)
+    - [Topics](./Distributed/Topics.md)
     - [Messaging](./Distributed/Messaging.md)
+    - [Polkadot](./Distributed/Polkadot.md)
+    - [Testing](./Distributed/Testing.md)
     - [Raft](./Distributed/Raft.md)
-
+    - [Research Paper](./Distributed/Research%20Paper.md)
+    - [Distributed Systems](./Distributed/Distributed%20Systems.md)
+    - [libp2p](./Distributed/libp2p.md)
+- ### Security
+    - [ImplRef](./Security/ImplRef.md)
+    - [GPG](./Security/GPG.md)
+    - [eSecurity CourseWork](./Security/eSecurity%20CourseWork.md)
+    - [.DS_St](./Security/.DS_Store)
+    - [TLS](./Security/TLS.md)
+    - [Encrypted Messaging](./Security/Encrypted%20Messaging.md)
+    - [Crypto](./Security/Crypto.md)
+    - [Signal Protocol](./Security/Signal%20Protocol.md)
+    - [Certificate](./Security/Certificate.md)
+    - [Terms](./Security/Terms.md)
+    - [Libsignal](./Security/Libsignal.md)
+    - [Kernel Exploitation](./Security/Kernel%20Exploitation.md)
 - ### Networking
     - [Hardware](./Networking/Hardware.md)
-    - [IP+NAT](./Networking/IP+NAT.md)
-    - [Network Layer](./Networking/Network%20layer.md)
     - [Nmap](./Networking/Nmap.md)
+    - [Network Layer](./Networking/Network%20Layer.md)
+    - [IP+NAT](./Networking/IP+NAT.md)
     - [Socket](./Networking/Socket.md)
-    - [TCP - Congestion](./Networking/TCP%20-%20Congestion.md)
-    - [Transport Layer](./Networking/Transport%20layer.md)
+    - [Transport Layer](./Networking/Transport%20Layer.md)
     - [WebRTC](./Networking/WebRTC.md)
-
+    - [TCP - Congestion](./Networking/TCP%20-%20Congestion.md)
+- ### Spec
+    - [Noise](./Spec/Noise.md)
+    - [Signal](./Spec/Signal.md)
+- ### Talks
+    - [GameDev](./Talks/GameDev.md)
+    - [Hall of Fame](./Talks/Hall%20of%20Fame.md)
+- ### Language
+    - [Swift](./Language/Swift.md)
+    - [Go](./Language/Go.md)
+    - [Python](./Language/Python.md)
+    - [Elixir](./Language/Elixir.md)
+    - [Javascript](./Language/Javascript.md)
+    - [Erlang](./Language/Erlang.md)
+    - [Solidity](./Language/Solidity.md)
+    - [Java](./Language/Java.md)
+    - [ObjectiveC](./Language/ObjectiveC.md)
+- ### Rust
+    - [Smart Pointer](./Rust/Smart%20Pointer.md)
+    - [Rust](./Rust/Rust.md)
+    - [RuleOfFive.](./Rust/RuleOfFive.png)
+    - [C++](./Rust/C++.md)
+    - [Lambda](./Rust/Lambda.md)
+- ### Concept
+    - [Lambda Calculus](./Concept/Lambda%20Calculus.md)
+    - [combinator.](./Concept/combinator.png)
+- ### Books
+    - [Mastering Redis](./Books/Mastering%20Redis.md)
+    - [.DS_St](./Books/.DS_Store)
+    - [Designing Data Intensive Application](./Books/Designing%20Data%20Intensive%20Application.md)
+    - [ZeroMQ](./Books/ZeroMQ.md)
+    - [Building Secure & Reliable Systems](./Books/Building%20Secure%20&%20Reliable%20Systems.md)
+    - [Distributed Systems Concept & Design](./Books/Distributed%20Systems%20Concept%20&%20Design.md)
+    - [Container Security](./Books/Container%20Security.md)
+    - [TCP IP Illustrated - Vol 1](./Books/TCP%20IP%20Illustrated%20-%20Vol%201.md)
+    - [Enterprise Integration Pattern - Addison Wisley](./Books/Enterprise%20Integration%20Pattern%20-%20Addison%20Wisley.md)
+- ### Architecture
+    - [Video Streaming](./Architecture/Video%20Streaming.md)
+    - [Game Server](./Architecture/Game%20Server.md)
+    - [Video Conferencing](./Architecture/Video%20Conferencing.md)
+    - [Browser](./Architecture/Browser.md)
+    - [Zoom](./Architecture/Zoom.md)
+    - [P2P](./Architecture/P2P.md)
+    - [Messaging Server](./Architecture/Messaging%20Server.md)
+    - [Sqlite](./Architecture/Sqlite.md)
 - ### Open Source
-    - [Beaver](./Open%20Source/Beaver.md)
-    - [Ejabbered](./Open%20Source/Ejabbered.md)
     - [Kafka](./Open%20Source/Kafka.md)
+    - [RABBITMQ](./Open%20Source/RABBITMQ.md)
+    - [License](./Open%20Source/License.md)
+    - [Owncast](./Open%20Source/Owncast.md)
     - [Nano](./Open%20Source/Nano.md)
+    - [Ejabbered](./Open%20Source/Ejabbered.md)
+    - [Redis](./Open%20Source/Redis.md)
+    - [Cassandra](./Open%20Source/Cassandra.md)
+    - [Beaver](./Open%20Source/Beaver.md)
+    - [DB](./Open%20Source/DB.md)
+    - [Misc](./Open%20Source/Misc.md)
     - [NATS](./Open%20Source/NATS.md)
-    - [Rabbit MQ](./Open%20Source/RABBITMQ.md)
-
-- ### Operating System
+- ### iOS
+    - [GRDB](./iOS/GRDB.md)
+    - [iOS](./iOS/iOS.md)
+- ### Android
+    - [NDK](./Android/NDK.md)
+    - [ADB.](./Android/ADB.png)
+    - [Android](./Android/Android.md)
+    - [ADB](./Android/ADB.md)
+    - [Rust](./Android/Rust.md)
+- ### Concepts
+    - [Video Streaming](./Concepts/Video%20Streaming.md)
+    - [Error Correction](./Concepts/Error%20Correction.md)
+    - [Networking](./Concepts/Networking.md)
+    - [Serialization](./Concepts/Serialization.md)
+    - [File Format](./Concepts/File%20Format.md)
+    - [Async](./Concepts/Async.md)
+    - [Encoding](./Concepts/Encoding.md)
+    - [Distributed Concensus](./Concepts/Distributed%20Concensus.md)
+    - [BPF](./Concepts/BPF.md)
+    - [Web Assembly](./Concepts/Web%20Assembly.md)
+    - [Functional Programming](./Concepts/Functional%20Programming.md)
+    - [Docker](./Concepts/Docker.md)
+    - [Garbage Collection](./Concepts/Garbage%20Collection.md)
+- ### Compression
+    - [Codec](./Compression/Codec.md)
+    - [Compression](./Compression/Compression.md)
+    - [JPEGEncoder](./Compression/JPEGEncoder.md)
+- ### Virtual Machine
+    - [JVM](./Virtual%20Machine/JVM.md)
+- ### OS
+    - [ShellCode](./OS/ShellCode.md)
     - [TLB](./OS/TLB.md)
-    
-- ### Protocol
+    - [Kernel](./OS/Kernel.md)
+- ### Protocols
+    - [HTTP](./Protocols/HTTP.md)
+    - [Live Streaming](./Protocols/Live%20Streaming.md)
+    - [Bittorrent](./Protocols/Bittorrent.md)
+    - [Signal](./Protocols/Signal.md)
+    - [XMPP](./Protocols/XMPP.md)
     - [AMQP](./Protocols/AMQP.md)
-    - [HLS](./Protocols/HLS.md)
-
-<style>
-
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  animation-name: example;
-  animation-duration: 4s;
-}
-
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}
-    a {
-        color:gray
-    }
-    a:hover {
-        color:gray;
-        text-decoration: underline
-    }
-</style>
+- ### Research Paper
+    - [Solving Big Data Challenges for Enterprise Application Performance Management](./Research%20Paper/Solving%20Big%20Data%20Challenges%20for%20Enterprise%20Application%20Performance%20Management.md)
+- ### Signal Processing
+    - [Audio](./Signal%20Processing/Audio.md)
+    - [Audio Programming](./Signal%20Processing/Audio%20Programming.md)

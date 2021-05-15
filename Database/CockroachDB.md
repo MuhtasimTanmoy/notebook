@@ -2,4 +2,5 @@
 
 ![](./screen/CockroachDB.png)
 
-- CockroachDB is mainly a key value store.
+- CockroachDB is mainly a distributed, replicated, transactional  key value store.
+- 
