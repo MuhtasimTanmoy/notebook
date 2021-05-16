@@ -1,24 +1,31 @@
+
+# Basic Commands
+
+DB Create
 ```
 createdb test
 psql -d test
 ```
 
+
+User create, permission add
 ```
 CREATE DATABASE myproject;
-CREATE USER test WITH PASSWORD ‘testpassword’
+CREATE USER test WITH PASSWORD 'test';
 GRANT ALL PRIVILEGES ON DATABASE myproject TO myuser;
 ```
 
+Import table to run query on
 ```
-psql -U db_user db_name < dump_name.sql
+SQL change for local user
+Connect to DB
 
-sudo ls /var/lib/postgresql/10/main/base/17422/
+\i /Users/tanmoy/..
 
-pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
-```
-
+Commands
 ```
 \?
+\conninfo
 \c database
 \dt list tables
 \d table_name
@@ -26,7 +33,10 @@ pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
 \df functions
 \dv views
 \du users
+\i import
+\q
 ```
+
 
 ```
 CREATE TABLE account(
@@ -48,4 +58,13 @@ CREATE TABLE account(
 For mac:
 - alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 - alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+```
+
+
+```
+psql -U db_user db_name < dump_name.sql
+
+sudo ls /var/lib/postgresql/10/main/base/17422/
+
+pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
 ```
