@@ -1,7 +1,5 @@
 # Testground
-
 Biswap
-
 gossipsub
 peer scoring
 adaptive gossip dissemination
