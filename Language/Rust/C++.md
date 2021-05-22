@@ -1,5 +1,10 @@
 # c++
 
+- [constexpr](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c/)
+    - explains `constexpr` usage to move computation from runtime to compile time.
+    
+
+
 
 
 ## Backlogs
