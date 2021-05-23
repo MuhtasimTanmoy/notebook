@@ -1,10 +1,31 @@
 # c++
 
-- [constexpr](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c/)
-    - explains `constexpr` usage to move computation from runtime to compile time.
+## Concepts
+
+### constexpr
+
+- Moving computation from runtime to compile time.
+- No syncronization concern.
+- Can be applied in `value` or `computations`.
+- [Incomplete]
+
+[constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c/)
+
+[CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
+
+
+### Template Metaprogramming
     
+- Vector push is defensive is case of move operation, using `no except` optimizes a lot. If not fallback to pre c++11 and use copy.
 
+- Perfect forwarding
 
+- Reflection
+- `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises.
+
+- Before, `move` semantics, `static_case<std::string&&>` would do the same.
+
+- `Literals` are assignable.
 
 
 ## Backlogs
@@ -33,13 +54,6 @@ There no standard package managers and repositories. If you stick to an operatin
 
 - An intrusive list is one where the pointer to the next list node is stored in the same structure as the node data. This is normally A Bad Thing, as it ties the data to the specific list implementation. Most class libraries (for example, the C++ Standard Library) use non-intrusive lists, where the data knows nothing about the list (or other container) implementation.
 
-- Vector push is defensive is case of move operation, using `no except` optimizes a lot. If not fallback to pre c++11 and use copy.
-
-- Perfect forwarding.
-- Reflection.
-- `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises.
-- Before, `move` semantics, `static_case<std::string&&>` would do the same.
-
 ## Snippet
 
 ```shell
@@ -50,10 +64,15 @@ g++ -fdump-class-heirarchy a.cpp
 
 # Reference
 - [Quroa c++ backlog](https://www.quora.com/Instead-of-inventing-a-ton-of-high-level-programming-languages-why-dont-people-implemented-C-C-frameworks-to-perform-high-level-repetitive-tasks)
+
 - [Intrusive list](https://stackoverflow.com/questions/3361145/intrusive-lists)
+
 - [Move semantics](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n2027.html#Move_Semantics)
+
 - [Perfect forwarding](http://thbecker.net/articles/rvalue_references/section_01.html)
+
 - [lvalue rvalue](https://www.internalpointers.com/post/understanding-meaning-lvalues-and-rvalues-c)
+
 - [Resource Management](https://www.youtube.com/watch?v=7Qgd9B1KuMQ)
     - Explains various c++ resource management.
     - Free in destructor
