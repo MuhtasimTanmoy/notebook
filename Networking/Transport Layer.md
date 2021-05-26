@@ -1,6 +1,5 @@
 Transport Layer - TCP / UDP
 
-
 A transport-layer protocol provides for **logical communication** between application processes running on different hosts.
 
 By logical communication, we mean that from an application’s perspective, it is as if the hosts running the processes were directly connected; in reality, the hosts may be on opposite sides of the planet, connected via numerous routers and a wide range of link types.

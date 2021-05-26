@@ -709,6 +709,8 @@ RESOURCES:
 
 - [Sample Library Usage](https://github.com/brson/stdx/blob/master/README.md)
 
+- [Rust overview](https://www.youtube.com/watch?v=9x7W3_KKKeA&ab_channel=YOW%21Conferences)
+
 TALKS : 
 - [Rust at Speed](https://www.youtube.com/watch?v=s19G6n0UjsM&t=3s) 
     - Explains usage of rust on [Noria](https://github.com/mit-pdos/noria)
