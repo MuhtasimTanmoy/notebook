@@ -1,3 +1,5 @@
+# Erlang
+
 Erlang is a functional language and accompanying runtime designed for highly parallel, scalable applications requiring high uptime.
 - Immutable Data
 - Functional Language
@@ -6,6 +8,7 @@ Erlang does this with features such as a built-in worker-supervisor
 message-passing model and hot-swappable code, meaning errors or code updates don't require the entire process to stop and restart in order to recover.
 
 ## Beam
+
 - BEAM is like Java’s JVM, but for Erlang
 - Interface to outside world - NIC / Ports
 - Schedulers
@@ -39,6 +42,7 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 
 
 # Features
+
 - Everything is a process.
 - Processes are strongly isolated.
 - Process creation and destruction is a lightweight operation.
@@ -49,10 +53,27 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 - Error handling is non-local.
 - Processes do what they are supposed to do or fail.
 - In computer science, syntactic sugar is syntax within a programming language that is designed to make things easier to read or to express. It makes the language "sweeter" for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
-
-In most other programming languages, software crashes have always been (and often still are) considered highly undesirable situations that must be avoided at all costs. Consequently, elaborate exception handling mechanisms exist to trap these situations and then mitigate their effects. This design philosophy exists because many of the foundational principles of software design were defined at a time when computers were single processor machines. Under these conditions, software crashes were indeed fatal. Given this basic constraint, it was perfectly natural therefore to develop programming styles in which a large proportion of the code was dedicated to detecting and then handling error situations. This in turn, led directly to the still widely popular coding style known as defensive programming.
-
 - It also supports interpreting, directly from source code via abstract syntax tree
+
+# Actor Supervisor
+- Actors are persistent
+- Encapsulates internal state
+    - Threads have state
+    - coroutines has state
+- Actors are asuncronous
+- Actors can create actors (main thread can create other threads as well )
+- Receive message make local decision
+- Perform arbitary side effecting function
+- Do you comunicate by sharing memory instead share memory by communicating message
+- Mutex - but many race condition
+- Golang channel to share between two goroutines
+- Address is actor - location & transport info
+- One actress may represent many actors
+- One actor may have many addresses
+- Supervision - the running state of an actor managed and supervised by an actor
+- Addresses dont change in restarts
+-  Address encapsulates mailbox and actor
+-  Clustering built-in with autodiscovery. It's very nice to start up activemq on two machines and see them find each other automagically.
 
  # Tutorial
 
@@ -88,6 +109,7 @@ In most other programming languages, software crashes have always been (and ofte
 
 
 ## Tail call optimization
+
 Saying that something is "tail recursive" is a short-hand way of saying "the function is recursive" and that we only find pure function
 calls in the tail-positions of all branches of a function.
 
@@ -123,6 +145,7 @@ can be replaced by jump to the start of the function.
 
 
 # Shell
+
 erl - Erlang
 iex - Elixir
 rebar3 binary download and copy to /usr/local/bin/

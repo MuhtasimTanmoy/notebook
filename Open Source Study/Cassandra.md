@@ -29,5 +29,6 @@
 - Wear leveling    
 
 # Resources
+
 - [Cassandra](https://www.datastax.com/blog/2012-review-performance)
 - [Cassandra Slide](https://www.slideshare.net/rbranson/cassandra-and-solid-state-drives)

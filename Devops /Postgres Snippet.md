@@ -16,11 +16,9 @@ GRANT ALL PRIVILEGES ON DATABASE myproject TO myuser;
 ```
 
 Import table to run query on
-```
+
 SQL change for local user
 Connect to DB
-
-\i /Users/tanmoy/..
 
 Commands
 ```

@@ -1,18 +1,16 @@
 # Salt
 
-A salt is random data that is used as an additional input to a one-way function that hashes data, a password or passphrase.
+- A salt is random data that is used as an additional input to a one-way function that hashes data, a password or passphrase.
+- Salts are closely related to the concept of a cryptographic nonce.
+- Protects against rainbow attack.
 
-Salts are closely related to the concept of a cryptographic nonce.
+- **Password stretching** 
+    - Multiple hash `Hash(Hash(Hash(Hash…(Hash(salt||password)))…)` 
+    - `Argon2` algorithm
 
-Protects against rainbow attack.
-
-**Password stretching** 
-- Multiple hash `Hash(Hash(Hash(Hash…(Hash(salt||password)))…)` 
-- Argon2 algorithm
-
-
-**Pepper** 
-- That is, another random value concatenated to the password, such that the stored value is `Hash(pepper||salt||password)`. The pepper is then not stored at all. Both the login server and password cracker need to brute force the unknown pepper value, slowing password hash comparisons for both parties.
+- **Pepper** 
+    - That is, another random value concatenated to the password, such that the stored value is `Hash(pepper||salt||password)`. 
+    - The pepper is then not stored at all. Both the login server and password cracker need to brute force the unknown pepper value, slowing password hash comparisons for both parties.
 
 
 # MAC (Message Authentication Code)
@@ -22,7 +20,9 @@ Protects against rainbow attack.
 
 # Secrecy
 
-In cryptography, forward secrecy = perfect forward secrecy, backward secrecy = future secrecy.
+In cryptography, 
+- Forward secrecy = Perfect Forward Secrecy, 
+- Backward secrecy = Future Secrecy.
 
 First, recall some background. The above terms are often discussed in the setting of secure channel establishment protocols, e.g., TLS, Signal, etc. In such a protocol, consider two parties, a client and a server, try to communicate with each other securely. The server (and the client if client-authentication is needed) is granted a certificate that shows its public key, and the server (and the client) itself knows the corresponding private key (a.k.a. the long-term secret). They essentially use the long-term secret and some randomness to compute and share a secret session key (only used within a session) and establish a secure communication channel based on the session key, e.g., using an authenticated encryption (with associated data) scheme.
 
