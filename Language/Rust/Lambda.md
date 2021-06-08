@@ -61,6 +61,16 @@ auto plus = [value = 1] (auto... as) {
     return sum(as..., value);
 };
 
+
+// Similar Lambda function
+
+struct {
+    int operator()(int n) const {
+        return n < 2 ? 1 : n * (*this)(n-1);
+    }
+} fact;
+return fact(5);
+
 // This inside lambda refers to the outer object
 ```
 
@@ -70,5 +80,6 @@ auto plus = [value = 1] (auto... as) {
 
 # Reference
 - [lambda from scratch](https://www.youtube.com/watch?v=3jCOwajNch0)
+- [Print variable type in C](https://stackoverflow.com/questions/81870/is-it-possible-to-print-a-variables-type-in-standard-c)
  
 

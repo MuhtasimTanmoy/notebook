@@ -86,4 +86,7 @@ g++ -fdump-class-heirarchy a.cpp
     - `move semantics` use case explain
     - `byte ordering` for c++
 
+- [Type Erasure](https://www.youtube.com/watch?v=tbUCHifyT24)
+    - [Incomplete]
+
 - [CPPCon Slide Collection: ](https://github.com/CppCon/CppCon2019) contains cpp conference presentations on variour topic.

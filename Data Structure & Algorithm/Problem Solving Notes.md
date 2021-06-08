@@ -38,7 +38,7 @@ if ( current_pallindrome > longest_pallindrome) {
 ```
 
 
-- For longest non reapting substring
+- For longest non repeating substring
     - Keeping `char` to `index` mapping.
 
 - Two Sorted array traversal
@@ -108,3 +108,4 @@ bool isPalindrome(int x) {
     }
 ```
 - 
+
