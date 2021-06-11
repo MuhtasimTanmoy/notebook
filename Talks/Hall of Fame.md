@@ -26,3 +26,4 @@
 
 - Insights
     - [Philosophy of software design ](https://www.youtube.com/watch?v=bmSAYlu0NcY)
+

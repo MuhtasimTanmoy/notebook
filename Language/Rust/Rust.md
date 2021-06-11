@@ -718,3 +718,6 @@ TALKS :
     - Problem : Huge result table, concurrent read write on same table, partial materialized view.
     - Lock, RWLock fails being the costly one themselves as the wrapping work is too less
     - Maintain two maps, one for read, another for write maintaining epic counter +2 for each read and  switch for alternatively.
+
+- [Pinning](https://stackoverflow.com/questions/49913846/what-are-the-use-cases-of-the-newly-proposed-pin-type)
+    - Self referenceing object move will make the member reference to point to old object. Pinning solves it.

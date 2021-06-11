@@ -2,7 +2,6 @@
 
 ```c++
 template<typename T>
-
 T function(T x) {
     return x + 1;
 }
@@ -63,13 +62,26 @@ auto plus = [value = 1] (auto... as) {
 
 
 // Similar Lambda function
-
 struct {
     int operator()(int n) const {
         return n < 2 ? 1 : n * (*this)(n-1);
     }
 } fact;
 return fact(5);
+
+
+// [ capture_list ]( argument_list ) -> return_type { code }
+
+// Corresponds to
+struct some_anonymous_type {
+  // capture_list turned into member variables
+  some_anonymous_type( /* capture_list turned into arguments */ ):
+    /* member variables initialized */
+  {}
+  return_type operator()( argument_list ) const {
+    code
+  }
+};
 
 // This inside lambda refers to the outer object
 ```

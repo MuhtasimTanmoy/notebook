@@ -87,6 +87,7 @@ g++ -fdump-class-heirarchy a.cpp
     - `byte ordering` for c++
 
 - [Type Erasure](https://www.youtube.com/watch?v=tbUCHifyT24)
+    - https://stackoverflow.com/questions/18085331/recursive-lambda-functions-in-c14
     - [Incomplete]
 
 - [CPPCon Slide Collection: ](https://github.com/CppCon/CppCon2019) contains cpp conference presentations on variour topic.

@@ -25,12 +25,6 @@ the first time it is used. You indicate a lazy stored property by writing the `l
 before its declaration.
 
 
-```swift
-lazy var iOSResumeDescription: String = {
-    return "I am an iOS developer"
-}()
-```
-
 - Closure
 
 Functions are actually a special case of closures: blocks of code that can be called later. 
@@ -45,16 +39,27 @@ ARC is a compile time feature that is Apple's version of automated memory manage
 It stands for  _Automatic Reference Counting._ This means that it  **_only_**  frees up memory 
 for objects when there are  **_zero strong_**  references to them.
 
-
-```swift
-collectionView.reloadItemsAtIndexPaths(collectionView.indexPathsForVisibleItems())
-```
-
 - Notification Center
     - When communication between two or more components of your app, that have no formal connection, needs to happen
     - When communication needs to happen repeatedly and consistently
     - When using one-to-many or many-to-many communication
 
+- Remote packet capture
+
+```
+# device listing
+rvictl -l
+
+# packet capture
+rvictl -s INDETIFIER_OF_DEVICE
+
+# remove virtual interface
+rvictl -x <UDID>
+
+# Capture packet
+tcpdump -n -t -i rvi0 -q -A tcp
+
+```
 
 # Resources
 - [Swift Style Guide](https://google.github.io/swift/#global-constants)    
