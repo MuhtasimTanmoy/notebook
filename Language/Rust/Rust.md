@@ -675,7 +675,7 @@ trait Future {
  
 ```
 
-## **Build System**    
+## **Build System**
 
 Cargo is Rust’s build system and package manager, and Rustaceans use Cargo to manage their Rust projects.
 
