@@ -1,7 +1,7 @@
 
 5. For good video tutorials:
 
-[https://www.pluralsight.com/](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.pluralsight.com%2F%3Ffbclid%3DIwAR2XXyivnF070TuPcaQpQsTGLyAGsIrcCBSHXUzdCz2dxeqfjFtfe4sUyhA&h=AT0sheULk5fL64hBhQGsCVZYnWx-bQlmE4d9CMfJ2DsoLGmHIXkBG4hlneHCegA1voLLz_-oi4t_UbimBRB6z1dybLRzkeI3loiQBiPP1M_Qi-KoF0Ogm-ihZ2mGO80Nss7zXxJUJI1Ih15yFIlysIKfp98b8fvRqQ)
+[https://www.pluralsight.com](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.pluralsight.com%2F%3Ffbclid%3DIwAR2XXyivnF070TuPcaQpQsTGLyAGsIrcCBSHXUzdCz2dxeqfjFtfe4sUyhA&h=AT0sheULk5fL64hBhQGsCVZYnWx-bQlmE4d9CMfJ2DsoLGmHIXkBG4hlneHCegA1voLLz_-oi4t_UbimBRB6z1dybLRzkeI3loiQBiPP1M_Qi-KoF0Ogm-ihZ2mGO80Nss7zXxJUJI1Ih15yFIlysIKfp98b8fvRqQ)
 
 
 Books:

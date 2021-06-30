@@ -41,6 +41,8 @@ if ( current_pallindrome > longest_pallindrome) {
 - For longest non repeating substring
     - Keeping `char` to `index` mapping.
 
+<br/>
+
 - Two Sorted array traversal
 
 ```c++
@@ -70,6 +72,8 @@ auto extractNext = [&]() -> int {
 };
 ```
 
+<br/>
+
 - Reverse while checking INT_MAX, INT_MIN
 
 ```c++
@@ -80,6 +84,8 @@ INT_MIN = -2147483648
 
 int num = neg_num % 10 // gives negative
 ```
+
+<br/>
 
 - Number Pallindorme
 
@@ -107,5 +113,58 @@ bool isPalindrome(int x) {
         return x == reversed || x == reversed / 10;
     }
 ```
-- 
+<br/>
 
+- Jump Game ||
+    - Use DP
+
+<br/>
+
+- Pattern Searching
+    - `KMP Algorithm O(n)`
+
+<br/>
+
+- Prime Factorization
+
+```c++
+// Generating for 1000 numbers
+
+
+// input should be root of n
+bool[] generateSieve(int n) {
+    bool isPrime[n + 1];
+	memset(isPrime, true, sizeof(isPrime));
+	for ( int i = 2; i * i <= n; i++ ) {
+		if ( isPrime[i] ) {
+			for(int p = i * i; p <= n; p += i) {
+				isPrime[p] = false;
+			}
+		} 
+	}
+    return isPrime;
+}
+
+auto getPrimeFactors = [&](int n) -> vector<int> {
+    vector<int> primeFactors;
+
+    for(int i = 2; i * i <= n; i+=1 ) {
+
+        if ( n % i == 0 ) {
+            
+            if (isPrime[i]) {
+                primeFactors.push_back(i);
+            }
+
+            if (isPrime[n / i]) {
+                primeFactors.push_back(n / i);
+            }
+        }
+    }
+
+	return primeFactors;
+};
+
+
+
+```

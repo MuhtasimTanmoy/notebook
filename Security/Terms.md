@@ -17,7 +17,6 @@
 - H(key, message) = Hash
 - Here, key & message available on both end denoting integrity of data.
 
-
 # Secrecy
 
 In cryptography, 

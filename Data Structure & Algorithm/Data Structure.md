@@ -8,7 +8,7 @@ Min Queue to Max Queue Conversion
 - Just negate the values
 - Indexed Priority Queue
 
-Usage -
+Usage
 - Huffman Encoding
 - BFS A*
 - Minimum Spanning Tree
@@ -16,8 +16,10 @@ Usage -
 - Naive Removing ( n )
 
 ---
+
 ## Union Find
-Usage -
+
+Usage
 - Kruskal's minimum spanning tree
 - Grid Percolation
 - Network Connectivity
@@ -25,7 +27,8 @@ Usage -
 
 ---
 ##  Binary Search Tree
-Usage -
+
+Usage
 - Set
 - Red Black Tree
 - AVL Tree
@@ -35,11 +38,14 @@ Usage -
 - Treap
 
 ---
+
 ## Tree Traversal
 - Level order traversal
 
 ---
+
 ## Hash Collision
+
 - Linear Probing Good
     - (aX + b ) % N 
     - Relatively Prime
@@ -49,6 +55,7 @@ Usage -
 - To handle deletion use tombstone marker
 
 ---
+
 ## Suffix Arrays
 
 Given a string S, find the longest repeated sub string that occurs at least M times.
@@ -91,16 +98,18 @@ Longest Common Prefix Array - LCP array
 
 
 ## FENWICK TREE
+
 All operations ( logn )
 
-Usage -
+Usage
 - Update
 - Range Sum
 
 # Segment Tree
+
 All operations ( logn )
 
-Usage - 
+Usage
 - Update
 - Range Sum
 - Min
