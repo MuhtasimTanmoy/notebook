@@ -164,7 +164,6 @@ auto getPrimeFactors = [&](int n) -> vector<int> {
 
 	return primeFactors;
 };
-
-
-
 ```
+
+
