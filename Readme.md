@@ -1,7 +1,5 @@
 # Notebook
-> Documented Learning
-
-Repository contains notes, takeaways, references and study summary of CS systems and concept.
+> Prefer to document learning, takeaways and study summary to reflect, update and keep references of things I find interesting organized.
 
 ## Table of conents
 
