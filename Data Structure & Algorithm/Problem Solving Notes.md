@@ -100,18 +100,20 @@ while(x) {
 
 // It is solved by this.
 bool isPalindrome(int x) {
-        if ( x < 0 || ( x % 10 == 0 && x != 0)) {
-            return false;
-        }
 
-        int reversed = 0;
-        while(x > reversed) {
-            reversed = reversed * 10 + x % 10;
-            x = x / 10;
-        }
-        
-        return x == reversed || x == reversed / 10;
+    if ( x < 0 || ( x % 10 == 0 && x != 0)) {
+        return false;
     }
+
+    int reversed = 0;
+
+    while(x > reversed) {
+        reversed = reversed * 10 + x % 10;
+        x = x / 10;
+    }
+    
+    return x == reversed || x == reversed / 10;
+}
 ```
 <br/>
 
@@ -167,3 +169,144 @@ auto getPrimeFactors = [&](int n) -> vector<int> {
 ```
 
 
+- Rotate Array
+
+```c++
+
+// Extra Space
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        
+        vector<int> cache = nums;
+        auto swapWithOffset = [&](int first) {
+            int num = cache[first];
+            int replaceToIndex = (first + k ) % nums.size();
+            nums[ replaceToIndex ] = num;
+        };
+        
+        for( int i = 0; i< nums.size(); i++) {
+            swapWithOffset(i);
+        }
+    }
+};
+
+
+// Cut the last part and reinsert
+vector<int> temp = vector<int>(nums.begin() + n - k % n, nums.end()); 
+//modulus handles k>n and subtract by n for last k elements
+if(k%n) nums.resize(n - k % n );
+nums.insert(nums.begin(), temp.begin(), temp.end());  
+//insert temp in the beginning of nums  
+
+
+// No Space
+// Use rotation, the last part will be first anyway
+
+supporse, k = 2
+- Data: 1,2,3,4,5,6,7
+- Full Reverse: 7,6,5,4,3,2,1
+- Reverse 0 to k-1: 6,7 ...
+- Reverse k to arr.length-1 : 1,2,3,4,5
+- Rotated arr = 6,7,1,2,3,4,5
+
+```
+
+
+- Contain Duplicate and their index in certain range
+    - Can think in two dimensions, sort using one, check index
+```c++
+class Solution {
+public:
+    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+
+        map<int, vector<int>> m;
+
+        for(int i=0; i < nums.size(); i++ ) {
+            int occuranceCount = m[nums[i]].size();
+            if (occuranceCount) {
+                // Extracting the last index inserted
+                int k1 = m[nums[i]][occuranceCount-1];
+                
+                if ( (i - k1) <= k ) return true;
+            }
+            m[nums[i]].push_back(i);
+        }
+        return false;
+    }
+};
+
+```
+- Occurence of number count
+    - Map it in different dimension, the 32 bit pattern addition for all numbers, then count occurence.
+
+- Access a vector by & to get reference
+
+- Can substitute map with `vector<int>freq2(1001,0)`
+    - In case the input space is less.
+    - Efiicien as `nlogn` avoided but memory additional.
+
+- Power of two invalid for negative number.
+
+- isPowerOfTwo 
+```
+    !(n & n-1)
+````
+- isPowerOfN
+
+```c++
+    if( n > 1 )
+        while( n % 3 == 0 ) n /= 3;
+    return n == 1;
+```
+
+- In case of alternating bit
+
+```c++
+
+// My approach was totally bit based to shift and check
+// bulitin_clz will count leading zero
+// builtin_ctz will last zero
+// builtingpopcount qill count one with more speed
+
+bool hasAlternatingBits(int n) {
+    int curr = n & 1;
+    n >>= 1;
+    while(n>0)
+    {
+        if(curr == (n&1))
+            return false;
+        curr=n&1;
+        n >>= 1;
+    }
+    return true;
+}
+
+```
+
+
+- All SubSet
+
+```c++
+
+void allSubSet(vector<int>& nums, 
+            vector<int> current,
+            int index,
+            vector<vector<int>>& subsets) {
+    
+    if (index == nums.size()) { 
+        subsets.push_back(current);
+        return;
+    }
+    
+    allSubSet(nums, current, index + 1, subsets);
+    current.push_back(nums[index]);
+    allSubSet(nums, current, index + 1, subsets);
+    current.pop_back();
+}
+
+vector<vector<int>> subsets;
+vector<int> current;
+allSubSet(nums, current, 0, subsets);
+
+```
