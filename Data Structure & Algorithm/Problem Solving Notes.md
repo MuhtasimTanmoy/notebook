@@ -310,3 +310,12 @@ vector<int> current;
 allSubSet(nums, current, 0, subsets);
 
 ```
+
+- Nth element
+```c++
+
+nth_element(nums.begin(), 
+nums.begin() + nums.size()/2, 
+nums.end());
+
+```

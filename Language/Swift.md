@@ -13,8 +13,8 @@
     - Property declaration to a protocol, but then every class or struct that conforms to this protocol still needs to provide its own storage for those properties.
 
 
-
+- [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift/)
 
 
 ## Resource
-- http://machinethink.net/blog/mixins-and-traits-in-swift-2.0/
+- [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0/)
