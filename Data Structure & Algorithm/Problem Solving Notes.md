@@ -319,3 +319,36 @@ nums.begin() + nums.size()/2,
 nums.end());
 
 ```
+
+
+- Efficient power
+
+```c++
+ double myPow(double x, int n) {
+        
+        bool isNeg = n < 0;
+        n = abs(n);
+        
+        if ( n == 0 ) { return 1; }
+        if ( n == 1 ) { return 1; }
+        
+        double result = 1;
+        
+        while( n ) {
+            if ( n % 2 ) {
+                result *= x;
+                n--;
+            } else {
+                x *= x;
+                n = n >> 1; 
+            }
+        }
+        
+        if ( isNeg ) {
+            result = 1 / result;
+        }
+        
+        return result;
+    }
+
+```
