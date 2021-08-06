@@ -1,7 +1,31 @@
 # Substrate
 
+## [Intro to Substrate](https://www.youtube.com/watch?v=-6BBIr-DmI4)
 - One node needs
     - Database
+        - Block storage
     - `P2P` Network
+        - JsonRPC
+            - Submit transaction
+            - Get data about events that happen onchain
+            - Read some of the storage onchain
+        - libp2p
+            - one node in the network connect with another
     - Block Authoring
-    - 
+    - Fork Choice Rules
+    - Transaction Handling
+        - Tx Pool
+    - State Transition Function ( Runtime )
+        - Compiled down to `wasm`
+        - Runs on all platforms
+        - Store `wasm` on chain which allows `forkless runtime update`
+        - Upgrade blockchain without hard fork, putting runtime logix there
+        - Sudo pallet for testing
+    - Concensus
+        - Authoring
+            - PoW
+            - Aura
+            - Babe
+        - Finality
+            - Grandpa
+    - Parachain 
