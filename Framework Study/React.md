@@ -1,4 +1,3 @@
-
 There are 3 possibilities to store state:
 - Component
     - Class Based Component
@@ -16,3 +15,7 @@ There are 3 possibilities to store state:
 
 - React platform agnostic converter js objects.
 - React dom renderer.
+- Execution Context.
+
+- React uses javascript object tree, runs diffing everytime anything changes and ensures minimum dom manipulation.
+

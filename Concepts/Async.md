@@ -32,3 +32,5 @@
 
 - [The Talk You've Been Await-ing for](https://www.youtube.com/watch?v=NNwK5ZPAJCk&t=306s)
     -  Implementaton of executor, Reactor.
+
+- [Java Async Dependency Management](https://gist.github.com/benjchristensen/4677544)

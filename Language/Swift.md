@@ -11,6 +11,8 @@
     - Stored properties
     - A mixin is like a trait but it also has state. Not avaialable in protocol.
     - Property declaration to a protocol, but then every class or struct that conforms to this protocol still needs to provide its own storage for those properties.
+- dsym
+    - A dSYM file is a "debug symbols file". When this setting is enabled, symbol names of your objects are removed from the resulting compiled binary.
 
 
 - [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift/)
@@ -18,3 +20,5 @@
 
 ## Resource
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0/)
+
+
