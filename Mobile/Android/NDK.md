@@ -1,7 +1,7 @@
 # NDK
 
-- Generates .so library file
-    - App split to be used 
+- Generates `.so` library file
+    - App Split to be used 
     - Code Obsfucation
     - Fast
     - Api Base, or Key hide

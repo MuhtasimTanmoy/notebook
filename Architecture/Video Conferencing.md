@@ -9,9 +9,9 @@
 - [OBS Studio](https://github.com/obsproject/obs-studio)
 - [Big Blue Button](https://github.com/bigbluebutton/bigbluebutton)
 - [Jami Project](https://git.jami.net/savoirfairelinux/ring-project)
-- [Testing](https://github.com/webrtc/KITE)
+- [Testing WebRTC](https://github.com/webrtc/KITE)
 
-![](./scene/benchmark.png)
+![](./Screen/benchmark.png)
 
 
 ## SFU
@@ -53,23 +53,33 @@ Adaptive bitrate streaming is the adjustments to video quality according to the 
 - The server selects the best stream for the clients by considering the network quality.
 
 ## SVC
+
 - Instead of multiple strea, multiple layers.
 - Temporal scalability future of SVC.
 
-## SSRC 
+## SSRC
+
 Identifies the synchronization source. The value is chosen randomly, with the intent that no two synchronization sources within the same RTP session will have the same SSRC. Although the probability of multiple sources choosing the same identifier is low, all RTP implementations must be prepared to detect and resolve collisions. If a source changes its source transport address, it must also choose a new SSRC to avoid being interpreted as a looped source
 
 ## Notes
+
 - For the media streams, WebRTC is RTP under the hood.
 - Janus plugin based, Medooze bare minimum.
 - Jitsi supports last N.
 
 # Reference
+
 - [Benchmark Conferencing](https://www.youtube.com/watch?v=wrp73yYE8Ck)
-- [AntMedia](https://antmedia.io/webrtc-servers/)
+
+- [AntMedia](https://antmedia.io/webrtc-servers)
+
 - [Simulacast](https://voximplant.com/blog/an-introduction-to-selective-forwarding-units)
 
+
 # Talk
+
 - [Medooze talk](https://www.youtube.com/watch?v=u8ymYTdA0ko&ab_channel=CommCon)
+
 - [Jitsi](https://www.youtube.com/watch?v=27KW7HaPai8)
+
 - [Jitsi Videobridge](https://www.youtube.com/watch?v=wwhT_Y0ex0A)

@@ -1,6 +1,10 @@
 # iOS
 
 - Hardware
+    - x86_64-darwin
+    - arm64-darwin
+    - x86_64-ios (simulator)
+    - arm64-ios (physical device)
 - Core OS
 - Core Services
 - Media
@@ -44,7 +48,11 @@ for objects when there are  **_zero strong_**  references to them.
     - When communication needs to happen repeatedly and consistently
     - When using one-to-many or many-to-many communication
 
-- Remote packet capture
+- [Reactive](http://reactivex.io/documentation/subject.html)
+    - Async
+    - Behaviour
+    - Publish
+    - Reply
 
 ```
 # device listing
