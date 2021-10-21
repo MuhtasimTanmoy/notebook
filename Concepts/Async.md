@@ -5,15 +5,12 @@
 - Green Threads
     - User level threads
 
-
 - Async
     - Transforms a block of code into a state machine that implements a trait called future.
 - Await
     - Mechanism to run a future. It asyncronously wait for the future to complete.
 
-
 ![](./screen/RustFuture.png)
-
 
 # Resources
 
@@ -34,3 +31,5 @@
     -  Implementaton of executor, Reactor.
 
 - [Java Async Dependency Management](https://gist.github.com/benjchristensen/4677544)
+
+- [Under the hood of Futures and Promises in Swift](https://swiftbysundell.com/articles/under-the-hood-of-futures-and-promises-in-swift/)

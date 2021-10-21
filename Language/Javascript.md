@@ -32,6 +32,8 @@ Objects (Oriented):
 
 - triple equals (===) will do the same comparison as double equals (including the special handling for NaN, -0, and +0) but without type conversion; if the types differ, false is returned.
 
+- `npm link` to create symlink of module
+
 - Event Loop
     - The event loop will only process when the `call stack` is empty.
     - The delay we define in timer is not the `exact` time rather the `minimum` time needed.
