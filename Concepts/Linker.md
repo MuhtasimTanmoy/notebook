@@ -10,4 +10,11 @@
     - COFF (Windows)
     - Mach-O (Mac)
 
-- [LLD Benchmark](https://stackoverflow.com/questions/3476093/replacing-ld-with-gold-any-experience)q
+- [Linking archive file](https://stackoverflow.com/questions/48132989/how-to-take-only-required-object-files-inside-a-single-a-archive)
+    - Linking and extracting from `.a` file.
+
+
+- [LLD Benchmark](https://stackoverflow.com/questions/3476093/replacing-ld-with-gold-any-experience)
+- [LLD Design](https://lld.llvm.org/NewLLD.html)
+    - Visiting same archive file makes it slower
+    - Mutully dependant `.a` file is harder to resolve.

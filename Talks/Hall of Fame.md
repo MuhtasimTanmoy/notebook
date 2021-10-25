@@ -27,3 +27,6 @@
 - Insights
     - [Philosophy of software design ](https://www.youtube.com/watch?v=bmSAYlu0NcY)
 
+- StackOverlfow
+- [mike-kinghan](https://stackoverflow.com/users/1362568/mike-kinghan)
+
