@@ -1,5 +1,23 @@
 # Linker
 
+- After independent compilation of translation units to object file, linkers work to connect them as an executable.
+
+-[CppCon 2017: Michael Spencer “My Little Object File: How Linkers Implement C++”](https://www.youtube.com/watch?v=a5L66zguFe4)
+
+- Object files
+    - Ranges of unsplttable data (sections)
+    - Names that reference those data (symbols)
+    - List of modifications to that data ( relocations)
+
+- Dumptools
+    - objdump
+    - nm
+    - llvm-readobj
+    - readelf (ELF)
+    - otool (mach O)
+    - dumpbin (PECOFF) 
+
+
 - [LLD Linker](https://lld.llvm.org/index.html)
 
 - BFD Linker
