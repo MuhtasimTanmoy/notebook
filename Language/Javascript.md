@@ -34,7 +34,7 @@ Objects (Oriented):
 
 - `npm link` to create symlink of module
 
-- Event Loop
+- Event Loop   
     - The event loop will only process when the `call stack` is empty.
     - The delay we define in timer is not the `exact` time rather the `minimum` time needed.
     - Different phases in event loop executes different types of callbacks.
@@ -126,6 +126,9 @@ console.log(`END`);
 
 - ES6 vs CommonJS Import Export
     - [Module exports vs export default](https://stackoverflow.com/questions/40294870/module-exports-vs-export-default-in-node-js-and-es6)
+
+- Addons
+    - Native c++ to be used in require
 
 # Resources
 - [Javascript Foundation](https://github.com/farnaz-kakhsaz/Deep-JavaScript-Foundations/blob/master/README.md)
