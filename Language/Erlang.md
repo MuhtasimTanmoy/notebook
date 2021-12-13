@@ -47,20 +47,21 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 - Processes are strongly isolated.
 - Process creation and destruction is a lightweight operation.
 - Message passing is the only way for processes to interact.
-- Processes have unique names.
+- Processes have unique names, internal state.
 - If you know the name of a process you can send it a message.
 - Processes share no resources.
 - Error handling is non-local.
 - Processes do what they are supposed to do or fail.
 - In computer science, syntactic sugar is syntax within a programming language that is designed to make things easier to read or to express. It makes the language "sweeter" for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
 - It also supports interpreting, directly from source code via abstract syntax tree
+- You can remember this because forms aren't expressions (no value is returned from them), and therefore the period represents the end of a statement.
 
 # Actor Supervisor
 - Actors are persistent
 - Encapsulates internal state
     - Threads have state
-    - coroutines has state
-- Actors are asuncronous
+    - Coroutines has state
+- Actors are asyncronous
 - Actors can create actors (main thread can create other threads as well )
 - Receive message make local decision
 - Perform arbitary side effecting function
@@ -71,9 +72,9 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 - One actress may represent many actors
 - One actor may have many addresses
 - Supervision - the running state of an actor managed and supervised by an actor
-- Addresses dont change in restarts
--  Address encapsulates mailbox and actor
--  Clustering built-in with autodiscovery. It's very nice to start up activemq on two machines and see them find each other automagically.
+- Addresses dont change in restarts 
+- Address encapsulates mailbox and actor
+- Clustering built-in with autodiscovery. It's very nice to start up activemq on two machines and see them find each other automagically.
 
  # Tutorial
 

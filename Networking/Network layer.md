@@ -12,3 +12,7 @@ Multicasting
     - Forward
 - Spannig tree avilable for `lsr` where we have information for all nodes
 - Reverse path forwarding `dvr`
+
+
+- FReeBSD has kQueue
+- Linux has no epoll
