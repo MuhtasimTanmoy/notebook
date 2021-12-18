@@ -124,6 +124,16 @@ console.log(`END`);
 
 ```
 
+```js
+
+// observer to watch an element with reference
+
+const observer = new IntersectionObserver(
+    handleIntersection,
+    observerConfig
+);
+```
+
 - ES6 vs CommonJS Import Export
     - [Module exports vs export default](https://stackoverflow.com/questions/40294870/module-exports-vs-export-default-in-node-js-and-es6)
 

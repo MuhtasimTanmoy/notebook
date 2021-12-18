@@ -169,3 +169,4 @@ rebar3 compile
 - [Beam VM](http://www.erlang-factory.com/upload/presentations/708/HitchhikersTouroftheBEAM.pdf)
 - [First Person Shooter in Erlang](http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf)
 - [The Beam Book](https://blog.stenmans.org/theBeamBook/)
+- [Erlang Design Architecture](https://stackoverflow.com/questions/7307634/how-do-you-design-the-architecture-of-an-erlang-otp-based-distributed-fault-tole/7308218#7308218)
