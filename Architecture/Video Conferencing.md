@@ -25,7 +25,7 @@ Without the issue of legacy endpoints, the SFU architecture provides better scal
 - SFU
     - For each PeerConnection the SFU will listen on a random UDP (and sometimes TCP port)
     - This IP/Port combination is giving to each peer who then attempts to contact the SFU.
-    - The SFU then checks the incoming packets if they contain a valid hash (determined by upwd). This ensures there is no attacker connecting to this port.
+    - The SFU then checks the incoming packets if they contain a valid hash (determined by upwd)- This ensures there is no attacker connecting to this port.
 
 - Turn Server
     - Provides a single allocation port that peers can connect to. You can use UDP, DTLS, TCP or TLS. You need a valid username/password.

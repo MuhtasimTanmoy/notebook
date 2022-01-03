@@ -25,7 +25,9 @@ message-passing model and hot-swappable code, meaning errors or code updates don
 
  - Erlang does not have an intermediary like Go channel, but it does employ a very powerful concept known as the Actor Model. In this world, a process is an independent actor. It doesn't care about the outside world. It's like a prisoner churning over its own thing and wait for something to be passed into its prison's door, or more specifically, mailbox.
 
-- Erlang's actor model is so simple and powerful. It never has to care about data race or syncing because each process can never access anything external.
+- Erlang's actor model is so simple and powerful. 
+- It never has to care about data race or syncing because each process can never access anything external.
+
 Each Erlang process has a small memory footprint and can grow/shrink dynamically. It does not share memory and only communicate through message passing.
 
 - Erlang is a niche language, but it is the niche with all of the very good developers. 
@@ -108,7 +110,6 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 - https://www.facebook.com/notes/facebook-engineering/chat-stability-and-scalability/51412338919/
 
 
-
 ## Tail call optimization
 
 Saying that something is "tail recursive" is a short-hand way of saying "the function is recursive" and that we only find pure function
@@ -142,7 +143,6 @@ can be replaced by jump to the start of the function.
 - Erlang programs, on the other hand, can have thousands of independent heaps which are garbage-collected separately; in this way, the performance penalty of garbage collection is spread out over time, and so a long-running application will not mysteriously stop responding from time to time while the garbage collector runs.
 
 > https://www.evanmiller.org/why-i-program-in-erlang.html
-
 
 
 # Shell
