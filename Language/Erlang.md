@@ -102,7 +102,7 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 
 - Erlang won't care about floats and integers in arithmetic, but will do so when comparing them. No worry though, because the == and /= operators are there to help you in these cases. 
 
-- Pragmaticism beats theory
+- Pragmatism beats theory
 
 - One of the earliest challenges we faced was reducing the channel servers' memory footprint. High-level languages often provide rich data types and powerful abstractions for manipulating them. Erlang strings, for instance, are linked lists of characters, allowing programmers to use all the list-manipulation goodies that Erlang provides. In this case, however, it pays to control the representation a little closer and use arrays of characters like one might in C++. In this case we traded back some of Erlang's power in favor of CPU and memory usage. We also exploited the nature of our application to make another trade-off: just before a user's HTTP response process goes to sleep to wait for a new message to arrive, we force a pass of the garbage collector. We spend more cycles in that process than we usually would, but we ensure that it's using as little as memory as possible before it sleeps.
 

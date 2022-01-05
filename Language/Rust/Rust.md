@@ -16,12 +16,13 @@
 ## Ownership
 
  - Ownership 
-    - The scope that will free the resource. Owned.
+    - The scope that will free the resource. 
+    - Owned.
 
  - Mutable Reference
-    - Can be only one. No one can Read and write. 
+    - Can be only one. No one can Read and write another. 
     - Exclusive access. 
-    - No responsibility to free. Only borrowing it. Exclusive.
+    - No responsibility to free. Only borrowing it.
 
  - Immutable Reference
     - No modification. Multiple read. Shared.
@@ -721,3 +722,8 @@ TALKS :
 
 - [Pinning](https://stackoverflow.com/questions/49913846/what-are-the-use-cases-of-the-newly-proposed-pin-type)
     - Self referenceing object move will make the member reference to point to old object. Pinning solves it.
+
+
+
+## Blog
+- https://lukaskalbertodt.github.io
