@@ -10,6 +10,7 @@ It is important to point out that IP address classes are more or less redundant 
 IP Network
 On a LAN, computers can talk with each other as long as they are under the same ip network. If the computers belong to different IP networks then they have to communicate with each other via a router.
 
+Port numbers have a range of 0..65535 (although often 0 has special meaning). In the original BSD TCP implementation, only root can bind to ports 1..1023, and dynamically assigned ports were assigned from the range 1024..5000; the others were available for unprivileged static assignment. These days 1024..5000 is often not enough dynamic ports, and IANA has now officially designated the range 49152..65535 for dynamic port assignment. However even that is not enough dynamic ports for some busy servers, so the range is usually configurable (by an administrator). On modern Linux and Solaris systems (often used as servers), the default dynamic range now starts at 32768. Mac OS X and Windows Vista default to 49152..65535.
 
 ### Router
 The main purpose of a router is to be able to forward traffic to different destinations. Within computer networking, those destinations are different IP networks.
@@ -35,7 +36,6 @@ IP = Network + Host Address
 These are private addresses.
 
 The above special addresses are called Private addresses. They cannot be used on the Internet, they can only be used within local networks. If you try to use Private addresses on the Internet then your Internet Service Provider will block your traffic automatically, sensing that the traffic is coming from a Private IP address. This automatic block is being done to avoid any IP address conflicts on the Internet. These addresses are used in so many places that without the block we would have guaranteed and constant IP address conflicts all over the Internet.
-
 
 
 # NAT
@@ -81,3 +81,5 @@ NAT Hole Punching
 There is no way for the router to know. We have to configure the router such that when traffic from outside hits a particular port of the router, the router will send it to a host that we configured. This is called port forwarding.
 
 
+- Resources
+    - [TCP Socket Programming](https://stackoverflow.com/questions/913501/how-to-let-kernel-choose-a-port-number-in-the-range-1024-5000-in-tcp-socket-pr)

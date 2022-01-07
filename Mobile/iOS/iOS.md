@@ -70,4 +70,5 @@ tcpdump -n -t -i rvi0 -q -A tcp
 ```
 
 # Resources
-- [Swift Style Guide](https://google.github.io/swift/#global-constants)    
+- [Swift Style Guide](https://google.github.io/swift/#global-constants)
+- [iOS Build](https://gist.github.com/adamawolf/3048717) 

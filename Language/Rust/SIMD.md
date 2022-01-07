@@ -6,3 +6,4 @@ SIMD instructions can greatly increase performance when exactly the same operati
 
 - [SSE](https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions)
 
+- [SIMD](http://const.me/articles/simd/simd.pdf)
