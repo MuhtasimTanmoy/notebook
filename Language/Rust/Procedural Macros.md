@@ -21,7 +21,7 @@
 
 // `macro_rules` let you write other macros.
 
-// Example serde
+// Example serde, derive macro
 #[derive(Serialize, Deserialize)]
 struct Foo {
     bar: usize,
@@ -35,7 +35,7 @@ impl Serialize for Foo {
 ```
 
 # Implementation
-- `Cargo Check` to check if compiles without building
-- `Cargo Build` to build the actual project
-
-- 
+- `cargo check` to check if compiles without building
+- `cargo build` to build the actual project
+- `cargo expand --test test derive_new`
+- [Sample Codebase](https://github.com/azriel91/proc_macro_rules)
