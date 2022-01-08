@@ -1,4 +1,10 @@
 # SQLite
+An "application file format" is the file format used to persist application state to disk or to exchange information between programs. 
+
+"file format" and an "application format". A file format is used to store a single object. So, for example, a GIF or JPEG file stores a single image, and an XHTML file stores text, so those are "file formats" and not "application formats". An EPUB file, in contrast, stores both text and images (as contained XHTML and GIF/JPEG files) and so it is considered an "application format". Sqlite file is application format.
+
+- rowID
+    - Integer Primary Key highly optimized
 
 - Isolation
     - Journal mode

@@ -1,18 +1,15 @@
 # c++
 
-## Concepts
-
 ### constexpr
 
-- Moving computation from runtime to compile time.
-- No syncronization concern.
-- Can be applied in `value` or `computations`.
+- [constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c/)
+- [CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
+
+Points
+- Moving computation from runtime to compile time
+- No syncronization concern
+- Can be applied in `value` or `computations`
 - [Incomplete]
-
-[constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c/)
-
-[CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
-
 
 ### Template Metaprogramming
     
@@ -21,6 +18,7 @@
 - Perfect forwarding
 
 - Reflection
+
 - `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises.
 
 - Before, `move` semantics, `static_case<std::string&&>` would do the same.
