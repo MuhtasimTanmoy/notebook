@@ -723,6 +723,7 @@ TALKS :
 - [Pinning](https://stackoverflow.com/questions/49913846/what-are-the-use-cases-of-the-newly-proposed-pin-type)
     - Self referenceing object move will make the member reference to point to old object. Pinning solves it.
 
+- [Code Benchmarking](https://godbolt.org/z/nqTveYvzx)
 
 
 ## Blog

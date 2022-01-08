@@ -14,3 +14,4 @@
 - [VFS](https://www.sqlite.org/vfs.html)
 - [FTS5](https://www.sqlite.org/fts5.html)
 - [R-Tree](https://www.sqlite.org/rtree.html)
+- [Architecture](https://www.sqlite.org/arch.html)
