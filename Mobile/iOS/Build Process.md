@@ -15,7 +15,8 @@
 
 - `Header maps` are used to communicate info from build system to clang compiler.
 
-- `Clang` mudules to spped up build.
+- `Clang` mudules to speed up build.
+
 - Compilers run different sort of optimization to 
 
 - Can write defaults
@@ -23,6 +24,13 @@
 
 - `Bitcode` is llvm `IR`. We upload it to app store which runs `llvm-backend` itself and it generates built for all available platforms. `Fat Binary` is removed. Any llvm optimization fix can run itself.
 
+- pod plugins list
+
+- There are two type of linking: static, and dynamic.
+    - dynamic framework is a dynamic library embedded in a bundle.
+    - Umbrella Header
+
 # Resources
 - [Build System Xcode](https://github.com/apple/swift-llbuild)
 - [Binary Framework Talk](https://developer.apple.com/videos/play/wwdc2019/416)
+- [Dynamic Library](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html)
