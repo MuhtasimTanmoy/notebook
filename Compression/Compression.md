@@ -1,4 +1,5 @@
 # Compression
+
 - Lossy 
     - Huffman
     - Run length

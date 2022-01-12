@@ -30,6 +30,8 @@
     - dynamic framework is a dynamic library embedded in a bundle.
     - Umbrella Header
 
+- Can fake [bitcode](https://stackoverflow.com/questions/64768561/what-is-the-point-of-marker-bitcode-fembed-bitcode-marker/64898439) in debug app.
+
 # Resources
 - [Build System Xcode](https://github.com/apple/swift-llbuild)
 - [Binary Framework Talk](https://developer.apple.com/videos/play/wwdc2019/416)
