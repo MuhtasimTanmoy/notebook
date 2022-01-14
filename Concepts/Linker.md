@@ -87,3 +87,15 @@ task register)
     - Section Header
     - Data
     - Magic Number
+
+- [How OS X Executes Applications
+](https://0xfe.blogspot.com/2006/03/how-os-x-executes-applications.html)
+- Library relocation problems, the first thing to do is run ldd on the executable. The ldd tool lists the dependent shared libraries that the executable requires, along with their paths if found.
+
+```bash
+ldd /bin/ls
+objdump -x /bin/ls
+
+otool
+
+```
