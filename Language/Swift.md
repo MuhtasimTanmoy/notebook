@@ -24,3 +24,5 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0/)
 
 
+- [Swift Memory Model](https://youtu.be/ERYNyrfXjlg)
+    - Word is a unit in the size of a pointer
