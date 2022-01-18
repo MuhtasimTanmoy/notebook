@@ -18,7 +18,9 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
 
 
 - [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift/)
-
+    - Process data bytes, consider as pointer, use `memcopy` style `mach_vm_read_overwrite` variant.
+    - Variables inside struct are postioned in offset that divisible by its size
+    - Explains memory layout for struct, class, enum, array, protocol
 
 ## Resource
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0/)
