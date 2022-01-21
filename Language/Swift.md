@@ -16,6 +16,21 @@
  
 In Swift, there are three kinds of statements: simple statements, compiler control statements, and control flow statements.
 
+-  When compiled, compiler uses function to pointer location in an array.
+    - Direct / Static Dispatch
+        - `Value type` (Initial + Extension) data structures have this.
+        - Class Extension, Protocol Extension will have static dispatch
+        - Final keyword
+        - This restricts subclassing, therefore faster.
+    - Table Dispatch
+        - Class, Protocol Init will have static dispatch
+        - For class type compilere maintains an array of witness pointers
+        - Whenever subclass it copies the table and append new function, replace overriden function
+    - Message Dispatch
+        - Dynamic keyword
+        - No offset, The entire table is travered to get the function. The later ones get executed.
+        - `Test` add, `measure` for see time difference.
+
 
 - [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift/)
     - Process data bytes, consider as pointer, use `memcopy` style `mach_vm_read_overwrite` variant.

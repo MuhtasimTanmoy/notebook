@@ -54,6 +54,8 @@ for objects when there are  **_zero strong_**  references to them.
     - Publish
     - Reply
 
+- Can capture memory leak by enabling option. 
+
 ```
 # device listing
 rvictl -l
