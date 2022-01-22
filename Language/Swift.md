@@ -12,7 +12,8 @@
     - A mixin is like a trait but it also has state. Not avaialable in protocol.
     - Property declaration to a protocol, but then every class or struct that conforms to this protocol still needs to provide its own storage for those properties.
 - dsym
-    - A dSYM file is a "debug symbols file". When this setting is enabled, symbol names of your objects are removed from the resulting compiled binary.
+    - A dSYM file is a "debug symbols file". 
+    - When this setting is enabled, symbol names of your objects are removed from the resulting compiled binary.
  
 In Swift, there are three kinds of statements: simple statements, compiler control statements, and control flow statements.
 
@@ -42,20 +43,24 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
 
 - Dependency injection through param, protocols
 
-- Generics, Associated Type
-- Opaque type
+- Generics
+- Associated Type
+- Opaque Type
     - Where caller function not aware of the type, function implementation is.
     - Used while not disclosed the type information
     - When used associated type as protocol and use protocol type as return type, use `some ` keyword which returns `opaque type`
 
-- [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift/)
+- Actor
+    - Manages concurrenncy related issue
+- Class has convenience initializer where struct cann simulate that through extension.
+- Struct can have inheritence by using `protocol + extension + default`.
+
+- [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift)
     - Process data bytes, consider as pointer, use `memcopy` style `mach_vm_read_overwrite` variant.
     - Variables inside struct are postioned in offset that divisible by its size
     - Explains memory layout for struct, class, enum, array, protocol
 
 ## Resource
-- [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0/)
-
-
+- [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0)
 - [Swift Memory Model](https://youtu.be/ERYNyrfXjlg)
     - Word is a unit in the size of a pointer

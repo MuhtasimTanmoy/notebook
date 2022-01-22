@@ -1,2 +1,0 @@
-# Designing Data Intensive Application
-

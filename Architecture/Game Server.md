@@ -1,7 +1,6 @@
-
 # Gameserver
 
-### Optimization for gameserver
+### Optimization for Gameserver
 - Better predictions
 - Eliminate the server for network latency
 - Optimize communication
@@ -9,16 +8,15 @@
 
 
 ### NAT Hole Punching
-Required for conncting peer to peer after matchmaking
+Required for connecting peer to peer after matchmaking
 - https://keithjohnston.wordpress.com/2014/02/17/nat-punch-through-for-multiplayer-games/
-
 
 
 ### [Research on Latency Problems and Solutions in Cloud Game!](https://www.researchgate.net/publication/337053541_Research_on_Latency_Problems_and_Solutions_in_Cloud_Game)
 
-Layer-coding approach was proposed to separate the  game  image  into  two  layers:  
-- Base  layer  (contain  original  image  information) 
-- Graphics enhancement  layer,  which  contains  graphics  enhancement  instructions:  light\map  rendering,  shading command, reflection computations, etc. 
+Layer-coding approach was proposed to separate the game image into two layers:  
+- Base layer (contain  original  image  information) 
+- Graphics enhancement  layer,  which  contains  graphics  enhancement  instructions:  light\map  rendering,  shading command, reflection computations, etc
 
 ### [EVE ONLINE!](http://uu.diva-portal.org/smash/get/diva2:408940/FULLTEXT01.pdf)
  - A type of shared-nothing-architecture in distributed computing, where each node is independent and does not communicate with other nodes.
@@ -29,15 +27,13 @@ Layer-coding approach was proposed to separate the  game  image  into  two  laye
 
 - Colyseus, which primarily acts as a game object manager
 
-- There are two
-types of game objects: immutable and mutable. We assume that immutable objects (e.g., map geometry, game
-code, and graphics) are globally replicated (i.e., every
-node in the system has a copy) since they are updated
-very infrequently, if at all.
-    - Each node has a local object store which
-is a collection of primaries and replicas, a replica manager that synchronizes primary and secondary replicas,
-and a object placer which decides where to place and
-migrate primary replicas
+- There are two types of game objects
+    - Immutable
+    - Mutable
+    
+We assume that immutable objects (e.g., map geometry, game code, and graphics) are globally replicated (i.e., every
+node in the system has a copy) since they are updated very infrequently, if at all.
+    - Each node has a local object store which is a collection of primaries and replicas, a replica manager that synchronizes primary and secondary replicas, and a object placer which decides where to place and migrate primary replicas
 
 - Networked games are rapidly evolving from small 4-8 person,  onetime play games to large-scale  games  involving thousands  of  participants and  persistent  game  worlds. However, like most Internet applications, current networkedgames are centralized.  Players send control messages to acentral server and the server sends (relevant) state updates to all active players. This design suffers from the well known robustness and scalability problems of single server designs. 
 

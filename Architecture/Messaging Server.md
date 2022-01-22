@@ -1,4 +1,4 @@
-A possible architecture of a chat application can be broken down in to smaller appplications performing a certain service as follows,
+A possible architecture of a chat application can be broken down in to smaller appplications performing a certain service as follows
 
 - HTTP Service - Handling web traffic.
 - Log Service - Logging activities.

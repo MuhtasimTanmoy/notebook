@@ -1,5 +1,4 @@
 # Peer to peer
-
 - Each peer assigned GUID
 - Virtually round structure
 - Two main algo

@@ -1,6 +1,6 @@
 # Browser architecture
 
-Rendering Steps
+Rendering Steps for a browser
 - Constructing the DOM Tree
 - Constructing the CSSOM Tree
 - Running JavaScript
@@ -12,19 +12,24 @@ Rendering Steps
 # JS
 
 - Javascript 
-    > Parsing > Compile + Optimize > Reoptimize > Execute > Garbage collection
+    - Parsing
+    - Compile + Optimize
+    - Reoptimize
+    - Execute
+    - Garbage collection
 - JS 
-    > Abstract Syntax Tree > Bytecode
-- JS engine comes with jit, garbage collector.
+    - Abstract Syntax Tree
+    - Bytecode
+- JS engine comes with jit, garbage collector
 - Runtime the stuff language put that you actually dont wrote. ( translation cost occurs one )
 
 # Interpretation & Compilation
 
-- Compiled is fast interpreted is repeated.
-- Compilers can optimize ahead as they have full picture.
-- Interpreters in js introcuded monitor warm functions.
+- Compiled is fast interpreted is repeated
+- Compilers can optimize ahead as they have full picture
+- Interpreters in js introduced monitor warm functions
 - Stub > Chunks > += with similar datatypes on both side
-eventually optimizing translation time.
+eventually optimizing translation time
 
 ## Notes
 
@@ -36,7 +41,7 @@ eventually optimizing translation time.
 
 # Resources
 
-[Chrome Internals:](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
+### [Chrome Internals](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
 
 - Architecture Core Principles
     - Stability
@@ -95,4 +100,3 @@ eventually optimizing translation time.
         - Paint
         - Raster
         - Gpu
-    -  
