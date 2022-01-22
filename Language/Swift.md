@@ -31,6 +31,22 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
         - No offset, The entire table is travered to get the function. The later ones get executed.
         - `Test` add, `measure` for see time difference.
 
+- Debugging
+    - p can change value
+    - p, po compute value, v from stackframe
+    - Network link conditioner to simulate packet loss
+
+- Opaque pointer opposite to generics
+- Extension, Opaque pointer has difference
+- Download task differs when we use it to download different types
+
+- Dependency injection through param, protocols
+
+- Generics, Associated Type
+- Opaque type
+    - Where caller function not aware of the type, function implementation is.
+    - Used while not disclosed the type information
+    - When used associated type as protocol and use protocol type as return type, use `some ` keyword which returns `opaque type`
 
 - [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift/)
     - Process data bytes, consider as pointer, use `memcopy` style `mach_vm_read_overwrite` variant.
