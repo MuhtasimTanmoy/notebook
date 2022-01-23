@@ -54,6 +54,7 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
     - Manages concurrenncy related issue
 - Class has convenience initializer where struct cann simulate that through extension.
 - Struct can have inheritence by using `protocol + extension + default`.
+- Struct can have data race if not captured. [Ref](https://stackoverflow.com/questions/41350772/if-arrays-are-value-types-and-therefore-get-copied-then-how-are-they-not-thread)
 
 - [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift)
     - Process data bytes, consider as pointer, use `memcopy` style `mach_vm_read_overwrite` variant.
