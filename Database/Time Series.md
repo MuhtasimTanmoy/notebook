@@ -7,4 +7,3 @@
     - Everything is indexed by time.
     - `Inverted Index` on time metadata.
     - Full of range read queries and write.
-    - 

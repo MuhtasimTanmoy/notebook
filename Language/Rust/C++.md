@@ -1,34 +1,25 @@
 # c++
 
-
 - Library
     - Boost
     - std
     - abseil
 
 ### constexpr
-
 - [constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c/)
 - [CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
-
-Points
-- Moving computation from runtime to compile time
-- No syncronization concern
-- Can be applied in `value` or `computations`
-- [Incomplete]
+    - Moving computation from runtime to compile time
+    - No syncronization concern
+    - Can be applied in `value` or `computations`
+    - [Incomplete]
 
 ### Template Metaprogramming
     
 - Vector push is defensive is case of move operation, using `no except` optimizes a lot. If not fallback to pre c++11 and use copy.
-
 - Perfect forwarding
-
 - Reflection
-
 - `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises.
-
 - Before, `move` semantics, `static_case<std::string&&>` would do the same.
-
 - `Literals` are assignable.
 
 
