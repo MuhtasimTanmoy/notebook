@@ -73,7 +73,6 @@ task register)
 ```
 - [ELF](https://cirosantilli.com/elf-hello-world#toc)
 
-
 - [2016 EuroLLVM Developers' Meeting: R. Ueyama "New LLD linker for ELF"](https://www.youtube.com/watch?v=CYCRqjVa6l4)
     - Basic linking cat object files and relocation
     - Simulation of linking, undefined, defined, lazy
@@ -88,14 +87,31 @@ task register)
     - Data
     - Magic Number
 
-- [How OS X Executes Applications
-](https://0xfe.blogspot.com/2006/03/how-os-x-executes-applications.html)
-- Library relocation problems, the first thing to do is run ldd on the executable. The ldd tool lists the dependent shared libraries that the executable requires, along with their paths if found.
+- [How OS X Executes Applications](https://0xfe.blogspot.com/2006/03/how-os-x-executes-applications.html)
+    - Library relocation problems, the first thing to do is run ldd on the executable. 
+    - The ldd tool lists the dependent shared libraries that the executable requires, along with their paths if found.
+
+- [CppCon 2018: Matt Godbolt “The Bits Between the Bits: How We Get to main()”](https://youtu.be/dOfucXtyEsU)
+    - Procedural Linkage Table
+    - Global Object Table
+    - static init function for each translation unit
+    - Puts a pointer to this function into a section called init array
+    - ARM instructions cant jump to long, so uses intermediate jump.
 
 ```bash
+
 ldd /bin/ls
 objdump -x /bin/ls
 
 otool
+
+# See Machine Code
+objdump -dC /bin/ls
+
+# See Machine Code with Relocation
+objdump --reloc -dC /bin/ls
+
+# See symbols of object file
+objdump --syms -C /bin/ls
 
 ```
