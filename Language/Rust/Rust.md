@@ -623,21 +623,15 @@ struct Deserializer<T> {
 ## Callback Based Future
 
 ```rust
-
 // Way too many allocaiton, dynamic dispatch
- 
 trait Future {
     type Output;
     fn schedule<F>(self, callback: F) 
         where F: FnOnce(Self:: Output);
 }
-
-
- 
 ```
 
 ## Concurrency
-
 - When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
 
 
@@ -695,6 +689,9 @@ cargo new crate_name
 **Trait objects** - has lackings, read again
 
 **Closures**
+
+## REPR
+This is the most important repr. It has fairly simple intent: do what C does. The order, size, and alignment of fields is exactly what you would expect from C or C++. Any type you expect to pass through an FFI boundary should have repr(C), as C is the lingua-franca of the programming world. This is also necessary to soundly do more elaborate tricks with data layout such as reinterpreting values as a different type.
 
 ---
 

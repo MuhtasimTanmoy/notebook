@@ -3,16 +3,8 @@
 - From c++ to rust, game ecosystem moving towards
 - ECS - Entity Component System
 
-
 ## [Bevy](https://github.com/bevyengine/bevy)
 - Simple game engine. easy to start
-
-
-
-
-
-
-
 
 ## [TiKV](https://github.com/tikv/tikv)
 ![](./screen/TiKV.png)
@@ -22,12 +14,7 @@
 - Each node has RocksDB for Raft
 - Uses Multiversion Concurrency Control
 
-
-
 ## [CockroachDB](https://github.com/cockroachdb/cockroach)
-
-
-
 
 ## Multiverssion Concurrency Control
 - Pessimistic
@@ -43,6 +30,9 @@
         - Commit 
 
 Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consistency over availability. BASE (Basic Availability, Soft-state, Eventual consistency) systems, like MongoDB and other NoSQL systems, favor availability over consistency. 
+
+## [NUM_CPUS](https://github.com/seanmonstar/num_cpus/)
+- 
 
 ![](./screen/CAP.png)
 

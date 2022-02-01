@@ -96,8 +96,6 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 - If both browsers behind same NAT hole punching stablish connection that never leaves
 - In some cases hole punching fails, TURN Relay can work
 
-## RTP
-
 
 # Recources
 - https://think-like-a-computer.com/2011/09/19/symmetric-nat/
@@ -110,3 +108,4 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 - https://testrtc.com/docs/
 - https://www.kurento.org/blog/rtp-i-intro-rtp-and-sdp
 - https://www.kurento.org/blog/rtp-ii-streaming-ffmpeg
+- [WebRTC Secutirty](https://ftp.ripe.net/rfc/v3test/testing_dl_v25.pdf)
