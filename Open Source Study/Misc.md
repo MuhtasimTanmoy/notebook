@@ -32,7 +32,8 @@
 Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consistency over availability. BASE (Basic Availability, Soft-state, Eventual consistency) systems, like MongoDB and other NoSQL systems, favor availability over consistency. 
 
 ## [NUM_CPUS](https://github.com/seanmonstar/num_cpus/)
-- 
+- Different architecture os handle in rust
+- Various os primitives to get logical & physical cores
 
 ![](./screen/CAP.png)
 
