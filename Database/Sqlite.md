@@ -32,6 +32,13 @@ An "application file format" is the file format used to persist application stat
 - Only VIRTUAL columns can be added using `ALTER TABLE`.
 - Strict Typed tables more common though dynamic type used by default in sqlite. If a type is not convertible then it stores as that.
 
+- The life-cycle of a prepared statement object usually goes like this:
+    - Create the prepared statement object using sqlite3_prepare_v2().
+    - Bind values to parameters using the sqlite3_bind_*() interfaces.
+    - Run the SQL by calling sqlite3_step() one or more times.
+    - Reset the prepared statement using sqlite3_reset() then go back to step 2. Do this zero or more times.
+    - Destroy the object using sqlite3_finalize().
+
 ## Resources
 - [VFS](https://www.sqlite.org/vfs.html)
 - [FTS5](https://www.sqlite.org/fts5.html)
