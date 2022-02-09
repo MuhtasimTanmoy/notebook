@@ -111,6 +111,10 @@ task register)
     - Relocation: https://refspecs.linuxbase.org/elf/ga...
     - sstrip: https://github.com/BR903/ELFkickers/
 
+[Procedure Linakge Table](https://www.youtube.com/watch?v=Ss2e6JauS0Y)
+- 
+
+
 ```bash
 
 ldd /bin/ls

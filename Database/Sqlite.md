@@ -28,10 +28,13 @@ An "application file format" is the file format used to persist application stat
 
 
 - Without file param used as in memory database
-- 
+- Functional difference between STORED columns cannot be added using the `ALTER TABLE ADD COLUMN` command. 
+- Only VIRTUAL columns can be added using `ALTER TABLE`.
+- Strict Typed tables more common though dynamic type used by default in sqlite. If a type is not convertible then it stores as that.
 
 ## Resources
 - [VFS](https://www.sqlite.org/vfs.html)
 - [FTS5](https://www.sqlite.org/fts5.html)
 - [R-Tree](https://www.sqlite.org/rtree.html)
 - [Architecture](https://www.sqlite.org/arch.html)
+- [SQLite Performance Optimization](https://stackoverflow.com/questions/1711631/improve-insert-per-second-performance-of-sqlite)

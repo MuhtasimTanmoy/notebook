@@ -6,4 +6,3 @@
  - CPU pinning
  - Managed as file tree, assigning user based, process based restriction.
  - Fair scheduling managed as `Red-Black Tree`
- 
