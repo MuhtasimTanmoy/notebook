@@ -27,10 +27,11 @@ An "application file format" is the file format used to persist application stat
         - WAL mode permits simultaneous readers and writers. It can do this because changes do not overwrite the original database file, but rather go into the separate write-ahead log file. That means that readers can continue to read the old, original, unaltered content from the original database file at the same time that the writer is appending to the write-ahead log. In WAL mode, SQLite exhibits "snapshot isolation". When a read transaction starts, that reader continues to see an unchanging "snapshot" of the database file as it existed at the moment in time when the read transaction started. Any write transactions that commit while the read transaction is active are still invisible to the read transaction, because the reader is seeing a snapshot of database file from a prior moment in time.
 
 
-- Without file param used as in memory database
+- Without file param used as in memory database.
 - Functional difference between STORED columns cannot be added using the `ALTER TABLE ADD COLUMN` command. 
 - Only VIRTUAL columns can be added using `ALTER TABLE`.
 - Strict Typed tables more common though dynamic type used by default in sqlite. If a type is not convertible then it stores as that.
+- Partial indexing used in many case.
 
 - The life-cycle of a prepared statement object usually goes like this:
     - Create the prepared statement object using sqlite3_prepare_v2().

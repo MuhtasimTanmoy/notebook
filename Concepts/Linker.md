@@ -99,21 +99,24 @@ task register)
     - ARM instructions cant jump to long, so uses intermediate jump.
 - [In-depth: ELF - The Extensible & Linkable Format](https://www.youtube.com/watch?v=nC1U1LJQL8o)
     - Segments are runtime, sections are link time specific
-    - Segment(Program Header e_phoff) contains multiple sections(Section Header e_shoff) , also how to load that in memory
-    - Sections are only used during linking, and used by debuggers
-    - `sstrip` can be used to strip all sections, yet program runs
-    - bss means uninitialized data segment, initialized variables got to data segment
-    - PIC, ASLR
-    - The ELF specification: https://refspecs.linuxfoundation.org/...
-    - elf.h from the Linux kernel: https://elixir.bootlin.com/linux/late...
-    - How programs get run: https://lwn.net/Articles/631631/
-    - TLS: https://docs.oracle.com/cd/E19120-01/...
-    - Relocation: https://refspecs.linuxbase.org/elf/ga...
-    - sstrip: https://github.com/BR903/ELFkickers/
-
+    - Segment(Program Header e_phoff) contains multiple sections(Section Header e_shoff), also how to load that in memory.
+    - Sections are only used during linking, and used by debuggers.
+    - `sstrip` can be used to strip all sections, yet program runs.
+    - BSS means uninitialized data segment, initialized variables got to data segment.
+    - PIC, ASLR.
+    - The ELF specification: https://refspecs.linuxfoundation.org/elf/elf.pdf
+    - elf.h from the Linux kernel: https://elixir.bootlin.com/linux/latest/source/include/uapi/linux/elf.h
+    - How programs get run: https://lwn.net/Articles/631631
+    - TLS: https://docs.oracle.com/cd/E19120-01/open.solaris/819-0690/chapter8-5/index.html
+    - Relocation: https://refspecs.linuxbase.org/elf/gabi4+/ch4.reloc.html
+    - sstrip: https://github.com/BR903/ELFkickers
+ 
 [Procedure Linakge Table](https://www.youtube.com/watch?v=Ss2e6JauS0Y)
-- 
-
+- Program Header Table
+- Section Header Table
+- Sections reside at bottom, can be stripped
+- static link : `gcc -static -fno-pie -no-pie -g -o a.out a.c`
+- All problems in computer science can be solved by additional layer of indirection.
 
 ```bash
 
