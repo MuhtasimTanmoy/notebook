@@ -117,6 +117,27 @@ task register)
 - Sections reside at bottom, can be stripped
 - static link : `gcc -static -fno-pie -no-pie -g -o a.out a.c`
 - All problems in computer science can be solved by additional layer of indirection.
+- Position inndependent code used for shared libraries by implementing relative addressing.
+- Linker does two things
+    - Symbol resoulution
+    - Relocation
+- `.interop` section helps with dynamic linker
+- At linking step onlt the relocation and symbol table instruction embedded, the real data stores at load time.
+- Global Offset Table
+- Procedure Linkage Table
+    - Resolves procedure
+- Test out program execution in GDB
+    - Running this on a program with two `printf`    
+    - ```
+        gdb a.out
+        b a.c:4
+        b a.c:5
+        r
+        disas 'printf@plt'
+        p/x *(void**)0x60101B
+        readelf -hW a.out will keep track of addresses
+      ```
+- Making common case fast is in the heart of system design
 
 ```bash
 

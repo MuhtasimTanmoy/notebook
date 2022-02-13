@@ -46,3 +46,4 @@ An "application file format" is the file format used to persist application stat
 - [R-Tree](https://www.sqlite.org/rtree.html)
 - [Architecture](https://www.sqlite.org/arch.html)
 - [SQLite Performance Optimization](https://stackoverflow.com/questions/1711631/improve-insert-per-second-performance-of-sqlite)
+- [Run Time Loadable Extension](https://www.sqlite.org/loadext.html)

@@ -85,4 +85,30 @@ g++ -fdump-class-heirarchy a.cpp
     - https://stackoverflow.com/questions/18085331/recursive-lambda-functions-in-c14
     - [Incomplete]
 
-- [CPPCon Slide Collection: ](https://github.com/CppCon/CppCon2019) contains cpp conference presentations on variour topic.
+- [CPPCon Slide Collection: ](https://github.com/CppCon/CppCon2019) contains cpp conference presentations on variour topic
+
+- [CppCon 2017: Fedor Pikus “C++ atomics, from basic to advanced. What do they really do?”](https://youtu.be/ZQFzMfHIxng)
+    - Used for lock free programming
+    - Presentation application based
+        - Mutex based
+        - Lock free / Wait free
+    - Ant trivially copyable type can be made atomic
+        - `x *= 2` is not atomic.
+        - `x = x + 1` is not atomic, same as `x++` unless x is atomic.
+        - `x = x * 2`  is not atomic, these are two separate  atomic operation.
+        - no atomicity for floating point numbers.
+        - Explicit `load`, `store`, `exchange`, `compare_and_swap` available.
+    - The concept of atomicity scales from single instruction to whole program.
+        - single add operation
+        - client seeing db state before after update
+    - Algorithm rules supreme
+        - SHould not delve into details of implementation too soon. Algorithm decides everything.
+    - Lock free but not wait free version
+        - ```c++
+            std: atomic<int> x { 0 };
+            int x0 = x;
+            while( !x.compare_and_swap(x0, x0 + 1); )
+            ```
+        - Will continue while other change and add with the latest value only. Supports all sort of operations.
+    - Atomics and locks generally provide thread safe way to do things
+    - Benchmark different operations in lock vs mutex, atomic operaions vs normal vs spinlock.
