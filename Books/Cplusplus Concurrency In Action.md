@@ -1,1 +1,1 @@
-# Cplusplus Concurrency In Action
+# [Cplusplus Concurrency In Action](https://www.bogotobogo.com/cplusplus/files/CplusplusConcurrencyInAction_PracticalMultithreading.pdf)

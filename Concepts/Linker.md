@@ -139,6 +139,11 @@ task register)
       ```
 - Making common case fast is in the heart of system design
 
+
+- [Before Main: How Executables Work on Linux](https://youtu.be/jR2hUhjcAXI)
+    - Windows does not have distinction between sections and segments
+    - Segments are composed of sections
+
 ```bash
 
 ldd /bin/ls
