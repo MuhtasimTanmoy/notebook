@@ -144,6 +144,8 @@ task register)
     - Windows does not have distinction between sections and segments
     - Segments are composed of sections
 
+- [CppCon 2017: Nir Friedman “What C++ developers should know about globals (and the linker)”](https://www.youtube.com/watch?v=xVT1y0xWgww&ab_channel=CppCon)
+
 ```bash
 
 ldd /bin/ls
