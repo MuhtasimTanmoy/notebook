@@ -6,7 +6,8 @@
     - abseil
 
 ### constexpr
-- [constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c/)
+- [constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c)
+
 - [CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
     - Moving computation from runtime to compile time
     - No syncronization concern
@@ -15,12 +16,13 @@
 
 ### Template Metaprogramming
     
-- Vector push is defensive is case of move operation, using `no except` optimizes a lot. If not fallback to pre c++11 and use copy.
+- Vector push is defensive is case of move operation, using `no except` optimizes a lot
+- If not fallback to pre c++11 and use copy
 - Perfect forwarding
 - Reflection
-- `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises.
-- Before, `move` semantics, `static_case<std::string&&>` would do the same.
-- `Literals` are assignable.
+- `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises
+- Before, `move` semantics, `static_case<std::string&&>` would do the same
+- `Literals` are assignable
 
 
 ## Backlogs
@@ -58,6 +60,7 @@ g++ -fdump-class-heirarchy a.cpp
 ![](./RuleOfFive.png)
 
 # Reference
+
 - [Quroa c++ backlog](https://www.quora.com/Instead-of-inventing-a-ton-of-high-level-programming-languages-why-dont-people-implemented-C-C-frameworks-to-perform-high-level-repetitive-tasks)
 
 - [Intrusive list](https://stackoverflow.com/questions/3361145/intrusive-lists)
@@ -69,12 +72,12 @@ g++ -fdump-class-heirarchy a.cpp
 - [lvalue rvalue](https://www.internalpointers.com/post/understanding-meaning-lvalues-and-rvalues-c)
 
 - [Resource Management](https://www.youtube.com/watch?v=7Qgd9B1KuMQ)
-    - Explains various c++ resource management.
+    - Explains various c++ resource management
     - Free in destructor
     - Copy constructor to copy heap
     - Assignment, copy and swap
     - Should have no exception thrown between allocation and free
-    - Disable logging, then enable it should have no code or return in between.
+    - Disable logging, then enable it should have no code or return in between
 
 - [C++ Memory Model](https://www.youtube.com/watch?v=UNJrgsQXvCA)
     - Talks mainly about c++ memory model
@@ -89,26 +92,35 @@ g++ -fdump-class-heirarchy a.cpp
 
 - [CppCon 2017: Fedor Pikus “C++ atomics, from basic to advanced. What do they really do?”](https://youtu.be/ZQFzMfHIxng)
     - Used for lock free programming
+
     - Presentation application based
         - Mutex based
         - Lock free / Wait free
-    - Ant trivially copyable type can be made atomic
-        - `x *= 2` is not atomic.
-        - `x = x + 1` is not atomic, same as `x++` unless x is atomic.
-        - `x = x * 2`  is not atomic, these are two separate  atomic operation.
+
+    - Any trivially copyable type can be made atomic
+        - `x *= 2` is not atomic
+        - `x = x + 1` is not atomic, same as `x++` unless x is atomic
+        - `x = x * 2`  is not atomic, these are two separate  atomic operation
         - no atomicity for floating point numbers.
-        - Explicit `load`, `store`, `exchange`, `compare_and_swap` available.
-    - The concept of atomicity scales from single instruction to whole program.
-        - single add operation
-        - client seeing db state before after update
+        - Explicit `load`, `store`, `exchange`, `compare_and_swap` available
+
+    - The concept of atomicity scales from single instruction to whole program
+        - Single add operation
+        - Client seeing db state before after update
+
     - Algorithm rules supreme
-        - SHould not delve into details of implementation too soon. Algorithm decides everything.
+        - Should not delve into details of implementation too soon. Algorithm decides everything.
+
     - Lock free but not wait free version
         - ```c++
             std: atomic<int> x { 0 };
             int x0 = x;
             while( !x.compare_and_swap(x0, x0 + 1); )
-            ```
-        - Will continue while other change and add with the latest value only. Supports all sort of operations.
+           ```
+        - Will continue while other change and add with the latest value only. Supports all sort of operations
+
     - Atomics and locks generally provide thread safe way to do things
-    - Benchmark different operations in lock vs mutex, atomic operaions vs normal vs spinlock.
+
+    - Benchmark different operations in lock vs mutex, atomic operaions vs normal vs spinlock
+
+    - Memory barriers

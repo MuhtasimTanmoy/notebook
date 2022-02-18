@@ -1,0 +1,14 @@
+- Memory barriers
+    - Can be used to prevent compilers to reorder operations, instructions for instructionn level parallelism
+    - 
+
+- [spinlock](https://github.com/CoffeeBeforeArch/spinlocks)
+    - Other locks waiting to get to sleep
+    - Spin lock polls in loop for atomic bool to be available
+    - Naive approach very high l1-dcache-load-misses
+        - Four main categories of cache misses
+            - Compulsory misses
+            - Capacity misses
+            - Conflict misses
+            - Coherence misses
+    - 
