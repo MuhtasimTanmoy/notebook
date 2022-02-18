@@ -13,13 +13,6 @@
 
 ---
 
-- Protocol
-
-A protocol in Swift is an interface that provides specific methods. 
-Any object conforms to that protocol must implement the given set of functions.
- “A protocol defines a blueprint of methods, properties, and other requirements that 
- suit a particular task or piece of functionality. 
-
 - Lazy var
 
 Swift has a mechanism built right into the language that enables 
