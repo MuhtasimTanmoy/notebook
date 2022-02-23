@@ -45,8 +45,8 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 
 # Features
 
-- Everything is a process.
-- Processes are strongly isolated.
+- Everything is a process
+- Processes are strongly isolated
 - Process creation and destruction is a lightweight operation.
 - Message passing is the only way for processes to interact.
 - Processes have unique names, internal state.

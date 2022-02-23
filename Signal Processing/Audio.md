@@ -20,9 +20,19 @@ Bit Rate = Bit Depth * Sample Rate * Number of Channels
 
 ## Notes
 - Uncompressed raw audio format is Linear Pulse Code Modulation(LPCM)
+- `mp4` and `aac` are two different concepts. mp4 is a container format, and aac is an encoding.
+- iPhone does not encode mp3
+- `AAC` is your format choice if you want interop between Android and iPhone devices
+- `PCM` is decodable on iPhone and Android and most cellphones at the expense of larger filesize.
+- But you can't create a file and save to the system with mp3, on iPhone. You can play back, but not save.
+- All smartphones can play WAV files (even Android as of 2.2). These are known as "Linear PCM" in iOS and "PCM/WAVE" in Android.
+- `ffprobe -hide_banner -stats -i ios-aac.m4a`
+- It does support hardware AAC/m4a encoding which is in many ways superior to mp3.
 
 # Reference
 - [How digital audio works](https://www.youtube.com/watch?v=1RIA9U5oXro&ab_channel=Computerphile)
 - [Reddit Thread ](https://www.reddit.com/r/iOSProgramming/comments/2le7hq/how_do_i_make_a_spectrum_visualizer_for_my_music/)
 - [Basic Audio Workflow](https://www.youtube.com/watch?v=JyUagzvGq7Q&ab_channel=ComputerScience)
 - [Reddit Thread: ](https://www.reddit.com/r/rust/comments/aua2tb/rust_2019_rust_audio/) - discussion on various rust library.
+- [iOS Recording Formats](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW6)
+- [Android Recording Format](https://developer.android.com/guide/topics/media/media-formats)
