@@ -4,17 +4,23 @@ Erlang is a functional language and accompanying runtime designed for highly par
 - Immutable Data
 - Functional Language
 
-Erlang does this with features such as a built-in worker-supervisor 
-message-passing model and hot-swappable code, meaning errors or code updates don't require the entire process to stop and restart in order to recover.
+Erlang does this with features such as a built-in `worker-supervisor`.
+
+`Message-passing` model and `hot-swappable` code, meaning errors or code updates don't require the entire process to stop and restart in order to recover.
 
 ## Beam
 
 - BEAM is like Java’s JVM, but for Erlang
-- Interface to outside world - NIC / Ports
+
+- Interface to outside world 
+    - NIC / Ports
+
 - Schedulers
     - Beam VM 
     - One VM per Thread
+
 - Processes
+
 - Memory Management
     -  Process heaps
     -  ETS tables
@@ -25,20 +31,26 @@ message-passing model and hot-swappable code, meaning errors or code updates don
 
  - Erlang does not have an intermediary like Go channel, but it does employ a very powerful concept known as the Actor Model. In this world, a process is an independent actor. It doesn't care about the outside world. It's like a prisoner churning over its own thing and wait for something to be passed into its prison's door, or more specifically, mailbox.
 
-- Erlang's actor model is so simple and powerful. 
+- Erlang's actor model is so simple and powerful.
+
 - It never has to care about data race or syncing because each process can never access anything external.
 
-Each Erlang process has a small memory footprint and can grow/shrink dynamically. It does not share memory and only communicate through message passing.
+- Each Erlang process has a small memory footprint and can grow/shrink dynamically. It does not share memory and only communicate through message passing.
 
 - Erlang is a niche language, but it is the niche with all of the very good developers. 
 
 - Akka as it can be used with Java, and is influenced by Erlang.
 
-- Erlang does this with features such as a built-in worker-supervisor message-passing model and hot-swappable code, meaning errors or code updates don't require the entire process to stop and restart in order to recover. Hot-swappable code allowing truly live updates to the program's behavior is a feature nearly unique to Erlang; most other programs and runtimes, even those designed for high uptime, have to end and be restarted to incorporate code changes.
+- Erlang does this with features such as a built-in `worker-supervisor` `message-passing` model and `hot-swappable` code, meaning errors or code updates don't require the entire process to stop and restart in order to recover. 
 
-- Most traditionally-imperative programmers look at the functional language branch as an academic curiosity, but a lot of functional concepts such as monadic processing (a function accepting an input returns an object that supports its own library of operations, allowing for method chaining with a "grammar structure", commonly known as a "fluent interface"), first-order functions (a function is an independently reference-able, assignable variable, independent of any other construct besides its input parameters), declarative syntax (the structure of the code indicates what to do more than how) have been incorporated into current versions of modern imperative languages.
+- `Hot-swappable` code allowing truly live updates to the program's behavior is a feature nearly unique to Erlang; most other programs and runtimes, even those designed for high uptime, have to end and be restarted to incorporate code changes.
 
-- It has the ability to handle multiple threads ( Process in Erlang terms) at the same time not utilising double CPU processing power. Unlike C program thread in which each thread uses seperate resources from the CPU.
+- Most traditionally-imperative programmers look at the functional language branch as an academic curiosity, but a lot of functional concepts such as 
+    - monadic processing (a function accepting an input returns an object that supports its own library of operations, allowing for method chaining with a "grammar structure", commonly known as a "fluent interface"), 
+    - first-order functions (a function is an independently reference-able, assignable variable, independent of any other construct besides its input parameters), 
+    - declarative syntax (the structure of the code indicates what to do more than how) have been incorporated into current versions of modern imperative languages.
+
+- It has the ability to handle multiple threads ( Process in Erlang terms ) at the same time not utilising double CPU processing power. Unlike C program thread in which each thread uses seperate resources from the CPU.
 
 - I want an implementation of the capability model. (Better security. PIDs could be transformed into some kind of URIs which means they would be available from anywhere in the world! Lets break out of the VM already! It's not in Erlang yet but I would switch for that).
 
@@ -47,24 +59,25 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 
 - Everything is a process
 - Processes are strongly isolated
-- Process creation and destruction is a lightweight operation.
-- Message passing is the only way for processes to interact.
-- Processes have unique names, internal state.
-- If you know the name of a process you can send it a message.
-- Processes share no resources.
-- Error handling is non-local.
-- Processes do what they are supposed to do or fail.
+- Process creation and destruction is a lightweight operation
+- Message passing is the only way for processes to interact
+- Processes have unique names, internal state
+- If you know the name of a process you can send it a message
+- Processes share no resources
+- Error handling is non-local
+- Processes do what they are supposed to do or fail
 - In computer science, syntactic sugar is syntax within a programming language that is designed to make things easier to read or to express. It makes the language "sweeter" for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
 - It also supports interpreting, directly from source code via abstract syntax tree
-- You can remember this because forms aren't expressions (no value is returned from them), and therefore the period represents the end of a statement.
+- You can remember this because forms aren't expressions (no value is returned from them), and therefore the period represents the end of a statement
 
 # Actor Supervisor
+
 - Actors are persistent
 - Encapsulates internal state
     - Threads have state
     - Coroutines has state
 - Actors are asyncronous
-- Actors can create actors (main thread can create other threads as well )
+- Actors can create actors ( main thread can create other threads as well )
 - Receive message make local decision
 - Perform arbitary side effecting function
 - Do you comunicate by sharing memory instead share memory by communicating message
@@ -107,6 +120,7 @@ Each Erlang process has a small memory footprint and can grow/shrink dynamically
 - One of the earliest challenges we faced was reducing the channel servers' memory footprint. High-level languages often provide rich data types and powerful abstractions for manipulating them. Erlang strings, for instance, are linked lists of characters, allowing programmers to use all the list-manipulation goodies that Erlang provides. In this case, however, it pays to control the representation a little closer and use arrays of characters like one might in C++. In this case we traded back some of Erlang's power in favor of CPU and memory usage. We also exploited the nature of our application to make another trade-off: just before a user's HTTP response process goes to sleep to wait for a new message to arrive, we force a pass of the garbage collector. We spend more cycles in that process than we usually would, but we ensure that it's using as little as memory as possible before it sleeps.
 
 - C++ less memory footprint
+
 - https://www.facebook.com/notes/facebook-engineering/chat-stability-and-scalability/51412338919/
 
 
@@ -131,7 +145,7 @@ goto c
 - goto <label> jumps to the start address of the routine.  
 - The last statement will be a return (ret) which expects to find a return address on the top of stack.
 
-This is called 'last call optimization' - it just says that if the
+This is called `last call optimization` - it just says that if the
 last thing a function does is call another function, then the call
 can be replaced by jump to the start of the function.
 
@@ -152,13 +166,16 @@ iex - Elixir
 rebar3 binary download and copy to /usr/local/bin/
 rebar3 compile
 
-### Open source Erlang Applications :
+### Open source Erlang Applications:
 
-- RabbitMQ: AMQP messaging protocol implementation. AMQP is an emerging standard for high-performance enterprise messaging.
+- RabbitMQ
+    - AMQP messaging protocol implementation. AMQP is an emerging standard for high-performance enterprise messaging.
 
-- CouchDB: “schema-less” document-oriented database, providing scalability across multicore and multiserver clusters.
+- CouchDB
+    - “schema-less” document-oriented database, providing scalability across multicore and multiserver clusters.
 
-- Ejabberd: system provides an Extensible Messaging and Presence Protocol (XMPP) based instant messaging (IM) application server.
+- Ejabberd
+    - system provides an Extensible Messaging and Presence Protocol (XMPP) based instant messaging (IM) application server.
 
 - Riak
     - Performance Benchmark
