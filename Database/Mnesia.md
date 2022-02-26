@@ -6,7 +6,7 @@
 
 - A power of two number of fragments is simply related to the fact the default fragmentation module `mnesia_frag` uses linear hashing so using 2^n fragments assures that records are equally distributed (more or less, obviously) between fragments.
 
-- Using disc_only_copies most of the time is spent in two operations:
+- Using `disc_only_copies` most of the time is spent in two operations:
     - Decide which fragment holds which record
     - Retrieve the record from corresponding dets table (Mnesia backend)
 

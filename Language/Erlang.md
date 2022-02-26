@@ -95,19 +95,19 @@ Erlang does this with features such as a built-in `worker-supervisor`.
 
  - Variables can't be variable in functional programming.
 
- - The first thing these commands tell us is that you can assign a value to a variable exactly once; then you can 'pretend' to assign a value to a variable if it's the same value it already has.
+ - The first thing these commands tell us is that you can assign a value to a variable exactly once; then you can `pretend` to assign a value to a variable if it's the same value it already has.
 
  - What this operator does when mixed with variables is that if the left-hand side term is a variable and it is unbound (has no value associated to it), Erlang will automatically bind the right-hand side value to the variable on the left-hand side. The comparison will consequently succeed and the variable will keep the value in memory.
 
- - This behavior of the = operator is the basis of something called 'Pattern matching', 
+ - This behavior of the `= operator` is the basis of something called 'Pattern matching', 
 
- -  If you're testing in the shell and save the wrong value to a variable, it is possible to 'erase' that variable by using the function f(Variable).. If you wish to clear all variable names, do f().
+ -  If you're testing in the shell and save the wrong value to a variable, it is possible to 'erase' that variable by using the function f(Variable). If you wish to clear all variable names, do f().
 
  - Atoms are literals, constants with their own name for value. What you see is what you get and don't expect more. The atom cat means "cat" and that's it.
 
  - An atom should be enclosed in single quotes (') if it does not begin with a lower-case letter or if it contains other characters than alphanumeric characters, underscore (_), or @.
 
- - I compared atoms to constants having their name as their values. You may have worked with code that used constants before: as an example, let's say I have values for eye colors: BLUE -> 1, BROWN -> 2, GREEN -> 3, OTHER -> 4. You need to match the name of the constant to some underlying value. Atoms let you forget about the underlying values: my eye colors can simply be 'blue', 'brown', 'green' and 'other'. T
+ - I compared atoms to constants having their name as their values. You may have worked with code that used constants before: as an example, let's say I have values for eye colors: `BLUE -> 1`, `BROWN -> 2`, `GREEN -> 3`, `OTHER -> 4`. You need to match the name of the constant to some underlying value. Atoms let you forget about the underlying values: my eye colors can simply be 'blue', 'brown', 'green' and 'other'.
 
 - Atoms are really nice and a great way to send messages or represent constants. However there are pitfalls to using atoms for too many things: an atom is referred to in an "atom table" which consumes memory (4 bytes/atom in a 32-bit system, 8 bytes/atom in a 64-bit system). The atom table is not garbage collected, and so atoms will accumulate until the system tips over, either from memory usage or because 1048577 atoms were declared.
 
@@ -117,7 +117,9 @@ Erlang does this with features such as a built-in `worker-supervisor`.
 
 - Pragmatism beats theory
 
-- One of the earliest challenges we faced was reducing the channel servers' memory footprint. High-level languages often provide rich data types and powerful abstractions for manipulating them. Erlang strings, for instance, are linked lists of characters, allowing programmers to use all the list-manipulation goodies that Erlang provides. In this case, however, it pays to control the representation a little closer and use arrays of characters like one might in C++. In this case we traded back some of Erlang's power in favor of CPU and memory usage. We also exploited the nature of our application to make another trade-off: just before a user's HTTP response process goes to sleep to wait for a new message to arrive, we force a pass of the garbage collector. We spend more cycles in that process than we usually would, but we ensure that it's using as little as memory as possible before it sleeps.
+- One of the earliest challenges we faced was reducing the channel servers' memory footprint. High-level languages often provide rich data types and powerful abstractions for manipulating them. Erlang strings, for instance, are linked lists of characters, allowing programmers to use all the list-manipulation goodies that Erlang provides. In this case, however, it pays to control the representation a little closer and use arrays of characters like one might in C++. 
+
+- In this case we traded back some of Erlang's power in favor of CPU and memory usage. We also exploited the nature of our application to make another trade-off: just before a user's HTTP response process goes to sleep to wait for a new message to arrive, we force a pass of the garbage collector. We spend more cycles in that process than we usually would, but we ensure that it's using as little as memory as possible before it sleeps.
 
 - C++ less memory footprint
 
