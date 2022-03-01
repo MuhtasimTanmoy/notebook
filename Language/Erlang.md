@@ -27,6 +27,9 @@ Erlang does this with features such as a built-in `worker-supervisor`.
     -  Atom table
     -  Large binary space
 
+- Process based gc
+    - starts with full sweep, after threshold generational mark and sweep
+
  - Variables in Erlang can only be assigned once. The Erlang shell provides a special command if that allows you to erase the binding of a variable or all variables at once.
 
  - Erlang does not have an intermediary like Go channel, but it does employ a very powerful concept known as the Actor Model. In this world, a process is an independent actor. It doesn't care about the outside world. It's like a prisoner churning over its own thing and wait for something to be passed into its prison's door, or more specifically, mailbox.
@@ -190,3 +193,4 @@ rebar3 compile
 - [The Beam Book](https://blog.stenmans.org/theBeamBook/)
 - [Erlang Design Architecture](https://stackoverflow.com/questions/7307634/how-do-you-design-the-architecture-of-an-erlang-otp-based-distributed-fault-tole/7308218#7308218)
 - [Time Series Database](https://github.com/dalmatinerdb/dalmatinerdb)
+- [FAQ](https://www.erlang.org/faq/academic.html)
