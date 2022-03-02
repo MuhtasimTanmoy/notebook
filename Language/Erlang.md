@@ -27,6 +27,23 @@ Erlang does this with features such as a built-in `worker-supervisor`.
     -  Atom table
     -  Large binary space
 
+- Type
+    - Number 
+        - float
+        - int
+    - atom
+    - ref
+    - func
+    - port
+    - pid
+    - tuple
+    - list
+        - nil
+        - cons
+    - binary
+
+- Ports are used for interoperability
+
 - Process based gc
     - starts with full sweep, after threshold generational mark and sweep
 
@@ -194,3 +211,4 @@ rebar3 compile
 - [Erlang Design Architecture](https://stackoverflow.com/questions/7307634/how-do-you-design-the-architecture-of-an-erlang-otp-based-distributed-fault-tole/7308218#7308218)
 - [Time Series Database](https://github.com/dalmatinerdb/dalmatinerdb)
 - [FAQ](https://www.erlang.org/faq/academic.html)
+- [Documnentation](https://www.erlang.org/doc/index.html)

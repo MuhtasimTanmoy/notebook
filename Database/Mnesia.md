@@ -23,10 +23,9 @@ dumped. A dump creates a new `DCD` and removes the `DCL`.
 
 - `DAT` files are `DETS:es` which contain `disc_only_copies` tables.
 
-- SCHEMA.DAT is a special DETS that contains the schema for that Mnesia instance.
+- `SCHEMA.DAT` is a special DETS that contains the schema for that Mnesia instance.
 
-- LATEST.LOG is Mnesia's transaction log, which is periodically flushed
-to the updated tables.
+- LATEST.LOG is Mnesia's transaction log, which is periodically flushed to the updated tables.
 
 - Applies argument Fun to all records in the table. Fun is a function that takes a record of the old type and returns a transformed record of the new type. Argument Fun can also be the atom ignore, which indicates that only the metadata about the table is updated. Use of ignore is not recommended, but included as a possibility for the user do to an own transformation.
 
