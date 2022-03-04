@@ -143,6 +143,9 @@ Erlang does this with features such as a built-in `worker-supervisor`.
 
 - C++ less memory footprint
 
+ - `=` used for pattern matching. If not bound, bind it. Then match.
+ - loop and recursions are tail recursive
+
 - https://www.facebook.com/notes/facebook-engineering/chat-stability-and-scalability/51412338919/
 
 
@@ -211,4 +214,4 @@ rebar3 compile
 - [Erlang Design Architecture](https://stackoverflow.com/questions/7307634/how-do-you-design-the-architecture-of-an-erlang-otp-based-distributed-fault-tole/7308218#7308218)
 - [Time Series Database](https://github.com/dalmatinerdb/dalmatinerdb)
 - [FAQ](https://www.erlang.org/faq/academic.html)
-- [Documnentation](https://www.erlang.org/doc/index.html)
+- [Documnentation]()
