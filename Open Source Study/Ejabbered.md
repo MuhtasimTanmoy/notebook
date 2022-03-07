@@ -194,4 +194,7 @@ PORT      STATE    SERVICE
 - https://trisquel.info/files/ejabberd%202.1.pdf 
 
 - [Installation Guide](https://www.ejabberd.im/files/doc/guide.html#htoc2)
-    - 
+- [How it works](https://docs.ejabberd.im/admin/guide/clustering/)
+- [Modules](https://docs.ejabberd.im/admin/configuration/modules/#mod-sip)
+- [Internals](https://docs.ejabberd.im/developer/guide/)
+- [Stanza Routing](https://docs.ejabberd.im/developer/extending-ejabberd/stanza-routing/)

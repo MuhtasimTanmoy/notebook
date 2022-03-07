@@ -11,7 +11,10 @@ Erlang does this with features such as a built-in `worker-supervisor`.
 ## Beam
 
 - BEAM is like Java’s JVM, but for Erlang
-
+- BEAM is a Stack-Based Byte-Code Virtual Machine 
+    − BEAM is a register-based virtual machine. It has 1024 virtual registers that are used for holding temporary values and for passing arguments when calling functions. 
+    - Variables that need to survive a function call are saved to the stack. 
+    - BEAM is a threaded-code interpreter. Each instruction is word pointing directly to executable C-code, making instruction dispatching very fast.
 - Interface to outside world 
     - NIC / Ports
 
