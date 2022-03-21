@@ -47,6 +47,13 @@ for objects when there are  **_zero strong_**  references to them.
     - Publish
     - Reply
 
+- Concurrency
+    - serial queue
+        - main thread queue is serial queue
+        - using sync in serial queue will cause deadlock
+    - parallel queue
+    - reference-counting (i.e. xref). The large negative value for xref and ref, for example, is likely indicating that is an object that cannot be deallocated. 
+
 - Can capture memory leak by enabling option. 
 
 ```
@@ -67,3 +74,4 @@ tcpdump -n -t -i rvi0 -q -A tcp
 # Resources
 - [Swift Style Guide](https://google.github.io/swift/#global-constants)
 - [iOS Build](https://gist.github.com/adamawolf/3048717) 
+- [Concurrency](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/ThreadMigration/ThreadMigration.html#//apple_ref/doc/uid/TP40008091-CH105-SW1)

@@ -17,5 +17,3 @@ The inability for machine learning algorithm to capture true relationship is cal
 - Regularization
 - Bagging Boosting 
     - Finding that sweet spot
-
-

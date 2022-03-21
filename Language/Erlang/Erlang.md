@@ -213,8 +213,9 @@ rebar3 compile
 
 - [Beam VM](http://www.erlang-factory.com/upload/presentations/708/HitchhikersTouroftheBEAM.pdf)
 - [First Person Shooter in Erlang](http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf)
-- [The Beam Book](https://blog.stenmans.org/theBeamBook/)
+- [The Beam Book](https://blog.stenmans.org/theBeamBook)
 - [Erlang Design Architecture](https://stackoverflow.com/questions/7307634/how-do-you-design-the-architecture-of-an-erlang-otp-based-distributed-fault-tole/7308218#7308218)
 - [Time Series Database](https://github.com/dalmatinerdb/dalmatinerdb)
 - [FAQ](https://www.erlang.org/faq/academic.html)
-- [Documnentation]()
+- [Garabge Collector](https://www.erlang-solutions.com/blog/erlang-garbage-collector)
+- [Map internals](https://vimeo.com/69950294)

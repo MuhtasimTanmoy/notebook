@@ -12,8 +12,7 @@
 
 - Generalized State Channel
     - General form of payment channels applying the same idea to any kind of state transition systems on Blockchain
-    - 
-
+    
 # Resources
 - [Bitcoin Lightning Network](https://dci.mit.edu/lightning-network/)
 - [Duplex Micro-Payment Channels](https://tik-old.ee.ethz.ch/file//716b955c130e6c703fac336ea17b1670/duplex-micropayment-channels.pdf)

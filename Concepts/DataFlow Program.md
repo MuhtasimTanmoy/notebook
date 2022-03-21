@@ -1,2 +1,0 @@
-# Differential-dataflow programming model
-- 

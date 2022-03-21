@@ -29,7 +29,8 @@ Three major component
 
 - Runtime Data Area
     - PC Registers & Stacks per thread
-![](./screen/memory.png)   
+    
+![](./screen/memory.png)
 
 - Execution Engine
     - Interpreter

@@ -1,4 +1,5 @@
-## Ip address
+## Ip Address
+
 IP Address consists of two parts: IP Network and Host address.
 
 There are two categories
@@ -13,6 +14,7 @@ On a LAN, computers can talk with each other as long as they are under the same 
 Port numbers have a range of 0..65535 (although often 0 has special meaning). In the original BSD TCP implementation, only root can bind to ports 1..1023, and dynamically assigned ports were assigned from the range 1024..5000; the others were available for unprivileged static assignment. These days 1024..5000 is often not enough dynamic ports, and IANA has now officially designated the range 49152..65535 for dynamic port assignment. However even that is not enough dynamic ports for some busy servers, so the range is usually configurable (by an administrator). On modern Linux and Solaris systems (often used as servers), the default dynamic range now starts at 32768. Mac OS X and Windows Vista default to 49152..65535.
 
 ### Router
+
 The main purpose of a router is to be able to forward traffic to different destinations. Within computer networking, those destinations are different IP networks.
 
 A router in its basic form is simply a network device with 2 network interfaces (NICs), each being on separate network ids. So, you may have 2 networks; 192.168.1.x and 192.168.2.x. On one NIC  the router would have the IP address 192.168.1.1 and on the other it would have an IP address of 192.168.2.1. Computers on the 192.168.1.x network can now communicate with computers on the 192.168.2.x network via the router.
@@ -20,11 +22,13 @@ A router in its basic form is simply a network device with 2 network interfaces 
 In summary all devices have a routing table, without it they wouldn’t know where to send packets to. When a PC sends packets to another PC it looks at it’s routing table to determine the best route possible. If it finds the destination address is “on-link” it knows it is part of the same subnet as the destination and sends the packets directly to the PC. If not it forwards the packet onto whatever is in the gateway field of the matching route entry. This same process is repeated at every router/hop along the way until it eventually arrives at a router that is part of the destination network. The router then sends the packets directly to the destination PC.
 
 ## Subnet Mask
+
 An IP address is always combined with a Subnet Mask, and it is the Subnet Mask that determines which part of the IP address that belongs to the IP network and which part that belongs to host addresses.
 
 IP = Network + Host Address
  
  # Default gateway
+
  In the local network, there must be a router for inter-network communication and the address of that router is configured to all clients of the LAN network. The address of the router is called Default Gateway. We could have just called it "Router Address".
 
 # Private IP
@@ -42,6 +46,7 @@ The above special addresses are called Private addresses. They cannot be used on
 Since public IP addresses are limited and thus we are forced to use private IP addresses at home, how do we connect to internet?
 
 ## How NAT Works?
+
 When a computer wants to communicate it sends off a packet with data. The packet always has two IP addresses inscribed in the envelope or header of the packet.
 
 Source Address, which is the IP address of the sender. This has to be entered into the packet so the receiver knows where it should send its replies, like a “return address” Destination address, the IP address of the receiver that the packet is being sent to In a home network where a computer wants to talk to something on the Internet, the source address will be a Private IP address on the LAN. The destination address of the packet will be a Public IP address of a server on the Internet. If that packet is sent to the Internet then the ISP will block and throw away the packet since it has a private IP address as its source.
@@ -77,7 +82,7 @@ NAT Hole Punching
 5.  Connection Established.
 
 
-# Port forward
+# Port Forward
 There is no way for the router to know. We have to configure the router such that when traffic from outside hits a particular port of the router, the router will send it to a host that we configured. This is called port forwarding.
 
 

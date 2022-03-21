@@ -117,8 +117,6 @@ WAL for crash recoverable transaction, Log on petal
 ![](./screen/RW_Transaction.png)
 - Data across data centers
 
-
-
 # Optimistic Concurrency Control
 - FARM - Optimized for one data center
 - NVRAM
@@ -132,7 +130,6 @@ WAL for crash recoverable transaction, Log on petal
     - Wide dependency - Distinct
 - Not good for stream processing
 - Instead of GFS writing in mapreduce, rdd can be retained in memory.
-
 
 # Cache consistency
 - Four architecture
@@ -163,7 +160,6 @@ WAL for crash recoverable transaction, Log on petal
 - Race condition
     - Read, miss, but before set write, invalidate happens      
 
-
 # Casual Consistency
 - Interact with only local
 - Usage - Cassandra, Dynamo
@@ -183,8 +179,6 @@ WAL for crash recoverable transaction, Log on petal
 
 
 # Blockstack
-
-
 
 
 ## Final Project
@@ -207,7 +201,6 @@ WAL for crash recoverable transaction, Log on petal
 - Logical Clock
     - only orderinig of event
 
-
 **Lecture 3**
 Lamport Diagrams/ Space Time Diagrams
 
@@ -221,8 +214,6 @@ A -> B when,
 Network mode
 - Syncrobous 
 - Asyncronous
-
-
 
 # Waterloo
  
@@ -277,7 +268,6 @@ Lecture 7
 - Ports are 16 bits
 
 Lecture 8
-
 
 ----
 

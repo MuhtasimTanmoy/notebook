@@ -9,7 +9,6 @@ ICE needs to gather candidates, prioritize them, choose default ones, exchange t
 ### TURN
 - Commmunication through server
 
-
 # NAT 
 
 All types of NAT fall into two categories; Static NAT and Dynamic NAT. Static NAT is where administrators manually create and maintain the NAT mappings and is usually associated with inbound types of NAT. Dynamic NAT is where the router creates and maintains mappings automatically on demand and is usually associated with outbound types of NAT.
@@ -87,14 +86,19 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 
  - The candidates can be packed in the original offer, or can be sent independently after the offer is sent. The latter is known as trickle ICE
 
-## Process keywords
+## Keywords
 
-- Signalling is not standard - SIP, Jingle.
-- RTP Media Session - Described by SDP
-- RTCWeb Media Extensions - ICE NAT Traversal - Secure RTP
-- ICE Hole Punching can establish direct p2p session between browsers behind different NAT
-- If both browsers behind same NAT hole punching stablish connection that never leaves
-- In some cases hole punching fails, TURN Relay can work
+- Signalling is not standard 
+    - SIP, Jingle
+- RTP Media Session 
+    - Described by SDP
+- RTCWeb Media Extensions 
+    - ICE NAT Traversal
+    - Secure RTP
+- `ICE Hole Punching` can establish direct `p2p` session between browsers behind different NAT
+- If both browsers behind same `NAT hole punching` stablish connection that never leaves
+- In some cases hole punching fails, `TURN Relay` can work
+- Some website serves static assets from other peer
 
 
 # Recources
