@@ -1,11 +1,11 @@
-# c++
+# C++
 
 - Library
     - Boost
     - std
     - abseil
 
-### constexpr
+### Constexpr
 - [constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c)
 
 - [CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
@@ -121,6 +121,6 @@ g++ -fdump-class-heirarchy a.cpp
 
     - Atomics and locks generally provide thread safe way to do things
 
-    - Benchmark different operations in lock vs mutex, atomic operaions vs normal vs spinlock
+    - Benchmark different operations in lock vs mutex, `atomic operaions vs normal vs spinlock`
 
     - Memory barriers

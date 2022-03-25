@@ -64,6 +64,8 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
 - [Queue Usage](https://stackoverflow.com/questions/28784507/adding-items-to-swift-array-across-multiple-threads-causing-issues-because-arra/28784770#28784770)
     - Concurrent queues are queues to which you can submit multiple tasks and they are allowed to run parallel. But sometimes you want to submit something to that queue that needs to lock everything else in the queue because it needs to run alone, so stuff you submit with barrier basically wait for everything in the queue to be completed and then it locks everyone else and executes. In the end release everyone else again.
 
+- KeyPath to simplify object property
+
 ## Resource
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0)
 - [Swift Memory Model](https://youtu.be/ERYNyrfXjlg)
