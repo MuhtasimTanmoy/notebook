@@ -47,6 +47,8 @@ for objects when there are  **_zero strong_**  references to them.
     - Publish
     - Reply
 
+- Interaction with c always takes `opaque pointer` in new systems, in older systems worked differently. 
+
 - Concurrency
     - serial queue
         - main thread queue is serial queue

@@ -1,4 +1,3 @@
-
 - Interface
     - Method signature
     - Property declaration
@@ -38,9 +37,9 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
     - Network link conditioner to simulate packet loss
 
 - Opaque pointer opposite to generics
+- Opaque type solves the problem introduced by `associatedType` 
 - Extension, Opaque pointer has difference
 - Download task differs when we use it to download different types
-
 - Dependency injection through param, protocols
 
 - Generics
@@ -52,8 +51,11 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
 
 - Actor
     - Manages concurrenncy related issue
-- Class has convenience initializer where struct cann simulate that through extension.
-- Struct can have inheritence by using `protocol + extension + default`.
+
+- Class has convenience initializer where struct cann simulate that through extension
+
+- Struct can have inheritence by using `protocol + extension + default`
+
 - Struct can have data race if not captured. [Ref](https://stackoverflow.com/questions/41350772/if-arrays-are-value-types-and-therefore-get-copied-then-how-are-they-not-thread)
 
 - [Swift Memory Layout](https://theswiftdev.com/memory-layout-in-swift)
@@ -65,6 +67,7 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
     - Concurrent queues are queues to which you can submit multiple tasks and they are allowed to run parallel. But sometimes you want to submit something to that queue that needs to lock everything else in the queue because it needs to run alone, so stuff you submit with barrier basically wait for everything in the queue to be completed and then it locks everyone else and executes. In the end release everyone else again.
 
 - KeyPath to simplify object property
+
 
 ## Resource
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0)
