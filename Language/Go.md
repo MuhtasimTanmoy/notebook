@@ -51,14 +51,11 @@ go test server *.go
 
 go run --race test.go 
 
- ```
-
-
+```
 
 
 **Other Points**
 - Go vet
-
 
  # Resources
  - https://word.bitly.com/post/29550171827/go-go-gadget
