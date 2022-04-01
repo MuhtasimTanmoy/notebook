@@ -2,12 +2,12 @@
 
 Rendering Steps for a browser
 - Constructing the DOM Tree
+    - byte > character > token > node > dom
 - Constructing the CSSOM Tree
 - Running JavaScript
 - Creating the Render Tree
 - Generating the Layout
 - Painting
-
 
 # JS
 
