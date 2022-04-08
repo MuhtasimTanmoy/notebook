@@ -26,7 +26,6 @@
     - -> Data + Port + IP (Packet) Network  
     - -> Packet + Mac (Frame)
 
-
 - Router
 	- Routers operate at Layer 3 of the OSI Model
 	- Route Table is a map of `_every_ network` that exists

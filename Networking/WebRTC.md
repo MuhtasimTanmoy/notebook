@@ -1,4 +1,4 @@
-# WebRTC Topics
+# WebRTC
 
 # ICE
 ICE needs to gather candidates, prioritize them, choose default ones, exchange them with the remote party, pair them and order into check lists.
