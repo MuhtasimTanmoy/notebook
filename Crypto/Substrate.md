@@ -28,4 +28,4 @@
             - Babe
         - Finality
             - Grandpa
-    - Parachain 
+    - Parachain

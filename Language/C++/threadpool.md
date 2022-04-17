@@ -4,6 +4,7 @@
     - ` std::function< double( int, int ) > ` double return type, two int argument
     - `packaged_task` to make future
 
+
 ```c++
 template<class T>
 struct threadsafe_queue {
@@ -44,6 +45,11 @@ private:
   std::atomic<bool> aborted{false};
   std::deque<T> data;
 };
+
+
+
+
+
 
 struct threadpool {
   explicit threadpool(std::size_t count)

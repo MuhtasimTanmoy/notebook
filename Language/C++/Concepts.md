@@ -1,6 +1,5 @@
 - Memory barriers
     - Can be used to prevent compilers to reorder operations, instructions for instructionn level parallelism
-    - 
 
 - [spinlock](https://github.com/CoffeeBeforeArch/spinlocks)
     - Other locks waiting to get to sleep

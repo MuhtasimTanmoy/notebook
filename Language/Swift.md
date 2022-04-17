@@ -65,6 +65,9 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
 
 - [Queue Usage](https://stackoverflow.com/questions/28784507/adding-items-to-swift-array-across-multiple-threads-causing-issues-because-arra/28784770#28784770)
     - Concurrent queues are queues to which you can submit multiple tasks and they are allowed to run parallel. But sometimes you want to submit something to that queue that needs to lock everything else in the queue because it needs to run alone, so stuff you submit with barrier basically wait for everything in the queue to be completed and then it locks everyone else and executes. In the end release everyone else again.
+    - Reads can enjoy concurrency (no barrier), but calling thread must wait (sync), but writes can not be concurrent (thus, the barrier), but calling thread doesn’t have to wait (hence async).
+    - One technically can use semaphores, but it’s the last tool we would reach for. NSLock is simple and performant. Unfair locks can be useful where performance is critical, but it’s a little cumbersome and its overkill in most situations.
+    - Reads can only happen concurrently only with respect to other reads. But they cannot be performed concurrently with writes. So concurrent queue allows the reads to happen concurrently, with the exception of writes, which is why we use barrier for writes.
 
 - KeyPath to simplify object property
 
