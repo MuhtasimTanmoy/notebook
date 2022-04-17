@@ -7,7 +7,6 @@
     - Contract is transaction with no to address, and only data
     - Full flow walkthrough
 
-
 - [](https://www.youtube.com/watch?v=IEvRRszoTeE)
 - [Blockchain / Crosschain / DeFi Bridge Design](https://youtu.be/zq4cbS3q-lY)
 

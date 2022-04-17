@@ -186,6 +186,9 @@ PORT      STATE    SERVICE
 
 12345/tcp filtered netbus
 
+- Other alternative
+    - Matrix, which is pull based
+
 # Resources
 - https://trisquel.info/files/ejabberd%202.1.pdf
 - http://www.owl.homeip.net/manuals/services/ejabber/

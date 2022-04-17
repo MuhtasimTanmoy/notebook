@@ -634,12 +634,11 @@ trait Future {
 ## Concurrency
 - When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
 
-
 **Other Points**
 
 - Static mutable is unsafe, and so must be done in an unsafe block.
 
-- Any type stored in a static must be Sync, and must not have a Drop implementation.
+- Any type stored in a static must be Sync, and must not have a `Drop` implementation.
 
 - They follow the “read-write lock” pattern, such that one may either have only one mutable reference to some data, or any number of immutable ones, but not both.
 
@@ -663,25 +662,34 @@ trait Future {
 - Tokio core is event loop of tokio    
 
 ```rust
-
 #[cfg(foo)]
-
 // in toml define one
- 
 ```
 
-## **Build System**
+Build System
 
 Cargo is Rust’s build system and package manager, and Rustaceans use Cargo to manage their Rust projects.
 
 crate - library - holds module
 
 ```bash
-
 cargo init
-
 cargo new crate_name
 
+# "^0.5.1" always goes to "1.0.0" upto not including
+
+# "~0.5.1" always goes to "0.6.0" upto not including. last set version.
+
+# bin package should have Cargo.lock, lib package should not
+
+# embed example as doc, run & verify test
+# a library is only as good as its documnetation
+cargo test --doc
+
+# optional dependency
+serde = { version = "1.0", default-features = false, features = ["derive"], optional = true }
+
+# dependency fetch only when feature enabled 
 ```
 
 **incomplete**
@@ -695,7 +703,7 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
 
 ---
 
-RESOURCES:
+Resources:
 
 - [Rust Ownership, Safety Explained](https://words.steveklabnik.com/a-30-minute-introduction-to-rust)
 
@@ -709,7 +717,7 @@ RESOURCES:
 
 - [Rust overview](https://www.youtube.com/watch?v=9x7W3_KKKeA&ab_channel=YOW%21Conferences)
 
-TALKS : 
+Talks : 
 - [Rust at Speed](https://www.youtube.com/watch?v=s19G6n0UjsM&t=3s) 
     - Explains usage of rust on [Noria](https://github.com/mit-pdos/noria)
     - Usage of cache inside DB, mainly materialized view, the current result for a query.
@@ -723,5 +731,5 @@ TALKS :
 - [Code Benchmarking](https://godbolt.org/z/nqTveYvzx)
 
 
-## Blog
+Blog
 - https://lukaskalbertodt.github.io
