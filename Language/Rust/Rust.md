@@ -12,6 +12,8 @@
 
 - No green threads given, can be a library but not runtime feature to support to write a portion.
 
+- If you have a reference &T, then normally in Rust the compiler performs optimizations based on the knowledge that &T points to immutable data. Mutating that data, for example through an alias or by transmuting an &T into an &mut T, is considered undefined behavior. `UnsafeCell<T>` opts-out of the immutability guarantee for &T: a shared reference &UnsafeCell<T> may point to data that is being mutated. This is called “interior mutability”.
+
 
 ## Ownership
 
@@ -439,7 +441,6 @@ enum Option<T> {
 Trait contains method signature.
 
 ```rust
-
 struct Circle {
     x: f64,
     y: f64,
@@ -448,7 +449,6 @@ struct Circle {
 
 trait HasArea {
     fn area(&self) -> f64;
-
     fn is_larger(&self, &Self) -> bool;
 }
 
@@ -456,18 +456,15 @@ impl HasArea for Circle {
     fn area(&self) -> f64 {
         std::f64::consts::PI * (self.radius * self.radius)
     }
-
     fn is_larger(&self, other: &Self) -> bool {
         self.area() > other.area()
     }
 }
 
 // with generics
-
 fn print_area<T: HasArea>(shape: T) {
     println!("This shape has an area of {}", shape.area());
 }
-
 
 trait Graph {
     type N;
@@ -476,7 +473,6 @@ trait Graph {
     fn has_edge(&self, &Self::N, &Self::N) -> bool;
     fn edges(&self, &Self::N) -> Vec<Self::E>;
 }
-
 ```
 
 # Attributes
@@ -498,14 +494,11 @@ fn main() {
 // Ord
 // PartialEq
 // PartialOrd
-
 ```
-
 
 ## Check last state of stuct when relesed
 
 ```rust
-
 struct Firework {
     strength: i32,
 }
@@ -520,15 +513,13 @@ fn main() {
     let firecracker = Firework { strength: 1 };
     let tnt = Firework { strength: 100 };
 }
-
 // BOOM times 100!!!
 // BOOM times 1!!!
 
 // Arc<T> type is a reference-counted type. When Drop is called, it will decrement the reference count, and if the total number of references is zero, will clean up the underlying value.
-
 ```
 
-## Trait objects
+## Trait Objects
 
 When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. 
 This is called ‘dispatch’. 
@@ -544,17 +535,13 @@ While Rust favors static dispatch, it also supports dynamic dispatch through a m
 fn do_something<T: Foo>(x: T) {
     x.method();
 }
-
 // Will be converted to this
-
 fn do_something_u8(x: u8) {
     x.method();
 }
-
 fn do_something_string(x: String) {
     x.method();
 }
-
 // This has a great upside: static dispatch allows function calls to be inlined because the callee is known at compile time, and inlining is the key to good optimization. Static dispatch is fast, but it comes at a tradeoff: ‘code bloat’, due to many copies of the same function existing in the binary, one for each type.
 
 // Furthermore, compilers aren’t perfect and may “optimize” code to become slower. For example, functions inlined too eagerly will bloat the instruction cache (cache rules everything around us). This is part of the reason that #[inline] and #[inline(always)] should be used carefully, and one reason why using a dynamic dispatch is sometimes more efficient.
@@ -565,7 +552,6 @@ fn do_something_string(x: String) {
 // This operation can be seen as ‘erasing’ the compiler’s knowledge about the specific type of the pointer, and hence trait objects are sometimes referred to as ‘type erasure’.
 
 // Dynamic dispatch
-
 fn do_something(x: &Foo) {
     x.method();
 }
@@ -578,36 +564,26 @@ fn main() {
 // this comes at the cost of requiring slower virtual function calls, and effectively inhibiting any chance of inlining and related optimizations from occurring.
 
 // The methods of the trait can be called on a trait object via a special record of function pointers traditionally called a ‘vtable’ 
-
 ```
+
 ## Variance
 
 ```rust
-
 // Covariance
-
-// any lifetime can be treated as static
+// Any lifetime can be treated as static
 
 let x: &'static str // more useful
 let a: &'a str
 
 a = x 
-
 // Contravariance
 
-fn foo(&'a str) { // less usefull
-}
-
-fn foo(&'static str) { // less usefull
-}
+fn foo(&'a str) { // less usefull}
+fn foo(&'static str) { // less usefull}
 
 // Invariance
-
-fn foo(s: &mut &'a str, a: &'a str) {
-
-}
+fn foo(s: &mut &'a str, a: &'a str) {}
 let mut x = ""
-
 foo(x, ""  )
 
 use std::marker::PhantomData;
@@ -667,7 +643,6 @@ trait Future {
 ```
 
 Build System
-
 Cargo is Rust’s build system and package manager, and Rustaceans use Cargo to manage their Rust projects.
 
 crate - library - holds module
@@ -696,15 +671,16 @@ serde = { version = "1.0", default-features = false, features = ["derive"], opti
 
 **Trait objects** - has lackings, read again
 
-**Closures**
-
 ## REPR
 This is the most important repr. It has fairly simple intent: do what C does. The order, size, and alignment of fields is exactly what you would expect from C or C++. Any type you expect to pass through an FFI boundary should have repr(C), as C is the lingua-franca of the programming world. This is also necessary to soundly do more elaborate tricks with data layout such as reinterpreting values as a different type.
 
+## Closure
+- boxed closure syntax |&:| -> int
+-  the sugar syntax is `|X: args...| -> ret`, where the X can be `&, &mut or nothing`, corresponding to the `Fn, FnMut, FnOnce` traits, you can also write `Fn<(args...), ret>` etc. for the non-sugared form. The sugar is likely to be changing (possibly something like `Fn(args...) -> ret).`
+
 ---
 
-Resources:
-
+## Resources
 - [Rust Ownership, Safety Explained](https://words.steveklabnik.com/a-30-minute-introduction-to-rust)
 
 - [How Rust Ownership works?](https://static.rust-lang.org/doc/master/book/ownership.html)
@@ -717,12 +693,13 @@ Resources:
 
 - [Rust overview](https://www.youtube.com/watch?v=9x7W3_KKKeA&ab_channel=YOW%21Conferences)
 
-Talks : 
+
+## Talks
 - [Rust at Speed](https://www.youtube.com/watch?v=s19G6n0UjsM&t=3s) 
     - Explains usage of rust on [Noria](https://github.com/mit-pdos/noria)
     - Usage of cache inside DB, mainly materialized view, the current result for a query.
-    - Problem : Huge result table, concurrent read write on same table, partial materialized view.
-    - Lock, RWLock fails being the costly one themselves as the wrapping work is too less
+    - Problem: Huge result table, concurrent read write on same table, partial materialized view.
+    - Lock, RWLock fails being the costly one themselves as the wrapping work is too less.
     - Maintain two maps, one for read, another for write maintaining epic counter +2 for each read and  switch for alternatively.
 
 - [Pinning](https://stackoverflow.com/questions/49913846/what-are-the-use-cases-of-the-newly-proposed-pin-type)
@@ -731,5 +708,6 @@ Talks :
 - [Code Benchmarking](https://godbolt.org/z/nqTveYvzx)
 
 
-Blog
+## Blog
 - https://lukaskalbertodt.github.io
+- http://pcwalton.github.io/

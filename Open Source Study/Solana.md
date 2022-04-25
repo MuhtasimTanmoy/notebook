@@ -42,9 +42,3 @@ Mapping - (reg -> stack)
     - A stack-based computer does not use the address field in the instruction. 
     - To evaluate an expression first it is converted to reverse Polish Notation i.e. Postfix Notation. 
     - Then instructions without any address used for operations
-
-- Web3 messaging
-    - https://www.sylo.io/network/
-    - https://matrix.org/
-    - https://github.com/status-im
-    - https://www.dialect.to/
