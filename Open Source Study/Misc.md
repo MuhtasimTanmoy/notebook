@@ -41,4 +41,7 @@ Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consiste
 - [Multiversion Concurrency Control](https://www.youtube.com/watch?v=sxabCqWsFHg)
 - [MCC](https://en.wikipedia.org/wiki/Multiversion_concurrency_control) - Description Section Helpful 
 - [CAP Keynote](https://awoc.wolski.fi/dlib/big-data/Brewer_podc_keynote_2000.pdf)
+
+
+## [Worker Pool](https://github.com/inaka/worker_pool)
 - 

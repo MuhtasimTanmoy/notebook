@@ -1,4 +1,3 @@
-
 # Signal
 
 I know most of the members here are ordinary users but maybe some of you who actually know about it and want to see some more details which was missing in this conference and both the computerphile videos Instant Messaging and the Signal Protocol - Computerphile, Double Ratchet Messaging Encryption - Computerphile
@@ -15,7 +14,7 @@ The sender combines the 32-byte Chain Key and the public key from the Signature 
 
 Combining means it just combines chain key and Signature public key to create Sender key but later receivers can decompose this Sender key into chain key and Signature public key.
 
-4. The sender individually encrypts the Sender Key to each member of the group.
+The sender individually encrypts the Sender Key to each member of the group.
 
 For all subsequent messages to the group:
 
@@ -35,8 +34,6 @@ This is done to prevent server from knowing which message is made for group and 
 
 ### The XEdDSA and VXEdDSA Signature Schemes
 - XEdDSA enables use of a single key pair format for both elliptic curve Diffie-Hellman and signatures.
-- 
-
 
 # Signal Protocol Summary
 A very brief overview of the Signal Protocol.
@@ -105,9 +102,6 @@ Also, session management across devices via [Sesame](https://whispersystems.org/
 - [Advanced cryptographic ratcheting](https://whispersystems.org/blog/advanced-ratcheting/)
 - [A Formal Security Analysis of the Signal Messaging Protocol](https://eprint.iacr.org/2016/1013.pdf)
 - [Signal Android Client Code](https://github.com/WhisperSystems/Signal-Android) 
-
-
-
 
 
 # Resources

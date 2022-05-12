@@ -46,11 +46,6 @@ private:
   std::deque<T> data;
 };
 
-
-
-
-
-
 struct threadpool {
   explicit threadpool(std::size_t count)
   {

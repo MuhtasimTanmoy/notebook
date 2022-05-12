@@ -7,8 +7,6 @@
 
 ![](./Screen/jdk.png)    
 
-
-
 Three major component
 - Class Loader
     - Loading
@@ -43,4 +41,4 @@ Three major component
         - Profiler
 
 # FootNotes
-- The Java standard library needs to call into native code. For this purpose, the JRE contains some .dll (Windows) or .dylib (macOS) or .so (Linux) files under bin/ or lib/ with supporting, system-specific native binary code.
+- The Java standard library needs to call into native code. For this purpose, the JRE contains some `.dll` (Windows) or `.dylib` (macOS) or `.so` (Linux) files under `bin/` or `lib/` with supporting, system-specific native binary code.

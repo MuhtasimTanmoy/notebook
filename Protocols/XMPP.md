@@ -40,12 +40,16 @@ Multiple implementations -
 
 ### XMPP Core
 
--   Core — information about the core XMPP technologies for XML streaming
--   Jingle — SIP-compatible multimedia signalling for voice, video, file transfer, and other applications
--   Multi-user chat — flexible, multi-party communication
--   Pubsub — alerts and notifications for data syndication, rich presence, and more
+-  Core 
+   — Information about the core XMPP technologies for XML streaming
+-  Jingle 
+   — SIP compatible multimedia signalling for voice, video, file transfer, and other applications
+-  Multi-user chat 
+   — Flexible, multi-party communication
+-  Pubsub 
+   — Alerts and notifications for data syndication, rich presence, and more
 
-#### rosters ( Contact List )  subscriptions  and presence
+#### Rosters ( Contact List ) subscriptions  and presence
 
 Basically your client (gajim, pidgin, adium, etc) sends packets (XML) to a router (XMPP "server") that determines who gets to see a copy of that packet.  
   
@@ -90,8 +94,6 @@ Stanzas have three possible names( XML tag names) in XMPP ,these can be a Messag
 
 ## Encryption
 There is no TLS usage in xmpp stream as it does not support raw data only frame. It can be enabled at websocket layer.
-
-
 
 
 ## Websocket Binding

@@ -1,6 +1,5 @@
  # Signal
 
-
 ## Implementation
 
 - Wire 
@@ -14,7 +13,7 @@
 
  # Resources
  
- - Analysing the Signal Protocol  
+ - [Analysing the Signal Protocol](https://eprint.iacr.org/2016/1013.pdf)
     - A manual and automated analysis of the Signal Protocol
     
 - [A Formal Security Analysis of the Signal Messaging Protocol](https://eprint.iacr.org/2016/1013.pdf)

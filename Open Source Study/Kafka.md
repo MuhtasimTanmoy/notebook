@@ -8,6 +8,5 @@ Furthermore, traditional messaging system cannot go "back in time" -- ie, the au
 
 And Kafka offers Kafka Connect and Streams API -- so it is a stream processing platform and not just a messaging/pub-sub system (even if it uses this in it's core).
 
-
 # Resources
 - [Kafka](https://hackernoon.com/thorough-introduction-to-apache-kafka-6fbf2989bbc1)

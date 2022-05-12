@@ -1,68 +1,57 @@
 
-# Basic Commands
+# Basic commands
+Quick bash snippets
 
-DB Create
-```
-createdb test
-psql -d test
-```
+- DB Create
+   ```bash
+   createdb test
+   psql -d test
+   ```
 
+- User create, permission add
+   ```bash
+   CREATE DATABASE myproject;
+   CREATE USER test WITH PASSWORD 'test';
+   GRANT ALL PRIVILEGES ON DATABASE myproject TO myuser;
+   ```
 
-User create, permission add
-```
-CREATE DATABASE myproject;
-CREATE USER test WITH PASSWORD 'test';
-GRANT ALL PRIVILEGES ON DATABASE myproject TO myuser;
-```
+- Basic commands
+   ```bash
+   \?
+   \conninfo
+   \c database
+   \dt list tables
+   \d table_name
+   \dn schema
+   \df functions
+   \dv views
+   \du users
+   \i import
+   \q
+   ```
 
-Import table to run query on
+- Table create
+   ```sql
+   CREATE TABLE account(
+      user_id serial PRIMARY KEY,
+      username VARCHAR (50) UNIQUE NOT NULL,
+      password VARCHAR (50) NOT NULL,
+      email VARCHAR (355) UNIQUE NOT NULL,
+      created_on TIMESTAMP NOT NULL,
+      last_login TIMESTAMP
+   );
 
-SQL change for local user
-Connect to DB
+   CREATE TABLE test(
+      user_id INT PRIMARY KEY,
+      username INT NOT NULL
+   );
+   ```
 
-Commands
-```
-\?
-\conninfo
-\c database
-\dt list tables
-\d table_name
-\dn schema
-\df functions
-\dv views
-\du users
-\i import
-\q
-```
+- DB export
 
+   ```bash
+   psql -U db_user db_name < dump_name.sql
 
-```
-CREATE TABLE account(
-   user_id serial PRIMARY KEY,
-   username VARCHAR (50) UNIQUE NOT NULL,
-   password VARCHAR (50) NOT NULL,
-   email VARCHAR (355) UNIQUE NOT NULL,
-   created_on TIMESTAMP NOT NULL,
-   last_login TIMESTAMP
-);
-
- CREATE TABLE test(
-   user_id INT PRIMARY KEY,
-   username INT NOT NULL
-);
-```
-
-```
-For mac:
-- alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-- alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-```
-
-
-```
-psql -U db_user db_name < dump_name.sql
-
-sudo ls /var/lib/postgresql/10/main/base/17422/
-
-pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
-```
+   sudo ls /var/lib/postgresql/10/main/base/17422/
+   pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
+   ```

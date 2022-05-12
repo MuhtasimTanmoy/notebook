@@ -24,7 +24,7 @@ The final value has to determined non-deterministically using heuristics such as
 
 Each node knows 
 - it's events
-- communication events
+- Communication events
 
 Local clock - Just a counter
 Monotonic increase at own event times.
@@ -37,14 +37,14 @@ Cant distinguish concurrent event
 
 - https://towardsdatascience.com/understanding-lamport-timestamps-with-pythons-multiprocessing-library-12a6427881c6
 
-# vector clock
+# Vector clock
  Just array of lamport
 
  CRDT
 
  Causally Related - One must be less and others equal or less
 
- Concurrent - One less , one more, one less / more
+ Concurrent - One less, one more, one less / more
 
 # Interval Tree Clock
 - https://www.youtube.com/watch?v=q0QOYtSsTg4
@@ -52,7 +52,8 @@ Cant distinguish concurrent event
 - https://blog.separateconcerns.com/2017-05-07-itc.html
 - https://towardsdatascience.com/understanding-lamport-timestamps-with-pythons-multiprocessing-library-12a6427881c6 (implementation)
 
-Actor explosion - All unique identifier coming together modifying
+Actor explosion 
+- All unique identifier coming together modifying
 - We need to track causality. In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events "happened before" the other one.
 - Version Vectors or Interval Tree Clocks
 
@@ -92,7 +93,7 @@ As category 1 Stratum is not publicly available, we can get from 2
 - ntpdate to update in reasonable window
 
 # Gossip Protocol
-- A, B has some state. A sends it's state with version/timestamp. B checks updated, update it's and send back the one A lacks. A updates and sends acknowledgement.
+- A, B has some state. A sends it's state with version / timestamp. B checks updated, update it's and send back the one A lacks. A updates and sends acknowledgement.
 - Kubernates depends on etcd
 - Kafka, elastic search on zookeeper
 - Three requirements for P2P
@@ -114,9 +115,10 @@ As category 1 Stratum is not publicly available, we can get from 2
 - Timeout value dynamically calculated
 - Akka has cluster singleton
 - Consul extension lifeguard
-- [https://github.com/hashicorp/memberlist](HashiCorp Memberlist)
-- [https://github.com/lalithsuresh/rapid](Rapid) Gossip with concensus
-- Kafka moving away from zookeeper which used for membership, failure detection 
+- [HashiCorp Memberlist](https://github.com/hashicorp/memberlist)
+- [Rapid](https://github.com/lalithsuresh/rapid) 
+  - Gossip with concensus
+  - Kafka moving away from zookeeper which used for membership, failure detection 
 - [Gossip Protocol](https://www.youtube.com/watch?v=MPfAekq4f5I&ab_channel=DistributedSystemsConference)
 - [Gossip Protocol Attibutes](https://www.youtube.com/watch?v=FuP1Fvrv6ZQ&ab_channel=PlanetCassandra )
 - [Gossip Protocol Android](https://github.com/leonardogcsoares/Gossip-Protocol-Android)

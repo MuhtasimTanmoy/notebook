@@ -4,7 +4,7 @@
     - OOP not suitable for game development.
     - Think about data structures ather than functions that operate on it.
     - Self mutating struct or internal mutability usage for entity object.
-    - Object indeing.
+    - Object indexing
     - Put objects in vector and use index. But on delete of object `use after free` occurs.
     - Generational Indexing
         - Using index with a generation field

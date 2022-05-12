@@ -18,14 +18,12 @@ The leveldb library provides a persistent key value store. Keys and values are a
 - Use both, in memory log  linked list, while persisting sorted
 - In sorted chunk, whenever two of size 6 merge, known as log compaction.
 
+# Multi version concurrency control used in postgres
+
 
 ## Keywords
 - Write Amplification : Write Amplification is the ratio of actual data written to the flash vs data requested by the host to write to the device.Write amplification occurs because the flash device is internally organized in pages and data can be written to it only on a page by page basis.  
 - Skip list: Search a linked list better than 0(n). Regular linked list with express lane and normal lane. Time complexity: o(sqrt(n))
-
-
-# multi version concurrency control used in postgres
-
 
 
 # Resources

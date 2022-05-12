@@ -1,6 +1,6 @@
 # Syncthing
 
-source: 
+Source: 
 
 Chooses exponentially nodes
 In 64 steps

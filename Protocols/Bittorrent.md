@@ -37,10 +37,7 @@ can use this information in order to deliver content efficiently.
 
 - The peers distribute the file to each other by using the swarming technique.
 
-
-
 # The Tracker Protocol 
-
 
 ## Algorithm
 - Choke Algorithm - For uploading

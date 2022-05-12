@@ -1,16 +1,15 @@
 # Rabbit MQ
+
 AMQP is the core protocol for RabbitMQ (a Message Broker), but it also supports STORM, MQTT and HTTP through the use of plugins.
 - STOMP — a simple text based messaging protocol
 - MQTT — is a binary protocol known for its lightweight messaging
 - HTTP — you’re probably familiar with this one. It is not a messaging protocol, but management plugins in RabbitMQ use HTTP to send and receive messages.
-
 
 There are three AMQP entities in RabbitMQ:
 - Exchange
 - Binding
 - Queues
 Messages published by a publisher are first received by the Exchange in RabbitMQ, then Exchanges will distribute message copies to Queues. To send appropriate messages to the appropriate queues, rules called Bindings are used.
-
 
 ## When delivery fails?
 What happens when a message fails to deliver to a consumer? This can occur due to a network or application failure. If either of these failures was to occur, our system could potentially lose the message forever.
@@ -32,7 +31,6 @@ As for the reply queue, it's typically created by the client, which then populat
 
 # PubSub
 - Selective clients
-
 
 # Resources
 - https://medium.com/swlh/a-quick-guide-to-understanding-rabbitmq-amqp-ba25fdfe421d

@@ -2,16 +2,18 @@
 - Off the record
 - As OTR sessions existed between exactly two clients, the chat history would not be synchronized across other clients of the involved parties. Furthermore, OTR chats were only possible if both participants were online at the same time, due to how the rolling key agreement scheme of OTR worked. This one not used now. Repalced by siognal protocol.
 
----
 
 # Signal protocol
 - Prekey bundle
-    - IPKb - Identity public key bundle
+    - `IPKb` 
+        - Identity public key bundle
         - Generated once and saved locally
-    - SPKb - Signed public key bundle 
+    - `SPKb` 
+        - Signed public key bundle 
         - To verify control over the public key
         - Generated once and saved locally
-    - OPKb - Optional private key bundle 
+    - `OPKb` 
+        - Optional private key bundle 
         - Used for session establishment when offline
         - Uploaded to keybase on server
         - Once fetched by the counterpart it is deleted from keybase / server
@@ -24,7 +26,6 @@
     - Concat the public key of both party. And check this out of bound.
 
 
----
 
 ## EC_DH_RSA
 - Elliptic curve diffie hellman RSA.
@@ -49,26 +50,22 @@ y^2 = x^3 + 486662 x^2 + x
 
 ![Elliptic Curve ](screen/ECDH.png)
 
----
 
 ## Extended Tripple Diffie-Hellman x3dh
 
-IPKa - a's Identity Public Key
-EPKa - a's Ephimeral Public key (Generated once for usage)
+`IPKa` - a's Identity Public Key
+`EPKa` - a's Ephimeral Public key (Generated once for usage)
 
 
-IPKb - b's Identity Public Key
-SPKb - b's Signed Public Key
-OPKb - b's One Use Public key (Chosen from a list of 100 available)
+`IPKb` - b's Identity Public Key
+`SPKb` - b's Signed Public Key
+`OPKb` - b's One Use Public key (Chosen from a list of 100 available)
 
 
 ![Tripple DH](screen/signal.png)
-
 ![3HH](screen/3DH.png)
 
 - Used for session establishement of Signal Protocol.
-      
----
 
 ## Forward Secrecy
 - Forward secrecy (FS), also known as perfect forward secrecy (PFS), is a feature of specific key agreement protocols that gives assurances that session keys will not be compromised even if long-term secrets used in the session key exchange are compromised.
@@ -79,7 +76,6 @@ The session key is kept different and changed over long period of time.
 - Future Secrecy comes from OTR 
 - PGP lacks deniability 
 
-----
 
 ## Double ratchet algorithm / Axolotl Ratchet
 
@@ -95,7 +91,6 @@ The session key is kept different and changed over long period of time.
 - The initial state of this chain is established by session agreement.
 
 ![Double Ratchet](screen/Ratchet.png)
----
 
 # PreKeys
 This protocol uses a concept called 'PreKeys'. A PreKey is an ECPublicKey and an associated unique ID which are stored together by a server. PreKeys can also be signed.
@@ -109,7 +104,6 @@ At install time, clients generate
 - A single signed PreKey
 - List of unsigned PreKeys (As per protocol 100 prekeys) and transmit all of them to the server.
 
----
 
 # Sessions
 
@@ -123,19 +117,18 @@ Sessions are established in one of three ways:
 - PreKeySignalMessages: A client can receive a PreKeySignalMessage from a recipient and use it to establish a session.
 - KeyExchangeMessages: Two clients can exchange KeyExchange messages to establish a session.
 
----
 
 # State
+
 An established session encapsulates a lot of state between two clients. That state is maintained in durable records which need to be kept for the life of the session.
 
 State is kept in the following places:
 
-- Identity State. Clients will need to maintain the state of their own identity key pair, as well as identity keys received from other clients.
-- PreKey State. Clients will need to maintain the state of their generated PreKeys.
-- Signed PreKey States. Clients will need to maintain the state of their signed PreKeys.
-- Session State. Clients will need to maintain the state of the sessions they have established.
+- `Identity State:` Clients will need to maintain the state of their own identity key pair, as well as identity keys received from other clients.
+- `PreKey State:` Clients will need to maintain the state of their generated PreKeys.
+- `Signed PreKey States:` Clients will need to maintain the state of their signed PreKeys.
+- `Session State:` Clients will need to maintain the state of the sessions they have established.
 
----
 
 # Workflow
 - Alice Bob communicating
@@ -155,7 +148,6 @@ State is kept in the following places:
 - Creating one shared group key, send it to server for fan out instead of pairwise encryption.
 - Sender keys does not have post compromise security.
 
----
 
 # Omemo
 A high level intro on how Omemo works: Each device gets it’s own public/private key pair. When a message is sent, it is encrypted with a message-specific key. This key itself is encrypted with the public key of each client participating in the chat. So if you have multiple devices, the message-key is encrypted for each of your devices. Same holds true for all devices of the person you are communicating with. If you are in a group chat, then the message-key is encrypted for everyone’s device participating in the group. For decryption each device decrypts the message-key, then takes the message-key and decrypts the potentially long message. This procedure enables bandwidth-efficient multi-user multi-device encryption. Each device public key can be represented via a fingerprint. When you send a message to someone, you need to be sure that this person is actually the person they claim to be. That explains the existance and necessity of fingerprint verification. The current scheme is trust-on-first-use (TOFU), meaning the first fingerprint is trusted. New fingerprints you have to manually trust. You should check in person, or via the phone with your comunication partner if the fingerprints match.
@@ -176,7 +168,6 @@ openssl s_client -connect www.site.com:443 -CAfile rootcert.pem | openssl x509 -
 echo "tanmoy" | openssl dgst -sha256 -binary | openssl enc -base64
 
 ```
-
 
 # Resources
 - [Omemo Encryption Protocol Spec](https://xmpp.org/extensions/xep-0384.html)

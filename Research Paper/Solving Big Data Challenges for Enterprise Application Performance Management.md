@@ -27,12 +27,9 @@ Test the systems in two different hardware setups:
 1. a memory
 2. a disk-bound setup
 
-
 The intention of JSR-163 is to present an interface for profiling and debugging. Byte code instrumentation allows to augment software components with agents that have ac- cess to the state and the method invocations. This approach enables monitoring components, tracing transactions, and performing root cause analysis without changing the code base of the monitored system.
 
 **Key-value stores**: Project Voldemort and Redis 
-
 **Extensible record stores**: HBase and Cassandra 
-
 **Scalable relational stores**: MySQL Cluster and VoltDB
 

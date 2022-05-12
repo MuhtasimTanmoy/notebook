@@ -6,8 +6,5 @@
 - EXPIRE HANDLE
 - With set maintain currently
 
-
-## Security
-
 # Resources
 - https://www.openmymind.net/redis.pdf

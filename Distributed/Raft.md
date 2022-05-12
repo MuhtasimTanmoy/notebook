@@ -2,8 +2,7 @@
 
 Raft uses a strong leadership model, wherein one of the replicas in the cluster serves as a leader and others serve as followers.
 
-6 basic operations of raft.
-
+6 basic operations of raft
 - Leader Election
 - Normal Operation
 - Safety consistency after leader change

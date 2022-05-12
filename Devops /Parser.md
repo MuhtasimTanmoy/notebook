@@ -1,6 +1,6 @@
 # Parser
-Used this to parse large database dump to extract relevant information.
 
+Used this to parse large database dump to extract relevant information.
 
 - Extracts `data` from this pattern `<url> data </url>` and saves it.
 

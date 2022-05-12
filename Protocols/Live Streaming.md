@@ -19,7 +19,6 @@ Similar to HLS
 # RTP
 - Webrtc built on top of
 
-
 # Resources
 - [Http Live Streaming](https://tools.ietf.org/html/rfc8216)
 - [Benchmark: SFU, MCU, Mesh](https://testrtc.com/different-multiparty-video-conferencing/)

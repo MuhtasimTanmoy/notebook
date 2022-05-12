@@ -1,9 +1,5 @@
 # [eSecurity Coursework MSc](https://asecuritysite.com/esecurity)
 
-
-
-## INIT
-
 Asymmetric Key
  - RSA
  - Elliptic Curve
@@ -39,10 +35,8 @@ Tools
 Github Codebase
 - https://github.com/billbuchanan/esecurity
 
-
 # Fundamentals
-> [Unit 1](https://asecuritysite.com/csn11117/unit01)
-
+- [Unit 1](https://asecuritysite.com/csn11117/unit01)
 
 - ASCII ( 7 bit format)
 - UTF-16 
@@ -51,12 +45,10 @@ Github Codebase
     - Base-64 - 6 bits at a time
 - [Calculator](https://asecuritysite.com/Coding/ascii)
 
-
 - Two main operation of encryption
     - exor
     - ror/rol
 - CRC is one of the most reliable error detection schemes and can detect up to 95.5% of all errors.
-
 
 # Symmetric Key
 Two types
@@ -72,14 +64,11 @@ EX: DES, Twofish, AES, RC2, Blowfish, ChaCha20  Others
 - Cipher Block chaining - Only the first block salt added from initialization vector. Others added from previous vector.
 - Key Entropy = log( num_of_phrases ) 
 
-
 # Hash
-
 - MD5 128 bits
 - SHA 1 160 bits 
 - RIPEMD used in blockchain
 - Same hash can be  generated using birthday attack
-
 
 # Public Key
 - Interger factorization
@@ -87,7 +76,6 @@ EX: DES, Twofish, AES, RC2, Blowfish, ChaCha20  Others
 - Elliptic Curve
 - Bitcoin uses secp256k1 and Tor uses	
 Curve 25519.
-
 
 # Key Exchange & Digital Certificate
 - For https only server authenticated

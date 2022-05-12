@@ -1,4 +1,4 @@
-## SSL/TLS Handshake
+## SSL / TLS Handshake
 
 The Secure Socket Layer protocol was created by Netscape to ensure secure transactions between web servers and browsers. The protocol uses a third party, a Certificate Authority (CA), to identify one end or both end of the transactions. This is in short how it works.
 

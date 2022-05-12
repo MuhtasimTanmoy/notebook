@@ -3,35 +3,26 @@
 Tokio is an asyncronous runtime for rust programming language.
 
 ```rust
-
 async fn print() {
     time::sleep(Duration::from_millis(10)).await;
     println!("Done sleeping");
 }
 
 // await part is divide into two poritons
-
 enum Task {
     Init,
     AwaitSleep(sleep),
 }
-
 ```
 
 How it works under the hood?
-
-- The compiler turns asyncrounous task into state machine.
-
-- Java program cant have segfault but can have data reces.
-
+- The compiler turns asyncrounous task into state machine
+- Java program cant have segfault but can have data reces
 - ARC gives smart pointer. Mutex lock provides another smart pointer. When it goes out of scope it is unlocked autometically.
-
-- MutexLockGuard is a smart pointer.
+- `MutexLockGuard` is a smart pointer.
     - Gives multiple reference to the data inside.
 
-
 ```rust
-
 struct Database(Arc <Mutex <HashMap <String,Byte> > >)
 
 #[tokio::main]
@@ -46,11 +37,8 @@ async fn main() -> io::Result<()> {
 
         tokio::spawn( async move {
             let cmd = conn.recv_frame().await?;
-
             let response = cmd.apply(&db);
-
             socket.write_frame(&response).await?;
-
             // socket.write_all(b"Hello world").await
         });
     }
@@ -59,7 +47,6 @@ async fn main() -> io::Result<()> {
 fn get(db: &Db, key: String) -> Frame {
     // Lock the db while we use it
     let locked = db.lock();
-
     if let Some(value) = locked.find(key) {
         Frame::bulk(value)
     } else {

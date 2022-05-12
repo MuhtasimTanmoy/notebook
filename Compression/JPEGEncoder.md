@@ -1,7 +1,7 @@
 # JPEG Image Compression
 - Joint Photographic Expert Group
 
-The major steps in JPEG compression involves
+The major steps in JPEG compression involves.
 1. Compressing at block level (8*8).
 2. Colour space transform and subsampling. (RGB->YCbCr)
 3. DCT (Discrete Cosine Transform).
@@ -26,9 +26,7 @@ The major steps in JPEG compression involves
 
 ```
 Y = a*R + b*G + c*B
-
 Cb = d*R + e*G + f*B
-
 Cr = g*R + h*G + i*B
 ```
 
