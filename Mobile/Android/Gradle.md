@@ -6,3 +6,6 @@
 
 - One stop process for all software delivery process.
 - Android studio uses gradle deamon to keep JVM instance open.
+
+# Resources
+- [Android Kernel](https://source.android.com/devices/architecture/kernel)

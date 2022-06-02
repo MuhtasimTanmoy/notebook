@@ -128,5 +128,3 @@ As said above, binder driver is a software components, which loads in the Kernel
 - Simple perf toolchain
 - NDK, JNI for c/c++ bindings
 
-
-

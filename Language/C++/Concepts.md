@@ -1,7 +1,9 @@
 - Memory barriers
     - Can be used to prevent compilers to reorder operations, instructions for instructionn level parallelism
 
-- [spinlock](https://github.com/CoffeeBeforeArch/spinlocks)
+- [Precompiled Headers](https://gcc.gnu.org/onlinedocs/gcc/Precompiled-Headers.html)
+
+- [Spinlock](https://github.com/CoffeeBeforeArch/spinlocks)
     - Other locks waiting to get to sleep
     - Spin lock polls in loop for atomic bool to be available
     - Naive approach very high l1-dcache-load-misses
