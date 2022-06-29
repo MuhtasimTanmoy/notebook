@@ -17,6 +17,8 @@ pip3 install -r requirements.txt
 python manage.py makemigrations user
 python manage.py makemigrations adserver
 
+python manage.py migrate 
+
 # Create user
 python manage.py createsuperuser
 
