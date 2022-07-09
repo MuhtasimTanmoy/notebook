@@ -66,3 +66,4 @@
             - Position Inndependent code, data keeps address, text segment keeps stub, abstraction
         - prepare objc runtime
         - run initializer
+- [Xcode Documentation](https://developer.apple.com/documentation/xcode/)
