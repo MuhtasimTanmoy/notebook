@@ -1,6 +1,4 @@
 # Distributed Concensus
 
-
-
 # Resources
-- [Distributed Concensus] (https://www.youtube.com/watch?v=S4FnmSeRpAY)
+- [Distributed Concensus](https://www.youtube.com/watch?v=S4FnmSeRpAY)

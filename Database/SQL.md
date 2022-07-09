@@ -3,7 +3,6 @@
 - [Group by vs Partition By](https://www.sqlshack.com/sql-partition-by-clause-overview/)
 
 ```sql
-
 # Select expression and group by expression must be same
 
 SELECT Customercity,
@@ -27,7 +26,7 @@ SELECT Customercity,
 FROM [dbo].[Orders];
 
 
-# Cumulative sum of orderamount
+-- Cumulative sum of orderamount
 
 SELECT Customercity, 
        CustomerName, 

@@ -14,5 +14,4 @@ Designing object-oriented software is hard, and designing reusable object-orient
 
 
 ![](./Screen/Design%20Pattern.png)
-
 ![](./Screen/Design%20Pattern%20Relations.png)

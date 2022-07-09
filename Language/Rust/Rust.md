@@ -706,8 +706,3 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
     - Self referenceing object move will make the member reference to point to old object. Pinning solves it.
 
 - [Code Benchmarking](https://godbolt.org/z/nqTveYvzx)
-
-
-## Blog
-- https://lukaskalbertodt.github.io
-- http://pcwalton.github.io/

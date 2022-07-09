@@ -53,7 +53,6 @@ go run --race test.go
 
 ```
 
-
 **Other Points**
 - Go vet
 

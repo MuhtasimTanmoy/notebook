@@ -18,8 +18,6 @@ Another downside of hubs is that only one computer can talk at a time through a 
     - If two computers talk at the same time a collision occurs. When this happens all computers will notice the disturbances and must stop talking for a while before trying again. This also makes a hub really slow. Only one device can communicate at a time, and when a collision accidentally occurs every device must be silent for a while.
     - The more computers you connect to a hub the bigger the risk gets for collisions to happen since more involved devices will indirectly compete with each other for the available communication time slots.
 
-
-
 # Router
 The main role of a Router is to route data traffic. The router knows in which directions different destinations are, and when it receives data traffic it will forward the traffic in the direction of the destination. A router always picks the best route it has knowledge about for the data traffic that it is forwarding.
 
@@ -86,7 +84,6 @@ IP addresses are relevant on a global scale. They hold the final destination of 
 
 
 # Broadcast
-
 The computer sends out a broadcast which will reach every other device on the LAN to ask any available DHCP servers to reply back with an IP address.
 
 When a computer sends out a broadcast it will use a special destination MAC address, FF:FF:FF:FF:FF:FF. That address is called the Broadcast Address and is used specifically for this purpose. All other equipment on the LAN will then understand that the traffic is a broadcast that is directed at everybody else within the LAN.

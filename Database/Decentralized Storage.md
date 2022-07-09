@@ -13,7 +13,6 @@
 - IPFS
 - Arweave - Archive of data
 
-
  # [Libri](https://github.com/drausin/libri) 
  The Libri API exposes simple Put/Get endpoints and a streaming Subscribe endpoint for storage notifications across the entire network.
 
@@ -28,7 +27,6 @@ Peers in the Libri network are called Librarians, and clients of these peers are
 - This means that if 20 out of 30 hosts go offline, a Sia user is still able to download her files.
 - Threefish encryption algorithm.
 - Merkle construction phase requires heavy preprocessing. Logarithmic of the file size.
-
 
 # Resources
 - [Reed Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)

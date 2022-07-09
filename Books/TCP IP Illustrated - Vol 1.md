@@ -1,6 +1,5 @@
 > Effective communication depends on the use of a common language.
 
-
 # Introduction
 - Diagnosing network protocols, is also a powerful tool for understanding how the network protocols operate.
 - The design that specifies how various protocols of a protocol suite relate to each other and divide up tasks to be accomplished is called the architec- ture or reference model for the protocol suite.
@@ -102,9 +101,8 @@
 - Handshake
 - WireShark to capture TCP Traffic
 
-![TCP](screenshots/TCP.png)
-![WireShark](screenshots/WireShark.png)
-
-![IEEE Packet](screenshots/IEEE_Packet.png)
+![TCP](screen/TCP.png)
+![WireShark](screen/WireShark.png)
+![IEEE Packet](screen/IEEE_Packet.png)
 
 > Designing an architecture is more art than science

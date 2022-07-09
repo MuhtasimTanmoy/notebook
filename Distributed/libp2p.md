@@ -32,9 +32,7 @@ p2p connection
 Some examples:
 
 /ip4/80.123.90.4/tcp/5432
-
 /ip6/[::1]/udp/10560/quic
-
 /unix//path/to/socket
 ```
 

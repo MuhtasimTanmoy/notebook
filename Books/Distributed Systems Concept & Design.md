@@ -1,6 +1,4 @@
 # Distributed Systems Concept & Design
-
-
 A distributed system is one in which components located at networked computers communicate and coordinate their actions only by passing messages. This definition leads to the following especially significant characteristics of distributed systems: concurrency of components, lack of a global clock and independent failures of components.
 
 The largest online game, EVE Online, utilises a client-server architecture where a single copy of the state of the world is maintained on a centralized server and accessed by client programs running on players’ consoles or other devices.
@@ -8,8 +6,6 @@ The largest online game, EVE Online, utilises a client-server architecture where
 location-aware or context-aware computing
 
 ## System Models
-
-
 Computer clocks and timing events • Each computer in a distributed system has its own internal clock, which can be used by local processes to obtain the value of the current time. Therefore two processes running on different computers can each associate timestamps with their events. However, even if the two processes read their clocks at the same time, their local clocks may supply different time values. This is because computer clocks drift from perfect time and, more importantly, their drift rates differ from one another. The term clock drift rate refers to the rate at which a computer clock deviates from a perfect reference clock. Even if the clocks on all the computers in a distributed system are set to the same time initially, their clocks will eventually vary quite significantly unless corrections are applied.
 
 Event ordering

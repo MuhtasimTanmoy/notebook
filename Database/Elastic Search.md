@@ -19,7 +19,6 @@ tokenization
 - After 1s index refresh happens > Doc indexed 
 - Translog (30 min or 512mb)
 - Master node & Data Node available
-- 
 
 - Inverted index
     - A document is the unit of data in Elasticsearch and an inverted index is created by tokenizing the terms in the document, creating a sorted list of all unique terms and associating a list of documents with where the word can be found.
@@ -27,7 +26,6 @@ tokenization
       - Word level inverted index (word -> record, position )
 
 ## Internal Usage
-
 - Porters stemmer algo
     - The Porter stemming algorithm (or ‘Porter stemmer’) is a process for removing the commoner morphological and inflexional endings from words in English. Its main use is as part of a term normalisation process that is usually done when setting up Information Retrieval systems.
 - Murmur3 hash function
@@ -39,14 +37,14 @@ tokenization
         - when sorted logN
 
 # Database Indexing
-
-> [Reference - Stack overflow](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)
+> [Reference: Stack overflow](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)
 
 - Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it.
 
 - Given our sample database of r = 5,000,000 records of a fixed size giving a record length of R = 204 bytes and they are stored in a table using the MyISAM engine which is using the default block size B = 1,024 bytes. The blocking factor of the table would be bfr = (B/R) = 1024/204 = 5 records per disk block. The total number of blocks required to hold the table is N = (r/bfr) = 5000000/5 = 1,000,000 blocks.
 
-- High cardinality > Better indexing 
+- High cardinality
+    - Better indexing 
 - Type of index 
     - Primary index
     - Dense index -> all records map to index
@@ -64,5 +62,5 @@ secondary index
 
 
 # Reference
-- https://blog.insightdatascience.com/anatomy-of-an-elasticsearch-cluster-part-i-7ac9a13b05db
+- [Anatomy of Elastic Search](https://blog.insightdatascience.com/anatomy-of-an-elasticsearch-cluster-part-i-7ac9a13b05db)
 

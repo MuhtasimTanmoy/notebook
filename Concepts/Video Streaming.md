@@ -1,6 +1,5 @@
 # Video Streaming
 
-
 ### HLS
 - HTTP Live Streaming
 - mpegts 
@@ -116,7 +115,6 @@ ffmpeg -r 1 -i test.mp4 -r 2 output.mp4
 # Extracting frame from video
 ffmpeg -i video.mp4 image-%05d.png
 ffmpeg -ss 00:00:25 -t 00:00:00.04 -i YOURMOVIE.MP4 -r 25.0 YOURIMAGE%4d.jpg
-
 ```
 
 # Resources

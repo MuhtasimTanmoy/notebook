@@ -19,16 +19,14 @@ Reference
 # RabbitMQ
 - Smart broker, Dumb consumer Model
 
-
 # ZooKeeper
 - Zookeeper as a general purpose distributed process coordination system
 
 # Nats
 
-
 # ZooKeeper
 
-- Zookeeper is a system for distributed cluster management. It is a distributed key-value store. It is highly-optimized for reads but writes are slower. It consists of an odd number of znodes known as an ensemble.
+- `Zookeeper` is a system for distributed cluster management. It is a distributed key-value store. It is highly-optimized for reads but writes are slower. It consists of an odd number of znodes known as an ensemble.
 
 - zookeeper as the backbone for maintaining cluster state and leader election. Handles the `concensus` part.
 

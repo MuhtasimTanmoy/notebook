@@ -16,15 +16,8 @@ Encoding formats
 - MP3
 
 # RTMP
-
-
-
 - https://github.com/ant-media/LiveVideoBroadcaster
-
 - https://github.com/gwuhaolin/livego
-
 - https://github.com/dhvanilp/Live-video-streaming
-
 - https://github.com/ricohapi/video-streaming-sample-app
-
 - https://developer.apple.com/documentation/http_live_streaming

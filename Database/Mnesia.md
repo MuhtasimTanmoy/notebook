@@ -52,4 +52,4 @@ dumped. A dump creates a new `DCD` and removes the `DCL`.
     - `nl(my_module).`
 
 - [Heap memory overload](https://stackoverflow.com/questions/7103621/erlang-and-its-consumption-of-heap-memory)
-- [Observer API](https://anilwadghule.com/2021/07/11/how-to-install-wxmac-properly-for-running-observer-with-elixir/)
+- [Observer API](https://anilwadghule.com/2021/07/11/how-to-install-wxmac-properly-for-running-observer-with-elixir)

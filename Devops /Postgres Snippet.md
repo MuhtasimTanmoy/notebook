@@ -49,9 +49,9 @@ Quick bash snippets
 
 - DB export
 
-   ```bash
-   psql -U db_user db_name < dump_name.sql
+```bash
+psql -U db_user db_name < dump_name.sql
 
-   sudo ls /var/lib/postgresql/10/main/base/17422/
-   pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
-   ```
+sudo ls /var/lib/postgresql/10/main/base/17422/
+pg_dump -U db_user -W -F t db_name > /path/to/your/file/dump_name.tar
+```

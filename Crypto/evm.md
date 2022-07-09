@@ -30,4 +30,3 @@
             - Merkle tree hash to retrieve
 
 - [SputnikVM: Rust Ethereum Virtual Machine Implementation](https://github.com/rust-blockchain/evm)
-    - 
