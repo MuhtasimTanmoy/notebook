@@ -40,16 +40,12 @@ plus.plusMe(42);
 
 // closure 
 class Plus {
-
     int value;
-
     public: 
     Plus(int v);
-
     int plusme(int v) const {
         return value + v;
     }
-
     template<class... As>
     auto operator()(As... as) const {
         return sum(as..., value)
@@ -60,7 +56,6 @@ auto plus = [value = 1] (auto... as) {
     return sum(as..., value);
 };
 
-
 // Similar Lambda function
 struct {
     int operator()(int n) const {
@@ -68,7 +63,6 @@ struct {
     }
 } fact;
 return fact(5);
-
 
 // [ capture_list ]( argument_list ) -> return_type { code }
 
@@ -85,8 +79,6 @@ struct some_anonymous_type {
 
 // This inside lambda refers to the outer object
 ```
-
-
 - Notes
     - The move constructor is used instead of the copy constructor, if the object has type "rvalue-reference" (Type &&).
 

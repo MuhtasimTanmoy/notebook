@@ -36,5 +36,6 @@ Precompiled headers are a general approach employed by many compilers to reduce 
 
 # Resources
 - [LLVM User Manual](https://clang.llvm.org/docs/UsersManual.html#terminology)
+- [LLVM Grad Student](http://www.cs.cornell.edu/~asampson/blog/llvm.html)
 - [LLVM Warning](https://softwareengineering.stackexchange.com/questions/122608/clang-warning-flags-for-objective-c-development/124574#124574)
     - `Wall` and `-Werror` at a minimum on any new code you are developing. Warnings added for good reasons, they find bugs.

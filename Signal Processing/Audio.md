@@ -28,6 +28,7 @@ Bit Rate = Bit Depth * Sample Rate * Number of Channels
 - All smartphones can play WAV files (even Android as of 2.2). These are known as "Linear PCM" in iOS and "PCM/WAVE" in Android.
 - `ffprobe -hide_banner -stats -i ios-aac.m4a`
 - It does support hardware AAC/m4a encoding which is in many ways superior to mp3.
+- FFT library - https://github.com/wendykierp/JTransforms
 
 # Reference
 - [How digital audio works](https://www.youtube.com/watch?v=1RIA9U5oXro&ab_channel=Computerphile)

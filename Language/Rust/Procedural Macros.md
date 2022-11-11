@@ -4,15 +4,14 @@
     - `Function like macro` `vec![1, 2, 3];`
     - `Derive Macro` (TokenStream) -> (TokenStream)
     - `Atttribute Macro`
-        - In case you have defined lots of macros and commonly used macros are duplicated, it is needed.
+        - In case you have defined lots of macros and commonly used macros are duplicated, it is needed
+> A lexer is a software program that performs lexical analysis. Lexical analysis is the process of separating a stream of characters into different words, which in computer science we call 'tokens' . When you read my answer you are performing the lexical operation of breaking the string of text at the space characters into multiple words
 
-> A lexer is a software program that performs lexical analysis. Lexical analysis is the process of separating a stream of characters into different words, which in computer science we call 'tokens' . When you read my answer you are performing the lexical operation of breaking the string of text at the space characters into multiple words.
+> A parser goes one level further than the lexer and takes the tokens produced by the lexer and tries to determine if proper sentences have been formed. Parsers work at the grammatical level, lexers work at the word level
 
-> A parser goes one level further than the lexer and takes the tokens produced by the lexer and tries to determine if proper sentences have been formed. Parsers work at the grammatical level, lexers work at the word level.
+- Proceduaral Macros are macros defined with `procedural code`
 
-- Proceduaral Macros are macros defined with `procedural code`.
-
-- `cargo-expand` can be used to see generated code. Get one level of expansion.
+- `cargo-expand` can be used to see generated code. Get one level of expansion
 - `syn` tokenstream parser
 - `quote` ast to tokenstream
 - `cargo t` to test
@@ -33,7 +32,6 @@ impl Serialize for Foo {
 }
 
 ```
-
 # Implementation
 - `cargo check` to check if compiles without building
 - `cargo build` to build the actual project

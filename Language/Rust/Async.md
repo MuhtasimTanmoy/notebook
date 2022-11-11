@@ -12,5 +12,15 @@
         - Epoll
             - Mush less user space to kernel space data movement
 
-
 - [The What and How of Futures and async/await in Rust](https://www.youtube.com/watch?v=9_3krAQtD2k)
+
+- [Crust of Rust: async/await](https://youtu.be/ThjvMReOXYM)
+    - `async fn f() {}` => `fn f() -> impl Future<Output = ()> { async {} }`
+    - select on mutable futures then the future itself
+    - io bound faster
+    - select is a future
+
+- [The Why, What, and How of Pinning in Rust](https://youtu.be/DkMwYxfSYNQ)
+    - 
+
+- https://youtu.be/b4mS5UPHh20

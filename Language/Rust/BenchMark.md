@@ -1,6 +1,5 @@
 # Benchmark
 
-
 - [CppCon 2017: Chandler Carruth “Going Nowhere Faster”
 ](https://www.youtube.com/watch?v=2EWejmkKlxs)
     - Demonstrates cache locality influence
@@ -12,6 +11,7 @@
      - Discontiguous data structures are root of all poor performance.
      - Say no to linked list, `std:map` never
      - Time spent waiting for data ( 50% )
+     
 ![](../images/Cache%20System.png)
 
 - [C++ Quick Benchmark](https://quick-bench.com)

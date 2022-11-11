@@ -27,7 +27,6 @@ Public Private key based Encryption.
 
 ```
 (m^(ed) == m ) mod  N
-
 ed == 1 (mod phi( N ))
 ```
 
@@ -47,13 +46,11 @@ ed == 1 (mod phi( N ))
     	- As no number less than share common factor.
 
 N = p1*p2 > big prime factorization
-
 phi (N) = (p1-1) * (p2-1)
 
 **Eulers theorem**
 
 m ^ phi(n) congruent to =  1 mod n
-
 m ^ (k * phi(n)  +1)  ==  m mod n
 
 **Walkthrough**

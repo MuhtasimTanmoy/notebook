@@ -57,7 +57,7 @@ There no standard package managers and repositories. If you stick to an operatin
 g++ -fdump-class-heirarchy a.cpp
 ```
 
-![](./RuleOfFive.png)
+![](./rule-Of-five.png)
 
 # Reference
 
@@ -92,25 +92,20 @@ g++ -fdump-class-heirarchy a.cpp
 
 - [CppCon 2017: Fedor Pikus “C++ atomics, from basic to advanced. What do they really do?”](https://youtu.be/ZQFzMfHIxng)
     - Used for lock free programming
-
     - Presentation application based
         - Mutex based
         - Lock free / Wait free
-
     - Any trivially copyable type can be made atomic
         - `x *= 2` is not atomic
         - `x = x + 1` is not atomic, same as `x++` unless x is atomic
         - `x = x * 2`  is not atomic, these are two separate  atomic operation
         - no atomicity for floating point numbers.
         - Explicit `load`, `store`, `exchange`, `compare_and_swap` available
-
     - The concept of atomicity scales from single instruction to whole program
         - Single add operation
         - Client seeing db state before after update
-
     - Algorithm rules supreme
         - Should not delve into details of implementation too soon. Algorithm decides everything.
-
     - Lock free but not wait free version
         - ```c++
             std: atomic<int> x { 0 };
@@ -118,9 +113,12 @@ g++ -fdump-class-heirarchy a.cpp
             while( !x.compare_and_swap(x0, x0 + 1); )
            ```
         - Will continue while other change and add with the latest value only. Supports all sort of operations
-
     - Atomics and locks generally provide thread safe way to do things
-
     - Benchmark different operations in lock vs mutex, `atomic operaions vs normal vs spinlock`
-
     - Memory barriers
+
+- More generally, this seems to be a common pattern in Rust ecosystem:
+    - A crate uses Mutex or other synchronization mechanism from std
+    - Someone asks for #[no_std] support
+    - Mutex is swapped for some variation of spinlock.
+    - A Spinlock is the simplest possible implementation of a mutex, its general form looks like this:

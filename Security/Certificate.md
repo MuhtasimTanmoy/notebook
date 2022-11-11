@@ -46,7 +46,6 @@ How do you know that you are dealing with the right person or rather the right w
 -----BEGIN CERTIFICATE----- and -----END CERTIFICATE----- show a certificate file in PEM format.
 
 - DER - binary encoded
-
 - PEM - Governed by RFCs, its used preferentially by open-source software. It can have a variety of extensions (.pem, .key, .cer, .cert, more)
 
 - PKCS7 - An open standard used by Java and supported by Windows. Does not contain private key material.
@@ -65,9 +64,7 @@ How do you know that you are dealing with the right person or rather the right w
 
 ## Chain of trust
 Root CA -> ICA ( Intermediate Certificate ) -> Certificate
-
 For practical, visit https site, see cert in browser and open `Keychain access` to see root that signs.
-
 So when requested two or more certificates are returned.
 ![TLS](screen/TLS.png)
 
@@ -80,7 +77,6 @@ So when requested two or more certificates are returned.
     - Vendor distributes CA colelction to clients
     - Server distributes cert and intermediates
     - Clients validate the collection
-
 
 ## x.509
 An X.509 certificate contains a public key and an identity (a hostname, or an organization, or an individual), and is either signed by a certificate authority or self-signed.

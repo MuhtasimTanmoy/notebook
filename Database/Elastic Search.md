@@ -5,7 +5,8 @@
 - Index (Logical namespace/ DB Name) -> Divided into Shrads (Types/ Table/ Schema)
 - Each shrad has replica
 - Each shrad is Lucene index > for inverted search
-- Divided into Segments > Inverted index
+- Divided into Segments
+    - Inverted index
 - Segments immutable
 - Apache lucene
     - Powerful open-source full-text search library.

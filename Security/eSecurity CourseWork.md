@@ -56,7 +56,6 @@ Two types
 - Block Cipher
 
 EX: DES, Twofish, AES, RC2, Blowfish, ChaCha20  Others
-
 - Padding used in case of block cipher
 - AES 128 blocks, DES 64 bit , 3 DES 112 bits
 - Salt added in encryption by initialization vector which must be transmitted.
@@ -88,13 +87,9 @@ Curve 25519.
 
 ```bash
 openssl s_client  -connect www.google:443 
-
 openssl dgst -md5 file
-
 openssl genrsa -out mykey.pem 1024
-
 openssl rsa -in mykey.pem -pubout > mykey.pub
-
 echo "this is a group of words that should not be considered random anymore so never use this to generate a private key" | openssl sha256
 ```
 

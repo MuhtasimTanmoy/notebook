@@ -36,7 +36,6 @@ operator delete, operator delete[]
 Each with a couple of overloads, e.g. std: :atign_val_t
 
 ```
-
 - Approach
     - use the dynamic linker to inject custom library code
     - `LD_PRELAOD=$(readlink -f path/to/lib.so) app`
@@ -58,16 +57,14 @@ Each with a couple of overloads, e.g. std: :atign_val_t
 ```c++
 #include <dlfcn.h> // dlsym
 extern "C" {
-        void* malloc(sizt_t size) {
-
-            static void* original_malloc(RTLD_NEXT ,"malloc") ;
-            assert(original_malloc);
-            auto *original_malloc_fn = reinterpret_cast<decltype(&::malloc)> (original_malloc);
-            void •ret = original_malloc_fn(size);
-
-            fprtntf(stderr, "mattoc intercepted: gozu oop\n",
-            size, ret);
-            return ret;
-        }
+    void* malloc(sizt_t size) {
+        static void* original_malloc(RTLD_NEXT ,"malloc") ;
+        assert(original_malloc);
+        auto *original_malloc_fn = reinterpret_cast<decltype(&::malloc)> (original_malloc);
+        void •ret = original_malloc_fn(size);
+        fprtntf(stderr, "mattoc intercepted: gozu oop\n",
+        size, ret);
+        return ret;
+    }
 }
 ```
