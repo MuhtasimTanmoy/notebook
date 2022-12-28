@@ -8,6 +8,7 @@
     - Full flow walkthrough
 
 - [](https://www.youtube.com/watch?v=IEvRRszoTeE)
+
 - [Blockchain / Crosschain / DeFi Bridge Design](https://youtu.be/zq4cbS3q-lY)
 
 - [Ethereum/EVM Smart Contract Reverse Engineering & Disassembly - Blockchain Security #3](https://www.youtube.com/watch?v=I6VDBvX9Pkw)
@@ -30,3 +31,22 @@
             - Merkle tree hash to retrieve
 
 - [SputnikVM: Rust Ethereum Virtual Machine Implementation](https://github.com/rust-blockchain/evm)
+
+- [Bridge/ Crosschain Bridge/ Defi Bridge](https://youtu.be/zq4cbS3q-lY)
+    - Why?
+        - Transaction fees
+        - Block confirmation times
+        - Liquidity Pool
+    - CrossChain Protocol Stack
+        - Application
+            - Built on function
+        - Funciton Call
+            - Execution
+        - Messaging
+            - Verificaiton
+    - Ethereum Event
+        - Event can be proven to come from certain blockchain 
+    - Hash Timelock Contracts (HTLC) - Trustless
+        - Decentralized exchange can only trade for assets on same blockchain
+        - Atomic Swaps 
+        - https://www.youtube.com/watch?v=VZX2ApRLuwM

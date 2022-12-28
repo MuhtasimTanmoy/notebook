@@ -706,3 +706,7 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
     - Self referenceing object move will make the member reference to point to old object. Pinning solves it.
 
 - [Code Benchmarking](https://godbolt.org/z/nqTveYvzx)
+
+- [RustC Dev Guides](https://rustc-dev-guide.rust-lang.org/llvm-coverage-instrumentation.html)
+
+- [Chalk](https://rust-lang.github.io/chalk/book/)
