@@ -1,12 +1,16 @@
-# Browser architecture
+# Browser Architecture
 
-Rendering steps for a browser
-- Constructing the DOM Tree
-    - byte > character > token > node > dom
-- Constructing the CSSOM tree
-- Running javascript
-- Creating the render tree
-- Generating the layout
+Rendering Steps for a browser
+- Constructing the `DOM` Tree
+    - byte
+    - character
+    - token
+    - node
+    - dom
+- Constructing the `CSSOM` Tree
+- Running JavaScript
+- Creating the Render Tree
+- Generating the Layout
 - Painting
 
 # JS
@@ -19,6 +23,7 @@ Rendering steps for a browser
 - JS 
     - Abstract Syntax Tree
     - Bytecode
+
 - JS engine comes with jit, garbage collector
 - Runtime the stuff language put that you actually dont wrote. ( translation cost occurs one )
 
@@ -51,7 +56,8 @@ eventually optimizing translation time
     - Speed
     
 - In order to ensure multiprocess
-    - IPC - Inter Process Communication
+    - IPC 
+        - Inter Process Communication
     - Message Passing for short objects, shared memory for larger.
     - Every process has different priviledges, so need security review.
     - These processing must be asyncronous.
