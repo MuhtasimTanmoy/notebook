@@ -49,7 +49,7 @@ Adaptive bitrate streaming is the adjustments to video quality according to the 
 - The server selects the best stream for the clients by considering the network quality.
 
 ## SVC
-- Instead of multiple strea, multiple layers.
+- Instead of multiple stream, multiple layers.
 - Temporal scalability future of SVC.
 
 ## SSRC
