@@ -189,7 +189,6 @@ Three  main  architectures  are  typically  used  in Massive  Multiplayer  Onlin
 
 ### [Peer-to-Peer Architectures for Massively Multiplayer Online Games:A Survey!](https://dl.acm.org/doi/pdf/10.1145/2522968.2522977?download=true)
 
-
 ----
 ## References
 - https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking

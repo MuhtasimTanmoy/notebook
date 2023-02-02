@@ -8,7 +8,7 @@ p2p network composed of four elements
 - `Peer Discovery` system, joining.
     - Discover nodes on  local network, DNS, DNS-SD.
     - Bootstrap node 
-- pubsub to broadcast event
+- `pubsub` to broadcast event
 - `DHT` to store data
 
 p2p connection
@@ -39,4 +39,4 @@ Some examples:
 # Resources
 - [libp2p introduction](https://www.youtube.com/watch?v=CRe_oDtfRLw)
 - [quic](https://www.youtube.com/watch?v=4FvMed5iCb4)
-- [libp2p R ust](https://www.youtube.com/watch?v=Sss2Tl7WRDQ)
+- [libp2p R ust](https://www.youtube.com/watch?v=Sss2Tl7WRDQ) 
