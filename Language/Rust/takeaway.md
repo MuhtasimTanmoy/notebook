@@ -15,3 +15,7 @@
   and communicating among different tasks.
 - Pair `tokio::sync::mpsc` with **task**s to create manager tasks that manage
   communication with services such as db, api clients, etc.
+
+  # Reference
+  - [5 years of Rust (for me)](https://docs.google.com/document/d/1CnIztKZcUzQgOpJgScFRu3hnjr8bH_Z3EiACvERn3fI/edit)
+  - [Slow compile time in RUST](https://www.pingcap.com/blog/rust-compilation-model-calamity)

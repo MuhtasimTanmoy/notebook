@@ -6,11 +6,13 @@
     - User level threads
 
 - Async
-    - Transforms a block of code into a state machine that implements a trait called future.
+    - Transforms a block of code into a state machine that implements a trait called future
 - Await
     - Mechanism to run a future. It asyncronously wait for the future to complete.
 
 ![](./screen/RustFuture.png)
+
+- `mio` provides a number of core abstractions for working with I/O resources, such as sockets, pipes, and devices. It also provides support for advanced features such as `epoll, kqueue, and IOCP` on different platforms, as well as convenient utility functions for working with I/O events, timeouts, and buffers.
 
 # Resources
 

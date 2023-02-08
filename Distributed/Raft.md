@@ -1,61 +1,66 @@
-# Raft
+# Raft: A Distributed Consensus Algorithm
 
-Raft uses a strong leadership model, wherein one of the replicas in the cluster serves as a leader and others serve as followers.
+`Raft` utilizes a centralized leadership model, where one of the replicas in the cluster serves as the leader and the others act as followers.
 
-6 basic operations of raft
+The complete `Raft` model consists of four critical components:
+
+- Consensus Module: the central algorithm module for consensus
+- Log: the storage space for Raft logs
+- State Machine: the repository for user data
+- Transport: the network layer for communication
+
+
+The six fundamental operations of Raft are:
+
 - Leader Election
 - Normal Operation
-- Safety consistency after leader change
-- Neutralizing old leaders
-- Clients interaction
-    - Linearizable Semantics where each client interaction happens exactly once
-- Configuration changes
-    - Adding or removing servers    
+- Safety and consistency after a leader changes
+- Deprecating former leaders
+- Client Interaction
+  - Linearizable Semantics, where each client interaction takes place once
+- Configuration Changes
+    - Adding or removing servers
 
-Each Server can have three states
-    - Follower state
-    - Leader state
-    - Candidate state
-- Time divided into terms
-    - Obsolete events
-- Each server maintains current term
-- Only two RPC and tree persistent state
 
-![Raft](screen/raft.png)
-     
- - Leader must give empty heartbeat to all followers. Empty appendentries.
- - ElectionTimeout - time span for leader choice.
- - Safety - Liveness for leader election
- - To eventually select one random timeout necessary 
+Each server in the cluster can be in one of three states:
+- Follower state
+- Leader state
+- Candidate state
 
- ### log
-    - Commited log persisted on disk in majority of servers
-    - Leader never overrides a log, it appends
-    - Future leaders must have all commited log 
-- Leader does not respond until command has been logged, commited, executed by leaders state machine.
-- Exactly once linearizability from unique key
-- Configuration changes must have two phases
 
-![Raft](screen/Concensus.png)
+The concept of `terms` is introduced, which divides time into periods where a specific server is a leader.
 
- Zookeeper is based on Zab (a protocol similar but not the same as Paxos), and etcd is built on top of Raft – the protocol about which this blog post speaks.
+Each server maintains its current term and has only two RPCs and three persistent states.
 
+![Raft](sc/raft.png)
+
+The leader must regularly send empty heartbeats to all followers in the form of empty append entries. The election timeout is the span of time for choosing a leader, and safety is the liveliness of the leader election. A random timeout is eventually selected to complete the election.
+
+### Logs
+The committed log is persisted on disk on a majority of the servers. The leader never overwrites the log but appends to it. All future leaders must have all committed logs. The leader will not respond until the command has been logged, committed, and executed by the leader's state machine. Linearizability is guaranteed with a unique key. Configuration changes must go through two phases.
+
+![Raft](sc/concensus.png)
 
 ### Term
-A term is the period of time for which a certain server is a leader. A new election triggers a new term, and the Raft algorithm ensures that a given term has a single leader.
-
+A term is a duration for which a specific server acts as the leader. A new election begins a new term, and the Raft algorithm ensures that every term has a single leader.
 
 ### Notes
-- Raft shouldn't be used for traffic-heavy services. It's more suitable for low-traffic scenarios where consistency is critical, at the possible expense of availability
-- When working with a Raft cluster, a client knows the network addresses of the cluster's replicas. How it knows this (e.g. by using some sort of service discovery mechanism)
-- Raft wasn't designed for high-throughput, fine-grained services. Every client request triggers quite a bit of work - communication between Raft replicas to replicate it to a majority, as well as persist it; all before a client gets a response.
-- Use Case
-    - Implementing a lock server, 
-    - Electing leaders for higher-level protocols, 
-    - Replicating critical configuration data in a distributed system
+- Raft is not suitable for high-traffic services and is better suited for low-traffic scenarios where consistency is crucial, even if availability may suffer.
 
-## Resources
-- https://eli.thegreenplace.net/2020/implementing-raft-part-0-introduction/
-- https://www.youtube.com/watch?v=YbZ3zDzDnrw&feature=youtu.be
-- https://blog.container-solutions.com/raft-explained-part-1-the-consenus-problem
-- https://raft.github.io/raft.pdf
+- Clients are aware of the network addresses of the replicas in the Raft cluster through some form of service discovery mechanism.
+
+- `Raft` is not designed for high-throughput, fine-grained services as every client request incurs significant communication and persistence work between Raft replicas before a response is received by the client.
+
+Potential use cases for Raft include:
+- Implementing a lock server
+- Electing leaders for higher-level protocols
+- Replicating critical configuration data in a distributed system
+
+Zookeeper is based on Zab (a protocol similar but not identical to Paxos), and etcd is built on top of Raft, the protocol discussed in this document.
+
+Reference
+- [Raft](https://www.pingcap.com/blog/implement-raft-in-rust)
+- [Implementing raft](https://eli.thegreenplace.net/2020/implementing-raft-part-0-introduction)
+- [Raft lecture](https://www.youtube.com/watch?v=YbZ3zDzDnrw&feature=youtu.be)
+- [Raft Concensus](https://blog.container-solutions.com/raft-explained-part-1-the-consenus-problem)
+- [Raft Paper](https://raft.github.io/raft.pdf)
