@@ -709,4 +709,5 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
 
 - [RustC Dev Guides](https://rustc-dev-guide.rust-lang.org/llvm-coverage-instrumentation.html)
 
-- [Chalk](https://rust-lang.github.io/chalk/book/)
+- [Chalk](https://rust-lang.github.io/chalk/book)
+- [Rust Functional Programming](https://github.com/JasonShin/fp-core.rs)
