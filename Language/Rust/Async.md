@@ -20,7 +20,4 @@
     - io bound faster
     - select is a future
 
-- [The Why, What, and How of Pinning in Rust](https://youtu.be/DkMwYxfSYNQ)
-    - 
-
 - https://youtu.be/b4mS5UPHh20

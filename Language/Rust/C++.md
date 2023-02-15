@@ -14,8 +14,7 @@
     - Can be applied in `value` or `computations`
     - [Incomplete]
 
-### Template Metaprogramming
-    
+### Template Meta programming
 - Vector push is defensive is case of move operation, using `no except` optimizes a lot
 - If not fallback to pre c++11 and use copy
 - Perfect forwarding
