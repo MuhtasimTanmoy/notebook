@@ -23,6 +23,8 @@
 - Before, `move` semantics, `static_case<std::string&&>` would do the same
 - `Literals` are assignable
 
+- CPP Core guideline
+    - https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 
 ## Backlogs
 

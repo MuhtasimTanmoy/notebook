@@ -1,8 +1,8 @@
-# Testground
+# Test Ground
 Biswap
-gossipsub
-peer scoring
-adaptive gossip dissemination
-opputunistic grafting
-peer quotas
-graylisting
+Gossipsub
+Peer scoring
+Adaptive gossip dissemination
+Opputunistic grafting
+Peer quotas
+Graylisting
