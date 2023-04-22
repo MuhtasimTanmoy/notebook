@@ -7,3 +7,6 @@ The idea behind loop unrolling is to reduce the overhead of the loop control ins
 Loop unrolling can be performed manually by the programmer or automatically by the compiler. Manual loop unrolling involves writing out the loop body multiple times, while automatic loop unrolling is done by the compiler during the optimization phase of compilation.
 
 However, it is important to note that loop unrolling can also have negative effects on performance, such as increasing the code size and reducing the effectiveness of certain optimizations. Therefore, the decision to use loop unrolling should be based on careful analysis of the specific code and the target platform.
+
+## Reference
+- [String copy optimization](https://github.com/mattgodbolt/xania/pull/252#discussion_r550894493)
