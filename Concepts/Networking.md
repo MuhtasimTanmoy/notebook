@@ -48,6 +48,5 @@ VPC - Logical segment of resources
 - TUN is used with routing. TAP is used for creating a network bridge.
 
 
-
 # Reference
 - https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking
