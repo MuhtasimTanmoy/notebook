@@ -115,6 +115,7 @@ As category 1 Stratum is not publicly available, we can get from 2
 - Timeout value dynamically calculated
 - Akka has cluster singleton
 - Consul extension lifeguard
+
 - [HashiCorp Memberlist](https://github.com/hashicorp/memberlist)
 - [Rapid](https://github.com/lalithsuresh/rapid) 
   - Gossip with concensus
