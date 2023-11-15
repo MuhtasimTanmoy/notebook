@@ -1,10 +1,10 @@
 # Smart pointer
 
-- unique_ptr
+- `unique_ptr`
     - Use it for exclusive ownership resource management
     - When we are done with heap allocation we need to call delete, the destructor of unique_ptr  does that for us.
     - Rust owership is basically transferring `unique_ptr` because if it is copyable, and two pointer reference to same address, it is unclear who may have the responsibility to clear it
-    - It is move only, makes ownership clearer
+    - It is `move` only, makes ownership clearer
     - Smart pointer should be treated like regular pointer, pass by value, return by value. 8 byte.
 
 ```c++

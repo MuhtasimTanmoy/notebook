@@ -19,7 +19,7 @@
         - Compiled down to `wasm`
         - Runs on all platforms
         - Store `wasm` on chain which allows `forkless runtime update`
-        - Upgrade blockchain without hard fork, putting runtime logix there
+        - Upgrade blockchain without hard fork, putting runtime logic there
         - Sudo pallet for testing
     - Concensus
         - Authoring

@@ -267,5 +267,3 @@ Lecture 7
 - Flow control part of transport layer
 - Congestion control part of network layer
 - Ports are 16 bits
-
-Lecture 8 

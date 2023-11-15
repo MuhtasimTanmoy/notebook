@@ -19,5 +19,3 @@ The video format is a container that contains all required part to play back spe
         - VP9 (50% smaller, streaming more consistent, container - webm, ivf)
         - AAC (Advance audio coding, best for video)
         - mp3
-
-

@@ -37,7 +37,7 @@ Each with a couple of overloads, e.g. std: :atign_val_t
 
 ```
 - Approach
-    - use the dynamic linker to inject custom library code
+    - use the `dynamic linker` to inject custom library code
     - `LD_PRELAOD=$(readlink -f path/to/lib.so) app`
     - `c++` does not define how linker works, it works on linux level
     - basically replacing library `malloc` call

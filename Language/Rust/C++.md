@@ -14,8 +14,7 @@
     - Can be applied in `value` or `computations`
     - [Incomplete]
 
-### Template Metaprogramming
-    
+### Template Meta programming
 - Vector push is defensive is case of move operation, using `no except` optimizes a lot
 - If not fallback to pre c++11 and use copy
 - Perfect forwarding
@@ -24,6 +23,8 @@
 - Before, `move` semantics, `static_case<std::string&&>` would do the same
 - `Literals` are assignable
 
+- CPP Core guideline
+    - https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 
 ## Backlogs
 
@@ -122,3 +123,6 @@ g++ -fdump-class-heirarchy a.cpp
     - Someone asks for #[no_std] support
     - Mutex is swapped for some variation of spinlock.
     - A Spinlock is the simplest possible implementation of a mutex, its general form looks like this:
+
+- [C++ Compilation](https://www.toptal.com/c-plus-plus/c-plus-plus-understanding-compilation?utm_campaign=%5BPubs%5D%20Engineering_Newsletter_2023&utm_medium=email&_hsmi=248180607&_hsenc=p2ANqtz-_7pVoDAvGp_z7piCM2_U-vB-2RwtVBH3Ax6kLyDqDpxekdnJvshAHPz-ilRhwvNPuiOT6W-Q3uQqMTi-c9WanueNBOKQ&utm_content=248180607&utm_source=hs_automation)
+- [Modern CPP Features](https://github.com/AnthonyCalandra/modern-cpp-features)

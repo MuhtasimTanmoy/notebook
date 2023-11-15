@@ -46,3 +46,4 @@ Distributed System Categories
  ## References
  - [Concensus  Algorithm](https://blog.mi.hdm-stuttgart.de/index.php/2019/03/17/consensus-protocols-a-key-to-cluster-management/)
  - [Intro to distributed Systems](https://medium.com/better-programming/a-thorough-introduction-to-distributed-systems-3b91562c9b3c)
+ - [Distributed Locking](https://www.linkedin.com/advice/0/what-some-common-distributed-locking-patterns)

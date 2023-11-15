@@ -10,9 +10,9 @@
 
 - No garbage collector.
 
-- No green threads given, can be a library but not runtime feature to support to write a portion.
+- No green threads given, can be a library but not runtime feature to support to write a portion
 
-- If you have a reference &T, then normally in Rust the compiler performs optimizations based on the knowledge that &T points to immutable data. Mutating that data, for example through an alias or by transmuting an &T into an &mut T, is considered undefined behavior. `UnsafeCell<T>` opts-out of the immutability guarantee for &T: a shared reference &UnsafeCell<T> may point to data that is being mutated. This is called “interior mutability”.
+- If you have a reference &T, then normally in Rust the compiler performs optimizations based on the knowledge that &T points to immutable data. Mutating that data, for example through an alias or by transmuting an &T into an &mut T, is considered undefined behavior. `UnsafeCell<T>` opts-out of the immutability guarantee for &T: a shared reference `&UnsafeCell<T>` may point to data that is being mutated. This is called “interior mutability”
 
 
 ## Ownership
@@ -709,4 +709,5 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
 
 - [RustC Dev Guides](https://rustc-dev-guide.rust-lang.org/llvm-coverage-instrumentation.html)
 
-- [Chalk](https://rust-lang.github.io/chalk/book/)
+- [Chalk](https://rust-lang.github.io/chalk/book)
+- [Rust Functional Programming](https://github.com/JasonShin/fp-core.rs)

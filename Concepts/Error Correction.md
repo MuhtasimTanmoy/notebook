@@ -12,7 +12,6 @@
 
 - Reed Solomon Codes
     - Special case of BCH codes
-    -  
 
 - Turbo Codes
 
@@ -21,7 +20,6 @@
 ## Galois Field
 - Equation is solvable by radicals if there is simple way of finding it's root. Like equations.
 - The coefficients are rational number. Rational numbers form a field, means arithmetic operations generate another rational number.
-
 
 # Reference
 - [Reed Solomon Code](https://www.cs.cmu.edu/~guyb/realworld/reedsolomon/reed_solomon_codes.html)

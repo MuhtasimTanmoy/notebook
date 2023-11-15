@@ -69,4 +69,3 @@ zlib, LZO, LZF, FastLZ, and QuickLZ.
 
 # MPEG Video Compression
 # MPEG Audio Compression
-
