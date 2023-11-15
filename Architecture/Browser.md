@@ -24,7 +24,7 @@ Rendering Steps for a browser
     - Abstract Syntax Tree
     - Bytecode
 
-- JS engine comes with jit, garbage collector
+- JS engine comes with `JIT`, Garbage collector
 - Runtime the stuff language put that you actually dont wrote. ( translation cost occurs one )
 
 # Interpretation & compilation
