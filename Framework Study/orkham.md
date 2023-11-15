@@ -1,4 +1,4 @@
-# Orkam
+# Orkham
 
 - Working on flaws of implicitly trusted network boundaries.
 - Devices have one way authentication

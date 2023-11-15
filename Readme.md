@@ -1,9 +1,10 @@
 # Notebook
-> Prefer to document learning, takeaways and study summary to reflect, update and keep references of things I find interesting organized.
 
-## Table of conents
+> Notes on things I find interesting mostly for documenting learning, takeaways and study summary.
+
+## Table of Contents
+
 - Notebook
-    - [Readme](./Readme.md)
     - Machine Learning
         - [Algorithms](./Machine%20Learning/Algorithms.md)
     - From Scratch
@@ -92,7 +93,7 @@
         - [Hardware](./Networking/Hardware.md)
         - [Nmap](./Networking/Nmap.md)
         - [Network Layer](./Networking/Network%20Layer.md)
-        - [IP+NAT](./Networking/IP+NAT.md)
+        - [IP + NAT](./Networking/IP+NAT.md)
         - [Socket](./Networking/Socket.md)
         - [TCP Congestion](./Networking/TCP%20Congestion.md)
         - [Transport Layer](./Networking/Transport%20Layer.md)

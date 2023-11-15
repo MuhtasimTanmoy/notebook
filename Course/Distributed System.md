@@ -176,7 +176,8 @@ WAL for crash recoverable transaction, Log on petal
 - Log consistency proof
 
 # Bitcoin
-
+- Fee Estimate Algorithm
+    - https://blog.iany.me/2020/08/bitcoin-core-fee-estimate-algorithm
 
 # Blockstack
 
@@ -193,13 +194,13 @@ WAL for crash recoverable transaction, Log on petal
 - Pysical Clock 
     - Time of day clock
         - Synced with NTP
-        - bad for duration, time label
+        - Bad for duration, time label
     - Monototic clock
-        - counter
-        - bad for time label
-        - good for duration
+        - Counter
+        - Bad for time label
+        - Good for duration
 - Logical Clock
-    - only orderinig of event
+    - Only orderinig of event
 
 **Lecture 3**
 Lamport Diagrams/ Space Time Diagrams
@@ -267,9 +268,4 @@ Lecture 7
 - Congestion control part of network layer
 - Ports are 16 bits
 
-Lecture 8
-
-----
-
-
- 
+Lecture 8 

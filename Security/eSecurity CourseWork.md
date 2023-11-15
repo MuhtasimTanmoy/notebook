@@ -73,15 +73,14 @@ EX: DES, Twofish, AES, RC2, Blowfish, ChaCha20  Others
 - Interger factorization
 - Discrete Algorithm
 - Elliptic Curve
-- Bitcoin uses secp256k1 and Tor uses	
-Curve 25519.
+- Bitcoin uses `secp256k1` and Tor uses	`Curve 25519`.
 
 # Key Exchange & Digital Certificate
 - For https only server authenticated
-- For  
 
 # Tuneling
-- Tunneling - over untrusted network
+- Tunneling 
+    - Over untrusted network
 - Host to host - tunnel
 - In case of VPN a tunnel created and cant see hop in `tracert`. 
 
