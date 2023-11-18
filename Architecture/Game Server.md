@@ -1,18 +1,18 @@
 # Gameserver
 
-### Optimization for Gameserver
-- Better predictions
-- Eliminate the server for network latency
-- Optimize communication
-- Game data is compressed using delta compression to reduce network load. That means the server doesn't send a full world snapshot each time, but rather only changes (a delta snapshot) that happened since the last acknowledged update. With each packet sent between the client and server, acknowledge numbers are attached to keep track of their data flow. Usually full (non-delta) snapshots are only sent when a game starts or a client suffers from heavy packet loss for a couple of seconds. Clients can request a full snapshot manually with the cl_fullupdate command.
+- Optimization for Gameserver
+    - Better predictions
+    - Eliminate the server for network latency
+    - Optimize communication
+    - Game data is compressed using delta compression to reduce network load. That means the server doesn't send a full world snapshot each time, but rather only changes (a delta snapshot) that happened since the last acknowledged update. With each packet sent between the client and server, acknowledge numbers are attached to keep track of their data flow. Usually full (non-delta) snapshots are only sent when a game starts or a client suffers from heavy packet loss for a couple of seconds. Clients can request a full snapshot manually with the cl_fullupdate command.
 
 
-### NAT Hole Punching
+-  NAT Hole Punching
 Required for connecting peer to peer after matchmaking
 - https://keithjohnston.wordpress.com/2014/02/17/nat-punch-through-for-multiplayer-games/
 
 
-### [Research on Latency Problems and Solutions in Cloud Game!](https://www.researchgate.net/publication/337053541_Research_on_Latency_Problems_and_Solutions_in_Cloud_Game)
+- [Research on Latency Problems and Solutions in Cloud Game!](https://www.researchgate.net/publication/337053541_Research_on_Latency_Problems_and_Solutions_in_Cloud_Game)
 
 Layer-coding approach was proposed to separate the game image into two layers:  
 - Base layer (contain  original  image  information) 
@@ -75,7 +75,7 @@ violation of game-play logic
 not “see.”     
 
 
-### [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf)
+- [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf)
 
 -  The primary contribution of this paper is architectural. We take advantage of the locality of interest data exhibits in
 an MMORPG to separate the large world into
@@ -106,7 +106,7 @@ close enough to the border between the two servers.
 - Log replicated server
 
 
-### [A Distributed Architecture for Multiplayer Interactive Applications on the Internet!](https://www.cs.ubc.ca/~krasic/cpsc538a/papers/diot99distributed.pdf)
+- [A Distributed Architecture for Multiplayer Interactive Applications on the Internet!](https://www.cs.ubc.ca/~krasic/cpsc538a/papers/diot99distributed.pdf)
 
 - IP multicast protocol suite (RTP/UDP)
 - Group communication is currently
@@ -152,8 +152,7 @@ distributed voting
 - The third element of the Mirrored-Server system is the CRIMP protocol. The requirement for a low latency performance has prompted the authors to introduce a receiver-based reliable multicast layer which conforms to the requirements of the architecture. Several other enhancements to increase the performance of the multicast layer is also introduced. In the receiver based protocol, the receivers detect losses and send a recovery request, which is responded to by any host that has the packet. By tweaking certain variables (such as the probability of generating a response or request etc) the protocol is optimized, allowing an efficient communication mechanism with minimal overhead. The layer also has provisions for boot strapping to allow new mirrors to join, loss detection, cancellation of recovery and server management capability.
 
 
-
-### [P2P matchmaking solution for online games!](https://link.springer.com/article/10.1007/s12083-019-00725-3)
+- [P2P matchmaking solution for online games!](https://link.springer.com/article/10.1007/s12083-019-00725-3)
 
 - ADU: Application Data Unit. An ADU is a chunk of data manipulated by the application. For
 transmission efficiency purposes, it is recommended not to fragment ADUs within the communication stack.
@@ -179,18 +178,29 @@ carries a description of an avatar.
 that guarantees ordered and reliable data transmission). UDP’s main functionality is to multiplex/demultiplex data. UDP has been designed to implement real-time applications on the
 Internet.
 
-### [A Comparison of Architectures in Massive Multiplayer Online Games!](https://www.researchgate.net/publication/271490933_A_Comparison_of_Architectures_in_Massive_Multiplayer_Online_Games)
+- [A Comparison of Architectures in Massive Multiplayer Online Games!](https://www.researchgate.net/publication/271490933_A_Comparison_of_Architectures_in_Massive_Multiplayer_Online_Games)
 
 Three  main  architectures  are  typically  used  in Massive  Multiplayer  Online  Games: 
--  a)  client-server architecture
--  b)  multi-server  architecture  
--  c)  Peer-to-Peer  (P2P)  architecture 
+-  client-server architecture
+-  multi-server architecture  
+-  Peer-to-Peer(P2P) architecture 
 
+- [Peer-to-Peer Architectures for Massively Multiplayer Online Games:A Survey!](https://dl.acm.org/doi/pdf/10.1145/2522968.2522977?download=true)
 
-### [Peer-to-Peer Architectures for Massively Multiplayer Online Games:A Survey!](https://dl.acm.org/doi/pdf/10.1145/2522968.2522977?download=true)
+- Entity Component System
+    - OOP not suitable for game development
+    - Think about data structures rather than functions that operate on it
+    - Self mutating struct or internal mutability usage for entity object
+    - Object indexing
+    - Put objects in vector and use index. But on delete of object `use after free` occurs
+    - Generational Indexing
+        - Using index with a generation field
+        - Need type registry to know only about the relevant in global system in anymap.
+    - In ECS System an entity is collection of traits
+    - Registry Pattern
+    - Resource Pattern
 
-----
 ## References
-- https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking
-- https://gist.github.com/GkhanKINAY/5cd384b5597f04ed9750f5a9caa597f0#tutorials
-- https://www.hindawi.com/journals/ijcgt/2008/327387/
+- [Source Multiplayer Networking](https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking)
+- [High-Level Development of Multiserver Online Games](https://www.hindawi.com/journals/ijcgt/2008/327387)
+- [ECS System Design](https://www.youtube.com/watch?v=aKLntZcp27M)
