@@ -124,6 +124,3 @@ There is no TLS usage in xmpp stream as it does not support raw data only frame.
 ## XMPP MUC
 - https://github.com/robbiehanson/XMPPFramework/issues/642
 - https://medium.com/@dylanshine/building-a-group-chat-with-the-xmppframework-59fa17ecf4a0
-
-
-

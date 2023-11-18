@@ -34,8 +34,7 @@ Stack-based Instr
 Mapping - (reg -> stack)
 
 - Neon EVM enables dApss to harness advantages from both blockchains 
-- Ethereum in terms of tools used, and Solana in terms of low gas fees and high throughput.
-
+- Ethereum in terms of tools used, and Solana in terms of low gas fees and high throughput
 - Generating Stack Machine Code using LLVM
 
 - [Type of Instructions](https://www.geeksforgeeks.org/computer-organization-instruction-formats-zero-one-two-three-address-instruction/)
