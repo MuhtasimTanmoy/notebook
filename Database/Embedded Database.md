@@ -10,7 +10,7 @@
 - Has different fork `rocksdb`, `hyperLevelDB`.
 
 
-## Rocks DB
+## RocksDB
 - Log Structured Merge Tree
 - MemTable / SSTable
 - InnoDB used in mySQL
