@@ -32,4 +32,3 @@ The intention of JSR-163 is to present an interface for profiling and debugging.
 **Key-value stores**: Project Voldemort and Redis 
 **Extensible record stores**: HBase and Cassandra 
 **Scalable relational stores**: MySQL Cluster and VoltDB
-
