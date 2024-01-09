@@ -8,6 +8,7 @@
     - Portal Network
         - Decentralized
         - LES was decentralized but bottlenecked
+    - [RLP Encoding](https://medium.com/@markodayansa/a-comprehensive-guide-to-rlp-encoding-in-ethereum-6bd75c126de0)
 
 - [The portal network](https://www.youtube.com/watch?v=jAX_bgcESoc)
     - Chain History / Header 

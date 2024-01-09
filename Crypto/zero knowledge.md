@@ -50,11 +50,13 @@ Ethereum layer 2 scaling
     - A succint proof that something is true
     - Private transaction on public blockchain
     - Compliance
-- Zero knowledge proof
     - Online both party
-- zk SNARK
     - Maintaining confidentiality
-
 - [Building a SNARK](https://youtu.be/J4pVTamUBvU?list=PLj80z0cJm8QErn3akRcqvxUsyXWC81OGq)
 - [ZKEVM](https://pixelplex.io/blog/zkevm-explained)
 - [ZKSync](https://era.zksync.io/docs/reference/concepts/zkSync.html#the-state-of-zksync)
+
+## References
+- https://zkiap.com
+- https://learn.0xparc.org/materials/circom/learning-group-1/intro-zkp
+- https://zk-learning.org
