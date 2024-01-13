@@ -29,9 +29,9 @@
 
 - [/Downloads/LLVM_talk.pdf](LLVM_talk)
 - Register allocation pass is replaced by Stackification pass
-Register-based Instr
-Stack-based Instr
-Mapping - (reg -> stack)
+    - Register-based Instr
+    - Stack-based Instr
+    - Mapping - (reg -> stack)
 
 - Neon EVM enables dApss to harness advantages from both blockchains 
 - Ethereum in terms of tools used, and Solana in terms of low gas fees and high throughput
@@ -41,3 +41,8 @@ Mapping - (reg -> stack)
     - A stack-based computer does not use the address field in the instruction. 
     - To evaluate an expression first it is converted to reverse Polish Notation i.e. Postfix Notation. 
     - Then instructions without any address used for operations
+
+
+### References
+- [Solana Bootcamp](https://www.soldev.app/library/playlist/solana-bootcamp-advanced)
+- [Sea level VM](https://medium.com/solana-labs/sealevel-parallel-processing-thousands-of-smart-contracts-d814b378192)

@@ -60,3 +60,4 @@ Ethereum layer 2 scaling
 - https://zkiap.com
 - https://learn.0xparc.org/materials/circom/learning-group-1/intro-zkp
 - https://zk-learning.org
+- https://github.com/matter-labs/awesome-zero-knowledge-proofs

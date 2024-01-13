@@ -49,7 +49,9 @@
 
 
 # ICMP
-    - Type - Code - Checksum
+    - Type 
+    - Code 
+    - Checksum
 
 ping addr repeat 1
 
@@ -66,9 +68,7 @@ ping addr repeat 1
 - TCP UDP packet generate
 - Or ping for control packet
 
-
 ## Reference 
-
 - https://github.com/tamalsaha/bpf-notes/blob/master/README.md
 - https://danielmiessler.com/study/tcpdump/
 - https://www.youtube.com/watch?v=znBGt7oHJyQ

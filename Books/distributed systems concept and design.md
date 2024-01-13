@@ -1,4 +1,4 @@
-# Distributed Systems Concept & Design
+# Distributed Systems Concept and Design
 A distributed system is one in which components located at networked computers communicate and coordinate their actions only by passing messages. This definition leads to the following especially significant characteristics of distributed systems: concurrency of components, lack of a global clock and independent failures of components.
 
 The largest online game, EVE Online, utilises a client-server architecture where a single copy of the state of the world is maintained on a centralized server and accessed by client programs running on players’ consoles or other devices.
@@ -37,4 +37,3 @@ Supervisor: Dispatching of interrupts, system call traps and other exceptions; c
 
 When a process executes application code, it executes in a distinct user-level address space for that application; when the same process executes kernel code, it executes in the kernel’s address space. The process can safely transfer from a user-level address space to the kernel’s address space via an exception such as an interrupt or a system call trap – the invocation mechanism for resources managed by the kernel. A system call trap is implemented by a machine-level TRAP instruction, which puts the processor into supervisor mode and switches to the kernel address space. When the TRAP instruction is executed, as with any type of exception, the hardware forces the processor to execute a kernel-supplied handler function, in order that no process may gain illicit control of the hardware.
 Programs pay a price for protection. Switching between address spaces may take many processor cycles, and a system call trap is a more expensive operation than a simple procedure or method call. We shall see in Section 7.5.1 how these penalties factor into invocation costs.
-

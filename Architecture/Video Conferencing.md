@@ -13,7 +13,6 @@
 
 ![](./Screen/benchmark.png)
 
-
 ## SFU
 In the SFU architecture, every participant sends his or her media stream to a centralized server (SFU) and receives streams from all other participants via the same central server. The architecture allows the call participant to send multiple media streams to the SFU, where the SFU may decide which of the media streams should be forwarded to the other call participants. SFU fallback to lowest quality in the network.
 
@@ -56,7 +55,6 @@ Adaptive bitrate streaming is the adjustments to video quality according to the 
 Identifies the synchronization source. The value is chosen randomly, with the intent that no two synchronization sources within the same RTP session will have the same SSRC. Although the probability of multiple sources choosing the same identifier is low, all RTP implementations must be prepared to detect and resolve collisions. If a source changes its source transport address, it must also choose a new SSRC to avoid being interpreted as a looped source
 
 ## Notes
-
 - For the media streams, WebRTC is RTP under the hood.
 - Janus plugin based, Medooze bare minimum.
 - Jitsi supports last N.

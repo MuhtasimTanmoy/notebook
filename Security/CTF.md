@@ -89,5 +89,3 @@ For CTF:
 But Bounty:
 - https://hackerone.com/bug-bounty-programs
 - https://www.bugcrowd.com/bug-bounty-list
-
-

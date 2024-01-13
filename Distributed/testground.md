@@ -1,8 +1,9 @@
-# Test Ground
+# Test ground
+
 Biswap
 Gossipsub
 Peer scoring
 Adaptive gossip dissemination
-Opputunistic grafting
+Oppurtunistic grafting
 Peer quotas
 Graylisting

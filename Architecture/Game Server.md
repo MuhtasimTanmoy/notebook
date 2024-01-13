@@ -7,10 +7,8 @@
     - Game data is compressed using delta compression to reduce network load. That means the server doesn't send a full world snapshot each time, but rather only changes (a delta snapshot) that happened since the last acknowledged update. With each packet sent between the client and server, acknowledge numbers are attached to keep track of their data flow. Usually full (non-delta) snapshots are only sent when a game starts or a client suffers from heavy packet loss for a couple of seconds. Clients can request a full snapshot manually with the cl_fullupdate command.
 
 
--  NAT Hole Punching
-Required for connecting peer to peer after matchmaking
-- https://keithjohnston.wordpress.com/2014/02/17/nat-punch-through-for-multiplayer-games/
-
+- [NAT Hole Punching](https://keithjohnston.wordpress.com/2014/02/17/nat-punch-through-for-multiplayer-games)
+    - Required for connecting peer to peer after matchmaking
 
 - [Research on Latency Problems and Solutions in Cloud Game!](https://www.researchgate.net/publication/337053541_Research_on_Latency_Problems_and_Solutions_in_Cloud_Game)
 
@@ -90,9 +88,7 @@ is a design that handles game scenarios occurring in an area near the virtual bo
 - Peer to peer
     - Clients multicast updates to other peers. However, lack of an established IP Multicast solution, forces such architectures to consume a lot of bandwidth
 
-- Using a publish/subscribe system [FWW02,
-CKSW02] allows players to subscribe only for
-events that interest them.
+- Using a publish/subscribe system [FWW02,CKSW02] allows players to subscribe only for events that interest them.
 
 - In overlapping multiple server parts
     - As multiple servers handle different areas of the
@@ -120,7 +116,6 @@ application, at the cost of consistency
 
 
 ### [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf) ****
-
 
 - A massively multiplayer online game is a networked game with two distinguishing features. First, the magnitude of the number of concurrent players is typically on the order of 104 or more. Second, MMGs have persistent state. This means that an MMG, unlike other networked games which end after some goal is completed, can continue indefinitely. Players join the game and play until they are ready to quit, at which point the state of their alter-ego in the game is saved. When they return, the state is restored. This
 also holds true for the virtual world.
