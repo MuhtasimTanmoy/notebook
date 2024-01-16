@@ -7,4 +7,4 @@
 - With set maintain currently
 
 # Resources
-- https://www.openmymind.net/redis.pdf
+- [Redis](https://www.openmymind.net/redis.pdf)

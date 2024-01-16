@@ -35,6 +35,7 @@ Ethereum layer 2 scaling
         - Computational extensive
 
 - [What are Zero-Knowledge Rollups?](https://pixelplex.io/blog/overview-of-zk-rollups/)
+- [Rollups and Data Availability - Building a Modular Blockchain Stack](https://youtu.be/PaSa6vvbeRk)
 
 - Projects
     - Polygon Hermez

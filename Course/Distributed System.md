@@ -1,16 +1,16 @@
-# MIT Parralal & Distributed OS Group
+# MIT Parralal and Distributed OS Group
 
 - [**Course Link**](https://pdos.csail.mit.edu/6.824/schedule.html)
 
 ## Introduction
 - Mapreduce explanation
-- general Phinlosophy
+- General Philosophy
 
-## RPC & Threads
-- Threads vs even driven asyncronous programming
-- To get Parrelalism + IO Concurrency fill all thread equal to core with event driven loop.
-- Go threads are cleverly run on one os thread.
-- Code snippets in go crawler explained.
+## RPC and Threads
+- Threads vs event driven asyncronous programming
+- To get Parrelalism + IO Concurrency fill all thread equal to core with event driven loop
+- Go threads are cleverly run on one os thread
+- Code snippets in go crawler explained
 
 ## GFS
 - Two phase commit
@@ -25,13 +25,14 @@
 
 # Fault Tolerance
 - Use of leader in distributed concensus
-    - Original Paxos dnt have a leader
-    - First round to elect a leadr, second to decide
-    - In raft, leader elected. So speeds up by factor of two.
-    - Sequence of leaders identified by followers using term.
-    - Back up. Fast.
-    - Log Compaction.
-    - Linearizability - All concurrent parallal requests map to one dimention.
+    - Original Paxos dont have a leader
+    - First round to elect a leader, second to decide
+    - In raft, leader elected. So speeds up by factor of two
+    - Sequence of leaders identified by followers using term
+    - Back up. Fast
+    - Log Compaction
+    - Linearizability 
+        - All concurrent parallal requests map to one dimention.
 
 # ZooKeeper
 - Raft usage requires explicit use in application which gives distributed concensus
@@ -39,15 +40,15 @@
 - zookeeper zab, raft like
 - Writes linearizable, gives zxID, Read fifo client with zxID
 - Primary backup system, not state machine replication.
-- Configuration management through read locking `ready` file.
+- Configuration management through read locking `ready` file
 - Mini Transaction
-    - Master state transfer, elect.
-    - Test & Set.
-- Api involves a naming system called 'zNodes'.
+    - Master state transfer, elect
+    - Test and Set
+- Api involves a naming system called 'zNodes'
     - Regular permanent zNode
     - Ephimeral zNode - Client need to continuously end heartbeat to keep it
     - Sequential
-- herd effect    
+- Herd effect    
 
 # CRAQ
 - Chain Replication
@@ -72,10 +73,8 @@
   - Crash recovery
 - Shared read lock
 - Exclusive write lock 
-
-Cache coherence lock to how updated write, Transactional to delay
-  
-WAL for crash recoverable transaction, Log on petal
+- Cache coherence lock to how updated write, Transactional to delay
+- WAL for crash recoverable transaction, Log on petal
  
 # Distributed Transaction
 - Transaction
@@ -98,7 +97,8 @@ WAL for crash recoverable transaction, Log on petal
 
 # Spanner
 - CockroachDB uses a lot of design
-- Sharding - key design
+- Sharding 
+    - Key design
 - Transactions over multiple shrad 
 - Paxos replecated
 - Transaction
@@ -118,7 +118,8 @@ WAL for crash recoverable transaction, Log on petal
 - Data across data centers
 
 # Optimistic Concurrency Control
-- FARM - Optimized for one data center
+- FARM 
+    - Optimized for one data center
 - NVRAM
     - Machine with battery attached
 - Kernel bypassing
@@ -203,13 +204,13 @@ WAL for crash recoverable transaction, Log on petal
     - Only orderinig of event
 
 **Lecture 3**
-Lamport Diagrams/ Space Time Diagrams
+
+Lamport Diagrams / Space Time Diagrams
 
 A -> B when,
 - A happens before B in same machine
 - A send B receive in different machine
-- transitive closure
-
+- Transitive closure
 - Causal anomaly
 
 Network mode
@@ -218,7 +219,8 @@ Network mode
 
 # Waterloo
  
-Lecture 1
+**Lecture 1**
+
 - Any big thing structure. Hiererchy 
 - DNS
 - Implicit hierarchy
@@ -227,8 +229,10 @@ Lecture 1
 - topology
 
 
-Lecture 2
+**Lecture 2**
+
 youtube pull replication
+
 push replication for popular
 
 DNS
@@ -237,7 +241,7 @@ ns - Name Server
 a - Address
 
 
-Lecture 6
+**Lecture 6**
 - SOCKET TABLE
     - SOCKET is an index to socket table, which has all information necessary.
     - SOCKET File Descriptor is an index. Just integer.
@@ -258,12 +262,11 @@ Lecture 6
 - UDP - SOCK_DGRAM - DATAGRAM
 
 - htons(PORT -> host byte order to network byte order
-- [Socket programming](https://www.youtube.com/watch?v=2QeL7jo_LIw&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
 
+- [Socket programming](https://www.youtube.com/watch?v=2QeL7jo_LIw&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
 - [SOCEKT PROGRAMMING](https://www.geeksforgeeks.org/socket-programming-cc/)   
 
-
-Lecture 7
+**Lecture 7**
 - Flow control part of transport layer
 - Congestion control part of network layer
 - Ports are 16 bits
