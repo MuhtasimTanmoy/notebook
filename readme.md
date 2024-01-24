@@ -1,6 +1,6 @@
 # Notebook
 
-> Compilation of notes to document learning, key takeaways, and study summaries, primarily emphasizing topics that I find interesting and important.
+> Compilation of notes containing key takeaways and study summaries to document learning paths on topics that I find interesting and important.
 
 ## Table of Contents
 
