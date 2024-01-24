@@ -1,6 +1,13 @@
-# Notebook
+<div align="center">
 
-> Compilation of notes containing key takeaways and study summaries to document learning paths on topics that I find interesting and important.
+[![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
+[![License](https://img.shields.io/cocoapods/l/AFNetworking?style=flat-square)](https://github.com/rednafi/think-asyncio/blob/master/LICENSE)
+
+</div>
+
+
+# Notebook
+> Compilation of notes containing key takeaways and study summaries to document learning paths on topics that I find interesting.
 
 ## Table of Contents
 
