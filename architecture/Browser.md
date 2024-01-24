@@ -40,7 +40,6 @@ eventually optimizing translation time
     - Critical rendering path
     - First meaningful paint
 
-
 # Resources
 ### [Chrome Internals](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
 

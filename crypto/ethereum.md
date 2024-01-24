@@ -19,4 +19,4 @@
 
 
 ## Resources
-- [RLPX Protocol](https://github.com/ethereum/devp2p/blob/master/rlpx.md)
+- [RLPX Protocol](https://github.com/ethereum/devp2p/blob/master/rlpx.md)c

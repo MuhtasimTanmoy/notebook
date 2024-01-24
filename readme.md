@@ -9,7 +9,6 @@
     - [game server](./architecture/game%20server.md)
     - [video conferencing](./architecture/video%20conferencing.md)
     - [browser](./architecture/browser.md)
-    - [zoom](./architecture/zoom.md)
     - [p2p](./architecture/p2p.md)
     - [web assembly](./architecture/web%20assembly.md)
     - [messaging server](./architecture/messaging%20server.md)

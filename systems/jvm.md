@@ -5,7 +5,7 @@
 - What is `JDK`?
     - The JDK is the Java Development Kit, the full-featured SDK for Java. It has everything the JRE has, but also the compiler (javac) and tools (like javadoc and jdb).
 
-![](./Screen/jdk.png)    
+![](./screen/jdk.png)    
 
 Three major component
 - Class Loader

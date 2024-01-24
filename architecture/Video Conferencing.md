@@ -11,7 +11,7 @@
 - [Jami Project](https://git.jami.net/savoirfairelinux/ring-project)
 - [Testing WebRTC](https://github.com/webrtc/KITE)
 
-![](./Screen/benchmark.png)
+![](./screen/benchmark.png)
 
 ## SFU
 In the SFU architecture, every participant sends his or her media stream to a centralized server (SFU) and receives streams from all other participants via the same central server. The architecture allows the call participant to send multiple media streams to the SFU, where the SFU may decide which of the media streams should be forwarded to the other call participants. SFU fallback to lowest quality in the network.
@@ -63,7 +63,7 @@ Identifies the synchronization source. The value is chosen randomly, with the in
 - [Benchmark Conferencing](https://www.youtube.com/watch?v=wrp73yYE8Ck)
 - [AntMedia](https://antmedia.io/webrtc-servers)
 - [Simulacast](https://voximplant.com/blog/an-introduction-to-selective-forwarding-units)
-
+- [Zoom](https://github.com/zoom/zoom-e2e-whitepaper/blob/master/zoom_e2e.pdf)
 
 # Talk
 - [Medooze talk](https://www.youtube.com/watch?v=u8ymYTdA0ko&ab_channel=CommCon)

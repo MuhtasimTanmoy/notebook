@@ -13,5 +13,5 @@ Designing object-oriented software is hard, and designing reusable object-orient
 - Composite is often used with Iterator or Visitor. Some patterns are alternatives: Prototype is often an alternative to Abstract Factory. Some patterns result in similar designs even though the patterns have different intents. For example, the structure diagrams of Composite and Decorator are similar.
 
 
-![](./Screen/Design%20Pattern.png)
-![](./Screen/Design%20Pattern%20Relations.png)
+![](./screen/Design%20Pattern.png)
+![](./screen/Design%20Pattern%20Relations.png)
