@@ -1,4 +1,5 @@
 # Serialization
+
 - JSON
     - JSON is textual, its integers and floats can be slow to encode and decode. JSON is not designed for numbers. Also, Comparing strings in JSON can be slow.
 - BSON

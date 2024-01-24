@@ -118,7 +118,8 @@ Although UDP provides error checking, it does not do anything to recover from an
 
 
 # Reference
-- https://www.youtube.com/watch?v=cNdlrbZSkyQ
-- https://gist.github.com/codehoose/020c6213f481aee76ea9b096acaddfaf
-- https://courses.cs.vt.edu/~cs5516/spring03/slides/SocketProgramming_6.pdf
-- https://www.csd.uoc.gr/~hy556/material/tutorials/cs556-3rd-tutorial.pdf
+- [Creating a TCP Server in C++ [Linux / Code Blocks]
+](https://www.youtube.com/watch?v=cNdlrbZSkyQ)
+- [Codehoose / bbtcpserver.cpp](https://gist.github.com/codehoose/020c6213f481aee76ea9b096acaddfaf)
+- [Socket Programming](https://courses.cs.vt.edu/~cs5516/spring03/slides/SocketProgramming_6.pdf)
+- [Introduction to Sockets Programming in C using TCP/IP](https://www.csd.uoc.gr/~hy556/material/tutorials/cs556-3rd-tutorial.pdf)

@@ -70,8 +70,6 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
     - Reads can only happen concurrently only with respect to other reads. But they cannot be performed concurrently with writes. So concurrent queue allows the reads to happen concurrently, with the exception of writes, which is why we use barrier for writes.
 
 - KeyPath to simplify object property
-
-
 - SwiftUI
     - Binding is by definition a two way connection, `.constant()` means a one way connection, when the user types into the textfield the variable in the view model will never get updated. Your updates can go down but not up.
     - `StateObject` is for initializing `ObservedObject` is for passng around.
@@ -80,3 +78,4 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0)
 - [Swift Memory Model](https://youtu.be/ERYNyrfXjlg)
     - Word is a unit in the size of a pointer
+- [Swift Plugin Manager Thread](https://forums.swift.org/t/weak-linking-in-swift-package-manager-plugin-architecture/49821)

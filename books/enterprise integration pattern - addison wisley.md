@@ -1,4 +1,4 @@
-www.enterpriseintegrationpatterns.com
+# Enterprise Integration Patterns
 
 - Pattern is the sweet spot of design. 
 
@@ -27,6 +27,3 @@ www.enterpriseintegrationpatterns.com
 - Message Router
 - Message Translator
 - Message Endpoint
-
-
-

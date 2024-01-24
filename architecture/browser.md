@@ -27,7 +27,7 @@ Rendering Steps for a browser
 - JS engine comes with `JIT`, Garbage collector
 - Runtime the stuff language put that you actually dont wrote. ( translation cost occurs one )
 
-# Interpretation & compilation
+# Interpretation and compilation
 - Compiled is fast interpreted is repeated
 - Compilers can optimize ahead as they have full picture
 - Interpreters in js introduced monitor warm functions
@@ -37,11 +37,11 @@ eventually optimizing translation time
 ## Notes
 - Polyfill backward compatibility
 - Perforamnce Measure
-    - Critical rendering path
-    - First meaningful paint
+    - Critical rendering path optimize
+    - Time to first meaningful paint
 
 # Resources
-### [Chrome Internals](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
+- ### [Anatomy of the browser 101 (Chrome University 2019)](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
 
 - Architecture Core Principles
     - Stability

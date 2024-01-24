@@ -22,9 +22,7 @@ Layer-coding approach was proposed to separate the game image into two layers:
 
 
 ### [Colyseus_A_Distributed_Architecture_for_Online_Multiplayer_Games!](https://www.researchgate.net/publication/220831981_Colyseus_A_Distributed_Architecture_for_Online_Multiplayer_Games)
-
 - Colyseus, which primarily acts as a game object manager
-
 - There are two types of game objects
     - Immutable
     - Mutable

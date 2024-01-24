@@ -10,7 +10,6 @@
 Kademlia is not a consensus algorithm, it’s a DHT which is way to structure p2p networks, and to store and look up data on them, which means it can tolerate a whole lot more failures than raft can, but it is usually used to store data that never changes, and many implementations don’t necessarily replicate data and by itself it doesn’t have any consistency guarantees.
 
 ## Chord
-
 - Each node has routing table
 - GUID - 64 bit
 - Total 2^64 nodes and routing atble has 64 entry

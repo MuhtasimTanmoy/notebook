@@ -1,7 +1,5 @@
 # EVM
 
-![](./screen/evm.png)
-
 - [EVM: From Solidity to byte code, memory and storage](https://www.youtube.com/watch?v=RxL_1AfV7N4)
     - Solidity and viper EVM language which generates `.bin` and `.abi`
     - Transactions are not part of world state or state tree
@@ -32,8 +30,6 @@
         - Swarm hash
             - Merkle tree hash to retrieve
 
-- [SputnikVM: Rust Ethereum Virtual Machine Implementation](https://github.com/rust-blockchain/evm)
-
 - [Bridge/ Crosschain Bridge/ Defi Bridge](https://youtu.be/zq4cbS3q-lY)
     - Why?
         - Transaction fees
@@ -48,12 +44,16 @@
             - Verificaiton
     - Ethereum Event
         - Event can be proven to come from certain blockchain 
-    - Hash Timelock Contracts (HTLC) - Trustless
+    - Hash Timelock Contracts (HTLC) 
+        - Trustless
         - Decentralized exchange can only trade for assets on same blockchain
-        - Atomic Swaps 
-        - https://www.youtube.com/watch?v=VZX2ApRLuwM
+        - Atomic Swaps
 
-# [Gossipsub - A gossip-based pubsub protocol By Yiannis Psaras @ Paris P2P Festival #1](https://youtu.be/VEEEaf8B35w)
+- [Introduction to Atomic Swaps: Live Demo + Solidity Tutorial Of Hash Timelocked Contract (HTLC)](https://www.youtube.com/watch?v=VZX2ApRLuwM)
+
+- [SputnikVM: Rust Ethereum Virtual Machine Implementation](https://github.com/rust-blockchain/evm)
+
+- [Gossipsub - A gossip-based pubsub protocol By Yiannis Psaras @ Paris P2P Festival #1](https://youtu.be/VEEEaf8B35w)
     - Floodsub -> RandomSub -> GossipSub
     - Eager push
     - Lazy pull 

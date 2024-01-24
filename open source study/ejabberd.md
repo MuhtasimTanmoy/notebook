@@ -190,14 +190,13 @@ PORT      STATE    SERVICE
     - Matrix, which is pull based
 
 # Resources
+- [Installation Guide](https://www.ejabberd.im/files/doc/guide.html#htoc2)
+- [How it works](https://docs.ejabberd.im/admin/guide/clustering/)
+- [Modules](https://docs.ejabberd.im/admin/configuration/modules/#mod-sip)
+- [Internals](https://docs.ejabberd.im/developer/guide/)
+- [Stanza Routing](https://docs.ejabberd.im/developer/extending-ejabberd/stanza-routing)
 - https://trisquel.info/files/ejabberd%202.1.pdf
 - http://www.owl.homeip.net/manuals/services/ejabber/
 - https://raymii.org/s/tutorials/Set_up_a_federated_XMPP_Chat_Network_with_ejabberd.html
 - https://tutslaptrinh.com/tutorial-detail/architecture-ejabberd
 - https://trisquel.info/files/ejabberd%202.1.pdf 
-
-- [Installation Guide](https://www.ejabberd.im/files/doc/guide.html#htoc2)
-- [How it works](https://docs.ejabberd.im/admin/guide/clustering/)
-- [Modules](https://docs.ejabberd.im/admin/configuration/modules/#mod-sip)
-- [Internals](https://docs.ejabberd.im/developer/guide/)
-- [Stanza Routing](https://docs.ejabberd.im/developer/extending-ejabberd/stanza-routing/)

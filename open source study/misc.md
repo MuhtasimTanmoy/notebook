@@ -17,6 +17,9 @@
 ## [CockroachDB](https://github.com/cockroachdb/cockroach)
 
 ## Multiverssion Concurrency Control
+
+Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consistency over availability. BASE (Basic Availability, Soft-state, Eventual consistency) systems, like MongoDB and other NoSQL systems, favor availability over consistency. 
+
 - Pessimistic
     - Lock and chage
     - Two phase lock
@@ -28,8 +31,6 @@
         - Simulation
         - Validation
         - Commit 
-
-Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consistency over availability. BASE (Basic Availability, Soft-state, Eventual consistency) systems, like MongoDB and other NoSQL systems, favor availability over consistency. 
 
 ## [NUM_CPUS](https://github.com/seanmonstar/num_cpus/)
 - Different architecture os handle in rust
@@ -44,4 +45,3 @@ Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consiste
 
 
 ## [Worker Pool](https://github.com/inaka/worker_pool)
-- 

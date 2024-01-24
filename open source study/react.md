@@ -1,3 +1,5 @@
+# React
+
 There are 3 possibilities to store state:
 - Component
     - Class Based Component
@@ -18,4 +20,3 @@ There are 3 possibilities to store state:
 - Execution Context.
 
 - React uses javascript object tree, runs diffing everytime anything changes and ensures minimum dom manipulation.
-

@@ -1,5 +1,6 @@
 
 # Portal
+
 - [Ethereum Client](https://youtu.be/0stc9jnQLXA)
     - Full Node
         - Decentralized, but storage heavy

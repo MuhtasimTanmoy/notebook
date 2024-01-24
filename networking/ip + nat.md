@@ -27,7 +27,7 @@ An IP address is always combined with a Subnet Mask, and it is the Subnet Mask t
 
 IP = Network + Host Address
  
- # Default gateway
+## Default gateway
 
  In the local network, there must be a router for inter-network communication and the address of that router is configured to all clients of the LAN network. The address of the router is called Default Gateway. We could have just called it "Router Address".
 
