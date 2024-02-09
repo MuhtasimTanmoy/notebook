@@ -1,4 +1,6 @@
-# Diffie Hellman
+# Cryptography
+
+## Diffie Hellman
 
 Web protocols use a combination of symmetric and asymmetric encryption to establish secure connections.
 
@@ -20,9 +22,7 @@ Example: TLS.
     - Extra communication. Round trip time.
 
 ## RSA
-
-Public Private key based Encryption.
-
+Public Private key based Encryption
 - Formula
 
 ```
@@ -48,29 +48,28 @@ ed == 1 (mod phi( N ))
 N = p1*p2 > big prime factorization
 phi (N) = (p1-1) * (p2-1)
 
-**Eulers theorem**
+## Eulers Theorem
 
 m ^ phi(n) congruent to =  1 mod n
 m ^ (k * phi(n)  +1)  ==  m mod n
 
-**Walkthrough**
-
+- Walkthrough
 	- Generate two prime number.           [ 3 and 11 ]
 	- Multiply > prime factorization       [ N = 33 ]
 	- phi(N) > toteint                     [ phi(N) = 20 ]
 	- Choose exponent between 1 - phi(N) 
-        - E = odd and Co prime             [ E coprime to phi(N) and N]
+		- E = odd and Co prime             [ E coprime to phi(N) and N]
 	- N & E public key                     [ (E,N) ]
 	- D = ( 2 * phi (N) + 1 ) / E          [ (D,N) ]
 	- ( data ^ e ) % N = encrypted text    
 	- ( encrypted text ^ d ) % N  = data
 
-# AES
+## AES
 
 - Chacha cypher
 	- Replacement for aes
 	- Works well on low end device
 
-# Resources
+## Resources
 - [RSA Encryption](https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/rsa-encryption-part-4)
-- [padding](https://asecuritysite.com/encryption/padding)
+- [Padding](https://asecuritysite.com/encryption/padding)

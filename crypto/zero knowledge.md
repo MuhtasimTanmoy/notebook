@@ -28,7 +28,7 @@ Ethereum layer 2 scaling
         - Post data to layer 1 and assume it's correct
         - Use fraud proofs
         - Withdrawal time long, so liquidity exits given by hop protocol and connext
-    - ZKRollup
+    - ZK Rollup
         - Use validity proofs
         - ZK-SNARK - validity proof
         - zkSync

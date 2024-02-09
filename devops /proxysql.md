@@ -1,4 +1,5 @@
 # Proxy SQL
+
 SQL aware load balancing.
 
 - MySQL default connection limit 256

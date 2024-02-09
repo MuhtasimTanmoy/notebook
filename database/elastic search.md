@@ -37,7 +37,8 @@ tokenization
         - when duplicates then N
         - when sorted logN
 
-# Database Indexing
+## Database indexing
+
 > [Reference: Stack overflow](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)
 
 - Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it.

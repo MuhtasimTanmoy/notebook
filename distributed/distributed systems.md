@@ -22,7 +22,6 @@ Distributed System Categories
     - Leader base
     - Raft 
 
----    
 
 - Distributed Data Stores
     - The concensus part can be separated as a service with ZooKeeper

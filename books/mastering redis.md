@@ -28,16 +28,18 @@ Commands
     - Write back ****
     - LRU
 
-# Resources
-- Cluster Spec
-   - https://redis.io/topics/cluster-spec
-- Documentation
-    - https://redis.io/documentation
-- Commands
-    - https://redis.io/commands
-- Interactive
-    - http://try.redis.io/    
-- Scale Takeaway
-    - https://www.youtube.com/watch?v=NymIgA7Wa78
-- Redis placement
-    - https://www.youtube.com/watch?v=U3RkDLtS7uY        
+## [Redis](https://university.redislabs.com)
+- Redis cluster only supports database 0, logical
+- Keys not production safe, Scan is
+- Del remove key and memory removed, Unlink only breaks the link, memory reclaimed asyncronously
+- Exist, Set two round time trip remove with NX, XX
+- EXPIRE HANDLE
+- With set maintain currently
+
+## Resources
+- [The Little Redis Book](https://www.openmymind.net/redis.pdf)
+- [Redis cluster specification](https://redis.io/topics/cluster-spec)
+- [Documentation](https://redis.io/documentation)
+- [Commands Cheat Sheet](https://redis.io/commands)
+- [Redis is Dead Long live Redis!](https://www.youtube.com/watch?v=NymIgA7Wa78)
+- [What are Distributed CACHES and how do they manage DATA CONSISTENCY?](https://www.youtube.com/watch?v=U3RkDLtS7uY)

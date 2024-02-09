@@ -1,10 +1,10 @@
-# Notes
+# eBPF
 - Packet filerting done in kernel space without context switch.
 - On link driver -> BPF + Protocol Stack 
 - eBBF - parse modify packet - filter before
 - TCPDump uses BPF
 
-#### TCPDUMP
+### TCPDUMP
 - tcpdump -nnSX port 443 (Capture HTTPS)
 - tcpdump -i eth0
 - tcpdump host 1.1.1.1
@@ -47,20 +47,16 @@
 - Capturing ssh session
     - sudo tcpdump -i en0 dest MY_IP
 
-
-# ICMP
-    - Type 
-    - Code 
-    - Checksum
-
-ping addr repeat 1
-
+#### ICMP
+- Type 
+- Code 
+- Checksum
 - Kprobes / Uprobes
 - Static tracepoint
 - Debugging replaces instruction with jump
 - Anything platform independent introduce virtual machine
 
-# IPtable
+# IP Table
 - Table, Chain, Target
 - Firewall
 
@@ -69,17 +65,15 @@ ping addr repeat 1
 - Or ping for control packet
 
 ## Reference 
-- https://github.com/tamalsaha/bpf-notes/blob/master/README.md
-- https://danielmiessler.com/study/tcpdump/
-- https://www.youtube.com/watch?v=znBGt7oHJyQ
-- https://martinsjean256.wordpress.com/2018/02/12/hacking-aircrack-ng-on-mac-cracking-wi-fi-without-kali-in-parallels/
-- https://opensource.com/article/18/10/introduction-tcpdump
-- https://www.youtube.com/watch?v=jQm-J-8iPVw
-- https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages
-- https://en.wikipedia.org/wiki/Network_socket
-- https://www.cs.dartmouth.edu/~sergey/cs258/2016/kprobes-2016.pdf
-- https://sebymiano.github.io/documents/19-eBPF-Iptables-Demo.pdf
-- https://events.static.linuxfound.org/sites/events/files/slides/2016%20-%20Linux%20Networking%20explained_0.pdf
 - [Talk on BPF](https://www.youtube.com/watch?v=4SiWL5tULnQ)
 - [BPF Deep Dive](https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/)
-- [BPF based Tools](https://github.com/iovisor/bcc)
+- [BPF Based Tools](https://github.com/iovisor/bcc)
+- [BPF Notes](https://github.com/tamalsaha/bpf-notes/blob/master/README.md)
+- [A tcpdump Tutorial with Examples](https://danielmiessler.com/study/tcpdump)
+- [eBPF: BPF kernel infrastructure](https://www.youtube.com/watch?v=znBGt7oHJyQ)
+- [Hacking: Aircrack-ng on Mac OsX | Cracking wi-fi without kali in parallels](https://martinsjean256.wordpress.com/2018/02/12/hacking-aircrack-ng-on-mac-cracking-wi-fi-without-kali-in-parallels)
+- [What is ICMP and How ICMP works || Explained](https://www.youtube.com/watch?v=jQm-J-8iPVw)
+- https://en.wikipedia.org/wiki/Network_socket
+- [The	Amazing	World of Kprobes](https://www.cs.dartmouth.edu/~sergey/cs258/2016/kprobes-2016.pdf)
+- [Linux Networking Explained](https://events.static.linuxfound.org/sites/events/files/slides/2016%20-%20Linux%20Networking%20explained_0.pdf)
+- [An introduction to using tcpdump at the Linux command line](https://opensource.com/article/18/10/introduction-tcpdump)

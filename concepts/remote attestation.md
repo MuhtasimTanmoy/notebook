@@ -9,6 +9,8 @@ system (challenger) to determine the level of trust in the integrity of platform
     - AMD PSP  
 
 
+
+## Resources
 - [TPM](https://www.youtube.com/watch?v=RW2zHvVO09g)
 - [36C3 - TrustZone-M(eh): Breaking ARMv8-M's security](https://www.youtube.com/watch?v=4u6BAH8mEDw)
 - [Vault](https://www.hashicorp.com/resources/runtime-protection-for-vault-and-consul)

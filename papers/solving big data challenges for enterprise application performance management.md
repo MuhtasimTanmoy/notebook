@@ -1,7 +1,7 @@
-## [Solving Big Data Challenges for Enterprise Application Performance Management](http://vldb.org/pvldb/vol5/p1724_tilmannrabl_vldb2012.pdf)
+### [Solving Big Data Challenges for Enterprise Application Performance Management](http://vldb.org/pvldb/vol5/p1724_tilmannrabl_vldb2012.pdf)
 
 - Administrators have on-line view of the system health by 
-    - Ganglia 
+    - Ganglia
     - Nagios 
 
 - Application Performance Management (APM) tools

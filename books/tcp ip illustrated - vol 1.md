@@ -104,5 +104,3 @@
 ![TCP](screen/TCP.png)
 ![WireShark](screen/WireShark.png)
 ![IEEE Packet](screen/IEEE_Packet.png)
-
-> Designing an architecture is more art than science

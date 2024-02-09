@@ -34,7 +34,7 @@ bt  # backtrace
 Precompiled headers are a general approach employed by many compilers to reduce compilation time. Consequently, compile times can often be greatly improved by caching some of the (redundant) work done by a compiler to process headers. Precompiled header files, which represent one of many ways to implement this optimization, are literally files that represent an on-disk cache that contains the vital information necessary to reduce some of the work needed to process a corresponding header file. While details of precompiled headers vary between compilers, precompiled headers have been shown to be highly effective at speeding up program compilation on systems with very large system headers (e.g., macOS).
 
 
-# Resources
+## Resources
 - [LLVM User Manual](https://clang.llvm.org/docs/UsersManual.html#terminology)
 - [LLVM Grad Student](http://www.cs.cornell.edu/~asampson/blog/llvm.html)
 - [LLVM Warning](https://softwareengineering.stackexchange.com/questions/122608/clang-warning-flags-for-objective-c-development/124574#124574)

@@ -1,6 +1,8 @@
-# Lamport Timestamps
+# Clock
 
-Each node knows 
+### Lamport timestamps
+
+Each node knows
 - It's events
 - Communication events
 
@@ -37,5 +39,4 @@ Actor explosion
 - Version Vectors or Interval Tree Clocks
 
 # Christian Algorithm
-Time Sync
-- https://www.youtube.com/watch?v=yvuy0rPkv8Q
+- [Synchronization in Distributed System - Christian's & Berkley's Algorithm](https://youtu.be/L7cjMgJktdA)

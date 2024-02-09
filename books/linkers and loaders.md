@@ -36,6 +36,7 @@ A3 00 00 00 00 mov %eax,b
 Each instruction contains a one-byte operation code followed by a four- byte address. The first instruction has a reference to 1234 (byte reversed, since the x86 uses a right to left byte order) and the second a reference to zero since the location of b is unknown.
 
 Now assume that the linker links this code so that the section in which a is located is relocated by hex 10000 bytes, and b turns out to be at hex 9A12. The linker modifies the code to be:
+
 A1 34 12 01 00 mov a,%eax
 A3 12 9A 00 00 mov %eax,b
 ```

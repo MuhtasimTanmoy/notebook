@@ -1,6 +1,6 @@
 # Browser Architecture
 
-Rendering Steps for a browser
+Rendering steps for a browser
 - Constructing the `DOM` Tree
     - byte
     - character
@@ -9,11 +9,11 @@ Rendering Steps for a browser
     - dom
 - Constructing the `CSSOM` Tree
 - Running JavaScript
-- Creating the Render Tree
-- Generating the Layout
+- Creating the render tree
+- Generating the layout
 - Painting
 
-# JS
+## JS
 - Javascript
     - Parsing
     - Compile + Optimize
@@ -27,7 +27,7 @@ Rendering Steps for a browser
 - JS engine comes with `JIT`, Garbage collector
 - Runtime the stuff language put that you actually dont wrote. ( translation cost occurs one )
 
-# Interpretation and compilation
+## Interpretation and compilation
 - Compiled is fast interpreted is repeated
 - Compilers can optimize ahead as they have full picture
 - Interpreters in js introduced monitor warm functions
@@ -40,8 +40,8 @@ eventually optimizing translation time
     - Critical rendering path optimize
     - Time to first meaningful paint
 
-# Resources
-- ### [Anatomy of the browser 101 (Chrome University 2019)](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
+## Resources
+- [Anatomy of the browser 101 (Chrome University 2019)](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
 
 - Architecture Core Principles
     - Stability

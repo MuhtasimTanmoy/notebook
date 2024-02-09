@@ -32,14 +32,14 @@ The concept of `terms` is introduced, which divides time into periods where a sp
 
 Each server maintains its current term and has only two RPCs and three persistent states.
 
-![Raft](sc/raft.png)
+![Raft](./screen/raft.png)
 
 The leader must regularly send empty heartbeats to all followers in the form of empty append entries. The election timeout is the span of time for choosing a leader, and safety is the liveliness of the leader election. A random timeout is eventually selected to complete the election.
 
 ### Logs
 The committed log is persisted on disk on a majority of the servers. The leader never overwrites the log but appends to it. All future leaders must have all committed logs. The leader will not respond until the command has been logged, committed, and executed by the leader's state machine. Linearizability is guaranteed with a unique key. Configuration changes must go through two phases.
 
-![Raft](sc/concensus.png)
+![Raft](./screen/concensus.png)
 
 ### Term
 A term is a duration for which a specific server acts as the leader. A new election begins a new term, and the Raft algorithm ensures that every term has a single leader.

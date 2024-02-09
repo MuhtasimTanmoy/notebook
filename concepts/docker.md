@@ -44,6 +44,7 @@
     - FileSystem
 
 ## Storage Driver
+
 `Storage drivers` allow you to create data in the writable layer of your container. 
 
 The files won’t be persisted after the container is deleted, and both read and write speeds are lower than native file system performance. Transferring similar tp rsync.
@@ -73,8 +74,8 @@ The files won’t be persisted after the container is deleted, and both read and
 - [Deep dive into Docker storage drivers](https://www.youtube.com/watch?v=9oh_M11-foU)
 - [Why docker is written in go](https://www.slideshare.net/jpetazzo/docker-and-go-why-did-we-decide-to-write-docker-in-go)
 - [Go Group](https://groups.google.com/g/golang-nuts?pli=1)
-- https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/lxc-namespace.pdf
-- https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a
+- [Resource management: Linux kernel Namespaces and cgroups](https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/lxc-namespace.pdf)
+- [Namespaces in Go - Basics](https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a)
 - https://docs.docker.com/storage/storagedriver/
 - https://docs.docker.com/storage/storagedriver/select-storage-driver
 - https://stackoverflow.com/questions/31152263/what-is-docker-storage-driver

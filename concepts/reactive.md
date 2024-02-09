@@ -11,4 +11,6 @@
 
 - Try to avoid Variables and Subjects if possible. AKA try to make everything "flowing". Function into function, into function and so on and, eventually, in UI. But be afraid of subjects overuse - otherwise your project will become hard to maintain and scale in no time.
 
+
+## Resources
 - [RX Example](https://github.dev/JussiSuojanen/friends/tree/RxSwift/Friends)

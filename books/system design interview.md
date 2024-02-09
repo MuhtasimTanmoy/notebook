@@ -2,6 +2,7 @@
 
 ## Chapter 1
 - Relational Database
+
 - Non-relational Database
     - key-value stores 
     - graph stores
@@ -13,7 +14,6 @@
     - Your data are unstructured, or you do not have any relational data.
     - You only need to serialize and deserialize data (JSON, XML, YAML, etc.). 
     - You need to store a massive amount of data.
-
 
 - Vertical Scaling
     - Vertical scaling has a hard limit. It is impossible to add unlimited CPU and memory to a single server.
@@ -47,12 +47,10 @@
 
 ## Chapter 2
 
-
 ## Chapter 14
 - Design Youtube
 - Familiar model
 - Apple, Xiaomi device codec error
-
 
 ## Chapter 15
 - Google Drive

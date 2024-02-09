@@ -1,12 +1,5 @@
 # nginx
 
-# Starting and Stopping Nginx
-
-```bash
-nginx # start
-nginx -s stop
-nginx -s reload
-```
 
 A light weight reverse proxy.
 

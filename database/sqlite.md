@@ -41,7 +41,6 @@ Sqlite file is application format.
     - Destroy the object using `sqlite3_finalize()`.
 
 - SQLite `vaccum` command optimizes size.
-- 
 
 ## Resources
 - [VFS](https://www.sqlite.org/vfs.html)

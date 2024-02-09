@@ -1,4 +1,4 @@
-# Functional Programming
+# Functional programming
 
 - Object oriented programming gives bad habit about functional programming as we have lots of void functions, if a function does not return anything why would we need one?
 

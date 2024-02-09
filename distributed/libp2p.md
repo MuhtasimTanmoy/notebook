@@ -29,8 +29,6 @@ p2p connection
     - A Multiaddr is a self-describing network address and protocol stack that is used to establish connections to peers.
     
 ```
-Some examples:
-
 /ip4/80.123.90.4/tcp/5432
 /ip6/[::1]/udp/10560/quic
 /unix//path/to/socket

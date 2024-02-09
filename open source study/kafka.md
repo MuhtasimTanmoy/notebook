@@ -58,8 +58,6 @@
 
 - Durability, Availability, Ordering Guarenty
 
-
-
 In traditional message processing, you apply simple computations on the messages -- in most cases individually per message.
 
 In stream processing, you apply complex operations on multiple input streams and multiple records (ie, messages) at the same time (like aggregations and joins).

@@ -182,7 +182,6 @@
 
 # Blockstack
 
-
 ## Final Project
 - Search 6.824
 
@@ -232,7 +231,6 @@ Network mode
 **Lecture 2**
 
 youtube pull replication
-
 push replication for popular
 
 DNS

@@ -36,7 +36,6 @@
     - [ethereum](./crypto/ethereum.md)
     - [token-economics](./crypto/token-economics.md)
     - [evm](./crypto/evm.md)
-    - [testground](./crypto/testground.md)
     - [substrate](./crypto/substrate.md)
     - [waku](./crypto/waku.md)
     - [solana](./crypto/solana.md)
@@ -53,7 +52,6 @@
     - [postgres snippet](./devops%20/postgres%20snippet.md)
 - course
     - [distributed system](./course/distributed%20system.md)
-    - [redis](./course/redis.md)
     - [advanced programming in the unix environment](./course/advanced%20programming%20in%20the%20unix%20environment.md)
 - papers
     - [solving big data challenges for enterprise application performance management](./papers/solving%20big%20data%20challenges%20for%20enterprise%20application%20performance%20management.md)
