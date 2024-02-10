@@ -124,7 +124,6 @@ Cr = g*R + h*G + i*B
                 - Succesive appoximation (For base line both nibble 0)
                                 
 ```c++
-
 // Nondifferential Huffman-coding frame
 const bytebits SOF0 = (bytebits)0xc0; // baseline dct
 const bytebits SOF1 = (bytebits)0xc1; // extended dct

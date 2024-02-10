@@ -1,4 +1,5 @@
-Transport Layer 
+# Transport Layer
+
 - TCP
 - UDP
 
@@ -85,11 +86,11 @@ To illustrate the demultiplexing job, recall the household analogy in the previ-
 From the discussion above, we know that transport-layer multiplexing requires (1) that sockets have unique identifiers, and (2) that each segment have special fields that indicate the socket to which the segment is to be delivered. These special fields are the **source port number** field and the **destination port number** field.
 
 
-### TCP Creates Socket with 4 tuple
+## TCP Creates Socket with 4 tuple
 
 When a client tries to connect to server, server creates a new socket (if not already created) using the 4 tuple (source IP, source port, dest IP, dest port). This means one process can open multiple socket. Hence, even though we only have around 60k ports, we can provide service to many more clients than 60k.
 
-# UDP
+## UDP
 
 > Why would anyone choose udp?
 
@@ -117,7 +118,7 @@ At the receiver, all 16-bit words are added, including the checksum. If no error
 Although UDP provides error checking, it does not do anything to recover from an error. Some implementations of UDP simply discard the damaged segment; others pass the dam- aged segment to the application with a warning.
 
 
-# Reference
+## Reference
 - [Creating a TCP Server in C++ [Linux / Code Blocks]
 ](https://www.youtube.com/watch?v=cNdlrbZSkyQ)
 - [Codehoose / bbtcpserver.cpp](https://gist.github.com/codehoose/020c6213f481aee76ea9b096acaddfaf)

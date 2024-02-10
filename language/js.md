@@ -45,7 +45,7 @@ Objects (Oriented):
     - Heavy duty tasks to be forwarded to worker thread so it does not block the current looping thread.
     - Requiring module is syncronous, should be donw at root level.
 
-![](./images/Event%20Loop%20Phases.png)
+![](./screen/Event%20Loop%20Phases.png)
 
 ```js
 

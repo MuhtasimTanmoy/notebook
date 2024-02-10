@@ -1,4 +1,4 @@
-## Ip Address
+## IP Address
 
 IP Address consists of two parts: IP Network and Host address.
 
@@ -13,7 +13,7 @@ On a LAN, computers can talk with each other as long as they are under the same 
 
 Port numbers have a range of 0..65535 (although often 0 has special meaning). In the original BSD TCP implementation, only root can bind to ports 1..1023, and dynamically assigned ports were assigned from the range 1024..5000; the others were available for unprivileged static assignment. These days 1024..5000 is often not enough dynamic ports, and IANA has now officially designated the range 49152..65535 for dynamic port assignment. However even that is not enough dynamic ports for some busy servers, so the range is usually configurable (by an administrator). On modern Linux and Solaris systems (often used as servers), the default dynamic range now starts at 32768. Mac OS X and Windows Vista default to 49152..65535.
 
-### Router
+## Router
 
 The main purpose of a router is to be able to forward traffic to different destinations. Within computer networking, those destinations are different IP networks.
 
@@ -31,7 +31,7 @@ IP = Network + Host Address
 
  In the local network, there must be a router for inter-network communication and the address of that router is configured to all clients of the LAN network. The address of the router is called Default Gateway. We could have just called it "Router Address".
 
-# Private IP
+## Private IP
 
 - 10.0.0.0 - 10.255.255.255
 - 172.16.0.0 - 172.31.255.255
@@ -42,7 +42,7 @@ These are private addresses.
 The above special addresses are called Private addresses. They cannot be used on the Internet, they can only be used within local networks. If you try to use Private addresses on the Internet then your Internet Service Provider will block your traffic automatically, sensing that the traffic is coming from a Private IP address. This automatic block is being done to avoid any IP address conflicts on the Internet. These addresses are used in so many places that without the block we would have guaranteed and constant IP address conflicts all over the Internet.
 
 
-# NAT
+## NAT
 Since public IP addresses are limited and thus we are forced to use private IP addresses at home, how do we connect to internet?
 
 ## How NAT Works?
@@ -58,8 +58,6 @@ When the router sends the packet on to the Internet the packet will appear to co
 
 What about when there are multiple clients? Well, the router keeps track about which packet belongs to which client. You don't have to worry.
 
-
-**NAT**
 
 NAT works in network layer
 PAT works in transport layer
@@ -82,7 +80,7 @@ NAT Hole Punching
 5.  Connection Established.
 
 
-# Port Forward
+## Port Forward
 There is no way for the router to know. We have to configure the router such that when traffic from outside hits a particular port of the router, the router will send it to a host that we configured. This is called port forwarding.
 
 

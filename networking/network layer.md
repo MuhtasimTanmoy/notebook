@@ -13,7 +13,7 @@ Distance-vector routing protocols use the [Bellman–Ford algorithm](https://en.
 - Reverse path forwarding `dvr`
 
 
-# Routing Algo
+## Routing Algo
 - DVR Distant Vector Routing
 	- Count to infinity
 	- Split horizon
