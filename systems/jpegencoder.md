@@ -2,16 +2,16 @@
 - Joint Photographic Expert Group
 
 The major steps in JPEG compression involves.
-1. Compressing at block level (8*8).
-2. Colour space transform and subsampling. (RGB->YCbCr)
-3. DCT (Discrete Cosine Transform).
-4. Quantisation.
-5. Zigzag scan.
-6. DPCM on DC component.
-7. RLE(Run Length Encoding) on AC Components.
-8. Entropy coding — Huffman or arithmetic.
+1. Compressing at block level (8*8)
+2. Colour space transform and subsampling (RGB->YCbCr)
+3. DCT (Discrete Cosine Transform)
+4. Quantisation
+5. Zigzag scan
+6. DPCM on DC component
+7. RLE(Run Length Encoding) on AC Components
+8. Entropy coding — Huffman or arithmetic
 
-## 2. Conversion 
+## Conversion 
 - Colour space transform and subsampling
     - CMY for printer
     - YCbCr
@@ -30,7 +30,7 @@ Cb = d*R + e*G + f*B
 Cr = g*R + h*G + i*B
 ```
 
-## 3. DCT
+##  DCT
 - 8 * 8 bits
 - Center around -127 - 128
 - DCT * DCT CoEff = Centered 8 * 8 bits
@@ -85,7 +85,8 @@ Cr = g*R + h*G + i*B
                             - Component ID
                             - Sampling Factor
                             - Quantization Table
-            - DRI - Define Restart Interval (FFDD) 
+            - DRI 
+                - Define Restart Interval (FFDD) 
                 - Length (2 Byte) 0004
                 - Relative value that is added to DC coefficient
                 - 0 - Ac Coefficient in MCU
@@ -122,7 +123,8 @@ Cr = g*R + h*G + i*B
                 - Start of selection - 0 (Same for baseline jpeg)
                 - End of selection - 63 (Same for baseline jpeg)
                 - Succesive appoximation (For base line both nibble 0)
-                                
+
+
 ```c++
 // Nondifferential Huffman-coding frame
 const bytebits SOF0 = (bytebits)0xc0; // baseline dct
@@ -144,7 +146,6 @@ const bytebits SOF11 = (bytebits)0xcb; // lossless
 const bytebits SOF13 = (bytebits)0xcd; // sequential dct
 const bytebits SOF14 = (bytebits)0xce; // progressive dct
 const bytebits SOF15 = (bytebits)0xcf; // lossless
-
 
 /// Huffman Table
 const bytebits DHT = (bytebits)0xc4;
@@ -202,7 +203,6 @@ const bytebits RST4 = (bytebits)0xd4;
 const bytebits RST5 = (bytebits)0xd5;
 const bytebits RST6 = (bytebits)0xd6;
 const bytebits RST7 = (bytebits)0xd7;
-
 ```
 
 - Baseline jepg renders line by line while progressive jpeg renders blur then makes it clear.

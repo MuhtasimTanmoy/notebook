@@ -37,9 +37,12 @@
     - Two steps:
         - Building index dictionary
         - Compressing words with index
-    - LZW - PKZIP
-    - LZSS - Winrar
-    - Deflate - GZIP, WinZip
+    - LZW 
+        - PKZIP
+    - LZSS 
+        - Winrar
+    - Deflate 
+        - GZIP, WinZip
     - LZMA - 7ZIP
 
 - Perceptual Transform Coders for audio/images/video
@@ -47,7 +50,7 @@
     - DCT
     - Vector Quantization
 
-- Image and Video compression applications and algorithms:
+- Image and Video compression applications and algorithms
     - JPEG
     - H.263
     - MPEG Video
@@ -56,9 +59,9 @@
 - Entropy Coding
     - Sum of log(2)p
 
-The main difference between LZ77 and LZSS is that in LZ77 the dictionary reference could actually be longer than the string it was replacing.
+The main difference between `LZ77` and `LZSS` is that in `LZ77` the dictionary reference could actually be longer than the string it was replacing.
 
-LZSS is primarily used across.
+`LZSS` is primarily used across.
 
 Represent the symbols using the minimum number of bits.
 

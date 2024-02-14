@@ -1,3 +1,5 @@
+# MISC
+
 ## [Amethyst](https://github.com/amethyst/amethyst)
 - For graphincs [Render Engine](https://github.com/bjorn/tiled)
 - From c++ to rust, game ecosystem moving towards
@@ -8,14 +10,12 @@
 
 ## [TiKV](https://github.com/tikv/tikv)
 ![](./screen/TiKV.png)
-
 - TiKV is an open-source, distributed, and transactional key-value database.
 - TiDB built after Google F1 and TiKV after Google Spanner.
 - Each node has RocksDB for Raft
 - Uses Multiversion Concurrency Control
 
 ## [CockroachDB](https://github.com/cockroachdb/cockroach)
-
 Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consistency over availability. BASE (Basic Availability, Soft-state, Eventual consistency) systems, like MongoDB and other NoSQL systems, favor availability over consistency. 
 
 - Pessimistic
@@ -38,7 +38,7 @@ Traditional RDBMS, like PostgreSQL, that provide ACID guarantees, favor consiste
 
 ## [Worker Pool](https://github.com/inaka/worker_pool)
 
-# Resources
+## Resources
 - [Multiversion Concurrency Control](https://www.youtube.com/watch?v=sxabCqWsFHg)
 - [MCC](https://en.wikipedia.org/wiki/Multiversion_concurrency_control) - Description Section Helpful 
 - [CAP Keynote](https://awoc.wolski.fi/dlib/big-data/Brewer_podc_keynote_2000.pdf)

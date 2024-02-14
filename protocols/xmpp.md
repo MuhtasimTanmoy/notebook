@@ -1,6 +1,5 @@
 # XMPP Framework
 
-#### Notes
 -   **X :**  It means eXtensible. XMPP is a open source project which can be changed or extended according to the need.
 -   **M :**  XMPP is designed for sending messages in real time. It has very efficient push mechanism compared to other protocols.
 -   **P :**  It determines whether you are online/offline/busy. It indicates the state.
@@ -38,7 +37,7 @@ Multiple implementations -
 - prosody - lightweight
 
 
-### XMPP Core
+## XMPP Core
 
 -  Core 
    — Information about the core XMPP technologies for XML streaming
@@ -49,7 +48,7 @@ Multiple implementations -
 -  Pubsub 
    — Alerts and notifications for data syndication, rich presence, and more
 
-#### Rosters ( Contact List ) subscriptions  and presence
+## Rosters ( Contact List ) subscriptions  and presence
 
 Basically your client (gajim, pidgin, adium, etc) sends packets (XML) to a router (XMPP "server") that determines who gets to see a copy of that packet.  
   
@@ -59,6 +58,7 @@ Then there's the "presence" part of the name - when you want to chat with someon
 
 ## Fundamental Exchange of Info
 The most basic unit of communication in XMPP is called a stanza.
+
 Stanzas have three possible names( XML tag names) in XMPP ,these can be a Message stanza , an IQ stanza and a Presence stanza.
 
 - Message
@@ -83,7 +83,6 @@ Stanzas have three possible names( XML tag names) in XMPP ,these can be a Messag
 	- .A jid is valid if it contains one “@” character and passwords of more than four characters are supported.This is a simple policy that comes by default with the code that Android Studio has generated for us.We leave it that way for this tutorial.
 	- [https://www.blikoontech.com/](https://www.blikoontech.com/)
 
-
  These stanza types provide three different
    communication primitives: a "push" mechanism for generalized
    messaging, a specialized "publish-subscribe" mechanism for
@@ -105,8 +104,7 @@ There is no TLS usage in xmpp stream as it does not support raw data only frame.
    connection to be established.
 - The process whereby a client connects to a server, exchanges XML stanzas, and ends the connection is:
 	- Determine the IP address and port at which to connect, typically
-       based on resolution of a fully qualified domain name
-       (Section 3.2)
+       based on resolution of a fully qualified domain name (Section 3.2)
     - Open a Transmission Control Protocol [TCP] connection
     - Open an XML stream over TCP (Section 4.2)
     - Preferably negotiate Transport Layer Security [TLS] for channel
@@ -122,5 +120,5 @@ There is no TLS usage in xmpp stream as it does not support raw data only frame.
 - https://tools.ietf.org/html/rfc6455
 
 ## XMPP MUC
-- https://github.com/robbiehanson/XMPPFramework/issues/642
-- https://medium.com/@dylanshine/building-a-group-chat-with-the-xmppframework-59fa17ecf4a0
+- [Do I need to Alloc Into XMPPROOM Object always for different operation of Room?](https://github.com/robbiehanson/XMPPFramework/issues/642)
+- [Building a group chat with the XMPPFramework and eJabberd](https://medium.com/@dylanshine/building-a-group-chat-with-the-xmppframework-59fa17ecf4a0)

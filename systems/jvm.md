@@ -3,7 +3,8 @@
 - What is `JRE`?
     - The JRE is the Java Runtime Environment. It is a package of everything necessary to run a compiled Java program, including the Java Virtual Machine (JVM), the Java Class Library, the java command, and other infrastructure. However, it cannot be used to create new programs.
 - What is `JDK`?
-    - The JDK is the Java Development Kit, the full-featured SDK for Java. It has everything the JRE has, but also the compiler (javac) and tools (like javadoc and jdb).
+    - The JDK is the Java Development Kit, the full-featured SDK for Java. 
+    - It has everything the JRE has, but also the compiler (javac) and tools (like javadoc and jdb).
 
 ![](./screen/jdk.png)    
 
@@ -40,5 +41,4 @@ Three major component
         - Target code generetor
         - Profiler
 
-# FootNotes
 - The Java standard library needs to call into native code. For this purpose, the JRE contains some `.dll` (Windows) or `.dylib` (macOS) or `.so` (Linux) files under `bin/` or `lib/` with supporting, system-specific native binary code.

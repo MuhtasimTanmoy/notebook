@@ -15,8 +15,8 @@ There are 3 possibilities to store state:
 
 - Talking about performance, I also once read someone saying "Redux for high-frequency (>1 second) state changes, Context API for low-frequency changes".
 
-- React platform agnostic converter js objects.
-- React dom renderer.
-- Execution Context.
+- React platform agnostic converter js objects
+- React dom renderer
+- Execution Context
 
 - React uses javascript object tree, runs diffing everytime anything changes and ensures minimum dom manipulation.

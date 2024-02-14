@@ -6,13 +6,16 @@
 - Paxos under the hood for transaction
 - Every Cassandra machine handles a proportionate share of every activity in the system. There are no special cases like the HDFS namenode or MongoDB mongos that require special treatment or special hardware to avoid becoming a bottleneck.
 
-- A log-structured engine that avoids overwrites to turn updates into sequential i/o is essential both on hard disks (HDD) and solid-state disks (SSD). On HDD, because the seek penalty is so high; on SSD, to avoid write amplification and disk failure.
+- A log-structured engine that avoids overwrites to turn updates into sequential i/o is essential both on hard disks (HDD) and solid-state disks (SSD). 
+- On HDD, because the seek penalty is so high; on SSD, to avoid write amplification and disk failure.
 
 - Voldemort and Riak support pluggable storage engines, which both limits them to a lowest-common-denominator of key/value pairs, and limits the optimizations that can be done with the distributed replication engine.
 
-- HBase has an integrated, log-structured storage engine, but relies on HDFS for replication instead of managing storage locally. This means HBase is architecturally incapable of supporting Cassandra-style optimizations like putting the commitlog on a separate disk, or mixing SSD and HDD in a single cluster with appropriate data pinned to each.
+- HBase has an integrated, log-structured storage engine, but relies on HDFS for replication instead of managing storage locally. 
+- This means HBase is architecturally incapable of supporting Cassandra-style optimizations like putting the commitlog on a separate disk, or mixing SSD and HDD in a single cluster with appropriate data pinned to each.
 
-- CASSANDRA’S STORAGEENGINE WAS OPTIMIZED FOR SPINNING DISKS
+- CASSANDRA’S STORAGE ENGINE WAS OPTIMIZED FOR SPINNING DISKS
+
 - LSM 
     - Log structured merge tree
     - Commit
@@ -30,8 +33,8 @@
     - Can write in small increments (4KB), but only erase in ~512KB blocks
     - Latency: write is ~100µs, erase is ~2ms
     - Limited durability: ~5,000 cycles (MLC) for each erase block
-- Wear leveling    
+- Wear leveling
 
-# Resources
+## Resources
 - [Cassandra](https://www.datastax.com/blog/2012-review-performance)
 - [Cassandra Slide](https://www.slideshare.net/rbranson/cassandra-and-solid-state-drives)

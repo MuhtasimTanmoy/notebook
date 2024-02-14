@@ -1,9 +1,13 @@
-# OTR
+# Encrypted Messaging
+
+## OTR
 - Off the record
-- As OTR sessions existed between exactly two clients, the chat history would not be synchronized across other clients of the involved parties. Furthermore, OTR chats were only possible if both participants were online at the same time, due to how the rolling key agreement scheme of OTR worked. This one not used now. Repalced by siognal protocol.
+- As OTR sessions existed between exactly two clients, the chat history would not be synchronized across other clients of the involved parties. 
+- Furthermore, OTR chats were only possible if both participants were online at the same time, due to how the rolling key agreement scheme of OTR worked. 
+- This one not used now. Replaced by siognal protocol.
 
 
-# Signal protocol
+## Signal Protocol
 - Prekey bundle
     - `IPKb` 
         - Identity public key bundle
@@ -32,7 +36,7 @@
 
 ![Elliptic Curve](screen/elliptic.png)
 
-The elliptic curve used in Signal Protocol is  Curve25519.
+The elliptic curve used in Signal Protocol is  `Curve25519`.
 
 Prime Number , p = `2^255 - 19`
 base point, x = 9
@@ -41,9 +45,10 @@ base point, x = 9
 y^2 = x^3 + 486662 x^2 + x
 ```
 
-
 - Why Diffie hellman and RSA both used for session key establishemnt?
-    - Only RSA can be used for session key agreement. Just send counteraprt's public key. Generate a random session key. Counterpart decrypts it and gets the session key. But it looses forward secetecy as compromised private key can decrypt all past messages.
+    - Only RSA can be used for session key agreement. - Just send counteraprt's public key. 
+    - Generate a random session key. Counterpart decrypts it and gets the session key. 
+    - But it looses forward secetecy as compromised private key can decrypt all past messages.
     - Only diffie hellman has man in the middle attack.
     So RSA needed. Authenticated diffie hellman key exchange.
 
@@ -61,7 +66,6 @@ y^2 = x^3 + 486662 x^2 + x
 `SPKb` - b's Signed Public Key
 `OPKb` - b's One Use Public key (Chosen from a list of 100 available)
 
-
 ![Tripple DH](screen/signal.png)
 ![3HH](screen/3DH.png)
 
@@ -77,7 +81,7 @@ The session key is kept different and changed over long period of time.
 - PGP lacks deniability 
 
 
-## Double ratchet algorithm / Axolotl Ratchet
+## Double Ratchet Algorithm / Axolotl Ratchet
 
 - Once the session established then the key goes through a one way function that acts as ratchet to generate more key.
 - The key is gone through KDF (Key Derivation Function).
@@ -92,7 +96,7 @@ The session key is kept different and changed over long period of time.
 
 ![Double Ratchet](screen/Ratchet.png)
 
-# PreKeys
+## PreKeys
 This protocol uses a concept called 'PreKeys'. A PreKey is an ECPublicKey and an associated unique ID which are stored together by a server. PreKeys can also be signed.
 It is used for asyncronous encrytion. As the other client can be offline for several months.
 
@@ -104,21 +108,21 @@ At install time, clients generate
 - A single signed PreKey
 - List of unsigned PreKeys (As per protocol 100 prekeys) and transmit all of them to the server.
 
-
-# Sessions
+## Sessions
 
 Signal Protocol is session-oriented. 
 Clients establish a "session," which is then used for all subsequent encrypt/decrypt operations.
+
 There is no need to ever tear down a session once one has been established.
 
 Sessions are established in one of three ways:
 
-- PreKeyBundles: A client that wishes to send a message to a recipient can establish a session by retrieving a PreKeyBundle for that recipient from the server.
-- PreKeySignalMessages: A client can receive a PreKeySignalMessage from a recipient and use it to establish a session.
-- KeyExchangeMessages: Two clients can exchange KeyExchange messages to establish a session.
+- `PreKeyBundles:` A client that wishes to send a message to a recipient can establish a session by retrieving a PreKeyBundle for that recipient from the server.
+- `PreKeySignalMessages:` A client can receive a PreKeySignalMessage from a recipient and use it to establish a session.
+- `KeyExchangeMessages:` Two clients can exchange KeyExchange messages to establish a session.
 
 
-# State
+## State
 
 An established session encapsulates a lot of state between two clients. That state is maintained in durable records which need to be kept for the life of the session.
 
@@ -130,7 +134,7 @@ State is kept in the following places:
 - `Session State:` Clients will need to maintain the state of the sessions they have established.
 
 
-# Workflow
+## Workflow
 - Alice Bob communicating
 - Bob publishes his public key in Key Directory
 - Alice fetches from it key from it.
@@ -148,9 +152,19 @@ State is kept in the following places:
 - Creating one shared group key, send it to server for fan out instead of pairwise encryption.
 - Sender keys does not have post compromise security.
 
+## Omemo
+A high level intro on how Omemo works: 
 
-# Omemo
-A high level intro on how Omemo works: Each device gets it’s own public/private key pair. When a message is sent, it is encrypted with a message-specific key. This key itself is encrypted with the public key of each client participating in the chat. So if you have multiple devices, the message-key is encrypted for each of your devices. Same holds true for all devices of the person you are communicating with. If you are in a group chat, then the message-key is encrypted for everyone’s device participating in the group. For decryption each device decrypts the message-key, then takes the message-key and decrypts the potentially long message. This procedure enables bandwidth-efficient multi-user multi-device encryption. Each device public key can be represented via a fingerprint. When you send a message to someone, you need to be sure that this person is actually the person they claim to be. That explains the existance and necessity of fingerprint verification. The current scheme is trust-on-first-use (TOFU), meaning the first fingerprint is trusted. New fingerprints you have to manually trust. You should check in person, or via the phone with your comunication partner if the fingerprints match.
+- Each device gets it’s own public/private key pair. When a message is sent, it is encrypted with a message-specific key.
+- This key itself is encrypted with the public key of each client participating in the chat. So if you have multiple devices, the message-key is encrypted for each of your devices. 
+- Same holds true for all devices of the person you are communicating with. 
+- If you are in a group chat, then the message-key is encrypted for everyone’s device participating in the group. 
+- For decryption each device decrypts the message-key, then takes the message-key and decrypts the potentially long message. 
+- This procedure enables bandwidth-efficient multi-user multi-device encryption. Each device public key can be represented via a fingerprint.
+- When you send a message to someone, you need to be sure that this person is actually the person they claim to be. 
+- That explains the existance and necessity of fingerprint verification. 
+- The current scheme is trust-on-first-use (TOFU), meaning the first fingerprint is trusted. 
+- New fingerprints you have to manually trust. You should check in person, or via the phone with your comunication partner if the fingerprints match.
 
 ## SSL Pinning
 - Pinning certificate of one definite server in app to avoid DNS poisoning .

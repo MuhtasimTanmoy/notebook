@@ -5,7 +5,6 @@ Secrets
 - Token
 - DB Credential
 - TLS
-
 - Secret Sprawl
 - In Source Code, auth header, they end up everywhere
 - Vault keeps it encrypted, commute TLS as well but application is not good at keeping secrets
@@ -23,5 +22,5 @@ Three main issue solved
 - Application data access secured with crypto offload, rotation, versioning, decomissioning
 
 
-# Vault Course
+## Vault Course
 - Vault secret store

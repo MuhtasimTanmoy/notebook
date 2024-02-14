@@ -32,7 +32,7 @@
     - https://github.com/benoitc/unicode_util_compat.git
 
 
-# Architecture overview
+## Architecture overview
 ![alt text](https://docs.ejabberd.im/static/images/architect/ejabberd_large_scale.png)
 
 ![alt text](https://image.slidesharecdn.com/xmppacademy2-151105134735-lva1-app6892/95/xmpp-academy-2-7-638.jpg?cb=1446731376)
@@ -41,18 +41,26 @@
 - No internal state kept. Helps in case of node failure.
 - Connection
     - The client to server connection (typically on tcp/5222) is handled by the module ejabberd_c2s. The server to server connection (typically on tcp/5269) is handled by the modules ejabberd_s2s, ejabberd_s2s_in, ejabber_s2s_out. The HTTP bindings are handled by the ejabberd_http module.
-- Router : 
-    - The router handles the routing of most of the messages, i.e., when a Jabber client sends a to another entity, how is the message routed to the correct destination? First ejabberd determines whether the message is a local or a remote one. It does so by looking at the "to" attribute to see if the host implied by the "to" attribute is hosted in itself. If so, the message is local; and is handled by ejabberd_local; otherwise it is treated as an s2s message.
-- Modules :  
-    - In additional to the core Jabber and Router logics, there is a large part of the ejabberd which can be plugged in only when necessary, and they are called modules. Modules can be started / stopped dynamically at any time, thus making the ejabberd server highly extensible even at runtime. Modules are widely used for various extensions (the so-called 'XEP's).
+- Router
+    - The router handles the routing of most of the messages, i.e., when a Jabber client sends a to another entity, how is the message routed to the correct destination? 
+    - First ejabberd determines whether the message is a local or a remote one. It does so by looking at the "to" attribute to see if the host implied by the "to" attribute is hosted in itself. 
+    - If so, the message is local; and is handled by ejabberd_local; otherwise it is treated as an s2s message.
+- Modules
+    - In additional to the core Jabber and Router logics, there is a large part of the ejabberd which can be plugged in only when necessary, and they are called modules. 
+    - Modules can be started / stopped dynamically at any time, thus making the ejabberd server highly extensible even at runtime. 
+    - Modules are widely used for various extensions (the so-called 'XEP's).
 - Hooks
-    - A hook is a way by which you can change the behaviour of ejabberd by injecting your new code into the system, without changing any existing code. For example, if you want to roll up your message filter to filter out messages you don't want, you can add a module hooking to the "filter_packet/3" hook. If you want to keep track of all the messages clients sent, you can write a function hooking to 'user_send_packet/3'.
+    - A hook is a way by which you can change the behaviour of ejabberd by injecting your new code into the system, without changing any existing code. 
+    - For example, if you want to roll up your message filter to filter out messages you don't want, you can add a module hooking to the "filter_packet/3" hook. 
+    - If you want to keep track of all the messages clients sent, you can write a function hooking to 'user_send_packet/3'.
 - Access Control
-    - Access Control. All users (including real jabber client users as well as administrators) are stored the same way in ejabberd. Their privileges are determined by the groups they belong to. Hence, the access control modules in ejabberd allow us to distinguish users with their groups, thus providing different services for different users. Utils and Libraries. Some other libraries and utils exist in ejabberd for common purposes, e.g.: XML processing, SASL authentication, Encodings, Logger, etc. It is worth noting the ejabberd_logger is a very good logger module perfectly usable by any other projects.        
-
+    - Access Control. All users (including real jabber client users as well as administrators) are stored the same way in ejabberd. 
+    - Their privileges are determined by the groups they belong to. 
+    - Hence, the access control modules in ejabberd allow us to distinguish users with their groups, thus providing different services for different users. 
+    - Utils and Libraries. Some other libraries and utils exist in ejabberd for common purposes, e.g.: XML processing, SASL authentication, Encodings, Logger, etc. It is worth noting the ejabberd_logger is a very good logger module perfectly usable by any other projects.
 - The main difference between the jabber:component:* namespaces and the 'jabber:client' or 'jabber:server' namespace is authentication.
 
-# PUB SUB
+## PUB SUB
 - Subscribe 
 - Unsubscribe
 - Configure
@@ -80,7 +88,7 @@
 - https://www.haproxy.org/download/1.8/doc/proxy-protocol.txt
 
 
-# IRC
+## IRC
 - Server
     - backbone
 - Clients
@@ -99,7 +107,7 @@ The standard structure of a network of IRC servers is a tree.[35] Messages are r
    and channel hosting and management (following specific rules [IRC-
    CHAN]).
    
-# Actor Model
+## Actor Model
  - Actors instead of objects
  - No shared state between actors
  - Asyncronous message passing
@@ -110,31 +118,26 @@ The standard structure of a network of IRC servers is a tree.[35] Messages are r
  - Messages
  - Mailbox - (Message Queue)
 
- # System Up & Running takeaways
+## System Up & Running takeaways
 
-### Log
+## Log
     - /usr/local/var/log/ejabberd/ejabberd.log
-### Scripts
 
+
+## Scripts
 ```
 /usr/local/sbin/ejabberdctl
 /usr/local/sbin/ejabberdctl start 
 /usr/local/sbin/ejabberdctl stop
-
 /usr/local/sbin/ejabberdctl live
-
 /etc/init.d/ejabberd
-
 sudo vim /etc/ejabberd/ejabberd.yml
-
 sudo cat /usr/local/etc/ejabberd/ejabberd.yml
-
 ejabberdctl register admin1 example.org FgT5bk3
-
 ```
 
 ### Running endpoint 
-    - http://localhost:5280/admin/
+    - http://localhost:5280/admin
 
 ## Port scan result
 
@@ -189,7 +192,7 @@ PORT      STATE    SERVICE
 - Other alternative
     - Matrix, which is pull based
 
-# Resources
+## Resources
 - [Installation Guide](https://www.ejabberd.im/files/doc/guide.html#htoc2)
 - [How it works](https://docs.ejabberd.im/admin/guide/clustering/)
 - [Modules](https://docs.ejabberd.im/admin/configuration/modules/#mod-sip)

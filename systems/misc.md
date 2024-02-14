@@ -2,8 +2,7 @@
 
 - Differential dataflow programming model.
 - Amazon Coretto
-    - Amazon distribution of JDK. Faster then native one.
-
+    - Amazon distribution of JDK. Faster then native one
 - Physical vs Logical Cores
     - Physical cores are number of physical cores, actual hardware components.
     - Logical cores are the number of physical cores times the number of threads that can run on each core through the use of hyperthreading.
@@ -18,14 +17,14 @@
 - [Next Generation Threats 2014](https://www.youtube.com/watch?v=tOMiAeRwpPA)
 - [Richard Stallman Talk](https://www.youtube.com/watch?v=jUibaPTXSHk)
 - [RSA Panel Discussion](https://www.youtube.com/watch?v=-fpNaapuPGY)
-- [Attack Techniques](https://www.youtube.com/watch?v=aoIPIIB4xlA)
+- [Attack Technique](https://www.youtube.com/watch?v=aoIPIIB4xlA)
         - git secrets
         - gitrob
-- [Philosophy of software design ](https://www.youtube.com/watch?v=bmSAYlu0NcY)
-
+- [Philosophy of Software Design](https://www.youtube.com/watch?v=bmSAYlu0NcY)
 - [Dilemma](https://www.tik.dev/blog/dilemma)
-    - Discussed tradeoff, career dillemma
-- [Startup tradeoffs](https://danluu.com/startup-tradeoffs)
+    - Discussed tradeoff
+    - Career dillemma
+- [Startup Tradeoffs](https://danluu.com/startup-tradeoffs)
     - Promotes working in a startup at first
     - Then shows the pitfalls
-- [Wealth](http://www.paulgraham.com/wealth.html)
+- [How to Make Wealth](http://www.paulgraham.com/wealth.html)
