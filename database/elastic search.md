@@ -15,7 +15,7 @@
     - Common word remove    
     - Stop word list
     - Lemma > Mapping different usage to one
-tokenization
+- tokenization
     -  Stemming > Buying > buy
 - After 1s index refresh happens > Doc indexed 
 - Translog (30 min or 512mb)
@@ -39,8 +39,6 @@ tokenization
 
 ## Database indexing
 
-> [Reference: Stack overflow](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)
-
 - Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it.
 
 - Given our sample database of r = 5,000,000 records of a fixed size giving a record length of R = 204 bytes and they are stored in a table using the MyISAM engine which is using the default block size B = 1,024 bytes. The blocking factor of the table would be bfr = (B/R) = 1024/204 = 5 records per disk block. The total number of blocks required to hold the table is N = (r/bfr) = 5000000/5 = 1,000,000 blocks.
@@ -63,6 +61,6 @@ secondary index
     - A list of documents containing a word.(Inverted index)
 
 
-# Reference
+## Reference
 - [Anatomy of Elastic Search](https://blog.insightdatascience.com/anatomy-of-an-elasticsearch-cluster-part-i-7ac9a13b05db)
-
+- [How does database indexing work?](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)

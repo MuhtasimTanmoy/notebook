@@ -11,7 +11,6 @@
 - Best effort delivery across process, tcp, udp, just once
 - No ordering
 
-
 ## RabbitMQ
 - Smart broker, Dumb consumer Model
 

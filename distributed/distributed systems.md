@@ -9,7 +9,7 @@ Distributed System Categories
 6. Distributed Ledgers
 
 
-# Concensus
+## Concensus
 - State machine replication based on log
 - State Machine Replication Principle:
     -  Physical logging means logging the contents of each row that is changed. 

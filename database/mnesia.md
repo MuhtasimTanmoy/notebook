@@ -12,10 +12,6 @@
     - `qlc` has a query-compiler and will attempt to use additional indexes if possible, but it all depends on the query planner and if it triggers. erl -man qlc has the details and you can ask it to output its plan.
 - read is just a `key-value` lookup, also functions `index_read` and `index_write`
 
-- [Documentation](https://www.erlang.org/doc/man/mnesia.html)
-- [Users's guide](https://www.erlang.org/doc/apps/mnesia/mnesia.pdf)
-- [Data Types](https://www.erlang.org/doc/reference_manual/data_types.html)
-
 - A power of two number of fragments is simply related to the fact the default fragmentation module `mnesia_frag` uses linear hashing so using 2^n fragments assures that records are equally distributed (more or less, obviously) between fragments.
 
 - Using `disc_only_copies` most of the time is spent in two operations:
@@ -51,5 +47,10 @@ dumped. A dump creates a new `DCD` and removes the `DCL`.
 - To load it on all nodes, command ("network load") instead of l in the Erlang shell for that
     - `nl(my_module).`
 
+
+## Resources
 - [Heap memory overload](https://stackoverflow.com/questions/7103621/erlang-and-its-consumption-of-heap-memory)
 - [Observer API](https://anilwadghule.com/2021/07/11/how-to-install-wxmac-properly-for-running-observer-with-elixir)
+- [Documentation](https://www.erlang.org/doc/man/mnesia.html)
+- [Users's guide](https://www.erlang.org/doc/apps/mnesia/mnesia.pdf)
+- [Data Types](https://www.erlang.org/doc/reference_manual/data_types.html)
