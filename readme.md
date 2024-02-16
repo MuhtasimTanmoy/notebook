@@ -21,7 +21,6 @@
     - [cockroachdb](./database/cockroachdb.md)
     - [time series db](./database/time%20series%20db.md)
     - [mysql](./database/mysql.md)
-    - [sql](./database/sql.md)
     - [graph database](./database/graph%20database.md)
     - [decentralized storage](./database/decentralized%20storage.md)
     - [elastic search](./database/elastic%20search.md)
@@ -54,9 +53,8 @@
     - [distributed system](./course/distributed%20system.md)
     - [advanced programming in the unix environment](./course/advanced%20programming%20in%20the%20unix%20environment.md)
 - papers
-    - [solving big data challenges for enterprise application performance management](./papers/solving%20big%20data%20challenges%20for%20enterprise%20application%20performance%20management.md)
+    - [Solving Big Data Challenges for Enterprise Application Performance Management](./papers/Solving%20Big%20Data%20Challenges%20for%20Enterprise%20Application%20Performance%20Management.md)
 - distributed
-    - [reading list](./distributed/reading%20list.md)
     - [file system](./distributed/file%20system.md)
     - [topics](./distributed/topics.md)
     - [messaging](./distributed/messaging.md)
@@ -72,11 +70,10 @@
     - [encrypted messaging](./security/encrypted%20messaging.md)
     - [vault](./security/vault.md)
     - [crypto](./security/crypto.md)
+    - [signal](./security/signal.md)
     - [signal protocol](./security/signal%20protocol.md)
     - [certificate](./security/certificate.md)
     - [terms](./security/terms.md)
-    - [ctf](./security/ctf.md)
-    - [libsignal](./security/libsignal.md)
     - [kernel exploitation](./security/kernel%20exploitation.md)
 - networking
     - [hardware](./networking/hardware.md)
@@ -91,9 +88,7 @@
     - [swift](./language/swift.md)
     - [go](./language/go.md)
     - [python](./language/python.md)
-    - [solidity](./language/solidity.md)
     - [java](./language/java.md)
-    - [obj-c](./language/obj-c.md)
     - [js](./language/js.md)
     - c++
         - [cast](./language/c++/cast.md)
@@ -205,7 +200,6 @@
     - [leveldb](./open%20source%20study/leveldb.md)
     - [unicycle](./open%20source%20study/unicycle.md)
     - [ejabberd](./open%20source%20study/ejabberd.md)
-    - [orkham](./open%20source%20study/orkham.md)
     - [cassandra](./open%20source%20study/cassandra.md)
     - [syncthing](./open%20source%20study/syncthing.md)
     - [react](./open%20source%20study/react.md)
@@ -220,9 +214,6 @@
 - protocols
     - [http](./protocols/http.md)
     - [live streaming](./protocols/live%20streaming.md)
-    - [signal](./protocols/signal.md)
     - [bit torrent](./protocols/bit%20torrent.md)
     - [xmpp](./protocols/xmpp.md)
     - [amqp](./protocols/amqp.md)
-- research paper
-    - [solving big data challenges for enterprise application Performance Management](./research%20paper/solving%20big%20data%20challenges%20for%20enterprise%20application%20Performance%20Management.md)
