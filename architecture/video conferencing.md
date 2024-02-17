@@ -18,7 +18,7 @@ In the SFU architecture, every participant sends his or her media stream to a ce
 
 Without the issue of legacy endpoints, the SFU architecture provides better scaling properties. It requires far less computing power on the server, since the computing requirements are delegated to the endpoints, which may be quite heavy for some mobile clients. It is also closer to the end-to-end principle, upon which the Internet is built. On the other hand, the SFU architecture has higher requirements on network bandwidth than the MCU architecture, as the number of media streams sent and received is usually higher.
 
-- **Turn server vs SFU**
+## Turn Server vs SFU
 
 - SFU
     - For each PeerConnection the SFU will listen on a random UDP (and sometimes TCP port)

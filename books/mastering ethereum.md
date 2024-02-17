@@ -30,8 +30,7 @@ wallet. The wallet seed can be represented by mnemonic words, making it easier
 for humans to copy, back up, and restore private keys.
 
 Ethereum is a deterministic but practically
-unbounded state machine, consisting of a globally accessible singleton state and a vir‐
-tual machine that applies changes to that state.
+unbounded state machine, consisting of a globally accessible singleton state and a virtual machine that applies changes to that state.
 
 Ethereum is an open source, globally decentral‐
 ized computing infrastructure that executes programs called smart contracts. It uses a

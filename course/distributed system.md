@@ -23,7 +23,7 @@
 - Burn Address gets some fee for registering name
 - Certificate Transparency
 
-# Fault Tolerance
+## Fault Tolerance
 - Use of leader in distributed concensus
     - Original Paxos dont have a leader
     - First round to elect a leader, second to decide
@@ -34,7 +34,7 @@
     - Linearizability 
         - All concurrent parallal requests map to one dimention.
 
-# ZooKeeper
+## ZooKeeper
 - Raft usage requires explicit use in application which gives distributed concensus
 - Zookeeper gives same as a co oord ination service
 - zookeeper zab, raft like
@@ -50,13 +50,13 @@
     - Sequential
 - Herd effect    
 
-# CRAQ
+## CRAQ
 - Chain Replication
 - Maintains linearizability unlike zookeeper
 - Uses configuration manager. Raft, Paxos, ZooKeeper.
 - No worry about partition, split brain
   
-# Aurora
+## Aurora
 - In each machine, Virtual machine monitor to monitor ec2
 - Website is constructed of stateless services that get persistent data from DB.
 - EC2 not good for DB. As not stateless like service.
@@ -67,7 +67,7 @@
     - Crash   Recovery 
 - Instead of RDS architecture, aurora just sends log entries, ack from quoram only.    
 
-# Frangipani
+## Frangipani
   - Cache coherence
   - Atomicity
   - Crash recovery
@@ -76,7 +76,7 @@
 - Cache coherence lock to how updated write, Transactional to delay
 - WAL for crash recoverable transaction, Log on petal
  
-# Distributed Transaction
+## Distributed Transaction
 - Transaction
     - Concurrency control
         - Pessimistic 
@@ -95,7 +95,7 @@
 - Serializable or atomic
     - Sequence change but no intermediate state
 
-# Spanner
+## Spanner
 - CockroachDB uses a lot of design
 - Sharding 
     - Key design
@@ -117,7 +117,7 @@
 ![](./screen/RW_Transaction.png)
 - Data across data centers
 
-# Optimistic Concurrency Control
+## Optimistic Concurrency Control
 - FARM 
     - Optimized for one data center
 - NVRAM
@@ -125,14 +125,14 @@
 - Kernel bypassing
 - RDMA Network Interface Card
 
- # Spark
+## Spark
  - Lineage Graph
     - Narrow dependency
     - Wide dependency - Distinct
 - Not good for stream processing
 - Instead of GFS writing in mapreduce, rdd can be retained in memory.
 
-# Cache consistency
+## Cache consistency
 - Four architecture
     - Single Server + DB Server
     - Multiple Server + One DB Server
@@ -161,7 +161,7 @@
 - Race condition
     - Read, miss, but before set write, invalidate happens      
 
-# Casual Consistency
+## Casual Consistency
 - Interact with only local
 - Usage - Cassandra, Dynamo
 - Versioning
@@ -172,24 +172,26 @@
 - Better approach log server. But centralizaed log means heavy load.
 - Dependency maintain. Better approach.
 
-# Certificate Transparency 
+## Certificate Transparency 
 - Merkle inclusion proof
 - Log consistency proof
 
-# Bitcoin
+## Bitcoin
 - Fee Estimate Algorithm
     - https://blog.iany.me/2020/08/bitcoin-core-fee-estimate-algorithm
 
-# Blockstack
+## Blockstack
 
 ## Final Project
 - Search 6.824
+
+
 
 ---- 
 
 # [CSE 138](https://www.youtube.com/watch?v=G0wpsacaYpE&list=PLNPUF5QyWU8O0Wd8QDh9KaM1ggsxspJ31&ab_channel=LindseyKuper)
 
-**Lecture 2**
+## Lecture 2
 - Distributed Systems = Partial Failure + Unbounded Latency
 - Pysical Clock 
     - Time of day clock
@@ -202,7 +204,7 @@
 - Logical Clock
     - Only orderinig of event
 
-**Lecture 3**
+## Lecture 3
 
 Lamport Diagrams / Space Time Diagrams
 
@@ -216,10 +218,10 @@ Network mode
 - Syncrobous 
 - Asyncronous
 
+
 # Waterloo
  
-**Lecture 1**
-
+## Lecture 1
 - Any big thing structure. Hiererchy 
 - DNS
 - Implicit hierarchy
@@ -229,14 +231,12 @@ Network mode
 
 
 **Lecture 2**
-
-youtube pull replication
-push replication for popular
-
-DNS
-cn - Canonical name
-ns - Name Server
-a - Address
+- youtube pull replication
+- push replication for popular
+- DNS
+    - CN - Canonical name
+    - NS - Name Server
+    - A - Address
 
 
 **Lecture 6**

@@ -1,6 +1,6 @@
 # Networking
 
-### Protocol stack
+## Protocol stack
 
 |  |  |  |
 |--|--|--|
@@ -12,7 +12,7 @@
 
 HOST LAYER - MEDIA LAYER
 
-### VETH pair
+## VETH pair
 - Connect two separate network namespaces (through tap)
     - Network namespace
         - Logically isolated network stack
@@ -35,17 +35,24 @@ HOST LAYER - MEDIA LAYER
 - open - vswitch  
 
 
-### VXLAN
-VXLAN is a tunneling protocol that encapsulates Layer 2 Ethernet frames in Layer 3 UDP packets, enabling you to create virtualized Layer 2 subnets, or segments, that span physical Layer 3 networks. Each Layer 2 subnet is uniquely identified by a VXLAN network identifier (VNI) that segments traffic. The entity that performs the encapsulation and decapsulation of packets is called a VXLAN tunnel endpoint (VTEP) and resides in hypervisor hosts.
+## VXLAN
 
-In data centers, VXLAN is the most commonly used protocol to create overlay networks that sit on top of the physical network, enabling the use of a virtual network of switches, routers, firewalls, load balancers, and so on. The VXLAN protocol supports the virtualization of the data center network and addresses the needs of multi-tenant data centers by providing the necessary segmentation on a large scale.
+- VXLAN is a tunneling protocol that encapsulates Layer 2 Ethernet frames in Layer 3 UDP packets, enabling you to create virtualized Layer 2 subnets, or segments, that span physical Layer 3 networks. 
 
-VPC - Logical segment of resources
+- Each Layer 2 subnet is uniquely identified by a VXLAN network identifier (VNI) that segments traffic. 
 
-### TUN/TAP
+- The entity that performs the encapsulation and decapsulation of packets is called a VXLAN tunnel endpoint (VTEP) and resides in hypervisor hosts.
+
+- In data centers, VXLAN is the most commonly used protocol to create overlay networks that sit on top of the physical network, enabling the use of a virtual network of switches, routers, firewalls, load balancers, and so on. 
+
+- The VXLAN protocol supports the virtualization of the data center network and addresses the needs of multi-tenant data centers by providing the necessary segmentation on a large scale.
+
+- VPC - Logical segment of resources
+
+## TUN/TAP
 - TUN, namely network TUNnel, simulates a network layer device and operates in layer 3 carrying IP packets. 
 - TAP, namely network TAP (Terminal Access Point), simulates a link layer device and operates in layer 2 carrying Ethernet frames. 
 - TUN is used with routing. TAP is used for creating a network bridge.
 
-### References
+## References
 - [Introduction to Linux interfaces for virtual networking](https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking)

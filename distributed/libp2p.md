@@ -31,7 +31,7 @@
 /unix//path/to/socket
 ```
 
-# Resources
+## Resources
 - [libp2p introduction](https://www.youtube.com/watch?v=CRe_oDtfRLw)
 - [quic](https://www.youtube.com/watch?v=4FvMed5iCb4)
 - [libp2p Rust](https://www.youtube.com/watch?v=Sss2Tl7WRDQ) 

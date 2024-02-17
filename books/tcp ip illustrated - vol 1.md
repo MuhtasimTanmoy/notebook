@@ -1,6 +1,8 @@
-> Effective communication depends on the use of a common language.
+# TCP IP Illustrated
 
-# Introduction
+Effective communication depends on the use of a common language.
+
+## Introduction
 - Diagnosing network protocols, is also a powerful tool for understanding how the network protocols operate.
 - The design that specifies how various protocols of a protocol suite relate to each other and divide up tasks to be accomplished is called the architec- ture or reference model for the protocol suite.
 -  Goals
@@ -51,7 +53,7 @@
     - p2p networks is called the discovery problem. That is, how does one peer find which other peer(s) can provide the data or service it wants in a network where peers may come and go? This is usually handled by a bootstrapping procedure whereby each client is initially configured with the addresses and port numbers of some peers that are likely to be operating. Once connected, the new participant learns of other active peers and, depending on the protocol, what services or files they provide.
     
 
-# The Internet Address Architecture
+## The Internet Address Architecture
 - IP Address = Net Numbner + Host Number 
 - Subnet Addressing
     - One of the earliest difficulties encountered when the Internet began to grow was the inconvenience of having to allocate a new network number for any new net- work segment that was to be attached to the Internet. This became especially cumbersome with the development and increasing use of local area networks (LANs) in the early 1980s. To address the problem, it was natural to consider a way that a site attached to the Internet could be allocated a network number cen- trally that could then be subdivided locally by site administrators.
@@ -66,7 +68,7 @@
 - The network topology were arranged as a tree1 and addresses were assigned in a way that was “sensitive” to this topology, very small routing tables could be used while still maintaining shortest-path routes to all destinations.
 -  Scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administra- tive.
 
-# Link Layer
+## Link Layer
 -  Frame as PDU
 - Link-layer protocols can be carried inside other (link- or higher-layer) protocols, a technique known as tunneling.
 - The particular method, known as carrier sense, multiple access with collision detection (CSMA/CD), mediates which computers can access the shared medium (cable) without any other special agree- ment or synchronization. 
@@ -91,15 +93,16 @@
 - maximum transmission unit (MTU) is the size of the largest protocol data unit (PDU) that can be communicated in a single network
 - **Tunneling** In some cases it is useful to establish a virtual link between one computer and another across the Internet or other network. VPNs, for example, offer this type of service. The method most commonly used to implement these types of services is called tunneling    
 
-# ARP
+## ARP
 - ARP is used with IPv4 only; IPv6 uses the Neigh- bor Discovery Protocol, which is incorporated into ICMPv6
 - ARP Broadcast
 - 
 
-# TCP
+## TCP
 - https://www.youtube.com/watch?v=F27PLin3TV0
 - Handshake
 - WireShark to capture TCP Traffic
+
 
 ![TCP](screen/TCP.png)
 ![WireShark](screen/WireShark.png)

@@ -14,7 +14,6 @@ Architecture study, open source codebase analysis, data structure study notes fo
 - MemTable / SSTable
 - InnoDB used in mySQL
 
-
 ## Resources
 - [DropBox Engineering Evening on RocksDB with Dhruba Borthakur @ Rockset](https://www.youtube.com/watch?v=aKAJMd0iKtI&ab_channel=DhrubaBorthakur)
 

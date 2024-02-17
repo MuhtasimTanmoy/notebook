@@ -1,6 +1,6 @@
 # VSCode
 
-- vscode autocompletion snippet
+- vscode auto completion snippet
 
 ```json
 {

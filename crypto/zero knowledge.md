@@ -45,7 +45,7 @@ Ethereum layer 2 scaling
     - zkSync Era
     - StarkNet
 
-# ZKEVM
+## ZKEVM
 
 - [SNARK / zk SNARK](https://youtu.be/h-94UhJLeck?list=PLj80z0cJm8QErn3akRcqvxUsyXWC81OGq)
     - A succint proof that something is true
@@ -58,7 +58,7 @@ Ethereum layer 2 scaling
 - [ZKSync](https://era.zksync.io/docs/reference/concepts/zkSync.html#the-state-of-zksync)
 
 ## References
-- https://zkiap.com
-- https://learn.0xparc.org/materials/circom/learning-group-1/intro-zkp
-- https://zk-learning.org
-- https://github.com/matter-labs/awesome-zero-knowledge-proofs
+- [Modern Zero Knowledge Cryptography](https://zkiap.com)
+- [Introduction to ZK](https://learn.0xparc.org/materials/circom/learning-group-1/intro-zkp)
+- [Zero Knowledge Proofs MOOC](https://zk-learning.org)
+- [Awesome zero knowledge proofs (zkp)](https://github.com/matter-labs/awesome-zero-knowledge-proofs)

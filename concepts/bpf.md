@@ -4,7 +4,7 @@
 - eBBF - parse modify packet - filter before
 - TCPDump uses BPF
 
-### TCPDUMP
+## TCPDUMP
 - tcpdump -nnSX port 443 (Capture HTTPS)
 - tcpdump -i eth0
 - tcpdump host 1.1.1.1
@@ -47,7 +47,7 @@
 - Capturing ssh session
     - sudo tcpdump -i en0 dest MY_IP
 
-#### ICMP
+## ICMP
 - Type 
 - Code 
 - Checksum
@@ -56,11 +56,11 @@
 - Debugging replaces instruction with jump
 - Anything platform independent introduce virtual machine
 
-# IP Table
+## IP Table
 - Table, Chain, Target
 - Firewall
 
-# Netcut
+## Netcut
 - TCP UDP packet generate
 - Or ping for control packet
 

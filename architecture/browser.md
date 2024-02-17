@@ -77,7 +77,7 @@ eventually optimizing translation time
     - services: micro services
     - third_party/Blink: Blink rendering engine
     - ui: user interface frameworks, helper classes
-    -  v8: JavaScript engine
+    - v8: JavaScript engine
 
 - [Life of a pixel](https://www.youtube.com/watch?v=m-J-tbAlFic&ab_channel=GoogleChromeDevelopers)
 

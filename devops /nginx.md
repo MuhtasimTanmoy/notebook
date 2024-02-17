@@ -1,11 +1,13 @@
-# nginx
+# NGINX
 
+- A light weight reverse proxy.
+- Suppose you have a server and you are running two web apps on it. 
+- One on port 8000 and one on `8001`. 
+- Now suppose we have a domain name "example.com". 
+- We want `abc.example.com` to get routed to port 8000 of the machine and `xyz.example.com` to get routed to 8001 port of the machine.
+- For that, we create 1 file for each web app we want to configure at `/etc/nginx/sites-enabled`. 
+- The file names could be anything. Let's just name them same as the sub-domain they represent.
 
-A light weight reverse proxy.
-
-Suppose you have a server and you are running two web apps on it. One on port 8000 and one on `8001`. Now suppose we have a domain name "example.com". We want "abc.example.com" to get routed to port 8000 of the machine and "xyz.example.com" to get routed to 8001 port of the machine.
-
-For that, we create 1 file for each web app we want to configure at `/etc/nginx/sites-enabled`. The file names could be anything. Let's just name them same as the sub-domain they represent.
 
 I mostly code in nodejs. So I usually have web app running on localhost. So the configuration looks like this:
 
@@ -20,7 +22,7 @@ server {
 }
 ```
 
-# How to add a site
+## How to add a site
 
 ```bash
 cd /etc/nginx/sites-enabled
@@ -40,7 +42,7 @@ server {
 }
 ```
 
-# How to enforce https?
+## How to enforce https?
 
 ```bash
 if ($scheme != "https") {
@@ -48,7 +50,7 @@ if ($scheme != "https") {
 } # managed by Certbot
 ```
 
-# Mixed content error
+## Mixed content error
 
 We once got mixed content error after upgrading to ssl. In order to fix the issue, we simply had to add some headers to location block.
 

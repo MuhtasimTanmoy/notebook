@@ -16,5 +16,5 @@
 
 
 ## References
-- https://near.github.io/nearcore/index.html
-- https://nomicon.io/
+- [Guide to Nearcore Development](https://near.github.io/nearcore/index.html)
+- [The NEAR Protocol Specification](https://nomicon.io)
