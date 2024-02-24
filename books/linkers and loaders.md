@@ -3,7 +3,7 @@
 -  Large C++ programs are prone to develop hard-to-diagnose bugs due to unexpected things that happen at link time. (The best known are static constructors that run in an an order the programmer wasn’t expecting.)
 - Global variable declarations are happen by a separate segment.
 
-### Linking and Loading
+## Linking and Loading
 
 - Linking takes a name written by a programmer such as getline and binds it to the location 612 bytes from * the beginning of the executable code in module `iosys`.’
 
@@ -20,7 +20,8 @@
 
 - Shared Libraries
     - Shared libraries complicate this task a little by moving some of the work from link time to load time. 
-    - The linker identifies the shared libraries that resolve the undefined names in a linker run, but rather than linking anything into the program, the linker notes in the output file the names of the libraries in which the symbols were found, so that the shared library can be bound in when the program is loaded.
+    - The linker identifies the shared libraries that resolve the undefined names in a linker run, but rather than linking anything into the program.
+    - The linker notes in the output file the names of the libraries in which the symbols were found, so that the shared library can be bound in when the program is loaded.
 
 ```asm
 this snippet of x86 code that moves the contents of variable a to variable b using the eax register.
@@ -41,9 +42,9 @@ A1 34 12 01 00 mov a,%eax
 A3 12 9A 00 00 mov %eax,b
 ```
 
-### Architectural Issues
+## Architectural Issues
 
-### Object Files
+## Object Files
 
 An object file contains five kinds of information.
 
@@ -97,6 +98,8 @@ Storage layout is a two-pass process, since the location of each segment can’t
     - A programmer can turn each of the object files linked into a pro- gram into a library with one procedure per library member, then link from those libraries so the linker pulls in procedures as needed, but skips the ones with no references.
     - In a language with class inheritance, calls to class methods generally use indirect calls since a method may be overridden in a subclass. But if there aren’t any subclasses, or there are subclasses but none of them override a particular method, the calls can be direct. A link- er could make special case optimizations like this to avoid some of the in- efficiencies otherwise inherent in object oriented languages.
 
+
+## Resources
 - [CppCon 2017: Teresa Johnson “ThinLTO: Scalable and Incremental Link-Time Optimization”](https://www.youtube.com/watch?v=p9nH2vZ2mNo)
     - Cross Module Optimization 
     - Build systems should be parallel, incremental, memory lean

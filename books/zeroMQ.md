@@ -2,9 +2,11 @@
 
 - ZeroMQ comes with culture of minimalism.
 - It’s sockets on steroids. It’s like mailboxes with routing. It’s fast!
-- PUB-SUB sockets: you do not know precisely when a subscriber starts to get messages. Even if you start a subscriber, wait a while, and then start the publisher, the subscriber will always miss the first messages that the publisher sends. This is because as the subscriber connects to the publisher (some‐ thing that takes a small but nonzero amount of time), the publisher may already be sending messages out.
+- PUB-SUB sockets: you do not know precisely when a subscriber starts to get messages. - Even if you start a subscriber, wait a while, and then start the publisher, the subscriber will always miss the first messages that the publisher sends. 
+- This is because as the subscriber connects to the publisher (something that takes a small but nonzero amount of time), the publisher may already be sending messages out.
 
 ### Why ZeroMQ
+
 Many applications these days consist of components that stretch across some kind of network, either a LAN or the Internet. So, many application developers end up doing some kind of messaging. Some developers use message queuing products, but most of the time they do it themselves, using TCP or UDP. These protocols are not hard to use, but there is a great difference between sending a few bytes from A to B and doing messaging in any kind of reliable way.
 - the “broker,” that does addressing, routing, and queuing.
 - It handles I/O asynchronously, in background threads
@@ -16,15 +18,16 @@ Many applications these days consist of components that stretch across some kind
 
 
 ## Socket and Patterns
+
 ØMQ sockets are easy to digest. These sockets have a life in four parts, just like BSD sockets:
 
-• We can create and destroy them, which go together to form a circle of socket life (see zmq_socket(), zmq_close()).
+- We can create and destroy them, which go together to form a circle of socket life (see `zmq_socket()`, `zmq_close()`).
 
-• We can configure them by setting options on them and checking them if necessary (see zmq_setsockopt(), zmq_getsockopt()).
+- We can configure them by setting options on them and checking them if necessary (see zmq_setsockopt(), zmq_getsockopt()).
 
-• We can plug them into the network topology by creating ØMQ connections to and from them (see zmq_bind(), zmq_connect()).
+- We can plug them into the network topology by creating ØMQ connections to and from them (see zmq_bind(), zmq_connect()).
 
-• We can use them to carry data by writing and receiving messages on them (see zmq_msg_send(), zmq_msg_recv()).
+- We can use them to carry data by writing and receiving messages on them (see zmq_msg_send(), zmq_msg_recv()).
 
 - To create a connection between two nodes, you use zmq_bind() in one node and zmq_connect() in the other. As a general rule of thumb, the node that does zmq_bind() is a “server,” sitting on a well-known network address, and the node that does zmq_con nect() is a “client,” with unknown or arbitrary network addresses.
 
@@ -38,11 +41,11 @@ Many applications these days consist of components that stretch across some kind
 
 The built-in core ØMQ patterns are:
 
-• Request-reply, which connects a set of clients to a set of services. This is a remote procedure call and task distribution pattern.
+- Request-reply, which connects a set of clients to a set of services. This is a remote procedure call and task distribution pattern.
 
-• Publish-subscribe, which connects a set of publishers to a set of subscribers. This is a data distribution pattern.
+- Publish-subscribe, which connects a set of publishers to a set of subscribers. This is a data distribution pattern.
 
-• Pipeline, which connects nodes in a fan-out/fan-in pattern that can have multiple steps and loops. This is a parallel task distribution and collection pattern.
+- Pipeline, which connects nodes in a fan-out/fan-in pattern that can have multiple steps and loops. This is a parallel task distribution and collection pattern.
 
 
 # Advanced Request Reply pattern

@@ -4,7 +4,10 @@
     - Better predictions
     - Eliminate the server for network latency
     - Optimize communication
-    - Game data is compressed using delta compression to reduce network load. That means the server doesn't send a full world snapshot each time, but rather only changes (a delta snapshot) that happened since the last acknowledged update. With each packet sent between the client and server, acknowledge numbers are attached to keep track of their data flow. Usually full (non-delta) snapshots are only sent when a game starts or a client suffers from heavy packet loss for a couple of seconds. Clients can request a full snapshot manually with the cl_fullupdate command.
+    - Game data is compressed using delta compression to reduce network load. That means the server doesn't send a full world snapshot each time, but rather only changes (a delta snapshot) that happened since the last acknowledged update. 
+    - With each packet sent between the client and server, acknowledge numbers are attached to keep track of their data flow. 
+    - Usually full (non-delta) snapshots are only sent when a game starts or a client suffers from heavy packet loss for a couple of seconds. 
+    - Clients can request a full snapshot manually with the cl_fullupdate command.
 
 - [NAT Hole Punching](https://keithjohnston.wordpress.com/2014/02/17/nat-punch-through-for-multiplayer-games)
     - Required for connecting peer to peer after matchmaking
@@ -27,7 +30,11 @@
     node in the system has a copy) since they are updated very infrequently, if at all.
     - Each node has a local object store which is a collection of primaries and replicas, a replica manager that synchronizes primary and secondary replicas, and a object placer which decides where to place and migrate primary replicas
 
-    - Networked games are rapidly evolving from small 4-8 person,  onetime play games to large-scale  games  involving thousands  of  participants and  persistent  game  worlds. However, like most Internet applications, current networkedgames are centralized.  Players send control messages to acentral server and the server sends (relevant) state updates to all active players. This design suffers from the well known robustness and scalability problems of single server designs. 
+    - Networked games are rapidly evolving from small 4-8 person,  onetime play games to large-scale  games  involving thousands  of  participants and  persistent  game  worlds. 
+    
+    - However, like most Internet applications, current networkedgames are centralized.  Players send control messages to acentral server and the server sends (relevant) state updates to all active players. 
+    
+    - This design suffers from the well known robustness and scalability problems of single server designs. 
 
     - Fortunately, there  are  two  fundamental  properties  of games  that  we  can  take  advantage  of  in  addressing  these challenges. First,  games  tolerate  weak  consistency  in the application state.
 
@@ -90,30 +97,33 @@
     - Bucket synchronization. The synchronization mechanism is the
     minimum functionality required for a distributed game. Without a synchronization mechanism,
     the real-time requirements of an interactive game cannot be satisfied.
-    - MiMaze  is the only game with a fully distributed architecture using IP multicast
-    - Choosing a distributed architecture improves the real-time properties of the
-    application, at the cost of consistency
+    - MiMaze is the only game with a fully distributed architecture using IP multicast
+    - Choosing a distributed architecture improves the real-time properties of the application, at the cost of consistency
 
 
 - [Distributed Architectures for Massively-Multiplayer Online Games!](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.8352&rep=rep1&type=pdf) ****
-    - A massively multiplayer online game is a networked game with two distinguishing features. First, the magnitude of the number of concurrent players is typically on the order of 104 or more. Second, MMGs have persistent state. This means that an MMG, unlike other networked games which end after some goal is completed, can continue indefinitely. Players join the game and play until they are ready to quit, at which point the state of their alter-ego in the game is saved. When they return, the state is restored. This
+    - A massively multiplayer online game is a networked game with two distinguishing features. 
+    - First, the magnitude of the number of concurrent players is typically on the order of 104 or more. 
+    - Second, MMGs have persistent state. This means that an MMG, unlike other networked games which end after some goal is completed, can continue indefinitely. 
+    - Players join the game and play until they are ready to quit, at which point the state of their alter-ego in the game is saved. When they return, the state is restored. This
     also holds true for the virtual world.
-    - Distributed systems are divided into two models: synchronous and asynchronous. In the synchronous model, processes execution occurs in synchronous rounds (i.e., they proceed in lockstep)[Lyn96] according to a global
-    clock. The advantage of the synchronous model is that it is easier to reason
+    - Distributed systems are divided into two models: synchronous and asynchronous. 
+    - In the synchronous model, processes execution occurs in synchronous rounds (i.e., they proceed in lockstep)[Lyn96] according to a global
+    clock. 
+    - The advantage of the synchronous model is that it is easier to reason
     about, with the caveat that most real distributed systems are not completely
-    synchronous. In the asynchronous model, processes execute local instructions at arbitrary speeds. This model has the advantage that algorithms
-    designed for it can run on all types of networks without timing guarantees.
-    The disadvantage of the asynchronous model is that some problems are more
+    synchronous. 
+    - In the asynchronous model, processes execute local instructions at arbitrary speeds. 
+    - This model has the advantage that algorithms designed for it can run on all types of networks without timing guarantees.
+    - The disadvantage of the asynchronous model is that some problems are more
     difficult, if not impossible, in the asynchronous system [Lyn96].
     - Three fundamental problem
         - Ordering of events
         - Syncronization of processes
             - Synchronization is the correct sequencing of processes to ensure mutually exclusive access to shared writable structures.
-            - A number of distributed mutual exclusion algorithms are presented in
-    [CDK01]. A simple ring-based algorithm logically arranges nodes in a ring
-    and passes a token that allows a member of the system access to the shared
-    writable structure. Other possibilities are multicast with logical clocks or
-    distributed voting
+            - A number of distributed mutual exclusion algorithms are presented in [CDK01]. 
+            - A simple ring-based algorithm logically arranges nodes in a ring and passes a token that allows a member of the system access to the shared writable structure. 
+            - Other possibilities are multicast with logical clocks or distributed voting
         - Consistency of data
     -  Synchronization Techniques
         -  The Bucket Synchronization Mechanism
@@ -121,35 +131,40 @@
         -  Local Lag and Timewarp
         - Trailing State Synchronization
 
-    - The Trailing State Synchronization is a novel method for synchronization of game state, introduced in this paper. The game chosen for the proof of concept by the authors is Quake. With a fast paced First Person Shooter game like Quake, the rate of commands issued by the user with reference to time is very high. This prevents synchronization mechanisms such as Timewarp which maintains multiple copies of the game state for each executed command. This problem is addressed by maintaining more than one executing parallel game states with the leading execution having no latency and the rest of the executing states each running with a delay of a few milliseconds from its preceding states. The parallel execution synchronization is similar to the Bucket Synchronization with different delays. To detect inconsistencies, each synchronizer looks at the changes in game state that an execution of a command produced and compares it with the immediate preceding state. If inconsistency is discovered, a roll back from the trailing state to the leading state is performed. This method allows for a high degree of consistency, while allowing low latency and scalability.
+    - The Trailing State Synchronization is a novel method for synchronization of game state, introduced in this paper. 
+    - The game chosen for the proof of concept by the authors is Quake. 
+    - With a fast paced First Person Shooter game like Quake, the rate of commands issued by the user with reference to time is very high. 
+    - This prevents synchronization mechanisms such as Timewarp which maintains multiple copies of the game state for each executed command. 
+    - This problem is addressed by maintaining more than one executing parallel game states with the leading execution having no latency and the rest of the executing states each running with a delay of a few milliseconds from its preceding states. 
+    - The parallel execution synchronization is similar to the Bucket Synchronization with different delays. 
+    - To detect inconsistencies, each synchronizer looks at the changes in game state that an execution of a command produced and compares it with the immediate preceding state. 
+    - If inconsistency is discovered, a roll back from the trailing state to the leading state is performed. 
+    - This method allows for a high degree of consistency, while allowing low latency and scalability.
 
-    - The third element of the Mirrored-Server system is the CRIMP protocol. The requirement for a low latency performance has prompted the authors to introduce a receiver-based reliable multicast layer which conforms to the requirements of the architecture. Several other enhancements to increase the performance of the multicast layer is also introduced. In the receiver based protocol, the receivers detect losses and send a recovery request, which is responded to by any host that has the packet. By tweaking certain variables (such as the probability of generating a response or request etc) the protocol is optimized, allowing an efficient communication mechanism with minimal overhead. The layer also has provisions for boot strapping to allow new mirrors to join, loss detection, cancellation of recovery and server management capability.
+    - The third element of the Mirrored-Server system is the CRIMP protocol. 
+    - The requirement for a low latency performance has prompted the authors to introduce a receiver-based reliable multicast layer which conforms to the requirements of the architecture. 
+    - Several other enhancements to increase the performance of the multicast layer is also introduced. 
+    - In the receiver based protocol, the receivers detect losses and send a recovery request, which is responded to by any host that has the packet. 
+    - By tweaking certain variables (such as the probability of generating a response or request etc) the protocol is optimized, allowing an efficient communication mechanism with minimal overhead. 
+    - The layer also has provisions for boot strapping to allow new mirrors to join, loss detection, cancellation of recovery and server management capability.
 
 
 - [P2P matchmaking solution for online games!](https://link.springer.com/article/10.1007/s12083-019-00725-3)
-    - ADU: Application Data Unit. An ADU is a chunk of data manipulated by the application. For
-    transmission efficiency purposes, it is recommended not to fragment ADUs within the communication stack.
-    - Avatar: Any dynamic object in a game that is controlled either by a participant or automatically
-    by the system.
-    - Dead Reckoning: An extrapolation technique used in the aviation systems to compute an estimate of the current position of a plane based on the knowledge of its position in the past and on
-    its trajectory.
+    - ADU: Application Data Unit. An ADU is a chunk of data manipulated by the application. For transmission efficiency purposes, it is recommended not to fragment ADUs within the communication stack.
+    - Avatar: Any dynamic object in a game that is controlled either by a participant or automatically by the system.
+    - Dead Reckoning: An extrapolation technique used in the aviation systems to compute an estimate of the current position of a plane based on the knowledge of its position in the past and on its trajectory.
     - DIA: Distributed Interactive Application are real-time applications where users (i.e. participants) interact in a defined environment. Examples of DIAs are distributed games, digital battlefield, shared virtual worlds, cooperative tools, etc.
-    - DIS: Distributed Interactive Simulation. DIS is an IEEE standard (see references [1][2]) which
-    describes the format of the packets that should be exchanged between simulation entities in a
-    distributed simulation, and that defines the protocol to handle these packets.
-    - IP multicast: An extension of IP to support the construction of trees (instead of point-to-point
-    routes) for the delivery of data to a group of receivers.
+    - DIS: Distributed Interactive Simulation. DIS is an IEEE standard (see references [1][2]) which describes the format of the packets that should be exchanged between simulation entities in a distributed simulation, and that defines the protocol to handle these packets.
+    - IP multicast: An extension of IP to support the construction of trees (instead of point-to-point routes) for the delivery of data to a group of receivers.
     - Mbone: Virtual overlay installed on the Internet to implement IP multicast.
-    - RTP/RTCP: Real-Time transport Protocol / Real-Time Control Protocol [9]. RTP is an encapsulation format designed to handle realtime data transmission on the Internet. RTP is generally
-    used in conjunction with UDP. RTCP is a control protocol that carries statistic and control
-    information for RTP data flows.
-    - NTP: Network Time Protocol [6]. NTP is a protocol used to synchronize a clock signal over a
-    network (in other words, to provide a global clock in a network). NTP is a client/server protocols where servers are organized in stratum. NTP is sensitive to link asymmetry.
-    - PDU: Protocol Data Unit. PDU is the standard way to describe a packet constructed by a protocol for transmission purposes. In the DIS, the most popular PDU is the Entity State PDU that
-    carries a description of an avatar.
-    - UDP: User Datagram Protocol. UDP is an unreliable transport protocol (as opposed to TCP
-    that guarantees ordered and reliable data transmission). UDP’s main functionality is to multiplex/demultiplex data. UDP has been designed to implement real-time applications on the
-    Internet.
+    - RTP/RTCP: Real-Time transport Protocol / Real-Time Control Protocol [9]. RTP is an encapsulation format designed to handle realtime data transmission on the Internet. 
+    - RTP is generally used in conjunction with UDP. RTCP is a control protocol that carries statistic and control information for RTP data flows.
+    - NTP: Network Time Protocol [6]. NTP is a protocol used to synchronize a clock signal over a network (in other words, to provide a global clock in a network).
+    - NTP is a client/server protocols where servers are organized in stratum. NTP is sensitive to link asymmetry.
+    - PDU: Protocol Data Unit. PDU is the standard way to describe a packet constructed by a protocol for transmission purposes. 
+    - In the DIS, the most popular PDU is the Entity State PDU that carries a description of an avatar.
+    - UDP: User Datagram Protocol. UDP is an unreliable transport protocol (as opposed to TCP that guarantees ordered and reliable data transmission). 
+    - UDP’s main functionality is to multiplex/demultiplex data. UDP has been designed to implement real-time applications on the Internet.
 
 - [A Comparison of Architectures in Massive Multiplayer Online Games!](https://www.researchgate.net/publication/271490933_A_Comparison_of_Architectures_in_Massive_Multiplayer_Online_Games)
     - Three  main  architectures  are  typically  used  in Massive  Multiplayer  Online  Games: 

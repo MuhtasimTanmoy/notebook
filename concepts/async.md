@@ -5,6 +5,11 @@
 - Green Threads
     - User level threads
 
+- Async Implementation at a high level has three major components 
+    - Executor
+    - Reactor
+    - XRoutine
+
 - Async
     - Transforms a block of code into a state machine that implements a trait called future
 - Await
@@ -12,7 +17,9 @@
 
 ![](./screen/RustFuture.png)
 
-- `mio` provides a number of core abstractions for working with I/O resources, such as sockets, pipes, and devices. It also provides support for advanced features such as `epoll, kqueue, and IOCP` on different platforms, as well as convenient utility functions for working with I/O events, timeouts, and buffers.
+- `mio` provides a number of core abstractions for working with I/O resources, such as sockets, pipes, and devices.
+
+- It also provides support for advanced features such as `epoll, kqueue, and IOCP` on different platforms, as well as convenient utility functions for working with I/O events, timeouts, and buffers.
 
 ## Resources
 
@@ -30,7 +37,7 @@
     - Explains future implementaion, benchmark.
 
 - [The Talk You've Been Await-ing for](https://www.youtube.com/watch?v=NNwK5ZPAJCk&t=306s)
-    -  Implementaton of executor, Reactor.
+    -  Implementaton of executor, Reactor
 
 - [Java Async Dependency Management](https://gist.github.com/benjchristensen/4677544)
 

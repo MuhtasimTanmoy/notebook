@@ -2,27 +2,36 @@
 
 A distributed system is one in which components located at networked computers communicate and coordinate their actions only by passing messages. 
 
-This definition leads to the following especially significant characteristics of distributed systems: concurrency of components, lack of a global clock and independent failures of components.
+This definition leads to the following especially significant characteristics of distributed systems: 
+- concurrency of components
+- lack of a global clock
+- independent failures of components
 
 The largest online game, EVE Online, utilises a client-server architecture where a single copy of the state of the world is maintained on a centralized server and accessed by client programs running on players’ consoles or other devices.
 
 ## System Models
 
 - Computer clocks and timing events 
-    - Each computer in a distributed system has its own internal clock, which can be used by local processes to obtain the value of the current time. Therefore two processes running on different computers can each associate timestamps with their events. 
-    - However, even if the two processes read their clocks at the same time, their local clocks may supply different time values. This is because computer clocks drift from perfect time and, more importantly, their drift rates differ from one another. 
-    - The term clock drift rate refers to the rate at which a computer clock deviates from a perfect reference clock. Even if the clocks on all the computers in a distributed system are set to the same time initially, their clocks will eventually vary quite significantly unless corrections are applied.
+    - Each computer in a distributed system has its own internal clock, which can be used by local processes to obtain the value of the current time.
+    - Therefore two processes running on different computers can each associate timestamps with their events.
+    - However, even if the two processes read their clocks at the same time, their local clocks may supply different time values. 
+    - This is because computer clocks drift from perfect time and, more importantly, their drift rates differ from one another. 
+    - The term clock drift rate refers to the rate at which a computer clock deviates from a perfect reference clock. 
+    - Even if the clocks on all the computers in a distributed system are set to the same time initially, their clocks will eventually vary quite significantly unless corrections are applied.
 
 - Event ordering
 - Failure model
 
 - In Chapter 4, we present the Java interfaces to datagram and stream communication, which provide different degrees of reliability.
 
-- Chapter 5 presents the request-reply protocol, which supports RMI. Its failure characteristics depend on the failure characteristics of both processes and communication channels. The protocol can be built from either datagram or stream communication. The choice may be decided according to a consideration of simplicity of implementation, performance and reliability.
+- Chapter 5 presents the request-reply protocol, which supports RMI. 
+- Its failure characteristics depend on the failure characteristics of both processes and communication channels. 
+- The protocol can be built from either datagram or stream communication. 
+- The choice may be decided according to a consideration of simplicity of implementation, performance and reliability.
 
-- Chapter 17 presents the two-phase commit protocol for transactions. It is designed to complete in the face of well-defined failures of processes and communication channels.
+- Chapter 17 presents the `two-phase commit` protocol for transactions. It is designed to complete in the face of well-defined failures of processes and communication channels.
 
-- The algorithm that we describe here is a ‘distance vector’ algorithm. This will provide a basis for the discussion in Section 3.4.3 of the link-state algorithm that has been used since 1979 as the main routing algorithm in the Internet. 
+- The algorithm that we describe here is a `distance vector` algorithm. This will provide a basis for the discussion in Section 3.4.3 of the link-state algorithm that has been used since 1979 as the main routing algorithm in the Internet. 
 
 - Routing in networks is an instance of the problem of path finding in graphs. Bellman’s shortest path algorithm, published well before computer networks were developed [Bellman 1957], provides the basis for the distance vector method. 
 

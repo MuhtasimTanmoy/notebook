@@ -4,13 +4,13 @@ A distributed system is basically a network of autonomous systems/servers connec
 
 - Consistent Hashing
 - Vector clocks 
-- Quorum a
+- Quorum
 - Anti-entropy using Merkle trees
 - Gossip-based membership protocol and failure detection.
 
 Preserves symmetry and avoids having a centralized registry for storing membership and node liveness information.
 
-Data replication is at the heart of making data durable and available in the presence of hardware failures such as machine crashes, disk failures, network partitions and clock skews. 
+Data replication is at the heart of making data durable and available in the presence of hardware failures such as machine crashes, disk failures, network partitions and clock skews.
 
 Popular implementations include those from etcd and consul. Next-generation distributed databases such as YugaByte DB, CockroachDB and TiDB use Raft for both leader election and data replication
 
