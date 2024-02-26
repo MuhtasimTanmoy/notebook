@@ -40,7 +40,7 @@ eventually optimizing translation time
     - Critical rendering path optimize
     - Time to first meaningful paint
 
-## Resources
+## References
 - [Anatomy of the browser 101 (Chrome University 2019)](https://www.youtube.com/watch?v=PzzNuCk-e0Y&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&start_radio=1&ab_channel=GoogleChromeDevelopers)
 
 - Architecture Core Principles

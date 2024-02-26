@@ -1,5 +1,6 @@
+# Cast
 
-# Type Cast
+## Type Cast
 
 - Static Cast
 
@@ -55,5 +56,4 @@ int main() {
     - It is used for up-cast (D to B) and down-cast (B to D), but it is mainly used for correct downcast
     - Using this cast has run time overhead, because it checks object types at run time using `RTTI` (Run Time Type Information)
     - If we are sure that we will never cast to wrong object then we should always avoid this cast and use `static_cast`
-    - Cast from parent to correct leaf is successfull
-    
+    - Cast from parent to correct leaf is successful

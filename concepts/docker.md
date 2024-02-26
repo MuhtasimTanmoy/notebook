@@ -1,11 +1,9 @@
 # Docker
-
 - Has two major portion
     - A `tar` file containing the process inside. A lifecycle state.
     - The isolated, contained process from that `tar` file. A runtime state.
 
 ## Namespace
-
 - Isolation of global system resources between independent processes.
 
 - Namespaces do not restrict access to physical resources such as CPU, memory and disk. That access is metered and restricted by a kernel feature called `cgroups`.
@@ -39,6 +37,7 @@
 
 - `/proc/self/ns/uts`
     - `type` and `inode` number
+    
 - Images contain
     - App Metadata
     - FileSystem
@@ -47,18 +46,23 @@
 
 `Storage drivers` allow you to create data in the writable layer of your container. 
 
-The files won’t be persisted after the container is deleted, and both read and write speeds are lower than native file system performance. Transferring similar tp rsync.
+The files won’t be persisted after the container is deleted, and both read and write speeds are lower than native file system performance. Transferring similar to rsync.
 
-- When you use the FROM command in a Dockerfile you are referring to a base image. Rather than copy everything in a new image, you will share the contents (a.k.a. fs layers); this is what is known as a **copy-on-write** (holy cow!) filesystem. The docker storage driver is just which kind of COW implementation to use (AUFS, BTRFS ...). If you imagine your images as layers and depending on each other, you get a graph.
+- When you use the FROM command in a Dockerfile you are referring to a base image. Rather than copy everything in a new image, you will share the contents (a.k.a. fs layers); this is what is known as a **copy-on-write** (holy cow!) filesystem. 
+
+- The docker storage driver is just which kind of `COW` implementation to use (AUFS, BTRFS ...). If you imagine your images as layers and depending on each other, you get a graph.
 
 - In VM the complete image is copied. 
 
 - AUFS 
-    - Ubuntu, Core  OS
+    - Ubuntu, Core OS
+
 - Device Mapper 
-    - Redhat 
+    - Redhat
+
 - BTRFS 
     - Redhat
+
 - OverlayFS
 - VFS
 
@@ -76,8 +80,8 @@ The files won’t be persisted after the container is deleted, and both read and
 - [Go Group](https://groups.google.com/g/golang-nuts?pli=1)
 - [Resource management: Linux kernel Namespaces and cgroups](https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/lxc-namespace.pdf)
 - [Namespaces in Go - Basics](https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a)
-- https://docs.docker.com/storage/storagedriver/
-- https://docs.docker.com/storage/storagedriver/select-storage-driver
-- https://stackoverflow.com/questions/31152263/what-is-docker-storage-driver
-- https://www.slideshare.net/Docker/docker-storage-drivers
-- https://github.com/nleiva/kubernetes-networking-links
+- [Storage drivers](https://docs.docker.com/storage/storagedriver)
+- [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver_
+- [What is Docker storage driver](https://stackoverflow.com/questions/31152263/what-is-docker-storage-driver)
+- [Docker storage drivers by Jérôme Petazzoni](https://www.slideshare.net/Docker/docker-storage-drivers)
+- [kubernetes-networking-links](https://github.com/nleiva/kubernetes-networking-links)

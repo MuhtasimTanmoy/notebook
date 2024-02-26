@@ -10,7 +10,7 @@
     - Ideally zero overhead when not used
     - Support for runtime attaching or similar
 
-- Good to
+- Good to know
     - Prefer to use existing tracing frameworks
     - perf with sdt / uprobe
     - LLVM - Xray

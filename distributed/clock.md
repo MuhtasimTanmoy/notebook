@@ -25,7 +25,7 @@
 - We need to track causality. 
 - In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events `happened before` the other one.
 
-## Resources
+## References
 - [Interval Search Trees ](https://www.youtube.com/watch?v=q0QOYtSsTg4)
 - [Pierre Chapuis - A short introduction to Interval Tree Clocks](https://www.youtube.com/watch?v=PgCziibErvU)
 - [A short introduction to Interval Tree Clocks](https://blog.separateconcerns.com/2017-05-07-itc.html)

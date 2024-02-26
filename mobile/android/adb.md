@@ -1,3 +1,5 @@
+# ADB
+
 1. ADB reboot-bootloader and reboot recovery commands:
 This command will let you can reboot your device in the bootloader. If due to some malware your device is stuck or if your device is not rebooting then you can connect your device to the computer and run this command to reboot. To run the command just type adb reboot-bootloader in the command line and to boot the device in recovery just type adb reboot recovery.
 

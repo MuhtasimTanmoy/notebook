@@ -12,7 +12,6 @@ Distance-vector routing protocols use the [Bellman–Ford algorithm](https://en.
 - Spanning tree avilable for `lsr` where we have information for all nodes
 - Reverse path forwarding `dvr`
 
-
 ## Routing Algo
 - DVR Distant Vector Routing
 	- Count to infinity

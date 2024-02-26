@@ -42,8 +42,6 @@ A home router has the following parts:
 - DNS
 - Web interface
 
-From the picture we can see, internal computers can communicate through switch alone. No need to go through router. Same for wifi communication: access point to switch.
-
 ## Switch
 
 When two computers on same ip network communicate with each other directly, the communication is dealt by the switch.

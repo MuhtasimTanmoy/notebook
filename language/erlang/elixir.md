@@ -49,7 +49,6 @@ to lambda.
     - Instead of stack based recursion, perform it like go to or jump instruction 
 
 ```elixir
- 
 defmodule Playground do
   for x <- [1, 2, 3] do
     x * x

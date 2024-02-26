@@ -41,7 +41,6 @@ These are private addresses.
 
 The above special addresses are called Private addresses. They cannot be used on the Internet, they can only be used within local networks. If you try to use Private addresses on the Internet then your Internet Service Provider will block your traffic automatically, sensing that the traffic is coming from a Private IP address. This automatic block is being done to avoid any IP address conflicts on the Internet. These addresses are used in so many places that without the block we would have guaranteed and constant IP address conflicts all over the Internet.
 
-
 ## NAT
 Since public IP addresses are limited and thus we are forced to use private IP addresses at home, how do we connect to internet?
 
@@ -83,6 +82,5 @@ NAT Hole Punching
 ## Port Forward
 There is no way for the router to know. We have to configure the router such that when traffic from outside hits a particular port of the router, the router will send it to a host that we configured. This is called port forwarding.
 
-
-- Resources
+- References
     - [TCP Socket Programming](https://stackoverflow.com/questions/913501/how-to-let-kernel-choose-a-port-number-in-the-range-1024-5000-in-tcp-socket-pr)

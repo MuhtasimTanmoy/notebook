@@ -49,12 +49,12 @@ A term is a duration for which a specific server acts as the leader. A new elect
 
 - `Raft` is not designed for high-throughput, fine-grained services as every client request incurs significant communication and persistence work between Raft replicas before a response is received by the client.
 
-Potential use cases for Raft include:
-- Implementing a lock server
-- Electing leaders for higher-level protocols
-- Replicating critical configuration data in a distributed system
+- Potential use cases for Raft include:
+  - Implementing a lock server
+  - Electing leaders for higher-level protocols
+  - Replicating critical configuration data in a distributed system
 
-Zookeeper is based on `Zab` (a protocol similar but not identical to Paxos), and etcd is built on top of Raft, the protocol discussed in this document.
+- Zookeeper is based on `Zab` (a protocol similar but not identical to Paxos), and etcd is built on top of Raft, the protocol discussed in this document.
 
 ## Reference
 - [Raft](https://www.pingcap.com/blog/implement-raft-in-rust)

@@ -1,4 +1,4 @@
-# threadpool
+# Threadpool
 
 - std::function is a type erasure object.
     - ` std::function< double( int, int ) > ` double return type, two int argument

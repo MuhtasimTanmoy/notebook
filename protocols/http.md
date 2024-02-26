@@ -28,6 +28,6 @@
 
 - Use of JSONP. Which loads by passing callback. 
 
-# Resources
+## References
 - [CORS and the Access-Control-Allow-Origin response header](https://portswigger.net/web-security/cors/access-control-allow-origin)
 - https://cors-anywhere.herokuapp.com

@@ -28,13 +28,18 @@
     - static: `.lib`
     - dynamic: `.dll`
     
-# Linker
-
-- It’s simple: a linker converts object files into executables and shared libraries. Let’s look at what that means. For cases where a linker is used, the software development process consists of writing program code in some language: e.g., C or C++ or Fortran (but typically not Java, as Java normally works differently, using a loader rather than a linker). A compiler translates this program code, which is human readable text, into into another form of human readable text known as assembly code. Assembly code is a readable form of the machine language which the computer can execute directly. An assembler is used to turn this assembly code into an object file. For completeness, I’ll note that some compilers include an assembler internally, and produce an object file directly. Either way, this is where things get interesting
-
-- .cpp -> Preprocessor -> Compiler -> Assembler -> Linker -> Loader. Compile flag `--save-temps` should generate all intermediate files
+## Linker
+- A linker converts object files into executables and shared libraries. Let’s look at what that means. 
+- For cases where a linker is used, the software development process consists of writing program code in some language: e.g., C or C++ or Fortran (but typically not Java, as Java normally works differently, using a loader rather than a linker). 
+- A compiler translates this program code, which is human readable text, into into another form of human readable text known as assembly code. 
+- Assembly code is a readable form of the machine language which the computer can execute directly. 
+- An assembler is used to turn this assembly code into an object file. For completeness, 
+- Some compilers include an assembler internally, and produce an object file directly
+- Steps
+    - `.cpp -> Preprocessor -> Compiler -> Assembler -> Linker -> Loader`
+    - Compile flag `--save-temps` should generate all intermediate files
 - After independent compilation of translation units to object file, linkers work to connect them as an executable
-- static libraries (.lib, .a) used in linker, dynamic libraries (.dll, .so) used in loader
+- static libraries (`.lib`, `.a`) used in linker, dynamic libraries (.dll, .so) used in loader
 
 -[CppCon 2017: Michael Spencer “My Little Object File: How Linkers Implement C++”](https://www.youtube.com/watch?v=a5L66zguFe4)
 
@@ -142,33 +147,33 @@ task register)
     - Relocation: https://refspecs.linuxbase.org/elf/gabi4+/ch4.reloc.html
     - sstrip: https://github.com/BR903/ELFkickers
  
-[Procedure Linakge Table](https://www.youtube.com/watch?v=Ss2e6JauS0Y)
-- Program Header Table
-- Section Header Table
-- Sections reside at bottom, can be stripped
-- static link : `gcc -static -fno-pie -no-pie -g -o a.out a.c`
-- All problems in computer science can be solved by additional layer of indirection.
-- Position inndependent code used for shared libraries by implementing relative addressing
-- Linker does two things
-    - Symbol resoulution
-    - Relocation
-- `.interop` section helps with dynamic linker
-- At linking step onlt the relocation and symbol table instruction embedded, the real data stores at load time.
-- Global Offset Table
-- Procedure Linkage Table
-    - Resolves procedure
-- Test out program execution in GDB
-    - Running this on a program with two `printf`    
-    - ```
-        gdb a.out
-        b a.c:4
-        b a.c:5
-        r
-        disas 'printf@plt'
-        p/x *(void**)0x60101B
-        readelf -hW a.out will keep track of addresses
-      ```
-- Making common case fast is in the heart of system design
+- [Procedure Linakge Table](https://www.youtube.com/watch?v=Ss2e6JauS0Y)
+    - Program Header Table
+    - Section Header Table
+    - Sections reside at bottom, can be stripped
+    - static link : `gcc -static -fno-pie -no-pie -g -o a.out a.c`
+    - All problems in computer science can be solved by additional layer of indirection.
+    - Position inndependent code used for shared libraries by implementing relative addressing
+    - Linker does two things
+        - Symbol resoulution
+        - Relocation
+    - `.interop` section helps with dynamic linker
+    - At linking step onlt the relocation and symbol table instruction embedded, the real data stores at load time.
+    - Global Offset Table
+    - Procedure Linkage Table
+        - Resolves procedure
+    - Test out program execution in GDB
+        - Running this on a program with two `printf`    
+        - ```
+            gdb a.out
+            b a.c:4
+            b a.c:5
+            r
+            disas 'printf@plt'
+            p/x *(void**)0x60101B
+            readelf -hW a.out will keep track of addresses
+        ```
+    - Making common case fast is in the heart of system design
 
 
 - [Before Main: How Executables Work on Linux](https://youtu.be/jR2hUhjcAXI)
@@ -178,7 +183,6 @@ task register)
 - [CppCon 2017: Nir Friedman “What C++ developers should know about globals (and the linker)”](https://www.youtube.com/watch?v=xVT1y0xWgww&ab_channel=CppCon)
 
 ```bash
-
 ldd /bin/ls
 objdump -x /bin/ls
 
@@ -192,5 +196,4 @@ objdump --reloc -dC /bin/ls
 
 # See symbols of object file
 objdump --syms -C /bin/ls
-
 ```

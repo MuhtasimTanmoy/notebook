@@ -10,7 +10,9 @@
 - There are many different types of encryption algorithms but HLS only supports AES-128. 
 - The Advanced Encryption Standard (AES) is an example of a block cipher, which encrypts (and decrypts) data in fixed-size blocks. It’s a symmetric key algorithm, which means that the key that is used to encrypt data is also used to decrypt it. AES-128 uses a key length of 128 bits (16 bytes).
 
-- HLS uses AES in cipher block chaining (CBC) mode. This means each block is encrypted using the cipher text of the preceding block, but this gives us a problem: how do we encrypt the first block? There is no block before it! To get around this problem we use what is known as an initialisation vector (IV). In this instance, it’s a 16-byte random value that is used to intialize the encryption process. It doesn’t need to be kept secret for the encryption to be secure.
+- HLS uses AES in cipher block chaining (CBC) mode. 
+- This means each block is encrypted using the cipher text of the preceding block, but this gives us a problem: how do we encrypt the first block? There is no block before it! 
+- To get around this problem we use what is known as an initialisation vector (IV). In this instance, it’s a 16-byte random value that is used to intialize the encryption process. It doesn’t need to be kept secret for the encryption to be secure.
 
 ## RTMP
 RTMP stands for real time media protocol and it’s the transport layer protocol. There’s one variance of the RTMP - RTMPT, that is the application level protocol, which runs over HTTP(s).
@@ -21,7 +23,7 @@ Similar to HLS
 ## RTP
 - Webrtc built on top of
 
-## Resources
+## References
 - [Http Live Streaming](https://tools.ietf.org/html/rfc8216)
 - [Benchmark: SFU, MCU, Mesh](https://testrtc.com/different-multiparty-video-conferencing/)
 - [HLS Encryption](https://hlsbook.net/how-to-encrypt-hls-video-with-ffmpeg/)

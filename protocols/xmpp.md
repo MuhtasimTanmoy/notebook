@@ -9,10 +9,10 @@
   - the XMPP Core Services and 
   - XMPP Extension Protocols (XEPs).
  
-The core part comprises of the features(services) deemed essential to most XMPP applications like - 
-- One to one Messaging
-- Data Communication Security Mechanisms
-- Presence and Contact Lists
+- The core part comprises of the features (services) deemed essential to most XMPP applications like
+   - One to one Messaging
+   - Data Communication Security Mechanisms
+   - Presence and Contact Lists
 
 Extensions - 
 - Multi User chat
@@ -83,17 +83,11 @@ Stanzas have three possible names( XML tag names) in XMPP ,these can be a Messag
 	- .A jid is valid if it contains one “@” character and passwords of more than four characters are supported.This is a simple policy that comes by default with the code that Android Studio has generated for us.We leave it that way for this tutorial.
 	- [https://www.blikoontech.com/](https://www.blikoontech.com/)
 
- These stanza types provide three different
-   communication primitives: a "push" mechanism for generalized
-   messaging, a specialized "publish-subscribe" mechanism for
-   broadcasting information about network availability, and a "request-
-   response" mechanism for more structured exchanges of data (similar to
-   [HTTP]).
+- These stanza types provide three different communication primitives: a "push" mechanism for generalized messaging, a specialized "publish-subscribe" mechanism for broadcasting information about network availability, and a "request-response" mechanism for more structured exchanges of data (similar to [HTTP]).
 
 
 ## Encryption
 There is no TLS usage in xmpp stream as it does not support raw data only frame. It can be enabled at websocket layer.
-
 
 ## Websocket Binding
 - A WebSocket binding for XMPP provides higher performance than the current HTTP binding for XMPP.

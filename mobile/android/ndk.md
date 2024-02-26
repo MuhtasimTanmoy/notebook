@@ -48,14 +48,19 @@
 - C++ vs Java
     - Java compiles to bytecode, and the bytecode compiles to native code by the JIT.
     - C compiles directly to native code.
-    - With big heaps on Java, GC time increases, adding stall time. In some software it is totally OK with stall times during GC cleanup cycle, in others it causes fatal errors. Try keeping your software to respond under a defined number of milliseconds when a GC happens, and you will see what I'm talking about.
-    - With big heaps on Java, GC time increases, adding stall time. In some software it is totally OK with stall times during GC cleanup cycle, in others it causes fatal errors. Try keeping your software to respond under a defined number of milliseconds when a GC happens, and you will see what I'm talking about.
-    - In some extreme cases, the JIT may also choose not to JIT the code at all. This happens when a JITed method would be to big, 8K if I remember correct. A non JITed method has a runtime penalty in the range of 20000% (200 times slower that is, at least at our customer it was). JIT is also turned of when the JVMs CodeCache starts to get full (if keep loading new classes into the JVM over and over again this can happen, also happen at customer site). At one point JIT statistics also reduced concurrency on one 128 core machine to basically single core performance.
+    - With big heaps on Java, GC time increases, adding stall time. 
+    - In some software it is totally OK with stall times during GC cleanup cycle, in others it causes fatal errors. 
+    - Try keeping your software to respond under a defined number of milliseconds when a GC happens, and you will see what I'm talking about.
+    - With big heaps on Java, GC time increases, adding stall time. 
+    - In some software it is totally OK with stall times during GC cleanup cycle, in others it causes fatal errors. 
+    - Try keeping your software to respond under a defined number of milliseconds when a GC happens, and you will see what I'm talking about.
+    - In some extreme cases, the JIT may also choose not to JIT the code at all. 
+    - This happens when a JITed method would be to big, 8K if I remember correct. A non JITed method has a runtime penalty in the range of 20000% (200 times slower that is, at least at our customer it was). 
+    - JIT is also turned of when the JVMs CodeCache starts to get full (if keep loading new classes into the JVM over and over again this can happen, also happen at customer site). 
+    - At one point JIT statistics also reduced concurrency on one 128 core machine to basically single core performance.
     - No selecting C over Java will not make your program faster
     - Typical good candidates for the NDK are self-contained, CPU-intensive operations that don't allocate much memory, such as signal processing, physics simulation, and so on. Simply re-coding a method to run in C usually does not result in a large performance increase.
     - The NDK can, however, can be an effective way to reuse a large corpus of existing C/C++ code.
 
-
-
-# Reference
+## References
 - [Dalvik vs ART](https://www.geeksforgeeks.org/difference-between-dalvik-and-art-in-android/)

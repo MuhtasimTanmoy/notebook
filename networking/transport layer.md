@@ -22,7 +22,7 @@ The two main protocols present in this layer are :
 
 ## Relationship between Transport and Network Layers
 
-**Transport-layer protocols are implemented in the end systems but not in network routers**.
+**Transport-layer protocols are implemented in the end systems but not in network routers**
 
 Sending Side:
 
@@ -118,7 +118,7 @@ At the receiver, all 16-bit words are added, including the checksum. If no error
 Although UDP provides error checking, it does not do anything to recover from an error. Some implementations of UDP simply discard the damaged segment; others pass the dam- aged segment to the application with a warning.
 
 
-## Reference
+## References
 - [Creating a TCP Server in C++ [Linux / Code Blocks]
 ](https://www.youtube.com/watch?v=cNdlrbZSkyQ)
 - [Codehoose / bbtcpserver.cpp](https://gist.github.com/codehoose/020c6213f481aee76ea9b096acaddfaf)

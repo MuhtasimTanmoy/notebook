@@ -1,7 +1,8 @@
 # Async
 
 - [I/O Multiplexing](https://www.softprayog.in/programming/io-multiplexing-select-poll-epoll-in-linux)
-    - When waiting for data on a `socket`, can check non-blocking with timeout, but has serious overhead. Suppose waiting on 500 `sockets` and data available on one just after timeout need to traverse 499 more to read that.
+    - When waiting for data on a `socket`, can check non-blocking with timeout, but has serious overhead. 
+    - Suppose waiting on 500 `sockets` and data available on one just after timeout need to traverse 499 more to read that.
     - Maintaining thread per socket,  does not scale
         - Select: Takes 3 sets of file descriptors we want to monitor for file descriptors
             - Read event
@@ -20,4 +21,4 @@
     - io bound faster
     - select is a future
 
-- https://youtu.be/b4mS5UPHh20
+- [Crust of Rust: Channels](https://youtu.be/b4mS5UPHh20)

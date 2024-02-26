@@ -13,5 +13,5 @@
     - `sys:get_state()` to be used for seeing state
     - `sys:replace_state()` for debugging
 
-## Resources
+## References
 - [A Peek Inside Erlang's OTP • Steve Vinoski • GOTO 2016](https://www.youtube.com/watch?v=PkHZPTn1brc)

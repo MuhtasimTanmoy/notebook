@@ -1,3 +1,5 @@
+# Pinning
+
 - [The Why, What, and How of Pinning in Rust](https://youtu.be/DkMwYxfSYNQ)
     - auto traits are `send`, `sync`, `unpin`
     - Pin will put constraint on the item to not be `movable`

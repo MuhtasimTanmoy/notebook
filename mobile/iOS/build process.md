@@ -51,8 +51,7 @@ xcodebuild -workspace lintanalize.xcworkspace -scheme MY_SCHEME -configuration D
 swiftlint analyze --fix --compiler-log-path xcodebuild.log
 ```
 
-
-# Resources
+## References
 - [Build System Xcode](https://github.com/apple/swift-llbuild)
 - [Binary Framework Talk](https://developer.apple.com/videos/play/wwdc2019/416)
 - [Dynamic Library](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html)

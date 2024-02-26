@@ -10,8 +10,8 @@ x
      - Discontiguous data structures are root of all poor performance.
      - Say no to linked list, `std:map` never
      - Time spent waiting for data ( 50% )
-     
-![](../screen/Cache%20System.png)
 
 - [C++ Quick Benchmark](https://quick-bench.com)
 - [C++ Analysis](https://godbolt.org)
+
+![](../screen/Cache%20System.png)

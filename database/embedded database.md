@@ -1,9 +1,6 @@
 # Embedded Database
 
 ## Level DB
-
-Architecture study, open source codebase analysis, data structure study notes for level DB.
-
 - Has too much mutex contension
 - Bitcoin core, go ethereum uses it
 - Sqlite used in past chrome, now uses leveldb

@@ -183,7 +183,7 @@ echo "tanmoy" | openssl dgst -sha256 -binary | openssl enc -base64
 
 ```
 
-# Resources
+## References
 - [Omemo Encryption Protocol Spec](https://xmpp.org/extensions/xep-0384.html)
 - [Signal Protocol Concept Explained ** ](https://www.youtube.com/watch?v=7WnwSovjYMs)
 - [Forward Secrecy](https://en.wikipedia.org/wiki/Forward_secrecy)

@@ -1,7 +1,7 @@
 # Error Correction
 
 - Repetation Code
-    - Turns 1 bit message to 3 bit codeword.
+    - Turns `1 bit` message to `3 bit` codeword.
 
 - Hamming Codes
     - Takes 4 bits and truns it into 7 bits codeword.

@@ -1,19 +1,17 @@
 # Socket
 
-The term socket is analogous to physical female connectors, communication between two nodes through a channel being visualized as a cable with two male connectors plugging into sockets at each node. Similarly, the term port (another term for a female connector) is used for external endpoints at a node, and the term socket is also used for an internal endpoint of local inter-process communication (IPC) (not over a network). However, the analogy is limited, as network communication need not be one-to-one or have a dedicated communication channel.
-
+- The term socket is analogous to physical female connectors, communication between two nodes through a channel being visualized as a cable with two male connectors plugging into sockets at each node. 
+- Similarly, the term port (another term for a female connector) is used for external endpoints at a node, and the term socket is also used for an internal endpoint of local inter-process communication (IPC) (not over a network). 
+- However, the analogy is limited, as network communication need not be one-to-one or have a dedicated communication channel.
 - Sockets are assumed to be associated with a specific socket address, namely the IP address and a port number for the local node
-
-Associating a socket with a socket address is called binding.
+- Associating a socket with a socket address is called binding.
 
 ## Unix Domain Socket
 
 A Unix domain socket or IPC socket (inter-process communication socket) is a data communications endpoint for exchanging data between processes executing on the same host operating system.
 
 - A pair of process communicating over a network employ a pair of sockets.
-
 - Socket = IP + Port Number
-
 - Like named pipes, Unix domain sockets support:
 
 - Types
@@ -40,4 +38,4 @@ UNIX domain sockets are subject to file system permissions, while TCP sockets ca
 
 ## Reference
 - [Sockets in Operating System](https://www.youtube.com/watch?v=uagKTbohimU)
-- https://en.wikipedia.org/wiki/Network_socket
+- [Network socket](https://en.wikipedia.org/wiki/Network_socket)

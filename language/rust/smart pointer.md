@@ -43,5 +43,5 @@ std :: unique_ptr<FILE, FileCloser> uptr(fp);
 - shared_ptr
 - weak_ptr
 
-# Resources
+## References
 - [Smart Pointer](https://github.com/CppCon/CppCon2019/blob/master/Presentations/back_to_basics_smart_pointers/back_to_basics_smart_pointers__arthur_odwyer__cppcon_2019.pdf)

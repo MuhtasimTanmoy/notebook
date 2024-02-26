@@ -28,9 +28,9 @@ Objects (Oriented):
 - Coercion
     - Converting a value from one type to another is often called “type casting”, when done explicitly, and “coercion” when done implicitly (forced by the rules of how a value is used).
 
-- double equals (==) will perform a type conversion when comparing two things, and will handle NaN, -0, and +0 specially to conform to IEEE 754 (so NaN != NaN, and -0 == +0);
+- double equals (`==`) will perform a type conversion when comparing two things, and will handle NaN, -0, and +0 specially to conform to IEEE 754 (so NaN != NaN, and -0 == +0);
 
-- triple equals (===) will do the same comparison as double equals (including the special handling for NaN, -0, and +0) but without type conversion; if the types differ, false is returned.
+- triple equals (`===`) will do the same comparison as double equals (including the special handling for NaN, -0, and +0) but without type conversion; if the types differ, false is returned.
 
 - `npm link` to create symlink of module
 

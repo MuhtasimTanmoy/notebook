@@ -6,8 +6,8 @@
     - Primary data representation for mongodb.
 - MessagePack
     - IDL ( Interface Definition Language )
-    - MessagePack supports streaming deserializers. 
-    - This feature is useful for network communication.
+    - Message Pack supports streaming deserializers
+    - This feature is useful for network communication
 - Protocol Buffer
     - Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.    
 - XML

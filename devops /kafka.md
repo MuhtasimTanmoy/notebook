@@ -29,12 +29,12 @@
             - Async relication observers
             - ISR 
                 - In sync replica
-    - kafka Mirror maker
+    - Kafka Mirror maker
         - Offet not maintained
     - Confluent replicator
         - Replicator provides tool to embed in java app for offset translation
         - Mirrors metadata as well
-    - Cluster Linking
+    - Cluster linking
         - No compression decompression
 
 - Kafka elasticity

@@ -1,5 +1,5 @@
-- [Adopting Rust]
-- Other language has compile time & run-time prevention of threading and memory corruption issue, while they abstract away my access to machine. But, C family language provides access with little in the way of safeguard.
+# Concepts
+- Other language has compile time and run-time prevention of threading and memory corruption issue, while they abstract away my access to machine. But, C family language provides access with little in the way of safeguard.
 - C++ has local dialects that prevent understanding codebase, where rust has strict guideline
 
 - Memory barriers
@@ -28,12 +28,10 @@
     - Exponential backoff makes starving even worse. To prevent starving, ticket based lock.
     - Optimize write
     - `volatile` keyword used to prevent a variable to read each time from cache, as valiue can be changed from any where else
-    - 
 
 - [Deep Copy vs Shallow Copy](https://stackoverflow.com/questions/24253344/is-it-possible-to-make-a-type-only-movable-and-not-copyable?rq=1)
 
 -[SOLID](https://youtu.be/Ntraj80qN2k)
-    - 
 
 - misc
     - Friend function to access private variables, or class

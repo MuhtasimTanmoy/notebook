@@ -15,40 +15,41 @@ Garbage collection (GC) is a form of automatic memory management. The garbage co
 
 Creating a new programming language
 - Get your syntax right
-- Make an interpreter - Static Compilation
+- Make an interpreter 
+- Static Compilation
 - Then give that to JVM
 
-Usage Tradeoff
-- Highly Engineered Perforamant System - Exact and Tracing
-    - Java, .NET
-- Non Performance Critical - Reference Counting and Conservative
-    - PHP, Python
+- Usage Tradeoff
+    - Highly Engineered Perforamant System - Exact and Tracing
+        - Java, .NET
+    - Non Performance Critical - Reference Counting and Conservative
+        - PHP, Python
 
-GC Fundamental
-- Allocation
+- GC Fundamental
+    - Allocation
+    - Identification
+    - Reclamation
+
+- Allocator
+    - Free list
+        - Class Based Object Allocation
+    - Bump counting
+        - Just a full heap. Allocation by incrementing pointer
+
 - Identification
-- Reclamation
+    - Tracing (Mark and Sweep)
+        - Start from top (DFS). Those which are not reached garbage collected
+        - Know about full heap
+    - Reference Counting
+        - Incoming reference count
+        - Know about one object
 
-Allocator
-- Free list
-    - Class Based Object Allocation.
-- Bump counting
-    - Just a full heap. Allocation by incrementing pointer.
-
-Identification
-- Tracing (Mark and Sweep)
-    - Start from top (DFS). Those which are not reached garbage collected.
-    - Know about full heap
-- Reference Counting
-    - Incoming reference count.
-    - Know about one object.
-
-Reclaimation
+- Reclaimation
   - Sweep to Free
   - Defragment Compaction > Mark compact
   - Evacuate
 
-Garbage Collector Algorithms
+- Garbage Collector Algorithms
 
 - Mark and Sweep
     - Free List + trace + Sweep to free
@@ -58,9 +59,9 @@ Garbage Collector Algorithms
     - Bump Allocation + trace + Evacuate
     - Half memory + Auto defragmented
 
-When choosing
- - Make the common case fast
- - Young objects die early
+- When choosing
+    - Make the common case fast
+    - Young objects die early
     - Two generational object tracing space 
         - Nursery
         - Mature
@@ -74,9 +75,9 @@ When choosing
 - Tracing > cant identify dead object only live
 - Concurrent real time system garbage collection
 
-Exapmple
-- Mostly copying collector - Apple UI Kit
-- BDW collector - Chakra VM - Mark sweep  - Free list
+- Exapmple
+    - Mostly copying collector - Apple UI Kit
+    - BDW collector - Chakra VM - Mark sweep  - Free list
 
 ## References
 - [Rethinking garbage collection](https://www.slideshare.net/rokon12/rethinking-garbage-collection-48598261)

@@ -1,4 +1,4 @@
-# RUST
+# Rust
 
 - Rust is a `systems programming` language that focuses on strong compile-time correctness guarantees.
 
@@ -475,7 +475,7 @@ trait Graph {
 }
 ```
 
-# Attributes
+## Attributes
 
 ```rust
 #[derive(Debug)]
@@ -596,7 +596,7 @@ struct Deserializer<T> {
 ```
 
 
-## Callback Based Future
+## Callback based future
 
 ```rust
 // Way too many allocaiton, dynamic dispatch
@@ -610,7 +610,7 @@ trait Future {
 ## Concurrency
 - When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
 
-**Other Points**
+## Other Points
 
 - Static mutable is unsafe, and so must be done in an unsafe block.
 
@@ -667,8 +667,6 @@ serde = { version = "1.0", default-features = false, features = ["derive"], opti
 # dependency fetch only when feature enabled 
 ```
 
-**incomplete**
-
 **Trait objects** - has lackings, read again
 
 ## REPR
@@ -680,7 +678,7 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
 
 ---
 
-## Resources
+## References
 - [Rust Ownership, Safety Explained](https://words.steveklabnik.com/a-30-minute-introduction-to-rust)
 
 - [How Rust Ownership works?](https://static.rust-lang.org/doc/master/book/ownership.html)
@@ -693,8 +691,6 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
 
 - [Rust overview](https://www.youtube.com/watch?v=9x7W3_KKKeA&ab_channel=YOW%21Conferences)
 
-
-## Talks
 - [Rust at Speed](https://www.youtube.com/watch?v=s19G6n0UjsM&t=3s) 
     - Explains usage of rust on [Noria](https://github.com/mit-pdos/noria)
     - Usage of cache inside DB, mainly materialized view, the current result for a query.

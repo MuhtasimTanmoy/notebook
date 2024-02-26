@@ -1,11 +1,10 @@
 # C++
-
 - Library
     - Boost
     - std
     - abseil
 
-### Constexpr
+## Constexpr
 - [constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c)
 
 - [CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
@@ -14,7 +13,7 @@
     - Can be applied in `value` or `computations`
     - [Incomplete]
 
-### Template Meta programming
+## Template meta programming
 - Vector push is defensive is case of move operation, using `no except` optimizes a lot
 - If not fallback to pre c++11 and use copy
 - Perfect forwarding
@@ -28,7 +27,7 @@
 
 ## Backlogs
 
-- By default C++ exception do not capture their execution context (backtrace), so when a generic exception occurs you don’t know what code actually generated it.
+- By default `C++` exception do not capture their execution context (backtrace), so when a generic exception occurs you don’t know what code actually generated it.
 
 - C++ has lot of unsafe API and its extremely easy to do unsafe operations like accessing a forbidden area in memory thanks to pointer of trying to acces an array/vector past its allocated area. This lead to instability and lot of time spent trying to find and fix the code.
 
@@ -60,7 +59,7 @@ g++ -fdump-class-heirarchy a.cpp
 
 ![](./rule-Of-five.png)
 
-# Reference
+# References
 
 - [Quroa c++ backlog](https://www.quora.com/Instead-of-inventing-a-ton-of-high-level-programming-languages-why-dont-people-implemented-C-C-frameworks-to-perform-high-level-repetitive-tasks)
 
@@ -120,7 +119,7 @@ g++ -fdump-class-heirarchy a.cpp
 
 - More generally, this seems to be a common pattern in Rust ecosystem:
     - A crate uses Mutex or other synchronization mechanism from std
-    - Someone asks for #[no_std] support
+    - Someone asks for `#[no_std]` support
     - Mutex is swapped for some variation of spinlock.
     - A Spinlock is the simplest possible implementation of a mutex, its general form looks like this:
 

@@ -16,7 +16,7 @@
     - A dSYM file is a "debug symbols file". 
     - When this setting is enabled, symbol names of your objects are removed from the resulting compiled binary.
  
-In Swift, there are three kinds of statements: simple statements, compiler control statements, and control flow statements.
+- In Swift, there are three kinds of statements: simple statements, compiler control statements, and control flow statements.
 
 -  When compiled, compiler uses function to pointer location in an array.
     - Direct / Static Dispatch
@@ -76,7 +76,7 @@ In Swift, there are three kinds of statements: simple statements, compiler contr
     - Binding is by definition a two way connection, `.constant()` means a one way connection, when the user types into the textfield the variable in the view model will never get updated. Your updates can go down but not up.
     - `StateObject` is for initializing `ObservedObject` is for passng around.
 
-## Resource
+## Resources
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0)
 - [Swift Memory Model](https://youtu.be/ERYNyrfXjlg)
     - Word is a unit in the size of a pointer

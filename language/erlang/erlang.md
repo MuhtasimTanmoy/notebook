@@ -209,8 +209,7 @@ rebar3 compile
     - Performance Benchmark
     - https://github.com/MuhtasimTanmoy/Riak-Database-Project
 
-# Resources
-
+## References
 - [Beam VM](http://www.erlang-factory.com/upload/presentations/708/HitchhikersTouroftheBEAM.pdf)
 - [First Person Shooter in Erlang](http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf)
 - [The Beam Book](https://blog.stenmans.org/theBeamBook)

@@ -1,15 +1,15 @@
 # WebRTC
 
-### ICE
+## ICE
 - ICE needs to gather candidates, prioritize them, choose default ones, exchange them with the remote party, pair them and order into check lists.
 
-### STUN
+## STUN
 - STUN allows a client to obtain a transport address (an IP address and port) which may be useful for receiving packets from a peer. However, addresses obtained by STUN may not be usable by all peers.
 
-### TURN
+## TURN
 - Commmunication through server
 
-### NAT 
+## NAT 
 - All types of NAT fall into two categories; Static NAT and Dynamic NAT. Static NAT is where administrators manually create and maintain the NAT mappings and is usually associated with inbound types of NAT. Dynamic NAT is where the router creates and maintains mappings automatically on demand and is usually associated with outbound types of NAT.
 
 - Every TCP/IP packet contains a source IP address, source port, destination IP address and destination port. All types of NAT create NAT mappings using these values.
@@ -37,7 +37,7 @@
     - Example – Expanding on the example from the port restricted cone NAT my PC makes two outbound connections to website IP 217.87.69.8 and 56.76.87.98. My PC uses source IP192.168.0.1 with source port 56723 for both connections. On all types of NAT so far both these connections would be NATed to change the source IP address only and keep the source port the same. This time however instead of leaving the source port as 56723 a symmetric NAT changes it to 45765 for one connection and 53132 for the other connection (random). This has created unique mappings for each connection and traffic from those destinations must come in on the respective ports. So 217.87.69.8 must send packets to destination port 45765 and 56.76.87.98 must send packets to port 53132 in addition to the requirements of a port restricted cone NAT.
 
 
-### Why symmetric NAT is not STUN compatible?
+## Why symmetric NAT is not STUN compatible?
 
 Here in case of first it works. In second it does not.
 
@@ -100,7 +100,7 @@ How peer to peer game connects and arcitecture is available here [Game server](.
 - Some website serves static assets from other peer
 
 
-# Recources
+# References
 - https://think-like-a-computer.com/2011/09/19/symmetric-nat/
 - https://think-like-a-computer.com/2011/07/18/how-routing-works/
 - https://think-like-a-computer.com/2011/08/24/ip-routing/
