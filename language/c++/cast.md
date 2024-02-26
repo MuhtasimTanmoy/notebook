@@ -1,6 +1,6 @@
 # Cast
 
-## Type Cast
+### Type Cast
 
 - Static Cast
 

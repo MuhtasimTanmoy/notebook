@@ -8,7 +8,7 @@ Erlang does this with features such as a built-in `worker-supervisor`.
 
 `Message-passing` model and `hot-swappable` code, meaning errors or code updates don't require the entire process to stop and restart in order to recover.
 
-## Beam
+### Beam
 
 - BEAM is like Java’s JVM, but for Erlang
 - BEAM is a Stack-Based Byte-Code Virtual Machine 
@@ -152,7 +152,7 @@ Erlang does this with features such as a built-in `worker-supervisor`.
 - https://www.facebook.com/notes/facebook-engineering/chat-stability-and-scalability/51412338919/
 
 
-## Tail call optimization
+### Tail call optimization
 
 Saying that something is "tail recursive" is a short-hand way of saying "the function is recursive" and that we only find pure function
 calls in the tail-positions of all branches of a function.
@@ -178,7 +178,7 @@ last thing a function does is call another function, then the call
 can be replaced by jump to the start of the function.
 
 
-## Garbage Collector
+### Garbage Collector
 
 - When it's time to collect garbage in other languages, the entire system has to stop while the garbage collector runs. This approach is perfectly fine if your computer program is supposed to run once, write some output, and then quit. But in long-running applications, such as desktop, mobile, or server programs, this strategy results in occasionally frozen UIs and slow response times.
 
@@ -194,7 +194,7 @@ iex - Elixir
 rebar3 binary download and copy to /usr/local/bin/
 rebar3 compile
 
-### Open source Erlang Applications:
+#### Open source Erlang Applications:
 
 - RabbitMQ
     - AMQP messaging protocol implementation. AMQP is an emerging standard for high-performance enterprise messaging.
@@ -209,7 +209,7 @@ rebar3 compile
     - Performance Benchmark
     - https://github.com/MuhtasimTanmoy/Riak-Database-Project
 
-## References
+### References
 - [Beam VM](http://www.erlang-factory.com/upload/presentations/708/HitchhikersTouroftheBEAM.pdf)
 - [First Person Shooter in Erlang](http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf)
 - [The Beam Book](https://blog.stenmans.org/theBeamBook)

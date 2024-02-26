@@ -2,7 +2,7 @@
 
 Effective communication depends on the use of a common language.
 
-## Introduction
+### Introduction
 - Diagnosing network protocols, is also a powerful tool for understanding how the network protocols operate.
 - The design that specifies how various protocols of a protocol suite relate to each other and divide up tasks to be accomplished is called the architecture or reference model for the protocol suite.
 -  Goals
@@ -92,7 +92,7 @@ Effective communication depends on the use of a common language.
     - Once connected, the new participant learns of other active peers and, depending on the protocol, what services or files they provide.
     
 
-## The Internet Address Architecture
+### The Internet Address Architecture
 - IP Address = Net Numbner + Host Number 
 - Subnet Addressing
     - One of the earliest difficulties encountered when the Internet began to grow was the inconvenience of having to allocate a new network number for any new network segment that was to be attached to the Internet. 
@@ -112,7 +112,7 @@ Effective communication depends on the use of a common language.
 - The network topology were arranged as a tree1 and addresses were assigned in a way that was “sensitive” to this topology, very small routing tables could be used while still maintaining shortest-path routes to all destinations.
 -  Scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administra- tive.
 
-## Link Layer
+### Link Layer
 - Frame as PDU
 - Link-layer protocols can be carried inside other (link or higher-layer) protocols, a technique known as tunneling.
 - The particular method, known as carrier sense, multiple access with collision detection (CSMA/CD), mediates which computers can access the shared medium (cable) without any other special agree- ment or synchronization. 
@@ -143,12 +143,12 @@ Effective communication depends on the use of a common language.
 
 - **Tunneling** In some cases it is useful to establish a virtual link between one computer and another across the Internet or other network. VPNs, for example, offer this type of service. The method most commonly used to implement these types of services is called tunneling    
 
-## ARP
+### ARP
 - ARP is used with IPv4 only; IPv6 uses the Neigh- bor Discovery Protocol, which is incorporated into ICMPv6
 - ARP Broadcast
 - 
 
-## TCP
+### TCP
 - https://www.youtube.com/watch?v=F27PLin3TV0
 - Handshake
 - WireShark to capture TCP Traffic

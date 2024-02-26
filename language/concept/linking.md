@@ -28,7 +28,7 @@
     - static: `.lib`
     - dynamic: `.dll`
     
-## Linker
+### Linker
 - A linker converts object files into executables and shared libraries. Let’s look at what that means. 
 - For cases where a linker is used, the software development process consists of writing program code in some language: e.g., C or C++ or Fortran (but typically not Java, as Java normally works differently, using a loader rather than a linker). 
 - A compiler translates this program code, which is human readable text, into into another form of human readable text known as assembly code. 

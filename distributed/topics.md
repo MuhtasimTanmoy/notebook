@@ -21,14 +21,14 @@ The final value has to determined non-deterministically using heuristics such as
   - Lag Compensation
 
 
-## CRDT
+### CRDT
  - Much of distributed computing focuses on the problem of how to prevent concurrent updates to replicated data. But another possible approach is optimistic replication, where all concurrent updates are allowed to go through, with inconsistencies possibly created, and the results are merged or "resolved" later. In this approach, consistency between the replicas is eventually re-established via "merges" of differing replicas.
   - Operation based 
   - State based 
   - However, there are practical differences. State-based CRDTs are often simpler to design and to implement; their only requirement from the communication substrate is some kind of gossip protocol. Their drawback is that the entire state of every CRDT must be transmitted eventually to every other replica, which may be costly. In contrast, operation-based CRDTs transmit only the update operations, which are typically small. However, operation-based CRDTs require guarantees from the communication middleware;that the operations are not dropped or duplicated when transmitted to the other replicas, and that they are delivered in causal order.
 
 
-## Network Time Protocol
+### Network Time Protocol
 
 NTP stands for Network Time Protocol. It is used to synchronize the clocks on our computer to one standard time source. It is very useful in situations like bank transactions. Assume the following situation without the presence of NTP. Suppose you carry out a transaction, where your computer reads the time at 2:30 PM while the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
 
@@ -51,7 +51,7 @@ As category 1 Stratum is not publicly available, we can get from 2
 - conf - server pool.ntp.org
 - ntpdate to update in reasonable window
 
-## Gossip Protocol
+### Gossip Protocol
 - A, B has some state. A sends it's state with version / timestamp. B checks updated, update it's and send back the one A lacks. A updates and sends acknowledgement.
 - Kubernates depends on etcd
 - Kafka, elastic search on zookeeper
@@ -76,7 +76,7 @@ As category 1 Stratum is not publicly available, we can get from 2
 - Consul extension lifeguard
 
 
-## References
+### References
 - [HashiCorp Memberlist](https://github.com/hashicorp/memberlist)
 - [Rapid](https://github.com/lalithsuresh/rapid) 
   - Gossip with concensus

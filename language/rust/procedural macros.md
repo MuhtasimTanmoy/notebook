@@ -32,7 +32,7 @@ impl Serialize for Foo {
 }
 
 ```
-## Implementation
+### Implementation
 - `cargo check` to check if compiles without building
 - `cargo build` to build the actual project
 - `cargo expand --test test derive_new`

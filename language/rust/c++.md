@@ -4,7 +4,7 @@
     - std
     - abseil
 
-## Constexpr
+### Constexpr
 - [constexpr concept](https://www.geeksforgeeks.org/understanding-constexper-specifier-in-c)
 
 - [CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
@@ -13,7 +13,7 @@
     - Can be applied in `value` or `computations`
     - [Incomplete]
 
-## Template meta programming
+### Template meta programming
 - Vector push is defensive is case of move operation, using `no except` optimizes a lot
 - If not fallback to pre c++11 and use copy
 - Perfect forwarding
@@ -25,7 +25,7 @@
 - CPP Core guideline
     - https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 
-## Backlogs
+### Backlogs
 
 - By default `C++` exception do not capture their execution context (backtrace), so when a generic exception occurs you don’t know what code actually generated it.
 
@@ -51,7 +51,7 @@ There no standard package managers and repositories. If you stick to an operatin
 
 - An intrusive list is one where the pointer to the next list node is stored in the same structure as the node data. This is normally A Bad Thing, as it ties the data to the specific list implementation. Most class libraries (for example, the C++ Standard Library) use non-intrusive lists, where the data knows nothing about the list (or other container) implementation.
 
-## Snippet
+### Snippet
 
 ```shell
 g++ -fdump-class-heirarchy a.cpp

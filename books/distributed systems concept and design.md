@@ -9,7 +9,7 @@ This definition leads to the following especially significant characteristics of
 
 The largest online game, EVE Online, utilises a client-server architecture where a single copy of the state of the world is maintained on a centralized server and accessed by client programs running on players’ consoles or other devices.
 
-## System Models
+### System Models
 
 - Computer clocks and timing events 
     - Each computer in a distributed system has its own internal clock, which can be used by local processes to obtain the value of the current time.

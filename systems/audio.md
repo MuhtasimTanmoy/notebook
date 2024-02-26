@@ -18,7 +18,7 @@ Two main factors determining sound
  
 Bit Rate = Bit Depth * Sample Rate * Number of Channels
 
-## Notes
+### Notes
 - Uncompressed raw audio format is Linear Pulse Code Modulation(LPCM)
 - `mp4` and `aac` are two different concepts. `mp4` is a container format, and aac is an encoding.
 - iPhone does not encode mp3
@@ -29,7 +29,7 @@ Bit Rate = Bit Depth * Sample Rate * Number of Channels
 - `ffprobe -hide_banner -stats -i ios-aac.m4a`
 - It does support hardware `AAC/m4a` encoding which is in many ways superior to mp3.
 
-##  Reference
+###  Reference
 - [How digital audio works](https://www.youtube.com/watch?v=1RIA9U5oXro&ab_channel=Computerphile)
 - [Reddit Thread ](https://www.reddit.com/r/iOSProgramming/comments/2le7hq/how_do_i_make_a_spectrum_visualizer_for_my_music/)
 - [Basic Audio Workflow](https://www.youtube.com/watch?v=JyUagzvGq7Q&ab_channel=ComputerScience)

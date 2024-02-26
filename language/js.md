@@ -140,6 +140,6 @@ const observer = new IntersectionObserver(
 - Addons
     - Native c++ to be used in require
 
-## References
+### References
 - [Javascript Foundation](https://github.com/farnaz-kakhsaz/Deep-JavaScript-Foundations/blob/master/README.md)
 - [Module System](https://auth0.com/blog/javascript-module-systems-showdown/)

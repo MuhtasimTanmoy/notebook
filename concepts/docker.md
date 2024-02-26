@@ -3,7 +3,7 @@
     - A `tar` file containing the process inside. A lifecycle state.
     - The isolated, contained process from that `tar` file. A runtime state.
 
-## Namespace
+### Namespace
 - Isolation of global system resources between independent processes.
 
 - Namespaces do not restrict access to physical resources such as CPU, memory and disk. That access is metered and restricted by a kernel feature called `cgroups`.
@@ -42,7 +42,7 @@
     - App Metadata
     - FileSystem
 
-## Storage Driver
+### Storage Driver
 
 `Storage drivers` allow you to create data in the writable layer of your container. 
 
@@ -66,13 +66,13 @@ The files won’t be persisted after the container is deleted, and both read and
 - OverlayFS
 - VFS
 
- ## Cgroups
+ ### Cgroups
  - Control the resource utilization. Keep a limit memory, CPU. 
 
- ## Seccomps
+ ### Seccomps
  - Sort of `bpf` based hook that happen before syscall.
 
-## References
+### References
 - [The Linux Programming Interface](https://man7.org/tlpi/)
 - [Linux Documentation](https://github.com/torvalds/linux/tree/master/Documentation)
 - [Deep dive into Docker storage drivers](https://www.youtube.com/watch?v=9oh_M11-foU)

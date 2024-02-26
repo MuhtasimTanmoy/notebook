@@ -22,7 +22,7 @@ server {
 }
 ```
 
-## How to add a site
+### How to add a site
 
 ```bash
 cd /etc/nginx/sites-enabled
@@ -42,7 +42,7 @@ server {
 }
 ```
 
-## How to enforce https?
+### How to enforce https?
 
 ```bash
 if ($scheme != "https") {
@@ -50,7 +50,7 @@ if ($scheme != "https") {
 } # managed by Certbot
 ```
 
-## Mixed content error
+### Mixed content error
 
 We once got mixed content error after upgrading to ssl. In order to fix the issue, we simply had to add some headers to location block.
 

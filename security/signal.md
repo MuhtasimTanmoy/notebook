@@ -32,19 +32,19 @@ But Signal app uses a different approach for group chat. There is no Sender key 
 
 This is done to prevent server from knowing which message is made for group and which one is a direct message. But a group message can still be distinguished from a direct message because signal client sends multiple copies of a group message at once. If the group size is large, it becomes more trivial to distinguish.
 
-## The XEdDSA and VXEdDSA Signature Schemes
+### The XEdDSA and VXEdDSA Signature Schemes
 - XEdDSA enables use of a single key pair format for both elliptic curve Diffie-Hellman and signatures.
 
-## Signal Protocol Summary
+### Signal Protocol Summary
 A very brief overview of the Signal Protocol.
 
 (disclaimer: I am not a crypto expert, just a guy who has read up a bit on this stuff.)
 
-## What is E2E encryption?
+### What is E2E encryption?
 - a variant of SP used by all standard E2E encrypted messangers
 - why is it important?
 
-## How do lesser encryption paradigms fall short?
+### How do lesser encryption paradigms fall short?
 - symmetric key exchange
     - how to share key?
 - asymmetric key exchange
@@ -55,18 +55,18 @@ A very brief overview of the Signal Protocol.
     - same key used only for short-duration session
     - forward secrecy: secrets broken in the future don't unlock past contents
 
-## Terminology
+### Terminology
 - elliptic curve (EC) keys: assymetric key pair, much stronger than RSA
 - elliptic curve Diffie-Hellman (ECDH/DH): how two pairs of EC keys generate a shared secret key
 - key derivation function (KDF): can "stretch" or "shrink" high-entropy bytes to yield symmetric key(s)
 
-## What is the "Signal Protocol"?
+### What is the "Signal Protocol"?
 - initial session setup via [X3DH](https://whispersystems.org/docs/specifications/x3dh/)
 - iterative message key generation via the [double ratchet](https://whispersystems.org/docs/specifications/doubleratchet/)
 
 Also, session management across devices via [Sesame](https://whispersystems.org/docs/specifications/sesame/)
 
-## Session setup
+### Session setup
 - goal is for Alice & Bob to share 32-byte secret, used for subsequent message encryption
 - Alice & Bob each have a set of (EC) identity key pairs, with public keys published to central server
     - identity (`IK`): unique & constant for user
@@ -79,7 +79,7 @@ Also, session management across devices via [Sesame](https://whispersystems.org/
     - `DH4 = DH(EK_a, OPK_b)`
     - shared key: `SK = KDF(DH1 || DH2 || DH3 || DH3)`
 
-## Double ratchet
+### Double ratchet
 - goal is for both Alice & Bob to generate same unique encryption key for each message
     - e.g., key(s) for AES256 cipher in GCM mode
     - allows for asynchronous communication
@@ -93,7 +93,7 @@ Also, session management across devices via [Sesame](https://whispersystems.org/
 - "DH" rachet means that `SK` changes with each round trip communication
     - temporary breaches in `SK` don't compromise all future communications
 
-## Resources
+### Resources
 (Read these and you'll actually learn how the SP works.)
 - [WhatsApp Encryption Overview](https://www.whatsapp.com/security/WhatsApp-Security-Whitepaper.pdf)
 - [X3DH](https://whispersystems.org/docs/specifications/x3dh/)

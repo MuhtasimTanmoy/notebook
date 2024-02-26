@@ -1,6 +1,6 @@
 # Live Streaming
 
-## HLS
+### HLS
 
 - HLS stands for HTTP live streaming and it is the application layer protocol.
 - Media streaming protocol used for delivering audio and visual media over the internet.
@@ -14,16 +14,16 @@
 - This means each block is encrypted using the cipher text of the preceding block, but this gives us a problem: how do we encrypt the first block? There is no block before it! 
 - To get around this problem we use what is known as an initialisation vector (IV). In this instance, it’s a 16-byte random value that is used to intialize the encryption process. It doesn’t need to be kept secret for the encryption to be secure.
 
-## RTMP
+### RTMP
 RTMP stands for real time media protocol and it’s the transport layer protocol. There’s one variance of the RTMP - RTMPT, that is the application level protocol, which runs over HTTP(s).
 
-## MPEG Dash
+### MPEG Dash
 Similar to HLS
 
-## RTP
+### RTP
 - Webrtc built on top of
 
-## References
+### References
 - [Http Live Streaming](https://tools.ietf.org/html/rfc8216)
 - [Benchmark: SFU, MCU, Mesh](https://testrtc.com/different-multiparty-video-conferencing/)
 - [HLS Encryption](https://hlsbook.net/how-to-encrypt-hls-video-with-ffmpeg/)

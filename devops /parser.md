@@ -51,7 +51,7 @@ def list_files(startpath):
                 continue
             if currentBasePath != basePath:
                 currentBasePath = basePath
-                print('- ### {}'.format(os.path.basename(path)))
+                print('- #### {}'.format(os.path.basename(path)))
             # subindent = ' ' * 4 * (level + 1)
             pathName = os.path.basename(path).replace(" ", "%20")
             fileName = name.replace(" ", "%20")

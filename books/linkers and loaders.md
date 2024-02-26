@@ -3,7 +3,7 @@
 -  Large C++ programs are prone to develop hard-to-diagnose bugs due to unexpected things that happen at link time. (The best known are static constructors that run in an an order the programmer wasn’t expecting.)
 - Global variable declarations are happen by a separate segment.
 
-## Linking and Loading
+### Linking and Loading
 
 - Linking takes a name written by a programmer such as getline and binds it to the location 612 bytes from * the beginning of the executable code in module `iosys`.’
 
@@ -42,9 +42,9 @@ A1 34 12 01 00 mov a,%eax
 A3 12 9A 00 00 mov %eax,b
 ```
 
-## Architectural Issues
+### Architectural Issues
 
-## Object Files
+### Object Files
 
 An object file contains five kinds of information.
 
@@ -59,23 +59,23 @@ An object file contains five kinds of information.
 • `Debugging information:` Other information about the object code not needed for linking but of use to a debugger. This includes source file and line number information, local symbols, descrip- tions of data structures used by the object code such as C structure definitions.
 (Some object files contain even more than this, but these are plenty to keep us occupied in this chapter.)
 
-### Storage allocation
+#### Storage allocation
 
 Storage layout is a two-pass process, since the location of each segment can’t be assigned until the sizes of all segments that logically precede it are known.
 
-### Symbol management
+#### Symbol management
 
-### Libraries
+#### Libraries
 
-### Relocation
+#### Relocation
 
-### Loading and overlays
+#### Loading and overlays
 
-### Shared libraries
+#### Shared libraries
 
-### Dynamic Linking and Loading
+#### Dynamic Linking and Loading
 
-### Advanced techniques
+#### Advanced techniques
 
 - C++ presents three challege to linker
     - Complicated naming rules
@@ -99,7 +99,7 @@ Storage layout is a two-pass process, since the location of each segment can’t
     - In a language with class inheritance, calls to class methods generally use indirect calls since a method may be overridden in a subclass. But if there aren’t any subclasses, or there are subclasses but none of them override a particular method, the calls can be direct. A link- er could make special case optimizations like this to avoid some of the in- efficiencies otherwise inherent in object oriented languages.
 
 
-## References
+### References
 - [CppCon 2017: Teresa Johnson “ThinLTO: Scalable and Incremental Link-Time Optimization”](https://www.youtube.com/watch?v=p9nH2vZ2mNo)
     - Cross Module Optimization 
     - Build systems should be parallel, incremental, memory lean

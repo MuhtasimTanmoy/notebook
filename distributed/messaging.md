@@ -1,7 +1,7 @@
 # Messaging
 - Transfering bits of information to relevant places
 
-## Kafka
+### Kafka
 - Dumb broker, Smart consumer Model
 - Kafka does not attempt to track which messages were read by each consumer and only retain unread messages, rather, Kafka retains all messages for a set amount of time, and consumers are responsible for tracking their location in each log.
 - Kafka uses Zookeeper to do leadership election of Kafka Broker and Topic Partition pairs.
@@ -11,12 +11,12 @@
 - Best effort delivery across process, tcp, udp, just once
 - No ordering
 
-## RabbitMQ
+### RabbitMQ
 - Smart broker, Dumb consumer Model
 
-## Nats
+### Nats
 
-## ZooKeeper
+### ZooKeeper
 - Zookeeper as a general purpose distributed process coordination system
 - `Zookeeper` is a system for distributed cluster management. It is a distributed key-value store. It is highly-optimized for reads but writes are slower. It consists of an odd number of znodes known as an ensemble.
 
@@ -26,9 +26,9 @@
 
 - Split Brain Problem
 
-## ZeroMQ
+### ZeroMQ
 
-## Reference
+### Reference
 - [Kafka: All you need to know](https://medium.com/hacking-talent/kafka-all-you-need-to-know-8c7251b49ad0)
 - [Kafka Architecture](http://cloudurable.com/blog/kafka-architecture/index.html)
 - [Zookeeper Doc](https://zookeeper.apache.org/doc/r3.5.7/zookeeperOver.html)

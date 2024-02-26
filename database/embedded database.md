@@ -1,17 +1,17 @@
 # Embedded Database
 
-## Level DB
+### Level DB
 - Has too much mutex contension
 - Bitcoin core, go ethereum uses it
 - Sqlite used in past chrome, now uses leveldb
 - Has different fork `rocksdb`, `hyperLevelDB`
 
-## RocksDB
+### RocksDB
 - Log Structured Merge Tree
 - MemTable / SSTable
 - InnoDB used in mySQL
 
-## References
+### References
 - [DropBox Engineering Evening on RocksDB with Dhruba Borthakur @ Rockset](https://www.youtube.com/watch?v=aKAJMd0iKtI&ab_channel=DhrubaBorthakur)
 
 - [Embedded Database: RocksDB](youtube.com/watch?v=V_C-T5S-w8g)

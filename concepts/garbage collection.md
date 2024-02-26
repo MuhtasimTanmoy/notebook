@@ -2,7 +2,7 @@
 Garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program. In large servers sometiems there is GC pause to reclaim memory.
 
 
-## [Rethinking Garbage Collection](https://www.youtube.com/watch?v=Fte2pKMjgG0)
+### [Rethinking Garbage Collection](https://www.youtube.com/watch?v=Fte2pKMjgG0)
 
 - Java compilation and execution goes through th below steps
     - JAVA Source File 
@@ -79,7 +79,7 @@ Creating a new programming language
     - Mostly copying collector - Apple UI Kit
     - BDW collector - Chakra VM - Mark sweep  - Free list
 
-## References
+### References
 - [Rethinking garbage collection](https://www.slideshare.net/rokon12/rethinking-garbage-collection-48598261)
 - [Rethinking Garbage Collection by Dr. Rifat Shahriyar](https://www.youtube.com/watch?v=Fte2pKMjgG0)
 - [Garbage Collection is Good!](https://www.infoq.com/presentations/garbage-collection-benefits)

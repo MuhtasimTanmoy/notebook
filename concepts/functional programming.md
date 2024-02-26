@@ -7,5 +7,5 @@
 - Reentrant
     - Can be paused anytime by `isr()` and resumed later.
 
-## References
+### References
 - [Lambda Calculus](https://www.youtube.com/watch?v=3VQ382QG-y4)

@@ -9,7 +9,7 @@ Distributed System Categories
 6. Distributed Ledgers
 
 
-## Concensus
+### Concensus
 - State machine replication based on log
 - State Machine Replication Principle:
     -  Physical logging means logging the contents of each row that is changed. 
@@ -42,7 +42,7 @@ Distributed System Categories
     - Bittorent
         - Trackerless torrent: Protocol that did not rely on centralized trackers for gathering metadata and finding peers, but instead uses new algorithms. One such instance is Kademlia (Mainline DHT), a distributed hash table (DHT) that allows you to find peers through other peers. In effect, each user performs a tracker’s duties.
 
- ## References
+ ### References
  - [Concensus  Algorithm](https://blog.mi.hdm-stuttgart.de/index.php/2019/03/17/consensus-protocols-a-key-to-cluster-management/)
  - [Intro to distributed Systems](https://medium.com/better-programming/a-thorough-introduction-to-distributed-systems-3b91562c9b3c)
  - [Distributed Locking](https://www.linkedin.com/advice/0/what-some-common-distributed-locking-patterns)

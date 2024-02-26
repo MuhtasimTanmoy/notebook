@@ -10,7 +10,7 @@
 - A parameter is the variable which is part of the method’s signature (method declaration). An argument is an expression used when calling the method.
 - Argument is the value/variable/reference being passed in, parameter is the receiving variable used w/in the function/block
 
-## Talks
+### Talks
 - [Signal Creator Moxie talks about ecosystem](https://www.youtube.com/watch?v=Nj3YFprqAr8)
 - [SSL, Keychain](https://www.youtube.com/watch?v=5dhSN9aEljg&t=110s)
     -  Security vulnerabilities occur when  developers dont have full scope of what's going on, and yet feel really good about solutions they implement.

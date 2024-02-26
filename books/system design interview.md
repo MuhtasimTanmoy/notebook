@@ -1,6 +1,6 @@
 # System Design Interview
 
-## Chapter 1
+### Chapter 1
 - Relational Database
 
 - Non-relational Database
@@ -45,13 +45,13 @@
 • Split tiers into individual services
 • Monitor your system and use automation tools
 
-## Chapter 2
+### Chapter 2
 
-## Chapter 14
+### Chapter 14
 - Design Youtube
 - Familiar model
 - Apple, Xiaomi device codec error
 
-## Chapter 15
+### Chapter 15
 - Google Drive
 - Familiar model

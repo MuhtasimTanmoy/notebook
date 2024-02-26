@@ -16,5 +16,5 @@
 
 - Therefore, the decision to use loop unrolling should be based on careful analysis of the specific code and the target platform.
 
-## Reference
+### Reference
 - [String copy optimization](https://github.com/mattgodbolt/xania/pull/252#discussion_r550894493)

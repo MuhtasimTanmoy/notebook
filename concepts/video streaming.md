@@ -1,11 +1,11 @@
 # Video Streaming
 
-## HLS
+### HLS
 - HTTP Live Streaming
 - mpegts 
     - mpeg Transport Stream
 
-## Compression
+### Compression
 - Spatial Compression (IntraFrame) 
     - JPEG
 - Temporal Compression (Interframe) 
@@ -16,7 +16,7 @@
 - Bitrate is the amount of bits per second 
     - bitrate = file size / duration  
 
-## FFMPEG
+### FFMPEG
 
 - Transcoding. Process off decoding of one codec and re-encoding to another.
 - Converting file format. Changing metadata of container.
@@ -117,7 +117,7 @@ ffmpeg -i video.mp4 image-%05d.png
 ffmpeg -ss 00:00:25 -t 00:00:00.04 -i YOURMOVIE.MP4 -r 25.0 YOURIMAGE%4d.jpg
 ```
 
-## References
+### References
 - [FFMEPG, Preset](https://trac.ffmpeg.org/wiki/Encode/H.264)
 - [Rate control](https://slhck.info/video/2017/03/01/rate-control.html)
 - [FFMPEG](https://ffmpeg.org/ffmpeg.html)         

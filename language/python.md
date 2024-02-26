@@ -4,7 +4,7 @@
 - This can be a a lot faster than interpreting the datastructures, as you are dealing directly with the processor and can apply optimisations that aren't usually possible in the source language.
 
 
-## Django Project Setup Code Snippet
+### Django Project Setup Code Snippet
 - `virtualenv` activate
 
 ```sh
@@ -25,6 +25,6 @@ python manage.py createsuperuser
 
 ```
 
-## References
+### References
 - [Jit Compilation](https://www.youtube.com/watch?v=sQTOIkOMDIw)
 - [How Do Python Coroutines Work?](https://www.youtube.com/watch?v=idLtMISlgy8) - Explains

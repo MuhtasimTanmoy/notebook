@@ -1,6 +1,6 @@
 # Substrate
 
-## [Intro to Substrate](https://www.youtube.com/watch?v=-6BBIr-DmI4)
+### [Intro to Substrate](https://www.youtube.com/watch?v=-6BBIr-DmI4)
 - One node needs
     - Database
         - Block storage

@@ -34,15 +34,15 @@ Each server maintains its current term and has only two RPCs and three persisten
 
 The leader must regularly send empty heartbeats to all followers in the form of empty append entries. The election timeout is the span of time for choosing a leader, and safety is the liveliness of the leader election. A random timeout is eventually selected to complete the election.
 
-## Logs
+### Logs
 The committed log is persisted on disk on a majority of the servers. The leader never overwrites the log but appends to it. All future leaders must have all committed logs. The leader will not respond until the command has been logged, committed, and executed by the leader's state machine. Linearizability is guaranteed with a unique key. Configuration changes must go through two phases.
 
 ![Raft](./screen/concensus.png)
 
-## Term
+### Term
 A term is a duration for which a specific server acts as the leader. A new election begins a new term, and the Raft algorithm ensures that every term has a single leader.
 
-## Notes
+### Notes
 - Raft is not suitable for high-traffic services and is better suited for low-traffic scenarios where consistency is crucial, even if availability may suffer.
 
 - Clients are aware of the network addresses of the replicas in the Raft cluster through some form of service discovery mechanism.
@@ -56,7 +56,7 @@ A term is a duration for which a specific server acts as the leader. A new elect
 
 - Zookeeper is based on `Zab` (a protocol similar but not identical to Paxos), and etcd is built on top of Raft, the protocol discussed in this document.
 
-## Reference
+### Reference
 - [Raft](https://www.pingcap.com/blog/implement-raft-in-rust)
 - [Implementing raft](https://eli.thegreenplace.net/2020/implementing-raft-part-0-introduction)
 - [Raft lecture](https://www.youtube.com/watch?v=YbZ3zDzDnrw&feature=youtu.be)

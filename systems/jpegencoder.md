@@ -11,7 +11,7 @@ The major steps in JPEG compression involves.
 7. RLE(Run Length Encoding) on AC Components
 8. Entropy coding — Huffman or arithmetic
 
-## Conversion 
+### Conversion 
 - Colour space transform and subsampling
     - CMY for printer
     - YCbCr
@@ -30,7 +30,7 @@ Cb = d*R + e*G + f*B
 Cr = g*R + h*G + i*B
 ```
 
-##  DCT
+###  DCT
 - 8 * 8 bits
 - Center around -127 - 128
 - DCT * DCT CoEff = Centered 8 * 8 bits
@@ -48,7 +48,7 @@ Cr = g*R + h*G + i*B
     - Raw video can be regarded as being a series of single images. 
     - There are typically 25, 30 or 50 frames per second
 
-## Huffman Coding
+### Huffman Coding
 - Number of Zero preceeding, Symbol, Value
 - Marker
     - Two Byte values (FFXX )

@@ -1,6 +1,6 @@
 # Lambda Calculus
 
-## JavaScript Lambda
+### JavaScript Lambda
 
 expression :: = variable
               | expression expression
@@ -17,7 +17,7 @@ const I = a => a
 // M(M) == Infinite ( omega combinator )
 ```
 
-## Resources
+### Resources
 - [Lambda Calculus](https://www.youtube.com/watch?v=3VQ382QG-y4 )
 - [What is Y combinator](https://stackoverflow.com/questions/93526/what-is-a-y-combinator)
 - [How to succeed at recursion without really recursing](https://mvanier.livejournal.com/2897.html)

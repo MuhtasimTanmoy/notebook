@@ -1,13 +1,13 @@
 # Encrypted Messaging
 
-## OTR
+### OTR
 - Off the record
 - As OTR sessions existed between exactly two clients, the chat history would not be synchronized across other clients of the involved parties. 
 - Furthermore, OTR chats were only possible if both participants were online at the same time, due to how the rolling key agreement scheme of OTR worked. 
 - This one not used now. Replaced by siognal protocol.
 
 
-## Signal Protocol
+### Signal Protocol
 - Prekey bundle
     - `IPKb` 
         - Identity public key bundle
@@ -31,7 +31,7 @@
 
 
 
-## EC_DH_RSA
+### EC_DH_RSA
 - Elliptic curve diffie hellman RSA.
 
 ![Elliptic Curve](screen/elliptic.png)
@@ -56,7 +56,7 @@ y^2 = x^3 + 486662 x^2 + x
 ![Elliptic Curve ](screen/ECDH.png)
 
 
-## Extended Tripple Diffie-Hellman x3dh
+### Extended Tripple Diffie-Hellman x3dh
 
 `IPKa` - a's Identity Public Key
 `EPKa` - a's Ephimeral Public key (Generated once for usage)
@@ -71,7 +71,7 @@ y^2 = x^3 + 486662 x^2 + x
 
 - Used for session establishement of Signal Protocol.
 
-## Forward Secrecy
+### Forward Secrecy
 - Forward secrecy (FS), also known as perfect forward secrecy (PFS), is a feature of specific key agreement protocols that gives assurances that session keys will not be compromised even if long-term secrets used in the session key exchange are compromised.
 For HTTPS the long-term secret is typically the private signing key of the server.
 The session key is kept different and changed over long period of time.
@@ -81,7 +81,7 @@ The session key is kept different and changed over long period of time.
 - PGP lacks deniability 
 
 
-## Double Ratchet Algorithm / Axolotl Ratchet
+### Double Ratchet Algorithm / Axolotl Ratchet
 
 - Once the session established then the key goes through a one way function that acts as ratchet to generate more key.
 - The key is gone through KDF (Key Derivation Function).
@@ -96,7 +96,7 @@ The session key is kept different and changed over long period of time.
 
 ![Double Ratchet](screen/Ratchet.png)
 
-## PreKeys
+### PreKeys
 This protocol uses a concept called 'PreKeys'. A PreKey is an ECPublicKey and an associated unique ID which are stored together by a server. PreKeys can also be signed.
 It is used for asyncronous encrytion. As the other client can be offline for several months.
 
@@ -108,7 +108,7 @@ At install time, clients generate
 - A single signed PreKey
 - List of unsigned PreKeys (As per protocol 100 prekeys) and transmit all of them to the server.
 
-## Sessions
+### Sessions
 
 Signal Protocol is session-oriented. 
 Clients establish a "session," which is then used for all subsequent encrypt/decrypt operations.
@@ -122,7 +122,7 @@ Sessions are established in one of three ways:
 - `KeyExchangeMessages:` Two clients can exchange KeyExchange messages to establish a session.
 
 
-## State
+### State
 
 An established session encapsulates a lot of state between two clients. That state is maintained in durable records which need to be kept for the life of the session.
 
@@ -134,7 +134,7 @@ State is kept in the following places:
 - `Session State:` Clients will need to maintain the state of the sessions they have established.
 
 
-## Workflow
+### Workflow
 - Alice Bob communicating
 - Bob publishes his public key in Key Directory
 - Alice fetches from it key from it.
@@ -147,12 +147,12 @@ State is kept in the following places:
 ![](screen/TextSecure.png)
 
 
-## Group Message Encryption - [reference](https://www.youtube.com/watch?v=tCKd6xBqyDw)
+### Group Message Encryption - [reference](https://www.youtube.com/watch?v=tCKd6xBqyDw)
 
 - Creating one shared group key, send it to server for fan out instead of pairwise encryption.
 - Sender keys does not have post compromise security.
 
-## Omemo
+### Omemo
 A high level intro on how Omemo works: 
 
 - Each device gets it’s own public/private key pair. When a message is sent, it is encrypted with a message-specific key.
@@ -166,24 +166,24 @@ A high level intro on how Omemo works:
 - The current scheme is trust-on-first-use (TOFU), meaning the first fingerprint is trusted. 
 - New fingerprints you have to manually trust. You should check in person, or via the phone with your comunication partner if the fingerprints match.
 
-## SSL Pinning
+### SSL Pinning
 - Pinning certificate of one definite server in app to avoid DNS poisoning .
 -  As mobile apps are connecting to one backend everytime, it makes sense.
 - Trust on first sight
 
 ```bash
-## Certificate download and save
+### Certificate download and save
 openssl s_client -showcerts -connect domain.com:443
 
-## public key
+### public key
 openssl s_client -connect www.site.com:443 -CAfile rootcert.pem | openssl x509 -pubkey -noout | openssl rsa -pubin -outform der | openssl enc -base64 -d > publickey.der
 
-## hash 
+### hash 
 echo "tanmoy" | openssl dgst -sha256 -binary | openssl enc -base64
 
 ```
 
-## References
+### References
 - [Omemo Encryption Protocol Spec](https://xmpp.org/extensions/xep-0384.html)
 - [Signal Protocol Concept Explained ** ](https://www.youtube.com/watch?v=7WnwSovjYMs)
 - [Forward Secrecy](https://en.wikipedia.org/wiki/Forward_secrecy)

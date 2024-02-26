@@ -1,15 +1,15 @@
 # WebRTC
 
-## ICE
+### ICE
 - ICE needs to gather candidates, prioritize them, choose default ones, exchange them with the remote party, pair them and order into check lists.
 
-## STUN
+### STUN
 - STUN allows a client to obtain a transport address (an IP address and port) which may be useful for receiving packets from a peer. However, addresses obtained by STUN may not be usable by all peers.
 
-## TURN
+### TURN
 - Commmunication through server
 
-## NAT 
+### NAT 
 - All types of NAT fall into two categories; Static NAT and Dynamic NAT. Static NAT is where administrators manually create and maintain the NAT mappings and is usually associated with inbound types of NAT. Dynamic NAT is where the router creates and maintains mappings automatically on demand and is usually associated with outbound types of NAT.
 
 - Every TCP/IP packet contains a source IP address, source port, destination IP address and destination port. All types of NAT create NAT mappings using these values.
@@ -37,7 +37,7 @@
     - Example – Expanding on the example from the port restricted cone NAT my PC makes two outbound connections to website IP 217.87.69.8 and 56.76.87.98. My PC uses source IP192.168.0.1 with source port 56723 for both connections. On all types of NAT so far both these connections would be NATed to change the source IP address only and keep the source port the same. This time however instead of leaving the source port as 56723 a symmetric NAT changes it to 45765 for one connection and 53132 for the other connection (random). This has created unique mappings for each connection and traffic from those destinations must come in on the respective ports. So 217.87.69.8 must send packets to destination port 45765 and 56.76.87.98 must send packets to port 53132 in addition to the requirements of a port restricted cone NAT.
 
 
-## Why symmetric NAT is not STUN compatible?
+### Why symmetric NAT is not STUN compatible?
 
 Here in case of first it works. In second it does not.
 
@@ -74,7 +74,7 @@ Another person browses xbox live for my game.
 - How peer to peer game connects and arcitecture is available here [Game server](../architecture/game%20server.md)
 
 
-## WebRTC Connection Process
+### WebRTC Connection Process
 
 - The process begins when a client computer wants to contact a peer computer for a data transaction, but cannot do so due to both client and peer being behind respective NATs. If STUN is not an option because one of the NATs is a symmetric NAT (a type of NAT known to be non-STUN compatible), TURN must be used.
 
@@ -92,7 +92,7 @@ Another person browses xbox live for my game.
 
 - While TURN is more robust than STUN in that it assist in traversal of more types of NATs, a TURN communication relays the entire communication through the server requiring far more server bandwidth than the STUN protocol, which typically only resolves the public facing IP address and relays the information to client and peer for them to use in direct communication. For this reason, the ICE protocol mandates STUN usage as a first resort, and TURN usage only when dealing with symmetric NATs or other situations where STUN cannot be used.
 
-## SDP
+### SDP
 - In order to exchange media, WebRTC uses session description protocol (SDP) to initiate and execute an “offer” and “answer” mechanism between endpoints or peers. Supported codecs, connectivity, and protocols are added to the SDP so that clients can decide what media codecs “Session Traversal Utilities for NAT” (STUN) allows clients to learn what their public NAT’d IP address and port is. Once this is achieved it’s possible to provide the correct details to other clients that want to connect to your client. Typically, a STUN server is needed. A STUN client can send messages to the STUN server to get the information about public IP and ports, and retrieve that information. This protocol does not work for symmetric NATs, however. Symmetric NATs generate ports are random for bindings. STUN cannot communicate that dynamic mapping when negotiating media paths.they can send and receive, and where to send them.
 
  - Clients then generate a connection offer, and start to generate multiple candidates to be used to stream media to another client.
@@ -101,7 +101,7 @@ Another person browses xbox live for my game.
 
  - The candidates can be packed in the original offer, or can be sent independently after the offer is sent. The latter is known as trickle ICE
 
-## Keywords
+### Keywords
 
 - Signalling is not standard 
     - SIP, Jingle

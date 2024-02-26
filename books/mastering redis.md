@@ -28,7 +28,7 @@ Commands
     - Write back ****
     - LRU
 
-## [Redis](https://university.redislabs.com)
+### [Redis](https://university.redislabs.com)
 - Redis cluster only supports database 0, logical
 - Keys not production safe, Scan is
 - Del remove key and memory removed, Unlink only breaks the link, memory reclaimed asyncronously
@@ -36,7 +36,7 @@ Commands
 - EXPIRE HANDLE
 - With set maintain currently
 
-## References
+### References
 - [The Little Redis Book](https://www.openmymind.net/redis.pdf)
 - [Redis cluster specification](https://redis.io/topics/cluster-spec)
 - [Documentation](https://redis.io/documentation)

@@ -4,7 +4,7 @@ Ethereum - Computation
 Swarm - Storage
 Whisper - Messaging
 
-## Implementations
+### Implementations
 - Swarm
 - Sia
 - Storj
@@ -12,7 +12,7 @@ Whisper - Messaging
 - IPFS
 - Arweave - Archive of data
 
-## [Libri](https://github.com/drausin/libri)
+### [Libri](https://github.com/drausin/libri)
 
 - The Libri API exposes simple `Put / Get` endpoints and a streaming Subscribe endpoint for storage notifications across the entire network.
 
@@ -27,7 +27,7 @@ Whisper - Messaging
 - Author clients convert a plaintext document into these encrypted chunks and back again.
 
 
-## [Sia](https://gitlab.com/NebulousLabs/Sia)
+### [Sia](https://gitlab.com/NebulousLabs/Sia)
 
 - The Sia software divides files into 30 segments before uploading, each targeted for distribution to hosts across the world.
 

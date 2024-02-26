@@ -1,6 +1,6 @@
 # Encoding
 
-## BASE64
+### BASE64
 
 - Whenever shipping binary data, convert that to base64. Binary streams chunked in 6 bits (2^6 = 64).
 
@@ -8,7 +8,7 @@
 
 - Essentially each 6 bits of the input is encoded in a 64-character alphabet. The "standard" alphabet uses A-Z, a-z, 0-9 and + and /, with = as a padding character. There are URL-safe variants.
 
-## Bit parity
+### Bit parity
 
 - In this method, every byte transmitted would have 7-bits of data, and the 8th would be 1 or 0, to force the total number of 1 bits in the byte to be even.
     - eg. 0x01 to 0x81, 0x02 to 0x82, 0x03 to 0x03 etc.
@@ -27,7 +27,7 @@
 
 - Base64 is a method to encode a byte sequence to a string.
 
-## Unicode and UTF-8
+### Unicode and UTF-8
 
 - **UTF-8** is a compromise character encoding that can be as compact as ASCII (if the file is just plain English text) but can also contain any unicode characters (with some increase in file size).
 
@@ -50,7 +50,7 @@
 - Not every byte sequence represents an Unicode string encoded in UTF-8 or UTF-16.
 - Not every Unicode string represents a byte sequence encoded in Base64.
 
-## References
+### References
 - [What is base 64 encoding used for?](https://stackoverflow.com/questions/201479/what-is-base-64-encoding-used-for)
 - [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses)
 - [Unicode list](https://home.unicode.org)

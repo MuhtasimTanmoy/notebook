@@ -29,7 +29,7 @@ bt  # backtrace
     - Assemble object
     - Link into executable
 
-## Precompiled Headers
+### Precompiled Headers
 
 - Precompiled headers are a general approach employed by many compilers to reduce compilation time.
 - Consequently, compile times can often be greatly improved by caching some of the (redundant) work done by a compiler to process headers. 
@@ -37,7 +37,7 @@ bt  # backtrace
 - While details of precompiled headers vary between compilers, precompiled headers have been shown to be highly effective at speeding up program compilation on systems with very large system headers (e.g., macOS).
 
 
-## References
+### References
 - [LLVM User Manual](https://clang.llvm.org/docs/UsersManual.html#terminology)
 - [LLVM Grad Student](http://www.cs.cornell.edu/~asampson/blog/llvm.html)
 - [LLVM Warning](https://softwareengineering.stackexchange.com/questions/122608/clang-warning-flags-for-objective-c-development/124574#124574)

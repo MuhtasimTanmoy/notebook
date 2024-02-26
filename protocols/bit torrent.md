@@ -35,12 +35,12 @@ can use this information in order to deliver content efficiently.
 
 - The peers distribute the file to each other by using the swarming technique.
 
-## The Tracker Protocol 
+### The Tracker Protocol 
 
-## Algorithm
+### Algorithm
 - Choke Algorithm - For uploading
 - Rarest first piece selection algorithm - For downloading
 
-## References
+### References
 - [Bittorrent Paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.114.4974&rep=rep1&type=pdf#:~:text=BitTorrent%20is%20an%20application%20layer,they%20are%20uploading%20to%20others.)
 - [Protocol Video](https://www.youtube.com/watch?v=8sTttjDmNbk)

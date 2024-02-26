@@ -1,6 +1,6 @@
 # Certificate
 
-## SSL / TLS Handshake
+### SSL / TLS Handshake
 
 The Secure Socket Layer protocol was created by Netscape to ensure secure transactions between web servers and browsers. The protocol uses a third party, a Certificate Authority (CA), to identify one end or both end of the transactions. This is in short how it works.
 
@@ -23,7 +23,7 @@ The Secure Socket Layer protocol was created by Netscape to ensure secure transa
 - Diffie hellman does the sesison shared secret key. RSA verifies it. Out put a session key which is symmetric and fast unlike RSA.
 
 
-## SSH
+### SSH
 - Simple TCP connection. Can be any reliable protocol.
 - Transfer packets. 
 - ssh -v server
@@ -36,7 +36,7 @@ padding         -
 message authentication code
 ```
 
-## Certificate
+### Certificate
 
 - How do you know that you are dealing with the right person or rather the right web site. This someone, you have to implicitly trust: you have his/her certificate loaded in your browser (a root Certificate). 
 
@@ -96,14 +96,14 @@ message authentication code
     - This is a passworded container format that contains both public and private certificate pairs. Unlike .pem files, this container is fully encrypted. 
     - Openssl can turn this into a .pem file with both public and private keys: openssl pkcs12 -in file-to-convert.p12 -out converted-file.pem -nodes
 
-## Chain of trust
+### Chain of trust
 - Root CA -> ICA ( Intermediate Certificate ) -> Certificate
 - For practical, visit https site, see cert in browser and open `Keychain access` to see root that signs.
 So when requested two or more certificates are returned.
 ![TLS](screen/TLS.png)
 
 
-## Public Key Infrastructure
+### Public Key Infrastructure
 - The framework to associate a public key with an individual
 - Trust on first sight. (SSH)
 - Web of trust (Omemo encryption)
@@ -112,7 +112,7 @@ So when requested two or more certificates are returned.
     - Server distributes cert and intermediates
     - Clients validate the collection
 
-## x.509
+### x.509
 An `X.509` certificate contains a public key and an identity (a hostname, or an organization, or an individual), and is either signed by a certificate authority or self-signed.
 
 Structure
@@ -155,7 +155,7 @@ Public Key + User Identity -> hash
 openssl x509 -in test.pem -text 
 ```
 
-## CSR - Certificate Signing Request
+### CSR - Certificate Signing Request
 
 In public key infrastructure (PKI) systems, a certificate signing request (also `CSR` or certification request) is a message sent from an applicant to a certificate authority in order to apply for a digital identity certificate.
 
@@ -171,7 +171,7 @@ C	Country
 MAIL    Email address
 ```
 
-## Adding SSL in Nginx
+### Adding SSL in Nginx
 Adding SSL protection is very easy now. We just need to install certbot and use it.
 
 ```
@@ -197,7 +197,7 @@ sudo certbot renew
 certbot certificates
 ```
 
-## Reference
+### Reference
 - [What is SSL and what are Certificates?](https://tldp.org/HOWTO/SSL-Certificates-HOWTO/x64.html)
 - [SSL and SSL Certificates Explained For Beginners
 ](http://www.steves-internet-guide.com/ssl-certificates-explained)

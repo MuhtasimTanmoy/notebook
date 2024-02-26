@@ -6,7 +6,7 @@
 - Sockets are assumed to be associated with a specific socket address, namely the IP address and a port number for the local node
 - Associating a socket with a socket address is called binding.
 
-## Unix Domain Socket
+### Unix Domain Socket
 
 A Unix domain socket or IPC socket (inter-process communication socket) is a data communications endpoint for exchanging data between processes executing on the same host operating system.
 
@@ -20,7 +20,7 @@ A Unix domain socket or IPC socket (inter-process communication socket) is a dat
     - Unordered and unreliable transmission of datagrams (SOCK_DGRAM, compare to UDP).
     The Unix domain socket facility is a standard component of POSIX operating systems.
 
-## Why use UDP instead of TCP
+### Why use UDP instead of TCP
 
 IP sockets (especially TCP/IP sockets) are a mechanism allowing communication between processes over the network. In some cases, you can use TCP/IP sockets to talk with processes running on the same computer (by using the loopback interface).
 
@@ -36,6 +36,6 @@ UNIX domain sockets are subject to file system permissions, while TCP sockets ca
 
 - Common applications of very high number of connections include pub/sub servers, chat, file servers, web servers, and software-defined networking.
 
-## Reference
+### Reference
 - [Sockets in Operating System](https://www.youtube.com/watch?v=uagKTbohimU)
 - [Network socket](https://en.wikipedia.org/wiki/Network_socket)

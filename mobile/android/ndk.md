@@ -62,5 +62,5 @@
     - Typical good candidates for the NDK are self-contained, CPU-intensive operations that don't allocate much memory, such as signal processing, physics simulation, and so on. Simply re-coding a method to run in C usually does not result in a large performance increase.
     - The NDK can, however, can be an effective way to reuse a large corpus of existing C/C++ code.
 
-## References
+### References
 - [Dalvik vs ART](https://www.geeksforgeeks.org/difference-between-dalvik-and-art-in-android/)

@@ -1,6 +1,6 @@
 # Elastic Search
 
-## Structure
+### Structure
 - Elastic Search forms with Index
 - Index (Logical namespace/ DB Name) -> Divided into Shrads (Types/ Table/ Schema)
 - Each shrad has replica
@@ -26,7 +26,7 @@
       - Record level inverted index (word -> record)
       - Word level inverted index (word -> record, position )
 
-## Internal Usage
+### Internal Usage
 - Porters stemmer algo
     - The Porter stemming algorithm (or ‘Porter stemmer’) is a process for removing the commoner morphological and inflexional endings from words in English. Its main use is as part of a term normalisation process that is usually done when setting up Information Retrieval systems.
 - Murmur3 hash function
@@ -37,7 +37,7 @@
         - when duplicates then N
         - when sorted logN
 
-## Database Indexing
+### Database Indexing
 
 - Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. 
 
@@ -59,13 +59,13 @@
 - Graph database which considers relation and data 
 secondary index
 
-## Notes
+### Notes
 - Low cardinality in database - Common attribute - Easy for indexing
 - Made efficient through bitmap indexing
 - DB Normalization - Denormalization
     - A list of words contained in a document.(Forward index)
     - A list of documents containing a word.(Inverted index)
 
-## References
+### References
 - [Anatomy of Elastic Search](https://blog.insightdatascience.com/anatomy-of-an-elasticsearch-cluster-part-i-7ac9a13b05db)
 - [How does database indexing work?](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)

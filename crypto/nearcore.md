@@ -15,6 +15,6 @@
 - [Sharding at Near Protocol Min Zhang](https://youtu.be/uNjPNlKXaMQ)
 
 
-## References
+### References
 - [Guide to Nearcore Development](https://near.github.io/nearcore/index.html)
 - [The NEAR Protocol Specification](https://nomicon.io)

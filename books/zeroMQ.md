@@ -5,7 +5,7 @@
 - PUB-SUB sockets: you do not know precisely when a subscriber starts to get messages. - Even if you start a subscriber, wait a while, and then start the publisher, the subscriber will always miss the first messages that the publisher sends. 
 - This is because as the subscriber connects to the publisher (something that takes a small but nonzero amount of time), the publisher may already be sending messages out.
 
-### Why ZeroMQ
+#### Why ZeroMQ
 
 Many applications these days consist of components that stretch across some kind of network, either a LAN or the Internet. So, many application developers end up doing some kind of messaging. Some developers use message queuing products, but most of the time they do it themselves, using TCP or UDP. These protocols are not hard to use, but there is a great difference between sending a few bytes from A to B and doing messaging in any kind of reliable way.
 - the “broker,” that does addressing, routing, and queuing.
@@ -17,7 +17,7 @@ Many applications these days consist of components that stretch across some kind
 - It does not impose any format on messages. They are blobs of zero bytes to gigabytes large. When you want to represent data you choose some other product on top, such as Google’s protocol buffers, XDR, and others.
 
 
-## Socket and Patterns
+### Socket and Patterns
 
 ØMQ sockets are easy to digest. These sockets have a life in four parts, just like BSD sockets:
 

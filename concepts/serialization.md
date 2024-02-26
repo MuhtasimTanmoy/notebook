@@ -14,7 +14,7 @@
 - CSV
 - YAML
 
-## Marshalling vs Serialization
+### Marshalling vs Serialization
 
 Marshaling and serialization are loosely synonymous in the context of remote procedure call, but semantically different as a matter of intent.
 

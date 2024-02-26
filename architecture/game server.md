@@ -186,7 +186,7 @@
         - Registry Pattern
         - Resource Pattern
 
-## References
+### References
 - [Source Multiplayer Networking](https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking)
 - [High-Level Development of Multiserver Online Games](https://www.hindawi.com/journals/ijcgt/2008/327387)
 - [ECS System Design](https://www.youtube.com/watch?v=aKLntZcp27M)

@@ -15,7 +15,7 @@
 - If you have a reference &T, then normally in Rust the compiler performs optimizations based on the knowledge that &T points to immutable data. Mutating that data, for example through an alias or by transmuting an &T into an &mut T, is considered undefined behavior. `UnsafeCell<T>` opts-out of the immutability guarantee for &T: a shared reference `&UnsafeCell<T>` may point to data that is being mutated. This is called “interior mutability”
 
 
-## Ownership
+### Ownership
 
  - Ownership 
     - The scope that will free the resource. 
@@ -54,7 +54,7 @@ fn add_one() -> int {
 
 ```
 
-## Rust use after free
+### Rust use after free
 
 ```rust
 
@@ -72,7 +72,7 @@ take_ownership(foo);
 
 ```
 
-## Rust does not have the concept of null
+### Rust does not have the concept of null
 
 ```rust
 // rust
@@ -91,7 +91,7 @@ int *i = new int;
 ```
 
 
-## Copy vs Reference
+### Copy vs Reference
 
 ```rust
 
@@ -168,10 +168,10 @@ fn main() {
 
 ```
 
-## Macro
+### Macro
 - Rust maintains `Hygenic macro`
 
-## Borrow
+### Borrow
 
 Any borrow must last for a scope no greater than that of the owner. We may have one or the other of these two kinds of borrows, but not both at the same time.
 
@@ -181,7 +181,7 @@ Any borrow must last for a scope no greater than that of the owner. We may have 
 Borrow checker will check you have not used anything after you have gotten rid of it. Mutable access to something shared.
 
 
-## Lifetime Operator
+### Lifetime Operator
 
 ```rust
 
@@ -230,7 +230,7 @@ let x: &'static i32 = &FOO;
 
 ```
 
-## Lifetime Elision
+### Lifetime Elision
 
 Here explicit lifetime declation is elicited. There are the three rules:
 
@@ -241,7 +241,7 @@ Here explicit lifetime declation is elicited. There are the three rules:
 - If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.
 
 
-## Mutability
+### Mutability
 
 ```rust
 // Mutability is a property of either a borrow (&mut) or a binding (let mut). Mutability is a property of the binding, not of the structure itself.
@@ -270,7 +270,7 @@ println!("y: {:?}", point.y);
 
 ```
 
-## Destructuring
+### Destructuring
 
 ```rust
 
@@ -284,11 +284,11 @@ let Inches(integer_length) = length;
 
 ```
 
-## Enum
+### Enum
 
 Also called `tagged union`
 
-## Match
+### Match
 
 Match is also an expression, which means we can use it on the right-hand side of a let binding or directly where an expression is used:
 
@@ -305,7 +305,7 @@ let number = match x {
 };
 ```
 
-## Pattern introduces shadowing
+### Pattern introduces shadowing
 
 ```rust
 let x = 1;
@@ -327,7 +327,7 @@ println!("x: {}", x)
 Sometimes it’s a nice way of converting something from one type to another, in this example the integers are converted to String.
 
 
-## Methods
+### Methods
 
 This `associated function` builds a new Circle for us. 
 Note that associated functions are called with the Struct::function() syntax, rather than the ref.method() syntax.Some other languages call associated functions ‘static methods’.
@@ -376,7 +376,7 @@ impl Circle {
 
 ```
 
-## String
+### String
 
 A ‘string’ is a sequence of Unicode scalar values encoded as a stream of UTF-8 bytes.
 
@@ -413,7 +413,7 @@ println!("");
 ```
 
 
-## Unsized type
+### Unsized type
 
 Rust understands a few of these types, but they have some restrictions. 
 
@@ -425,7 +425,7 @@ There are three:
 
 - Only the last field in a struct may have a dynamically sized type, the other fields must not. Enum variants must not have dynamically sized types as data.
 
-## Generic
+### Generic
 
 ```rust
 
@@ -475,7 +475,7 @@ trait Graph {
 }
 ```
 
-## Attributes
+### Attributes
 
 ```rust
 #[derive(Debug)]
@@ -496,7 +496,7 @@ fn main() {
 // PartialOrd
 ```
 
-## Check last state of stuct when relesed
+### Check last state of stuct when relesed
 
 ```rust
 struct Firework {
@@ -519,7 +519,7 @@ fn main() {
 // Arc<T> type is a reference-counted type. When Drop is called, it will decrement the reference count, and if the total number of references is zero, will clean up the underlying value.
 ```
 
-## Trait Objects
+### Trait Objects
 
 When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. 
 This is called ‘dispatch’. 
@@ -566,7 +566,7 @@ fn main() {
 // The methods of the trait can be called on a trait object via a special record of function pointers traditionally called a ‘vtable’ 
 ```
 
-## Variance
+### Variance
 
 ```rust
 // Covariance
@@ -596,7 +596,7 @@ struct Deserializer<T> {
 ```
 
 
-## Callback based future
+### Callback based future
 
 ```rust
 // Way too many allocaiton, dynamic dispatch
@@ -607,10 +607,10 @@ trait Future {
 }
 ```
 
-## Concurrency
+### Concurrency
 - When a type T implements Send, it indicates that something of this type is able to have ownership transferred safely between threads.
 
-## Other Points
+### Other Points
 
 - Static mutable is unsafe, and so must be done in an unsafe block.
 
@@ -669,16 +669,16 @@ serde = { version = "1.0", default-features = false, features = ["derive"], opti
 
 **Trait objects** - has lackings, read again
 
-## REPR
+### REPR
 This is the most important repr. It has fairly simple intent: do what C does. The order, size, and alignment of fields is exactly what you would expect from C or C++. Any type you expect to pass through an FFI boundary should have repr(C), as C is the lingua-franca of the programming world. This is also necessary to soundly do more elaborate tricks with data layout such as reinterpreting values as a different type.
 
-## Closure
+### Closure
 - boxed closure syntax |&:| -> int
 -  the sugar syntax is `|X: args...| -> ret`, where the X can be `&, &mut or nothing`, corresponding to the `Fn, FnMut, FnOnce` traits, you can also write `Fn<(args...), ret>` etc. for the non-sugared form. The sugar is likely to be changing (possibly something like `Fn(args...) -> ret).`
 
 ---
 
-## References
+### References
 - [Rust Ownership, Safety Explained](https://words.steveklabnik.com/a-30-minute-introduction-to-rust)
 
 - [How Rust Ownership works?](https://static.rust-lang.org/doc/master/book/ownership.html)

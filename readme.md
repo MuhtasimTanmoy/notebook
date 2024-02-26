@@ -15,7 +15,7 @@
 # Notebook
 > Compilation of notes containing key takeaways and study summaries to document learning paths on topics that I find interesting.
 
-## Table of Contents
+### Table of Contents
 
 - database
     - [cockroachdb](./database/cockroachdb.md)

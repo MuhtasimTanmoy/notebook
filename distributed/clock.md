@@ -1,6 +1,6 @@
 # Clock
 
-## Lamport Timestamps
+### Lamport Timestamps
 - Each node knows
     - It's events
     - Communication events
@@ -11,7 +11,7 @@
     `c_j(d) = max(c_i(a)++, c_j(d))`
     - Cant distinguish concurrent event
 
-## Vector Clock
+### Vector Clock
 - Just array of lamport
 - CRDT
 - Causally Related 
@@ -19,13 +19,13 @@
 - Concurrent 
     - One less, one more, one less / more
 
-## Interval Tree Clock
+### Interval Tree Clock
 - Version Vectors or Interval Tree Clocks
 - All unique identifier coming together modifying
 - We need to track causality. 
 - In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events `happened before` the other one.
 
-## References
+### References
 - [Interval Search Trees ](https://www.youtube.com/watch?v=q0QOYtSsTg4)
 - [Pierre Chapuis - A short introduction to Interval Tree Clocks](https://www.youtube.com/watch?v=PgCziibErvU)
 - [A short introduction to Interval Tree Clocks](https://blog.separateconcerns.com/2017-05-07-itc.html)

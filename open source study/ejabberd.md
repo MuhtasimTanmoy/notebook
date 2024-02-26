@@ -32,7 +32,7 @@
     - https://github.com/benoitc/unicode_util_compat.git
 
 
-## Architecture overview
+### Architecture overview
 ![alt text](https://docs.ejabberd.im/static/images/architect/ejabberd_large_scale.png)
 
 ![alt text](https://image.slidesharecdn.com/xmppacademy2-151105134735-lva1-app6892/95/xmpp-academy-2-7-638.jpg?cb=1446731376)
@@ -60,7 +60,7 @@
     - Utils and Libraries. Some other libraries and utils exist in ejabberd for common purposes, e.g.: XML processing, SASL authentication, Encodings, Logger, etc. It is worth noting the ejabberd_logger is a very good logger module perfectly usable by any other projects.
 - The main difference between the jabber:component:* namespaces and the 'jabber:client' or 'jabber:server' namespace is authentication.
 
-## PUB SUB
+### PUB SUB
 - Subscribe 
 - Unsubscribe
 - Configure
@@ -88,7 +88,7 @@
 - https://www.haproxy.org/download/1.8/doc/proxy-protocol.txt
 
 
-## IRC
+### IRC
 - Server
     - backbone
 - Clients
@@ -107,7 +107,7 @@ The standard structure of a network of IRC servers is a tree.[35] Messages are r
    and channel hosting and management (following specific rules [IRC-
    CHAN]).
    
-## Actor Model
+### Actor Model
  - Actors instead of objects
  - No shared state between actors
  - Asyncronous message passing
@@ -118,13 +118,13 @@ The standard structure of a network of IRC servers is a tree.[35] Messages are r
  - Messages
  - Mailbox - (Message Queue)
 
-## System Up & Running takeaways
+### System Up & Running takeaways
 
-## Log
+### Log
     - /usr/local/var/log/ejabberd/ejabberd.log
 
 
-## Scripts
+### Scripts
 ```
 /usr/local/sbin/ejabberdctl
 /usr/local/sbin/ejabberdctl start 
@@ -136,10 +136,10 @@ sudo cat /usr/local/etc/ejabberd/ejabberd.yml
 ejabberdctl register admin1 example.org FgT5bk3
 ```
 
-### Running endpoint 
+#### Running endpoint 
     - http://localhost:5280/admin
 
-## Port scan result
+### Port scan result
 
 PORT      STATE    SERVICE
 
@@ -192,7 +192,7 @@ PORT      STATE    SERVICE
 - Other alternative
     - Matrix, which is pull based
 
-## References
+### References
 - [Installation Guide](https://www.ejabberd.im/files/doc/guide.html#htoc2)
 - [How it works](https://docs.ejabberd.im/admin/guide/clustering/)
 - [Modules](https://docs.ejabberd.im/admin/configuration/modules/#mod-sip)

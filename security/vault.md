@@ -22,5 +22,5 @@ Three main issue solved
 - Application data access secured with crypto offload, rotation, versioning, decomissioning
 
 
-## Vault Course
+### Vault Course
 - Vault secret store

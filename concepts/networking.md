@@ -1,6 +1,6 @@
 # Networking
 
-## Protocol stack
+### Protocol stack
 
 |  |  |  |
 |--|--|--|
@@ -12,7 +12,7 @@
 
 HOST LAYER - MEDIA LAYER
 
-## VETH pair
+### VETH pair
 - Connect two separate network namespaces (through tap)
     - Network namespace
         - Logically isolated network stack
@@ -35,7 +35,7 @@ HOST LAYER - MEDIA LAYER
 - open - vswitch  
 
 
-## VXLAN
+### VXLAN
 
 - VXLAN is a tunneling protocol that encapsulates Layer 2 Ethernet frames in Layer 3 UDP packets, enabling you to create virtualized Layer 2 subnets, or segments, that span physical Layer 3 networks. 
 
@@ -49,10 +49,10 @@ HOST LAYER - MEDIA LAYER
 
 - VPC - Logical segment of resources
 
-## TUN/TAP
+### TUN/TAP
 - TUN, namely network TUNnel, simulates a network layer device and operates in layer 3 carrying IP packets. 
 - TAP, namely network TAP (Terminal Access Point), simulates a link layer device and operates in layer 2 carrying Ethernet frames. 
 - TUN is used with routing. TAP is used for creating a network bridge.
 
-## References
+### References
 - [Introduction to Linux interfaces for virtual networking](https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking)

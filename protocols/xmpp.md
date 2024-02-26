@@ -37,7 +37,7 @@ Multiple implementations -
 - prosody - lightweight
 
 
-## XMPP Core
+### XMPP Core
 
 -  Core 
    — Information about the core XMPP technologies for XML streaming
@@ -48,7 +48,7 @@ Multiple implementations -
 -  Pubsub 
    — Alerts and notifications for data syndication, rich presence, and more
 
-## Rosters ( Contact List ) subscriptions  and presence
+### Rosters ( Contact List ) subscriptions  and presence
 
 Basically your client (gajim, pidgin, adium, etc) sends packets (XML) to a router (XMPP "server") that determines who gets to see a copy of that packet.  
   
@@ -56,7 +56,7 @@ Because it's XML-based, however, there are many, many extensions to XMPP - inclu
   
 Then there's the "presence" part of the name - when you want to chat with someone, you have to "subscribe" to them - in Facebook terms, you add them as a friend, and they accept you, subscribing to you (usually) in return. When you login to the XMPP server, your status message is delivered to anyone who has subscribed to your presence - so they know you just logged on and can message you. There's quite a bit more you can do with it, but that's the basics.
 
-## Fundamental Exchange of Info
+### Fundamental Exchange of Info
 The most basic unit of communication in XMPP is called a stanza.
 
 Stanzas have three possible names( XML tag names) in XMPP ,these can be a Message stanza , an IQ stanza and a Presence stanza.
@@ -86,10 +86,10 @@ Stanzas have three possible names( XML tag names) in XMPP ,these can be a Messag
 - These stanza types provide three different communication primitives: a "push" mechanism for generalized messaging, a specialized "publish-subscribe" mechanism for broadcasting information about network availability, and a "request-response" mechanism for more structured exchanges of data (similar to [HTTP]).
 
 
-## Encryption
+### Encryption
 There is no TLS usage in xmpp stream as it does not support raw data only frame. It can be enabled at websocket layer.
 
-## Websocket Binding
+### Websocket Binding
 - A WebSocket binding for XMPP provides higher performance than the current HTTP binding for XMPP.
 - During the WebSocket handshake, the client MUST include the value
    'xmpp' in the list of protocols for the 'Sec-WebSocket-Protocol'
@@ -113,6 +113,6 @@ There is no TLS usage in xmpp stream as it does not support raw data only frame.
 - https://tools.ietf.org/html/rfc7395
 - https://tools.ietf.org/html/rfc6455
 
-## XMPP MUC
+### XMPP MUC
 - [Do I need to Alloc Into XMPPROOM Object always for different operation of Room?](https://github.com/robbiehanson/XMPPFramework/issues/642)
 - [Building a group chat with the XMPPFramework and eJabberd](https://medium.com/@dylanshine/building-a-group-chat-with-the-xmppframework-59fa17ecf4a0)

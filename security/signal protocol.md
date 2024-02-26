@@ -1,7 +1,7 @@
 # Signal
 Here concept specific notes taken for libsignal library.
 
-## HKDF
+### HKDF
 
 A key derivation function (KDF) is a basic and essential component of cryptographic systems.  Its goal is to take some source of initial keying material and derive from it one or more cryptographically strong secret keys.
 
@@ -65,13 +65,13 @@ Inputs:
 
 ```
 
-## Elliptic Curve Diffie Hellman
+### Elliptic Curve Diffie Hellman
 `Elliptic-curve Diffie–Hellman (ECDH)` is a key agreement protocol that allows two parties, each having an elliptic-curve public–private key pair, to establish a shared secret over an insecure channel.
 - VRF 
    - Verifiable random function
 - Zom android
 
-## Implementation
+### Implementation
 - Wire 
     - Proteus
 - Matrix 
@@ -81,7 +81,7 @@ Inputs:
 - ChatSecure
     - Omemo XMPP
 
-## References
+### References
 - [Elliptic Curve](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography)
  - [Analysing the Signal Protocol](https://eprint.iacr.org/2016/1013.pdf)
     - A manual and automated analysis of the Signal Protocol

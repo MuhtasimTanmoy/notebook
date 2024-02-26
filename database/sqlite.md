@@ -7,7 +7,7 @@ An `application file format` is the file format used to persist application stat
 
 Sqlite file is application format.
 
-## Full Text Search
+### Full Text Search
 - FTS3 has smaller file, slower search
 - FTS4 has bigger file, faster search
 
@@ -52,7 +52,7 @@ Sqlite file is application format.
 
 - SQLite `vaccum` command optimizes size.
 
-## References
+### References
 - [VFS](https://www.sqlite.org/vfs.html)
 - [FTS5](https://www.sqlite.org/fts5.html)
 - [R-Tree](https://www.sqlite.org/rtree.html)

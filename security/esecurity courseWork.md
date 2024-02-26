@@ -35,7 +35,7 @@ Tools
 Github Codebase
 - https://github.com/billbuchanan/esecurity
 
-## Fundamentals
+### Fundamentals
 - [Unit 1](https://asecuritysite.com/csn11117/unit01)
 
 - ASCII ( 7 bit format)
@@ -50,7 +50,7 @@ Github Codebase
     - ror/rol
 - CRC is one of the most reliable error detection schemes and can detect up to 95.5% of all errors.
 
-## Symmetric Key
+### Symmetric Key
 Two types
 - Stream Cipher
 - Block Cipher
@@ -63,22 +63,22 @@ EX: DES, Twofish, AES, RC2, Blowfish, ChaCha20  Others
 - Cipher Block chaining - Only the first block salt added from initialization vector. Others added from previous vector.
 - Key Entropy = log( num_of_phrases ) 
 
-## Hash
+### Hash
 - MD5 128 bits
 - SHA 1 160 bits 
 - RIPEMD used in blockchain
 - Same hash can be  generated using birthday attack
 
-## Public Key
+### Public Key
 - Interger factorization
 - Discrete Algorithm
 - Elliptic Curve
 - Bitcoin uses `secp256k1` and Tor uses	`Curve 25519`.
 
-## Key Exchange and Digital Certificate
+### Key Exchange and Digital Certificate
 - For https only server authenticated
 
-## Tuneling
+### Tuneling
 - Tunneling 
     - Over untrusted network
 - Host to host - tunnel
@@ -92,12 +92,12 @@ openssl rsa -in mykey.pem -pubout > mykey.pub
 echo "this is a group of words that should not be considered random anymore so never use this to generate a private key" | openssl sha256
 ```
 
-## Threat Classification
+### Threat Classification
 - Intrusion
 - Blocking
 - Malware
 
-## Attacks
+### Attacks
 - Buffer overflow
 - DOs
 

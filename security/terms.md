@@ -1,6 +1,6 @@
 # Terms
 
-## Salt
+### Salt
 - A salt is random data that is used as an additional input to a one-way function that hashes data, a password or passphrase.
 - Salts are closely related to the concept of a cryptographic nonce.
 - Protects against rainbow attack.
@@ -9,15 +9,15 @@
     - Multiple hash `Hash(Hash(Hash(Hash…(Hash(salt||password)))…)` 
     - `Argon2` algorithm
 
-## Pepper
+### Pepper
 - That is, another random value concatenated to the password, such that the stored value is `Hash(pepper||salt||password)`. 
 - The pepper is then not stored at all. Both the login server and password cracker need to brute force the unknown pepper value, slowing password hash comparisons for both parties.
 
-## MAC (Message Authentication Code)
+### MAC (Message Authentication Code)
 - H(key, message) = Hash
 - Here, key & message available on both end denoting integrity of data.
 
-## Secrecy
+### Secrecy
 
 - Forward secrecy = Perfect Forward Secrecy, 
 - Backward secrecy = Future Secrecy.
@@ -33,6 +33,6 @@
 - People more often call this future secrecy perhaps because they want to emphasize that even if at some point the long-term secret (together with the party's current session key and all other secret states) is corrupted the future messages can still be secure (if the previously corrupted party somehow becomes "clean" again). (I agree that the terms are a mess because "future secrecy" looks and sounds almost the same as "forward secrecy".) 
 - Signal is an example that achieves backward secrecy with the Double Ratchet Algorithm which can self-heal itself soon after corruption.
 
-## References
+### References
 - [Salt (cryptography)](https://en.wikipedia.org/wiki/Salt_(cryptography))
 - [HMAC-based Extract-and-Expand Key Derivation Function (HKDF)](https://tools.ietf.org/html/rfc5869)
