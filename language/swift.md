@@ -76,7 +76,7 @@
     - Binding is by definition a two way connection, `.constant()` means a one way connection, when the user types into the textfield the variable in the view model will never get updated. Your updates can go down but not up.
     - `StateObject` is for initializing `ObservedObject` is for passng around.
 
-## Resources
+## References
 - [Traits and Mixin](http://machinethink.net/blog/mixins-and-traits-in-swift-2.0)
 - [Swift Memory Model](https://youtu.be/ERYNyrfXjlg)
     - Word is a unit in the size of a pointer

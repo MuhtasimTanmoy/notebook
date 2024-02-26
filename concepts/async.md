@@ -21,7 +21,7 @@
 
 - It also provides support for advanced features such as `epoll, kqueue, and IOCP` on different platforms, as well as convenient utility functions for working with I/O events, timeouts, and buffers.
 
-## Resources
+## References
 
 - [Rust's Journey to Async/Await](https://www.youtube.com/watch?v=lJ3NC-R3gSI)
     - Explains how rust got it's `asyncronous` paradigm.

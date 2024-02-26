@@ -70,6 +70,6 @@ m ^ (k * phi(n)  +1)  ==  m mod n
 	- Replacement for aes
 	- Works well on low end device
 
-## Resources
+## References
 - [RSA Encryption](https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/rsa-encryption-part-4)
 - [Padding](https://asecuritysite.com/encryption/padding)

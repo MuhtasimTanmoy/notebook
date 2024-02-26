@@ -81,7 +81,7 @@ Inputs:
 - ChatSecure
     - Omemo XMPP
 
-## Resources
+## References
 - [Elliptic Curve](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography)
  - [Analysing the Signal Protocol](https://eprint.iacr.org/2016/1013.pdf)
     - A manual and automated analysis of the Signal Protocol

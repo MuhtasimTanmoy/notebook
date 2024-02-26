@@ -36,7 +36,7 @@ Commands
 - EXPIRE HANDLE
 - With set maintain currently
 
-## Resources
+## References
 - [The Little Redis Book](https://www.openmymind.net/redis.pdf)
 - [Redis cluster specification](https://redis.io/topics/cluster-spec)
 - [Documentation](https://redis.io/documentation)

@@ -13,7 +13,7 @@ Any `band limited` continuous time signal can be accurately converted to and fro
 ## Dithering
 - Dithering is the process of ntentionally adding noise to a signal, during the process of quantization, o preserve low level information and prevent correlated distortion.
 
-## Resources
+## References
 - [Audio Theory](https://youtube.com/playlist?list=PLbqhA-NKGP6B6V_AiS-jbvSzdd7nbwwCw)
 
 - [CppCon 2015: Timur Doumler “C++ in the Audio Industry”](https://www.youtube.com/watch?v=boPEO2auJj4)

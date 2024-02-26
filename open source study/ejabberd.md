@@ -192,7 +192,7 @@ PORT      STATE    SERVICE
 - Other alternative
     - Matrix, which is pull based
 
-## Resources
+## References
 - [Installation Guide](https://www.ejabberd.im/files/doc/guide.html#htoc2)
 - [How it works](https://docs.ejabberd.im/admin/guide/clustering/)
 - [Modules](https://docs.ejabberd.im/admin/configuration/modules/#mod-sip)

@@ -37,7 +37,7 @@ bt  # backtrace
 - While details of precompiled headers vary between compilers, precompiled headers have been shown to be highly effective at speeding up program compilation on systems with very large system headers (e.g., macOS).
 
 
-## Resources
+## References
 - [LLVM User Manual](https://clang.llvm.org/docs/UsersManual.html#terminology)
 - [LLVM Grad Student](http://www.cs.cornell.edu/~asampson/blog/llvm.html)
 - [LLVM Warning](https://softwareengineering.stackexchange.com/questions/122608/clang-warning-flags-for-objective-c-development/124574#124574)

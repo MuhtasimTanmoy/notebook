@@ -42,7 +42,7 @@ We can calculate the false positive error rate, **_p_**, based on the size of th
 - Approximation: Number of zeros at end, N then 2^N
 - Use bucket, 70% average.
 
-## Resources
+## References
 - [Bloom Filter](https://hackernoon.com/probabilistic-data-structures-bloom-filter-5374112a7832)
 - [Murmur Hash Function](https://sites.google.com/site/murmurhash/)
 - [FNV Hash Function](http://isthe.com/chongo/tech/comp/fnv/)

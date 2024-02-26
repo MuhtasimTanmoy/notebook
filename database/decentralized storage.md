@@ -39,6 +39,6 @@ Whisper - Messaging
 
 - Merkle construction phase requires heavy preprocessing. Logarithmic of the file size.
 
-# Resources
+# References
 - [Reed Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
 - [Swarm Arweave Sia Talk ](https://www.youtube.com/watch?v=vVsHBAohsaE)

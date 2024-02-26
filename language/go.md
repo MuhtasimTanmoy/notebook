@@ -43,7 +43,7 @@ go run --race test.go
 go vet
 ```
 
-## Resources
+## References
  - [Go Go Gadget](https://word.bitly.com/post/29550171827/go-go-gadget)
  - [Intro to Git & GO](https://www.youtube.com/watch?v=xSq0OdlVLRI&list=PLoiT1Gv2KR1gE-WK7dIQ5bsJ_RAVZnzP8&index=1)
  - [How to use interfaces in Go](https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)

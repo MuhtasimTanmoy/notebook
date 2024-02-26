@@ -117,7 +117,7 @@ ffmpeg -i video.mp4 image-%05d.png
 ffmpeg -ss 00:00:25 -t 00:00:00.04 -i YOURMOVIE.MP4 -r 25.0 YOURIMAGE%4d.jpg
 ```
 
-## Resources
+## References
 - [FFMEPG, Preset](https://trac.ffmpeg.org/wiki/Encode/H.264)
 - [Rate control](https://slhck.info/video/2017/03/01/rate-control.html)
 - [FFMPEG](https://ffmpeg.org/ffmpeg.html)         

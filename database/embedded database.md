@@ -11,7 +11,7 @@
 - MemTable / SSTable
 - InnoDB used in mySQL
 
-## Resources
+## References
 - [DropBox Engineering Evening on RocksDB with Dhruba Borthakur @ Rockset](https://www.youtube.com/watch?v=aKAJMd0iKtI&ab_channel=DhrubaBorthakur)
 
 - [Embedded Database: RocksDB](youtube.com/watch?v=V_C-T5S-w8g)

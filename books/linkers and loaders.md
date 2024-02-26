@@ -99,7 +99,7 @@ Storage layout is a two-pass process, since the location of each segment can’t
     - In a language with class inheritance, calls to class methods generally use indirect calls since a method may be overridden in a subclass. But if there aren’t any subclasses, or there are subclasses but none of them override a particular method, the calls can be direct. A link- er could make special case optimizations like this to avoid some of the in- efficiencies otherwise inherent in object oriented languages.
 
 
-## Resources
+## References
 - [CppCon 2017: Teresa Johnson “ThinLTO: Scalable and Incremental Link-Time Optimization”](https://www.youtube.com/watch?v=p9nH2vZ2mNo)
     - Cross Module Optimization 
     - Build systems should be parallel, incremental, memory lean

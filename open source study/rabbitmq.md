@@ -36,6 +36,6 @@ As for the reply queue, it's typically created by the client, which then populat
 ## PubSub
 - Selective clients
 
-## Resources
+## References
 - [A Quick Guide To Understanding RabbitMQ & AMQP](https://medium.com/swlh/a-quick-guide-to-understanding-rabbitmq-amqp-ba25fdfe421d)
 - [Understanding AMQP, the protocol used by RabbitMQ](https://spring.io/blog/2010/06/14/understanding-amqp-the-protocol-used-by-rabbitmq)

@@ -17,6 +17,6 @@
     - Transaction Gossip
     - Beacon Light
 
-## Resources
+## References
 - [RLPX Protocol](https://github.com/ethereum/devp2p/blob/master/rlpx.md)
 - [Ethereum State Trie Architecture Explained](https://medium.com/@eiki1212/ethereum-state-trie-architecture-explained-a30237009d4e)

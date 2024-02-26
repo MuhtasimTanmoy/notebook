@@ -8,6 +8,6 @@
  - Fair scheduling managed as `Red-Black Tree`
 
 
-## Resources
+## References
 - [Documentation](https://www.kernel.org/doc/Documentation/)
 - [Manual](https://man7.org/linux/man-pages/man5/proc.5.html)

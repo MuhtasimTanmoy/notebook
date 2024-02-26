@@ -7,6 +7,6 @@ A possible architecture of a chat application can be broken down in to smaller a
     - Reporting Service - Reporting behaviors, anomalies.
     - Analytics Service - Performing analytics and Providing insights.
 
-# Resources
+# References
 - [Noise Protocol](http://www.noiseprotocol.org/noise.html)
 - [Signal Protocol](https://www.youtube.com/watch?v=ceGTgqypwnQ&ab_channel=DavidWong)
