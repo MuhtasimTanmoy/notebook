@@ -1,16 +1,23 @@
 # Audio Signal
 
-Audio signals are normally in time domain. If you read the samples that make the audio from left to right, you travel in time, and the values you read signify how much to push or pull your loudspeaker cone at that point in time.
+- Audio signals are normally in time domain. 
+- If you read the samples that make the audio from left to right, you travel in time, and the values you read signify how much to push or pull your loudspeaker cone at that point in time.
 
-When you use `FFT`, you transform your time-domain audio signal to frequency domain.
+- When you use `FFT`, you transform your time-domain audio signal to frequency domain.
 
-As a result of `FFT`, you should get several bins filled with magnitudes and phases. You can discard the phases for this purpose; you are interested in the magnitudes.
+- As a result of `FFT`, you should get several bins filled with magnitudes and phases. 
 
-Human ears typically can hear sounds as low as 20Hz to as high as 20000Hz in frequency. In a typical CD quality audio data, you have 44100 samples per second (in time domain, remember) which can encode information from 0Hz to 22050Hz (half the sampling rate basically; if you're interested in why, check out the "nyquist theorem").
+- You can discard the phases for this purpose; you are interested in the magnitudes.
 
-The magnitudes in FFT bins gives you the energy of sound between different frequencies. So depending on how you setup your FFT solver, say you end up with 100 bins. First bin gives you the energy between (say) 0 and 50Hz, the second bin gives you the energy between 50Hz and 100Hz and so on. 
+- Human ears typically can hear sounds as low as 20Hz to as high as 20000Hz in frequency. 
+- In a typical CD quality audio data, you have 44100 samples per second (in time domain, remember) which can encode information from 0Hz to 22050Hz (half the sampling rate basically; if you're interested in why, check out the "nyquist theorem").
 
-You want to plug those magnitudes to the height of lines in your visualisation. The leftmost lines track the lower frequencies, and the rightmost lines track the highest frequencies.
+- The magnitudes in FFT bins gives you the energy of sound between different frequencies. 
+- So depending on how you setup your FFT solver, say you end up with 100 bins. 
+- First bin gives you the energy between (say) 0 and 50Hz, the second bin gives you the energy between 50Hz and 100Hz and so on. 
+
+- You want to plug those magnitudes to the height of lines in your visualisation. 
+- The leftmost lines track the lower frequencies, and the rightmost lines track the highest frequencies.
 
 Two main factors determining sound
 - Sample Frequency ( X axis )

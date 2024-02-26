@@ -21,7 +21,7 @@
     - A type of shared-nothing-architecture in distributed computing, where each node is independent and does not communicate with other nodes.
     - Multiple programming paradigms, such as object oriented, imperative and functional programming styles.
 
-- [Colyseus_A_Distributed_Architecture_for_Online_Multiplayer_Games!](https://www.researchgate.net/publication/220831981_Colyseus_A_Distributed_Architecture_for_Online_Multiplayer_Games)
+- [Colyseus: A Distributed Architecture for Online Multiplayer Games!](https://www.researchgate.net/publication/220831981_Colyseus_A_Distributed_Architecture_for_Online_Multiplayer_Games)
     - Colyseus, which primarily acts as a game object manager
     - There are two types of game objects
         - Immutable

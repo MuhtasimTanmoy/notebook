@@ -2,14 +2,16 @@
 
 ### Structure
 - Elastic Search forms with Index
-- Index (Logical namespace/ DB Name) -> Divided into Shrads (Types/ Table/ Schema)
+- Index (Logical namespace/ DB Name)
+    - Divided into Shrads (Types/ Table/ Schema)
 - Each shrad has replica
-- Each shrad is Lucene index > for inverted search
+- Each shrad is Lucene index
+    - For inverted search
 - Divided into Segments
     - Inverted index
 - Segments immutable
 - Apache lucene
-    - Powerful open-source full-text search library.
+    - Powerful open-source full-text search library
 - DB normalize
     - Case dispose, punctuation, 
     - Common word remove    
@@ -17,7 +19,8 @@
     - Lemma > Mapping different usage to one
 - tokenization
     -  Stemming > Buying > buy
-- After 1s index refresh happens > Doc indexed 
+- After 1s index refresh happens
+    - Doc indexed 
 - Translog (30 min or 512mb)
 - Master node & Data Node available
 
@@ -52,8 +55,10 @@
 
 - Type of index 
     - Primary index
-    - Dense index -> all records map to index
-    - Sparse index -> few records map to sorted index
+    - Dense index 
+        - All records map to index
+    - Sparse index
+        - Few records map to sorted index
     - Sparse index not not possible if records not organized/sorted
 
 - Graph database which considers relation and data 
@@ -63,8 +68,8 @@ secondary index
 - Low cardinality in database - Common attribute - Easy for indexing
 - Made efficient through bitmap indexing
 - DB Normalization - Denormalization
-    - A list of words contained in a document.(Forward index)
-    - A list of documents containing a word.(Inverted index)
+    - A list of words contained in a document. (Forward index)
+    - A list of documents containing a word. (Inverted index)
 
 ### References
 - [Anatomy of Elastic Search](https://blog.insightdatascience.com/anatomy-of-an-elasticsearch-cluster-part-i-7ac9a13b05db)

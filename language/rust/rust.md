@@ -707,3 +707,21 @@ This is the most important repr. It has fairly simple intent: do what C does. Th
 
 - [Chalk](https://rust-lang.github.io/chalk/book)
 - [Rust Functional Programming](https://github.com/JasonShin/fp-core.rs)
+
+- [Rust Good Practices Talk Takeaway](https://www.youtube.com/watch?feature=youtu.be&v=Pn-1so-Ibsg&app=desktop)
+    - Open source projects share similarities with small startups, and attempting to focus on just one thing can prove difficult.
+    - For some, working full-time on open source is a dream job.
+    - A complete rewrite in Rust may not always be necessary.
+    - According to John Gall's philosophy, complex systems that work evolved from simple systems that worked, whereas complex systems designed from scratch often fail and cannot be fixed.
+    - Rather than doing a complete rewrite, consider breaking down small interfaces into a new system using microservice architecture.
+    - For example, the NPM architecture has a central registry that emits events, and followers work on those events.
+    - Use tools such as `RustDoc` to generate HTML from documentation and `Clippy` to provide recommendations based on static analysis.
+    - The Rust philosophy is to make the right things easy and the wrong things hard.
+    - `Clippy` provides helpful recommendations based on static analysis.
+    - Writing naive code can result in slow performance, as seen with the Rust `log parser` being slower than the node log parser.
+    - Only dedicate yourself to something you have complete confidence in. If there is any doubt or argument, the dogma must be in question.
+    - Use tools such as `Glue, Nom, and Regex` for parsing.
+    - Writing boring code when company code is at stake is good.
+    - Trying to change everything at once is a recipe for failure.
+    - Focus on solving the problem at hand, not what you want to solve.
+    - Consider replacing problematic parts with Rust.
