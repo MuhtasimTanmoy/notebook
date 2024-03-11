@@ -1,2 +1,0 @@
-# GRDB
-- Sqlite Wrapper

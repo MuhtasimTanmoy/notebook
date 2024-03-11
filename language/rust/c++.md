@@ -57,9 +57,13 @@ There no standard package managers and repositories. If you stick to an operatin
 g++ -fdump-class-heirarchy a.cpp
 ```
 
-![](./rule-Of-five.png)
+![](./screen/rule-Of-five.png)
 
-# References
+### References
+
+- [Just Rust](https://www.youtube.com/watch?v=YtUfK3ZP3No&list=PLFCH6yhq9yAH28S_oGUtqO46eI7IAWdEO)
+    - `Valgrind` can find memory error, race condition
+    - `Covety` static analysis, defect finding tool
 
 - [Quroa c++ backlog](https://www.quora.com/Instead-of-inventing-a-ton-of-high-level-programming-languages-why-dont-people-implemented-C-C-frameworks-to-perform-high-level-repetitive-tasks)
 

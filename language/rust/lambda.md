@@ -82,7 +82,7 @@ struct some_anonymous_type {
 - Notes
     - The move constructor is used instead of the copy constructor, if the object has type "rvalue-reference" (Type &&).
 
-# Reference
+### References
 - [lambda from scratch](https://www.youtube.com/watch?v=3jCOwajNch0)
 - [Print variable type in C](https://stackoverflow.com/questions/81870/is-it-possible-to-print-a-variables-type-in-standard-c)
  

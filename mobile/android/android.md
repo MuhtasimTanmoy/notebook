@@ -127,3 +127,7 @@ As said above, binder driver is a software components, which loads in the Kernel
 ### Others
 - Simple perf toolchain
 - NDK, JNI for c/c++ bindings
+
+
+### Resources
+- [Rust on Android](https://security.googleblog.com/2021/04/rust-in-android-platform.html)

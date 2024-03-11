@@ -17,6 +17,9 @@ const I = a => a
 // M(M) == Infinite ( omega combinator )
 ```
 
+### Combinator
+![](./screen/combinator.png)
+
 ### Resources
 - [Lambda Calculus](https://www.youtube.com/watch?v=3VQ382QG-y4 )
 - [What is Y combinator](https://stackoverflow.com/questions/93526/what-is-a-y-combinator)

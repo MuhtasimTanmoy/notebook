@@ -222,17 +222,19 @@ Network mode
 # Waterloo
  
 ### Lecture 1
+
 - Any big thing structure. Hiererchy 
 - DNS
 - Implicit hierarchy
 - Ip addr geographically dispered
 - Split up geo or data center 
-- topology
+- Topology
 
 
 **Lecture 2**
-- youtube pull replication
-- push replication for popular
+
+- Youtube pull replication
+- Push replication for popular
 - DNS
     - CN - Canonical name
     - NS - Name Server
@@ -240,6 +242,7 @@ Network mode
 
 
 **Lecture 6**
+
 - SOCKET TABLE
     - SOCKET is an index to socket table, which has all information necessary.
     - SOCKET File Descriptor is an index. Just integer.
@@ -262,7 +265,8 @@ Network mode
 - htons(PORT -> host byte order to network byte order
 
 - [Socket programming](https://www.youtube.com/watch?v=2QeL7jo_LIw&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
-- [SOCEKT PROGRAMMING](https://www.geeksforgeeks.org/socket-programming-cc/)   
+- [SOCEKT PROGRAMMING](https://www.geeksforgeeks.org/socket-programming-cc/) 
+- [Princeton systems course](https://medium.com/princeton-systems-course)
 
 **Lecture 7**
 - Flow control part of transport layer
