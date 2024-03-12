@@ -1,8 +1,8 @@
 # Decentralized Storage
 
-Ethereum - Computation
-Swarm - Storage
-Whisper - Messaging
+- Ethereum: Computation
+- Swarm: Storage
+- Whisper: Messaging
 
 ### Implementations
 - Swarm

@@ -2,7 +2,8 @@
 
 ### BASE64
 
-- Whenever shipping binary data, convert that to base64. Binary streams chunked in 6 bits (2^6 = 64).
+- Whenever shipping binary data, convert that to base64. 
+- Binary streams chunked in 6 bits (2^6 = 64).
 
 - Why 64? We can generally rely on the same 64 characters being present in many character sets which end up on the other side of the wire uncorrupted.
 
@@ -35,9 +36,15 @@
 
 -  For example, the Unicode code point for the capital letter “T” is U+0054, the Unicode code point for the lowercase letter “t” is U+0074, and the Unicode point for the lower left triangle “◺” is U+25FA.
 
-- The “problem” with Unicode is that it is most often represented in software as an int32 (32 bit integer). The vast majority of characters in widespread use could fit into a much smaller number than required for a 32 bit data type. This is where UTF-8 enters the picture.
+- The problem with Unicode is that it is most often represented in software as an int32 (32 bit integer). 
+- The vast majority of characters in widespread use could fit into a much smaller number than required for a 32 bit data type. 
+- This is where UTF-8 enters the picture.
 
-- **UTF-8** is a variable length encoding of Unicode code points. For each Unicode code point, it uses between 1 and 4 bytes. All of the most common characters can be represented using 1–2 bytes (all ASCII characters can be represented in 1 byte). UTF-8 allows us to use all of the characters defined by Unicode, but allows us to save some extra space and only reach for the 3rd or 4th byte when we really need it. To again list the same examples, we could represent the Unicode code point “T” as 84, “t” as and “◺” as 226 151 186.
+- **UTF-8** is a variable length encoding of Unicode code points. 
+- For each Unicode code point, it uses between 1 and 4 bytes. 
+- All of the most common characters can be represented using 1–2 bytes (all ASCII characters can be represented in 1 byte). 
+- UTF-8 allows us to use all of the characters defined by Unicode, but allows us to save some extra space and only reach for the 3rd or 4th byte when we really need it. 
+- To again list the same examples, we could represent the Unicode code point “T” as 84, “t” as and “◺” as 226 151 186.
 
 - UTF-8 and UTF-16 are methods to encode Unicode strings to byte sequences. UTF-16 has advantage if non conventional characters are dominant. UTF-8 otherwise.
 

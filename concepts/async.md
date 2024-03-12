@@ -1,5 +1,7 @@
 # Async
 
+![](./screen/RustFuture.png)
+
 - System Threads
     - Kernel level threads
 - Green Threads
@@ -12,10 +14,9 @@
 
 - Async
     - Transforms a block of code into a state machine that implements a trait called future
+
 - Await
     - Mechanism to run a future. It asyncronously wait for the future to complete.
-
-![](./screen/RustFuture.png)
 
 - `mio` provides a number of core abstractions for working with I/O resources, such as sockets, pipes, and devices.
 

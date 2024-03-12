@@ -44,53 +44,70 @@ A home router has the following parts:
 
 ### Switch
 
-When two computers on same ip network communicate with each other directly, the communication is dealt by the switch.
+- When two computers on same IP network communicate with each other directly, the communication is dealt by the switch.
 
-The task performed by switch is called Switching. Routers forward traffic based on IP address, switches forward traffic based on MAC address.
+- The task performed by switch is called Switching. 
+- Routers forward traffic based on IP address, switches forward traffic based on MAC address.
 
-A switch is an intelligent device.
+- A switch is an intelligent device.
 
-What a switch does is that it constantly monitors the traffic which is entering the switch from connected devices. It then learns about where the different MAC addresses of those devices are connected. It does this by looking at the traffic that arrives from computers to read the source MAC address of the traffic.
+- What a switch does is that it constantly monitors the traffic which is entering the switch from connected devices. 
+- It then learns about where the different MAC addresses of those devices are connected. 
+- It does this by looking at the traffic that arrives from computers to read the source MAC address of the traffic.
 
-If it doesn't know where a particular device is, it acts like sends them to all unknown devices and waits for reply for them.
+- If it doesn't know where a particular device is, it acts like sends them to all unknown devices and waits for reply for them.
 
-Switch is like a HUB + Cache.
+- Switch is like a `HUB + Cache`.
 
- Switch
-	- A **Switch** is a network device whose **primary purpose is to facilitate communication _within_  networks**.
-	- The **Layer 2 header** contains information that enables [_hop to hop_ delivery](https://www.practicalnetworking.net/series/packet-traveling/osi-model/#osi-layer-23), such as the **Source and Destination MAC address**.
-	- A Switch operates by maintaining what is known as a  **MAC Address table**. This is a table that  **maps MAC addresses of devices plugged into each switch port**. A typical switch has many ports, from 24 to 48, up to 96, or more. The  **MAC Address Table is populated by looking at the Source MAC** address field of any  **received frames**.
+- Switch
+	- A Switch is a network device whose rimary purpose is to facilitate communication _within_  networks.
+	- The Layer 2 header contains information that enables [_hop to hop_ delivery](https://www.practicalnetworking.net/series/packet-traveling/osi-model/#osi-layer-23), such as the Source and Destination MAC address.
+	- A Switch operates by maintaining what is known as a  MAC Address table. 
+    - This is a table that maps MAC addresses of devices plugged into each switch port. 
+    - A typical switch has many ports, from 24 to 48, up to 96, or more. 
+    - The MAC Address Table is populated by looking at the Source MAC** address field of any received frames.
 
-There are three methods by which a Switch can forward frames. They are briefly described below.
+- There are three methods by which a Switch can forward frames. They are briefly described below.
 
-Switch frame forwarding
+- Switch frame forwarding
 
-- Store and Forward – The Switch copies the entire frame (header + data) into a memory buffer and inspects the frame for errors before forwarding it along. This method is the slowest, but allows for the best error detection and additional features like prioritizing certain types of traffic for faster processing.
+- Store and Forward 
+    – The Switch copies the entire frame (header + data) into a memory buffer and inspects the frame for errors before forwarding it along. 
+    - This method is the slowest, but allows for the best error detection and additional features like prioritizing certain types of traffic for faster processing.
 
-- Cut-Through – The Switch stores nothing, and inspects only the bare minimum required to read the Destination MAC address and forward the frame. This method is the quickest, but provides no error detection or potential for additional features.
+- Cut Through 
+    – The Switch stores nothing, and inspects only the bare minimum required to read the Destination MAC address and forward the frame. 
+    - This method is the quickest, but provides no error detection or potential for additional features.
 
-- Fragment Free – This method is a blend of the prior two. The Switch inspects only the first portion of the frame (64 bytes) before forwarding the frame along. If a transmission error occurred, it is typically noticed within the first 64 bytes. As such, this method provides “good enough” error detection, while gaining the speed and efficiency of avoiding storing the entire frame in its memory before forwarding it.    
+- Fragment Free 
+    – This method is a blend of the prior two. 
+    - The Switch inspects only the first portion of the frame (64 bytes) before forwarding the frame along. 
+    - If a transmission error occurred, it is typically noticed within the first 64 bytes. 
+    - As such, this method provides “good enough” error detection, while gaining the speed and efficiency of avoiding storing the entire frame in its memory before forwarding it.    
 
 ### [Address Resolution Protocol](https://www.practicalnetworking.net/series/packet-traveling/key-players/#arp)
 
-It sends a broadcast request known as ARP asking "Who has the default gateway IP? Send me your MAC address." Then once computer gets the address, it stores it in a cache for few minutes (refreshing after every successful packet transfer). The cache allows the computer to send packets without broadcasting for MAC address every time.
+- It sends a broadcast request known as ARP asking "Who has the default gateway IP? 
+- Send me your MAC address." Then once computer gets the address, it stores it in a cache for few minutes (refreshing after every successful packet transfer). 
+- The cache allows the computer to send packets without broadcasting for MAC address every time.
 
 
 ### Mac Address
-All equipments that can be connected to computer networks (computers, routers, servers, printers and etc) have a MAC address. It is an address which is written into the network interface of the device during manufacturing.
+- All equipments that can be connected to computer networks (computers, routers, servers, printers and etc) have a MAC address. 
+- It is an address which is written into the network interface of the device during manufacturing.
+- A MAC address consists of `12 hexadecimal characters` and could look like this:
+    - 01:23:45:67:89:ab
+    - 00:fe:19:2a:73:dc
+    - 02:0a:95:9d:68:16
 
-A MAC address consists of 12 hexadecimal characters and could look like this:
+- Each time a computer sends out network traffic the traffic has both a source and destination IP address, but it also has a source and destination MAC address.
 
-- 01:23:45:67:89:ab
-- 00:fe:19:2a:73:dc
-- 02:0a:95:9d:68:16
-
-Each time a computer sends out network traffic the traffic has both a source and destination IP address, but it also has a source and destination MAC address.
-
-IP addresses are relevant on a global scale. They hold the final destination of the packet and can tell us which address the packet is originally coming from. In contrast, MAC addresses are used on a more local scale, and hold information about the next hop destination in the local LAN network.
+- IP addresses are relevant on a global scale. They hold the final destination of the packet and can tell us which address the packet is originally coming from. 
+- In contrast, MAC addresses are used on a more local scale, and hold information about the next hop destination in the local LAN network.
 
 
 ### Broadcast
-The computer sends out a broadcast which will reach every other device on the LAN to ask any available DHCP servers to reply back with an IP address.
-
-When a computer sends out a broadcast it will use a special destination MAC address, FF:FF:FF:FF:FF:FF. That address is called the Broadcast Address and is used specifically for this purpose. All other equipment on the LAN will then understand that the traffic is a broadcast that is directed at everybody else within the LAN.
+- The computer sends out a broadcast which will reach every other device on the LAN to ask any available DHCP servers to reply back with an IP address.
+- When a computer sends out a broadcast it will use a special destination MAC address, FF:FF:FF:FF:FF:FF. 
+- That address is called the Broadcast Address and is used specifically for this purpose. 
+- All other equipment on the LAN will then understand that the traffic is a broadcast that is directed at everybody else within the LAN.

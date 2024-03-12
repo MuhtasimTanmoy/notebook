@@ -1,5 +1,7 @@
 # EVM
 
+![](./screen/modular.png)
+
 - [EVM: From Solidity to byte code, memory and storage](https://www.youtube.com/watch?v=RxL_1AfV7N4)
     - Solidity and viper EVM language which generates `.bin` and `.abi`
     - Transactions are not part of world state or state tree
@@ -80,5 +82,3 @@
     - Ambient peer discovery
     - IHAVE gossip
     - IWHAT gossip
-
-![](./screen/modular.png)

@@ -156,15 +156,18 @@ State is kept in the following places:
 A high level intro on how Omemo works: 
 
 - Each device gets it’s own public/private key pair. When a message is sent, it is encrypted with a message-specific key.
-- This key itself is encrypted with the public key of each client participating in the chat. So if you have multiple devices, the message-key is encrypted for each of your devices. 
+- This key itself is encrypted with the public key of each client participating in the chat. 
+- So if you have multiple devices, the message-key is encrypted for each of your devices. 
 - Same holds true for all devices of the person you are communicating with. 
 - If you are in a group chat, then the message-key is encrypted for everyone’s device participating in the group. 
 - For decryption each device decrypts the message-key, then takes the message-key and decrypts the potentially long message. 
-- This procedure enables bandwidth-efficient multi-user multi-device encryption. Each device public key can be represented via a fingerprint.
+- This procedure enables bandwidth-efficient multi-user multi-device encryption. 
+- Each device public key can be represented via a fingerprint.
 - When you send a message to someone, you need to be sure that this person is actually the person they claim to be. 
 - That explains the existance and necessity of fingerprint verification. 
 - The current scheme is trust-on-first-use (TOFU), meaning the first fingerprint is trusted. 
-- New fingerprints you have to manually trust. You should check in person, or via the phone with your comunication partner if the fingerprints match.
+- New fingerprints you have to manually trust. 
+- You should check in person, or via the phone with your comunication partner if the fingerprints match.
 
 ### SSL Pinning
 - Pinning certificate of one definite server in app to avoid DNS poisoning .

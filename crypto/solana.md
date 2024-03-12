@@ -1,8 +1,12 @@
 # Solana
 
 - Stack Machine
-    - In the stack machine, data is available at the top of the stack by default. The stack acts as a source and destination, push and pop instructions are used to access instructions and data from the stack. 
-    - There is no need to pass the source and destination address because the default address is top of the stack. In the stack machine, there is no need to pass explicit addresses in the instruction. Therefore the instruction format consists only of the `OPCODE (Operation Code)` field. This instruction format is known as Zero address instruction
+    - In the stack machine, data is available at the top of the stack by default. 
+    - The stack acts as a source and destination, push and pop instructions are used to access instructions and data from the stack.
+    - There is no need to pass the source and destination address because the default address is top of the stack. 
+    - In the stack machine, there is no need to pass explicit addresses in the instruction. 
+    - Therefore the instruction format consists only of the `OPCODE (Operation Code)` field. 
+    - This instruction format is known as Zero address instruction
     - Software stack machines re-emerge as blockchain and web streaming become popular
     - Stack machines boast better code density than register machines
     - Stack machine is much simpler than register machines
@@ -47,7 +51,7 @@
     - [Tower BFT](https://medium.com/solana-labs/tower-bft-solanas-high-performance-implementation-of-pbft-464725911e79)
     - [Gulf Stream](https://medium.com/solana-labs/gulf-stream-solanas-mempool-less-transaction-forwarding-protocol-d342e72186ad)
     - [Sea Level VM](https://medium.com/solana-labs/sealevel-parallel-processing-thousands-of-smart-contracts-d814b378192)
-    - [Whitepaper](https://solana.com/solana-whitepaper.pdf)
+    - [Solana Whitepaper](https://solana.com/solana-whitepaper.pdf)
 
 #### References
 - [Solana Bootcamp](https://www.soldev.app/library/playlist/solana-bootcamp-advanced)

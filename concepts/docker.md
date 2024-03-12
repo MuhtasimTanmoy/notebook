@@ -81,7 +81,7 @@ The files won’t be persisted after the container is deleted, and both read and
 - [Resource management: Linux kernel Namespaces and cgroups](https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/lxc-namespace.pdf)
 - [Namespaces in Go - Basics](https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a)
 - [Storage drivers](https://docs.docker.com/storage/storagedriver)
-- [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver_
+- [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver)
 - [What is Docker storage driver](https://stackoverflow.com/questions/31152263/what-is-docker-storage-driver)
 - [Docker storage drivers by Jérôme Petazzoni](https://www.slideshare.net/Docker/docker-storage-drivers)
 - [kubernetes-networking-links](https://github.com/nleiva/kubernetes-networking-links)

@@ -1,19 +1,28 @@
 # ADB
 
-1. ADB reboot-bootloader and reboot recovery commands:
-This command will let you can reboot your device in the bootloader. If due to some malware your device is stuck or if your device is not rebooting then you can connect your device to the computer and run this command to reboot. To run the command just type adb reboot-bootloader in the command line and to boot the device in recovery just type adb reboot recovery.
+![](./screen/ADB.png )
 
-2. Fastboot device command:
-Fastboot is a diagnostic and engineering protocol that you can boot your Android device into. ADB does not work in the bootloader. If you have to boot into Android and the debugging tools are not active to communicate then you can use the fastboot command. Type fastboot devices in the prompt and you get the serial number.
+- ADB reboot-bootloader and reboot recovery commands
+    - This command will let you can reboot your device in the bootloader. 
+    - If due to some malware your device is stuck or if your device is not rebooting then you can connect your device to the computer and run this command to reboot. 
+    - To run the command just type adb reboot-bootloader in the command line and to boot the device in recovery just type adb reboot recovery.
 
-3. Fastboot unlock command:
-Fastboot flashing unlock command unlocks your bootloader. This command is not supported in many phones that support fastboot but you can check if your phone supports it. Just type fastboot flashing unlock in the command prompt and hit enter.
+- Fastboot device command
+    - Fastboot is a diagnostic and engineering protocol that you can boot your Android device into. 
+    - ADB does not work in the bootloader. 
+    - If you have to boot into Android and the debugging tools are not active to communicate then you can use the fastboot command. 
+    - Type fastboot devices in the prompt and you get the serial number.
 
-4. ADB sideload command:
-You can download the update zip file in your phone instead of waiting for the update to be pushed into the phone. To do that just download the update to your computer and connect your device to the computer. Now reboot into recovery on your phone and using the volume buttons choose to apply update from ADB. then open command line and type ADB sideload Full-Path-to-the-file.zip and hit enter.
+- Fastboot unlock command
+    - Fastboot flashing unlock command unlocks your bootloader.
+    - This command is not supported in many phones that support fastboot but you can check if your phone supports it. 
+    - Just type fastboot flashing unlock in the command prompt and hit enter.
 
+- ADB sideload command:
+    - You can download the update zip file in your phone instead of waiting for the update to be pushed into the phone. 
+    - To do that just download the update to your computer and connect your device to the computer. 
+    - Now reboot into recovery on your phone and using the volume buttons choose to apply update from ADB. then open command line and type ADB sideload Full-Path-to-the-file.zip and hit enter.
 
-![](./ADB.png )
 
 
 ```sh

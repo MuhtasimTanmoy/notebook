@@ -30,7 +30,11 @@ Network Layers
 Video Conferencing
 Game Server
 Encoding
-Garbage Collection -->
+Garbage Collection 
+EVM
+Raft
+Jpeg
+TCP IP Illustrated-->
 
 - Database
     - [Cockroachdb](./database/cockroachdb.md): Distributed SQL database.
@@ -59,12 +63,10 @@ Garbage Collection -->
 - Devops 
     - [Kafka](./devops%20/kafka.md): Distributed streaming platform for building real-time data pipelines and streaming applications.
     - [Parser](./devops%20/parser.md): Utility script
-    - [Kubernates](./devops%20/kubernates.md): Open-source platform for automating deployment, scaling, and management of containerized applications.
     - [Nginx](./devops%20/nginx.md): High-performance web server and reverse proxy.
     - [ProxySQL](./devops%20/proxysql.md): High-performance SQL proxy for MySQL.
     - [SSH](./devops%20/ssh.md): Network protocol providing secure communication over an unsecured network.
     - [VScode](./devops%20/vscode.md): VScode autocomplete script
-    - [Postgres Snippet](./devops%20/postgres%20snippet.md): Code snippet or utility related to PostgreSQL database management system.
 
 - Courses
     - [Distributed System](./course/distributed%20system.md): Network of independent computers that work together to achieve a common goal.
@@ -168,13 +170,12 @@ Garbage Collection -->
         - [Build Process](./mobile/iOS/build%20process.md): Series of steps for compiling, testing, and deploying software.
         - [Grand Central Dispatch](./mobile/iOS/grand%20central%20dispatch.md): Technology for managing concurrent tasks in macOS and iOS.
         - [xcodeproj](./mobile/iOS/xcodeproj.md): File format used by Xcode IDE for macOS and iOS development projects.
-        - [ios](./mobile/iOS/ios.md): Operating system for Apple's mobile devices, such as iPhone and iPad.
+        - [iOS](./mobile/iOS/ios.md): Operating system for Apple's mobile devices, such as iPhone and iPad.
     - Android
         - [NDK](./mobile/android/ndk.md): Native Development Kit: Set of tools for developing Android applications using native code.
         - [Gradle](./mobile/android/gradle.md): Build automation tool used primarily for Android development.
         - [Android](./mobile/android/android.md): Operating system for mobile devices developed by Google.
         - [ADB](./mobile/android/adb.md): Android Debug Bridge: Command-line tool for interacting with Android devices.
-        - [rust](./mobile/android/rust.md)
         
 - Concepts
     - [Video Streaming](./concepts/video%20streaming.md): Transmission of video content over a network for playback in real-time.

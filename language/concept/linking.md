@@ -113,7 +113,9 @@ task register)
     - Simulation of linking, undefined, defined, lazy
 
 - [ELF Standard](https://cirosantilli.com/elf-hello-world#standards)
-    - Two system calls from the linux kernel are relevant. The fork system call (or perhaps vfork or clone) is used to create a new process, similar to the calling one (every Linux user-land process except init is created by fork or friends). The execve system call replace the process address space by a fresh one (essentially by sort-of mmap-ing segments from the ELF executable and anonymous segments, then initializing the registers, including the stack pointer). The x86-64 ABI supplement and the Linux assembly howto give details
+    - Two system calls from the linux kernel are relevant. The fork system call (or perhaps vfork or clone) is used to create a new process, similar to the calling one (every Linux user-land process except init is created by fork or friends). 
+    - The execve system call replace the process address space by a fresh one (essentially by sort-of mmap-ing segments from the ELF executable and anonymous segments, then initializing the registers, including the stack pointer). 
+    - The x86-64 ABI supplement and the Linux assembly howto give details
     - The dynamic linking happens after execve and involves the /lib/x86_64-linux-gnu/ld-2.13.so file, which for ELF is viewed as an "interpreter"
     - `The segments contain information needed at runtime, while the sections contain information needed during linking.`
     - Section contains static for the linker, segment dynamic data for the OS
@@ -172,7 +174,7 @@ task register)
             disas 'printf@plt'
             p/x *(void**)0x60101B
             readelf -hW a.out will keep track of addresses
-        ```
+            ```
     - Making common case fast is in the heart of system design
 
 

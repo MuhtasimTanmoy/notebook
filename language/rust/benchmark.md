@@ -1,5 +1,7 @@
 # Benchmark
 
+![](../screen/Cache%20System.png)
+
 - [CppCon 2017: Chandler Carruth “Going Nowhere Faster”](https://www.youtube.com/watch?v=2EWejmkKlxs)
     - Demonstrates cache locality influence
     - Using `branching` instead of `cmove`
@@ -13,5 +15,3 @@ x
 
 - [C++ Quick Benchmark](https://quick-bench.com)
 - [C++ Analysis](https://godbolt.org)
-
-![](../screen/Cache%20System.png)
