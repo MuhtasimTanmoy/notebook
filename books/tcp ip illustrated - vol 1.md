@@ -4,7 +4,9 @@ Effective communication depends on the use of a common language.
 
 ### Introduction
 - Diagnosing network protocols, is also a powerful tool for understanding how the network protocols operate.
+
 - The design that specifies how various protocols of a protocol suite relate to each other and divide up tasks to be accomplished is called the architecture or reference model for the protocol suite.
+
 -  Goals
     - Internet communication must continue despite loss of networks or gateways.
     - The Internet must support multiple types of communication services.
@@ -13,8 +15,11 @@ Effective communication depends on the use of a common language.
     - The Internet architecture must be cost-effective.
     - The Internet architecture must permit host attachment with a low level of effort.
     - The resources used in the Internet architecture must be accountable.
-- In packet switching, “chunks” (packets) of digital information comprising some number of bytes are carried through the network somewhat independently. 
-- Chunks coming from different sources or senders can be mixed together and pulled apart later, which is called multiplexing.   
+
+- In packet switching, “chunks” (packets) of digital information comprising some number of bytes are carried through the network somewhat independently.
+
+- Chunks coming from different sources or senders can be mixed together and pulled apart later, which is called multiplexing.
+
 - When packets are received at a packet switch, they are ordinarily stored in buffer memory or queue and processed in a first-come-first-served (FCFS) fashion.
     - Statistical Multiplexing
         - In statistical multiplexing, traffic is mixed together based on the arrival statistics or timing pattern of the traffic. 
@@ -34,13 +39,15 @@ Effective communication depends on the use of a common language.
         - Although this tends to require larger packets, perconnection state at packet switches is no longer required and a connectionless network could be built, eliminating the need for a (complicated) signaling protocol. 
         - Datagrams were eagerly embraced by the designers of the early Internet, and this decision had profound implications for the rest of the protocol suite.
 
-    - Message Boundaries: Applications write messages that are carried in protocols. A message boundary is the position or byte offset between one write and another. - Protocols that preserve message boundaries indicate the position of the sender’s message boundaries at the receiver.
+    - Message Boundaries: Applications write messages that are carried in protocols. A message boundary is the position or byte offset between one write and another. 
+    
+    - Protocols that preserve message boundaries indicate the position of the sender’s message boundaries at the receiver.
 
     - Protocols that do not preserve message boundaries (e.g., streaming protocols like TCP) ignore this information and do not make it available to a receiver. 
 
     - As a result, applications may need to implement their own methods to indicate a sender’s message boundaries if this capability is required.
         - Datagram preserves
-        - Tcp dont
+        - TCP dont
     - Low level should not iplement error control, encryption, delivery acknowledgment
     - The end-to-end argument tends to support a design with a “dumb” network and “smart” systems connected to the network.
 
@@ -59,16 +66,21 @@ Effective communication depends on the use of a common language.
     - When an object (packet, message, etc.), called a protocol data unit (PDU), at one layer is carried by a lower layer, it is said to be encapsulated (as opaque data) by the next layer down.
 
     - Any system with multiple interfaces is called multihomed.
+
     - `Address Resolution Protocol (ARP)`. It is a specialized protocol used with IPv4 and only with multi-access link-layer protocols (such as Ethernet and Wi-Fi) to convert between the addresses used by the IP layer and the addresses used by the link layer.
+
     - Forwarding is performed: unicast (destined for a single host), broadcast (destined for all hosts on a given network), and multicast (destined for a set of hosts that belong to a multicast group).
 
     - ping and traceroute, use ICMP
+
     - The Internet Group Management Protocol (IGMP) is another protocol adjunct to IPv4. It is used with multicast addressing and delivery to manage which hosts are members of a multicast group
 
-    - Transmission Control Protocol (TCP), deals with problems such as packet loss, duplication, and reordering that are not repaired by the IP layer. 
+    - Transmission Control Protocol (TCP), deals with problems such as packet loss, duplication, and reordering that are not repaired by the IP layer.
+
     - It operates in a connection-oriented (VC) fashion and does not preserve message boundaries. Conversely, the User Datagram Protocol (UDP) provides little more than the features provided by IP. 
 
     - UDP allows applications to send datagrams that preserve message boundaries but imposes no rate control or error control.
+    
     - The PDU that TCP sends to IP is called a TCP segment.
     - UDP provides is a set of port numbers for multiplexing and demultiplexing data, plus a data integrity checksum.
     - Datagram Congestion Control Protocol (DCCP), specified in [RFC4340]. It provides a type of service midway between TCP and UDP: connection-oriented exchange of unreliable datagrams but with congestion control.
@@ -93,6 +105,7 @@ Effective communication depends on the use of a common language.
     
 
 ### The Internet Address Architecture
+
 - IP Address = Net Numbner + Host Number 
 - Subnet Addressing
     - One of the earliest difficulties encountered when the Internet began to grow was the inconvenience of having to allocate a new network number for any new network segment that was to be attached to the Internet. 
@@ -128,6 +141,7 @@ Effective communication depends on the use of a common language.
 - When multiple VLANs must span multiple switches (trunking), it becomes necessary to label Ethernet frames with the VLAN to which they belong before they are sent to another switch. Support for this capability uses a tag called the VLAN tag
     - vconfig add eth1 2
     - ethtool
+
 - In Linux, the Wake-On values are zero or more bits indicating whether receiving the following types of frames trigger a wake-up from a low-power state: any physical-layer (PHY) activity (p), unicast frames destined for the station (u), multicast frames (m), broadcast frames (b), ARP frames (a), magic packet frames (g), and magic packet frames including a password.
     -  ethtool –s eth0 wol umgb
     -  brctl addbr br0 
@@ -137,23 +151,25 @@ Effective communication depends on the use of a common language.
     -  ifconfig eth1 up 
     -  ifconfig br0 up
 
-- Clients may wish to communicate with servers on the same computer using Internet protocols such as TCP/IP. 
-- To enable this, most implementations support a network layer loopback capability that typically takes the form of a virtual loopback network interface.
-- Maximum transmission unit (MTU) is the size of the largest protocol data unit (PDU) that can be communicated in a single network
+- Clients may wish to communicate with servers on the same computer using Internet protocols such as TCP/IP.
 
-- **Tunneling** In some cases it is useful to establish a virtual link between one computer and another across the Internet or other network. VPNs, for example, offer this type of service. The method most commonly used to implement these types of services is called tunneling    
+- To enable this, most implementations support a network layer loopback capability that typically takes the form of a virtual loopback network interface.
+
+- `Maximum transmission unit` (MTU) is the size of the largest `protocol data unit` (PDU) that can be communicated in a single network
+
+- **Tunneling** In some cases it is useful to establish a virtual link between one computer and another across the Internet or other network. VPNs, for example, offer this type of service. The method most commonly used to implement these types of services is called `tunneling`   
 
 ### ARP
 - ARP is used with IPv4 only; IPv6 uses the Neigh- bor Discovery Protocol, which is incorporated into ICMPv6
 - ARP Broadcast
-- 
 
-### TCP
-- https://www.youtube.com/watch?v=F27PLin3TV0
-- Handshake
-- WireShark to capture TCP Traffic
-
-
+### [TCP Connection Walkthrough](https://www.youtube.com/watch?v=F27PLin3TV0)
 ![TCP](screen/TCP.png)
+- Handshake
+    - SYN
+    - SYN-ACK
+    - ACK
+- Wireshark to capture TCP Traffic
+
 ![WireShark](screen/WireShark.png)
 ![IEEE Packet](screen/IEEE_Packet.png)
