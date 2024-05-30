@@ -244,8 +244,6 @@
 
 This repository mostly contains a confused bunch of notes I’ve taken occasionally, serving as a reference for my future self. This never really had the ambition to be broadly useful or to attract readers.
 
-That being said, if you find yourself reading something, be kind and don’t be surprised by the poor quality of some of the posts.
-
-If you want to help to improve the content, you are welcome. Please open a [PR](https://github.com/MuhtasimTanmoy/notebook/pulls) on github.
+That being said, if you find yourself reading something, be kind and don’t be surprised by the poor quality of some of the posts. If you want to help to improve the content, you are welcome. Please open a [PR](https://github.com/MuhtasimTanmoy/notebook/pulls) on github.
 
 Except where otherwise noted, content on this site is licensed under CC0, “no rights reserved”.
