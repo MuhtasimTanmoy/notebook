@@ -95,8 +95,8 @@ Cr = g*R + h*G + i*B
                 - Length (2 Byte)    
                 - Table Info
                     -  AC/DC | Table ID 
-                - [16 bytes] - Number of codes of each length
-                - [X] - Symbols themselves    
+                - [16 bytes] - Number of codes of each length                  
+                - Symbols themselves    
                 - Codes are what we actually encounter in huffman coded bitstream, we callculate those codes. Codes will be of variable length.
                 - Symbol will be 8 bits, descriptor of codes.
                 - Huffman Symbols
