@@ -24,6 +24,7 @@
     - [Signal Protocol](./security/signal%20protocol.md) : End to end encryption protocol and messaging application.
     - [Bit Torrent](./protocols/bit%20torrent.md) : Peer-to-peer file-sharing protocol for distributing large amounts of data.
     - [XMPP](./protocols/xmpp.md) : Extensible Messaging and Presence Protocol: Open technology for real-time communication.
+    - [Linking](./language/concept/linking.md) : Process of connecting or combining separate components into a unified whole.
     - [EVM](./crypto/evm.md) : Runtime environment for executing smart contracts on Ethereum.
     - [Certificate](./security/certificate.md) : Digital certificate used to verify the identity of a person, device, or organization.
     - [WebRTC](./networking/webrtc.md) : API for real-time communication between web browsers.
@@ -131,7 +132,7 @@
         - [Elixir](./language/erlang/elixir.md)
         - [Erlang](./language/erlang/erlang.md)
     - Concept
-        - [Linking](./language/concept/linking.md) : Process of connecting or combining separate components into a unified whole.
+        - [Linking](./language/concept/linking.md) : Process of connecting or combining separate components into a unified whole.                    
         - [Lambda Calculus](./language/concept/lambda%20calculus.md) : Formal system in mathematical logic for expressing computation.
         - [Concepts](./language/concept/concepts.md) : Functional, concurrent programming language built on the Erlang VM.
 
