@@ -66,7 +66,7 @@ y^2 = x^3 + 486662 x^2 + x
 `SPKb` - b's Signed Public Key
 `OPKb` - b's One Use Public key (Chosen from a list of 100 available)
 
-![Tripple DH](screen/signal.png)
+![Tripple DH](screen/Signal.png)
 ![3HH](screen/3DH.png)
 
 - Used for session establishement of Signal Protocol.
