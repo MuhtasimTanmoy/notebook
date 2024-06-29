@@ -37,7 +37,7 @@ The leader must regularly send empty heartbeats to all followers in the form of 
 ### Logs
 The committed log is persisted on disk on a majority of the servers. The leader never overwrites the log but appends to it. All future leaders must have all committed logs. The leader will not respond until the command has been logged, committed, and executed by the leader's state machine. Linearizability is guaranteed with a unique key. Configuration changes must go through two phases.
 
-![Raft](./screen/concensus.png)
+![Raft](./screen/Concensus.png)
 
 ### Term
 A term is a duration for which a specific server acts as the leader. A new election begins a new term, and the Raft algorithm ensures that every term has a single leader.
