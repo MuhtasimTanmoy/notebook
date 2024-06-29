@@ -18,9 +18,9 @@
 ### Table of Contents
 
 - Featured
-
-    - [JPEG Encoder](./systems/jpegencoder.md) : Algorithm for encoding digital images in the JPEG format.
     - [Encrypted Messaging](./security/encrypted%20messaging.md) : Messaging with end-to-end encryption to ensure privacy and security.
+    - [Video Conferencing](./architecture/video%20conferencing.md) : Real-time communication between multiple participants via video and audio.   
+    - [JPEG Encoder](./systems/jpegencoder.md) : Algorithm for encoding digital images in the JPEG format.                    
     - [Signal Protocol](./security/signal%20protocol.md) : End to end encryption protocol and messaging application.
     - [Bit Torrent](./protocols/bit%20torrent.md) : Peer-to-peer file-sharing protocol for distributing large amounts of data.
     - [XMPP](./protocols/xmpp.md) : Extensible Messaging and Presence Protocol: Open technology for real-time communication.
@@ -28,8 +28,7 @@
     - [EVM](./crypto/evm.md) : Runtime environment for executing smart contracts on Ethereum.
     - [Certificate](./security/certificate.md) : Digital certificate used to verify the identity of a person, device, or organization.
     - [WebRTC](./networking/webrtc.md) : API for real-time communication between web browsers.
-    - [Network Layer](./networking/network%20layer.md) : OSI model layer responsible for network routing and addressing.
-    - [Video Conferencing](./architecture/video%20conferencing.md) : Real-time communication between multiple participants via video and audio.
+    - [Network Layer](./networking/network%20layer.md) : OSI model layer responsible for network routing and addressing.                    
     - [Game Server](./architecture/game%20server.md) : Server responsible for hosting and managing multiplayer online games.
     - [Encoding](./concepts/encoding.md) : Process of converting data into a format suitable for transmission or storage.
     - [Garbage Collection](./concepts/garbage%20collection.md) : Automatic memory management technique for reclaiming unused memory.
