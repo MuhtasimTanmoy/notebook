@@ -41,7 +41,7 @@
 - After independent compilation of translation units to object file, linkers work to connect them as an executable
 - static libraries (`.lib`, `.a`) used in linker, dynamic libraries (.dll, .so) used in loader
 
--[CppCon 2017: Michael Spencer “My Little Object File: How Linkers Implement C++”](https://www.youtube.com/watch?v=a5L66zguFe4)
+- [CppCon 2017: Michael Spencer “My Little Object File: How Linkers Implement C++”](https://www.youtube.com/watch?v=a5L66zguFe4)
 
 - Object files
     - Ranges of unsplttable data (sections)
