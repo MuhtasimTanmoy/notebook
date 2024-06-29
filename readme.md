@@ -36,6 +36,49 @@
     - [Raft](./distributed/raft.md) : Consensus algorithm for managing replicated logs in distributed systems.
     - [TCP IP Illustrated - vol 1](./books/tcp%20ip%20illustrated%20-%20vol%201.md) : Book providing in-depth coverage of the TCP/IP protocol suite.
 
+- Concepts
+    - [Video Streaming](./concepts/video%20streaming.md) : Transmission of video content over a network for playback in real-time.
+    - [Remote Attestation](./concepts/remote%20attestation.md) : Process of verifying the integrity and authenticity of remote systems.
+    - [Error Correction](./concepts/error%20correction.md) : Techniques for detecting and correcting errors in transmitted data.
+    - [Networking](./concepts/networking.md) : Communication between computing devices over a network.
+    - [Serialization](./concepts/serialization.md) : Process of converting data structures or objects into a format suitable for transmission.
+    - [File Format](./concepts/file%20format.md) : Structure and organization of data within a file.
+    - [Async](./concepts/async.md) : Programming paradigm emphasizing asynchronous execution.
+    - [Encoding](./concepts/encoding.md) : Process of converting data into a format suitable for transmission or storage.
+    - [Distributed Concensus](./concepts/distributed%20concensus.md) : Agreement among distributed nodes on a single data value or state.
+    - [BPF](./concepts/bpf.md) : Berkeley Packet Filter, in-kernel virtual machine for filtering and processing network packets.
+    - [Reactive](./concepts/reactive.md) : Programming paradigm emphasizing the propagation of changes and asynchronous data streams.
+    - [Functional Programming](./concepts/functional%20programming.md) : Programming paradigm centered around the evaluation of mathematical functions.
+    - [Docker](./concepts/docker.md) : Platform for developing, shipping, and running applications using containerization.
+    - [Garbage Collection](./concepts/garbage%20collection.md) : Automatic memory management technique for reclaiming unused memory.
+    - [Static Dynamic Library](./concepts/static%20dynamic%20library.md) : Libraries linked at compile time and runtime.
+
+- Systems
+    - [LLVM](./systems/llvm.md) : Low-Level Virtual Machine: Compiler infrastructure supporting various programming languages.
+    - [Profiling](./systems/profiling.md) : Process of analyzing software performance characteristics.
+    - [JVM](./systems/jvm.md) : Java Virtual Machine: Runtime environment for executing Java bytecode.
+    - [Audio](./systems/audio.md) : Sound-related topics, including recording, playback, and processing.
+    - [Shell code](./systems/shell%20code.md) : Code written to be executed by a command-line shell.
+    - [Build System](./systems/build%20system.md) : Tool or process for automating the building of software.
+    - [Codec](./systems/codec.md) : Algorithm for encoding and decoding data streams or signals.
+    - [TLB](./systems/tlb.md) : Cache used to improve virtual address translation speeds.
+    - [Probabilistic algorithm](./systems/probabilistic%20algorithm.md) : Algorithm that employs randomness or probability in its operation.
+    - [Audio Programming](./systems/audio%20programming.md) : Development of software for audio processing or synthesis.
+    - [Kernel](./systems/kernel.md): Core component of an operating system responsible for managing hardware and resources.
+    - [misc](./systems/misc.md)
+    - [VM](./systems/vm.md) : Software emulation of a physical computer system.
+    - [Compression](./systems/compression.md) : Process of reducing the size of data for storage or transmission.
+    - [Jpeg Encoder](./systems/jpegencoder.md) : Algorithm for encoding digital images in the JPEG format.
+
+- Architecture
+    - [Video Streaming](./architecture/video%20streaming.md) : Transmission of video content over a network for playback in real-time.
+    - [Game Server](./architecture/game%20server.md) : Server responsible for hosting and managing multiplayer online games.
+    - [Video Conferencing](./architecture/video%20conferencing.md) : Real-time communication between multiple participants via video and audio.
+    - [Browser](./architecture/browser.md) : Software application used for accessing information.
+    - [p2p](./architecture/p2p.md) : Network architecture where each node can act as both a client and a server.
+    - [Web Assembly](./architecture/web%20assembly.md) : Binary instruction format for a stack-based virtual machine used to run code in web browsers.
+    - [Messaging Server](./architecture/messaging%20server.md) : Server responsible for handling and delivering messages between users or systems.
+
 - Database
     - [Cockroachdb](./database/cockroachdb.md) : Distributed SQL database.
     - [Time Series DB](./database/time%20series%20db.md) : Database optimized for handling time series data.
@@ -153,16 +196,7 @@
     - [Building secure and reliable systems](./books/building%20secure%20and%20reliable%20systems.md) : Book focusing on principles and practices of building secure and reliable software systems.
     - [Programming in Erlang](./books/programming%20in%20erlang.md) : Book introducing Erlang programming language concepts and techniques.
     - [Concurrennt programming in erlang](./books/concurrennt%20programming%20in%20erlang.md) : Book focusing on concurrent programming patterns and best practices in Erlang.
-    - [Enterprise integration pattern](./books/enterprise%20integration%20pattern%20-%20addison%20wisley.md) : Book detailing patterns for integrating enterprise systems.
-
-- Architecture
-    - [Video Streaming](./architecture/video%20streaming.md) : Transmission of video content over a network for playback in real-time.
-    - [Game Server](./architecture/game%20server.md) : Server responsible for hosting and managing multiplayer online games.
-    - [Video Conferencing](./architecture/video%20conferencing.md) : Real-time communication between multiple participants via video and audio.
-    - [Browser](./architecture/browser.md) : Software application used for accessing information.
-    - [p2p](./architecture/p2p.md) : Network architecture where each node can act as both a client and a server.
-    - [Web Assembly](./architecture/web%20assembly.md) : Binary instruction format for a stack-based virtual machine used to run code in web browsers.
-    - [Messaging Server](./architecture/messaging%20server.md) : Server responsible for handling and delivering messages between users or systems.
+    - [Enterprise integration pattern](./books/enterprise%20integration%20pattern%20-%20addison%20wisley.md) : Book detailing patterns for integrating enterprise systems.      
 
 - Mobile
     - iOS
@@ -175,41 +209,7 @@
         - [NDK](./mobile/android/ndk.md) : Native Development Kit: Set of tools for developing Android applications using native code.
         - [Gradle](./mobile/android/gradle.md) : Build automation tool used primarily for Android development.
         - [Android](./mobile/android/android.md) : Operating system for mobile devices developed by Google.
-        - [ADB](./mobile/android/adb.md) : Android Debug Bridge: Command-line tool for interacting with Android devices.
-        
-- Concepts
-    - [Video Streaming](./concepts/video%20streaming.md) : Transmission of video content over a network for playback in real-time.
-    - [Remote Attestation](./concepts/remote%20attestation.md) : Process of verifying the integrity and authenticity of remote systems.
-    - [Error Correction](./concepts/error%20correction.md) : Techniques for detecting and correcting errors in transmitted data.
-    - [Networking](./concepts/networking.md) : Communication between computing devices over a network.
-    - [Serialization](./concepts/serialization.md) : Process of converting data structures or objects into a format suitable for transmission.
-    - [File Format](./concepts/file%20format.md) : Structure and organization of data within a file.
-    - [Async](./concepts/async.md) : Programming paradigm emphasizing asynchronous execution.
-    - [Encoding](./concepts/encoding.md) : Process of converting data into a format suitable for transmission or storage.
-    - [Distributed Concensus](./concepts/distributed%20concensus.md) : Agreement among distributed nodes on a single data value or state.
-    - [BPF](./concepts/bpf.md) : Berkeley Packet Filter, in-kernel virtual machine for filtering and processing network packets.
-    - [Reactive](./concepts/reactive.md) : Programming paradigm emphasizing the propagation of changes and asynchronous data streams.
-    - [Functional Programming](./concepts/functional%20programming.md) : Programming paradigm centered around the evaluation of mathematical functions.
-    - [Docker](./concepts/docker.md) : Platform for developing, shipping, and running applications using containerization.
-    - [Garbage Collection](./concepts/garbage%20collection.md) : Automatic memory management technique for reclaiming unused memory.
-    - [Static Dynamic Library](./concepts/static%20dynamic%20library.md) : Libraries linked at compile time and runtime.
-
-- Systems
-    - [LLVM](./systems/llvm.md) : Low-Level Virtual Machine: Compiler infrastructure supporting various programming languages.
-    - [Profiling](./systems/profiling.md) : Process of analyzing software performance characteristics.
-    - [JVM](./systems/jvm.md) : Java Virtual Machine: Runtime environment for executing Java bytecode.
-    - [Audio](./systems/audio.md) : Sound-related topics, including recording, playback, and processing.
-    - [Shell code](./systems/shell%20code.md) : Code written to be executed by a command-line shell.
-    - [Build System](./systems/build%20system.md) : Tool or process for automating the building of software.
-    - [Codec](./systems/codec.md) : Algorithm for encoding and decoding data streams or signals.
-    - [TLB](./systems/tlb.md) : Cache used to improve virtual address translation speeds.
-    - [Probabilistic algorithm](./systems/probabilistic%20algorithm.md) : Algorithm that employs randomness or probability in its operation.
-    - [Audio Programming](./systems/audio%20programming.md) : Development of software for audio processing or synthesis.
-    - [Kernel](./systems/kernel.md): Core component of an operating system responsible for managing hardware and resources.
-    - [misc](./systems/misc.md)
-    - [VM](./systems/vm.md) : Software emulation of a physical computer system.
-    - [Compression](./systems/compression.md) : Process of reducing the size of data for storage or transmission.
-    - [Jpeg Encoder](./systems/jpegencoder.md) : Algorithm for encoding digital images in the JPEG format.
+        - [ADB](./mobile/android/adb.md) : Android Debug Bridge: Command-line tool for interacting with Android devices.                                        
 
 - Open Source Study
     - [Kafka](./open%20source%20study/kafka.md) : Distributed streaming platform for building real-time data pipelines and streaming applications.
