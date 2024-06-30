@@ -33,7 +33,7 @@
     - [Encoding](./concepts/encoding.md) : Process of converting data into a format suitable for transmission or storage.
     - [Garbage Collection](./concepts/garbage%20collection.md) : Automatic memory management technique for reclaiming unused memory.
     - [Raft](./distributed/raft.md) : Consensus algorithm for managing replicated logs in distributed systems.
-    - [TCP IP Illustrated - vol 1](./books/tcp%20ip%20illustrated%20-%20vol%201.md) : Book providing in-depth coverage of the TCP/IP protocol suite.
+    - [TCP IP Illustrated - vol 1](./books/tcp%20ip%20illustrated%20-%20vol%201.md) : Book providing in-depth TCP/IP protocol suite coverage.
 
 - Concepts
     - [Video Streaming](./concepts/video%20streaming.md) : Transmission of video content over a network for playback in real-time.
@@ -44,8 +44,7 @@
     - [File Format](./concepts/file%20format.md) : Structure and organization of data within a file.
     - [Async](./concepts/async.md) : Programming paradigm emphasizing asynchronous execution.
     - [Encoding](./concepts/encoding.md) : Process of converting data into a format suitable for transmission or storage.
-    - [Distributed Concensus](./concepts/distributed%20concensus.md) : Agreement among distributed nodes on a single data value or state.
-    - [BPF](./concepts/bpf.md) : Berkeley Packet Filter, in-kernel virtual machine for filtering and processing network packets.
+    - [BPF](./concepts/bpf.md) : Berkeley Packet Filter, an in-kernel virtual machine for filtering and processing network packets.
     - [Reactive](./concepts/reactive.md) : Programming paradigm emphasizing the propagation of changes and asynchronous data streams.
     - [Functional Programming](./concepts/functional%20programming.md) : Programming paradigm centered around the evaluation of mathematical functions.
     - [Docker](./concepts/docker.md) : Platform for developing, shipping, and running applications using containerization.
@@ -58,10 +57,10 @@
     - [JVM](./systems/jvm.md) : Java Virtual Machine: Runtime environment for executing Java bytecode.
     - [Audio](./systems/audio.md) : Sound-related topics, including recording, playback, and processing.
     - [Shell code](./systems/shell%20code.md) : Code written to be executed by a command-line shell.
-    - [Build System](./systems/build%20system.md) : Tool or process for automating the building of software.
+    - [Build System](./systems/build%20system.md) : Tool or process for automating software building.
     - [Codec](./systems/codec.md) : Algorithm for encoding and decoding data streams or signals.
     - [TLB](./systems/tlb.md) : Cache used to improve virtual address translation speeds.
-    - [Probabilistic algorithm](./systems/probabilistic%20algorithm.md) : Algorithm that employs randomness or probability in its operation.
+    - [Probabilistic algorithm](./systems/probabilistic%20algorithm.md) : Algorithm that employs randomness or probability.
     - [Audio Programming](./systems/audio%20programming.md) : Development of software for audio processing or synthesis.
     - [Kernel](./systems/kernel.md): Core component of an operating system responsible for managing hardware and resources.
     - [misc](./systems/misc.md)
@@ -102,8 +101,8 @@
     - [Avalanche](./crypto/avalanche.md) : Scalable, decentralized blockchain platform for building custom dApps and enterprise applications.
     - [Zero Knowledge](./crypto/zero%20knowledge.md) : Cryptographic method enabling one party to prove knowledge of something to another without revealing the information itself.
 
-- Devops 
-    - [Kafka](./devops%20/kafka.md) : Distributed streaming platform for building real-time data pipelines and streaming applications.
+- DevOps 
+    - [Kafka](./devops%20/kafka.md) : A distributed streaming platform for building real-time data pipelines and streaming applications.
     - [Parser](./devops%20/parser.md) : Utility script
     - [Nginx](./devops%20/nginx.md) : High-performance web server and reverse proxy.
     - [ProxySQL](./devops%20/proxysql.md) : High-performance SQL proxy for MySQL.
@@ -191,7 +190,7 @@
     - [ZeroMQ](./books/zeroMQ.md) : Lightweight messaging library for building distributed applications.
     - [C plusplus concurrency in action](./books/c%20plusplus%20concurrency%20in%20action.md) : Book covering concurrent programming techniques in C++.
     - [Container Security](./books/container%20security.md) : Practices and techniques for securing containerized applications and environments.
-    - [TCP IP Illustrated - vol 1](./books/tcp%20ip%20illustrated%20-%20vol%201.md) : Book providing in-depth coverage of the TCP/IP protocol suite.
+    - [TCP IP Illustrated - vol 1](./books/tcp%20ip%20illustrated%20-%20vol%201.md) : Book providing in-depth TCP/IP protocol suite coverage.
     - [Building secure and reliable systems](./books/building%20secure%20and%20reliable%20systems.md) : Book focusing on principles and practices of building secure and reliable software systems.
     - [Programming in Erlang](./books/programming%20in%20erlang.md) : Book introducing Erlang programming language concepts and techniques.
     - [Concurrennt programming in erlang](./books/concurrennt%20programming%20in%20erlang.md) : Book focusing on concurrent programming patterns and best practices in Erlang.
