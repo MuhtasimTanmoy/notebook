@@ -18,10 +18,10 @@
 ### Table of Contents
 
 - Featured
+    - [Signal Protocol](./security/signal%20protocol.md) : End to end encryption protocol and messaging application.
     - [Encrypted Messaging](./security/encrypted%20messaging.md) : Messaging with end-to-end encryption to ensure privacy and security.
     - [Video Conferencing](./architecture/video%20conferencing.md) : Real-time communication between multiple participants via video and audio.   
     - [JPEG Encoder](./systems/jpegencoder.md) : Algorithm for encoding digital images in the JPEG format.                    
-    - [Signal Protocol](./security/signal%20protocol.md) : End to end encryption protocol and messaging application.
     - [Bit Torrent](./protocols/bit%20torrent.md) : Peer-to-peer file-sharing protocol for distributing large amounts of data.
     - [XMPP](./protocols/xmpp.md) : Extensible Messaging and Presence Protocol: Open technology for real-time communication.
     - [Linking](./language/concept/linking.md) : Process of connecting or combining separate components into a unified whole.
