@@ -1,5 +1,6 @@
 # JPEG Image Compression
-- Joint Photographic Expert Group
+
+JPEG stands for `Joint Photographic Expert Group`
 
 The major steps in JPEG compression involves.
 1. Compressing at block level (8*8)
@@ -10,6 +11,9 @@ The major steps in JPEG compression involves.
 6. DPCM on DC component
 7. RLE(Run Length Encoding) on AC Components
 8. Entropy coding — Huffman or arithmetic
+
+###  Implemetation
+- https://github.com/MuhtasimTanmoy/jpeg-codec
 
 ### Conversion 
 - Colour space transform and subsampling
