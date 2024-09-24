@@ -63,10 +63,10 @@
     - [Probabilistic algorithm](./systems/probabilistic%20algorithm.md) : Algorithm that employs randomness or probability.
     - [Audio Programming](./systems/audio%20programming.md) : Development of software for audio processing or synthesis.
     - [Kernel](./systems/kernel.md): Core component of an operating system responsible for managing hardware and resources.
-    - [misc](./systems/misc.md)
     - [VM](./systems/vm.md) : Software emulation of a physical computer system.
     - [Compression](./systems/compression.md) : Process of reducing the size of data for storage or transmission.
     - [Jpeg Encoder](./systems/jpegencoder.md) : Algorithm for encoding digital images in the JPEG format.
+    - [Misc](./systems/misc.md): Random
 
 - Architecture
     - [Video Streaming](./architecture/video%20streaming.md) : Transmission of video content over a network for playback in real-time.
