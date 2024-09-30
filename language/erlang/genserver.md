@@ -6,11 +6,11 @@
 - handle_call
     - expect reply
 
-- Instead of spawning process, using `spawn_link` will link process accordingly.
-    - Then supervisor can respawn that process.
+- Instead of spawning process, using `spawn_link` will link the process accordingly.
+    - The supervisor can respawn that process.
     - Supervise strategy like `one_for_one`.
-    - `sys:trace` to be used for tracing
-    - `sys:get_state()` to be used for seeing state
+    - `sys: trace` to be used for tracing
+    - `sys:get_state()` to be used for seeing the state
     - `sys:replace_state()` for debugging
 
 ### References

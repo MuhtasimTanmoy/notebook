@@ -3,7 +3,7 @@
 
 ### Kafka
 - Dumb broker, Smart consumer Model
-- Kafka does not attempt to track which messages were read by each consumer and only retain unread messages.
+- Kafka does not attempt to track which messages were read by each consumer and only retains unread messages.
 - Rather, Kafka retains all messages for a set amount of time, and consumers are responsible for tracking their location in each log.
 - Kafka uses Zookeeper to do leadership election of Kafka Broker and Topic Partition pairs.
 - Topics are the logical categorization of messages in Kafka model. 
@@ -14,7 +14,7 @@
 - The Kafka Producer API is used to produce streams of data records. 
 - The Kafka Consumer API is used to consume a stream of records from Kafka. 
 - A Broker is a Kafka server that runs in a Kafka Cluster. Kafka Brokers form a cluster. 
-- Best effort delivery across process, tcp, udp, just once
+- Best effort delivery across process, TCP, UDP, just once
 - No ordering
 
 ### RabbitMQ
@@ -25,10 +25,10 @@
 ### ZooKeeper
 - Zookeeper as a general purpose distributed process coordination system
 - `Zookeeper` is a system for distributed cluster management. It is a distributed key-value store. 
-- It is highly-optimized for reads but writes are slower. 
+- It is highly optimized for reads but writes are slower. 
 - It consists of an odd number of znodes known as an ensemble.
-- zookeeper as the backbone for maintaining cluster state and leader election. Handles the `concensus` part.
-- Zookeeper solves these problems using its magical tree structure file system called znodes, somewhat similar to the Unix file system. 
+- zookeeper as the backbone for maintaining cluster state and leader election. Handles the `consensus` part.
+- Zookeeper solves these problems using its magical tree structure file system called nodes, somewhat similar to the Unix file system. 
 - These znodes are analogous to folders and files in a Unix file system with some additional magical abilities.
 - Zookeeper provides primitive operations to manipulate these znodes, through which we will solve our distributed system problems.
 
@@ -42,4 +42,4 @@
 - [Zookeeper Doc](https://zookeeper.apache.org/doc/r3.5.7/zookeeperOver.html)
 - [Distributed System Design with Zookeeper](https://medium.com/@bikas.katwal10zookeeper-introduction-designing-a-distributed-system-using-zookeeper-and-java-7f1b108e236)
 - [Distributed Coordination](https://medium.com/hootsuite-engineering/distributed-coordination-with-zookeeper-247a62c900f1)
-- [Why zookeeper needs odd number of nodes](https://medium.com/@bikas.katwal10/why-zookeeper-needs-an-odd-number-of-nodes-bb8d6020e9e9)
+- [Why zookeeper needs an odd number of nodes](https://medium.com/@bikas.katwal10/why-zookeeper-needs-an-odd-number-of-nodes-bb8d6020e9e9)

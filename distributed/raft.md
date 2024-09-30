@@ -20,7 +20,6 @@ The six fundamental operations of Raft are:
 - Configuration Changes
     - Adding or removing servers
 
-
 Each server in the cluster can be in one of three states:
 - Follower state
 - Leader state
@@ -32,7 +31,7 @@ Each server maintains its current term and has only two RPCs and three persisten
 
 ![Raft](./screen/raft.png)
 
-The leader must regularly send empty heartbeats to all followers in the form of empty append entries. The election timeout is the span of time for choosing a leader, and safety is the liveliness of the leader election. A random timeout is eventually selected to complete the election.
+The leader must regularly send empty heartbeats to all followers in the form of empty append entries. The election timeout is the period for choosing a leader, and safety is the liveliness of the leader election. A random timeout is eventually selected to complete the election.
 
 ### Logs
 The committed log is persisted on disk on a majority of the servers. The leader never overwrites the log but appends to it. All future leaders must have all committed logs. The leader will not respond until the command has been logged, committed, and executed by the leader's state machine. Linearizability is guaranteed with a unique key. Configuration changes must go through two phases.

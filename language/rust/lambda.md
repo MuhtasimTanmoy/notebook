@@ -14,11 +14,11 @@ class Plus {
 
     int plusme(int v) const {
         return value + v;
-    }
+ }
 
     int operator()(int v) const {
         return value + v;
-    }
+ }
 }
 
 // Above class can be written as
@@ -31,7 +31,7 @@ auto plus = [x = 1] (int v) { return x + v; };
 // Template
 [value =1] (auto x) { return value + x; };
 
-// variable on stack pointing to heap
+// variable on stack pointing to the heap
 auto plus = Plus();
 
 // heap pointing to vtable through vptr. Not by default. By making one or methods virtual.
@@ -45,11 +45,11 @@ class Plus {
     Plus(int v);
     int plusme(int v) const {
         return value + v;
-    }
+ }
     template<class... As>
     auto operator()(As... as) const {
         return sum(as..., value)
-    }
+ }
 }
 
 auto plus = [value = 1] (auto... as) {
@@ -60,7 +60,7 @@ auto plus = [value = 1] (auto... as) {
 struct {
     int operator()(int n) const {
         return n < 2 ? 1 : n * (*this)(n-1);
-    }
+ }
 } fact;
 return fact(5);
 
@@ -68,22 +68,20 @@ return fact(5);
 
 // Corresponds to
 struct some_anonymous_type {
-  // capture_list turned into member variables
+ // capture_list turned into member variables
   some_anonymous_type( /* capture_list turned into arguments */ ):
-    /* member variables initialized */
-  {}
+ /* member variables initialized */
+ {}
   return_type operator()( argument_list ) const {
-    code
-  }
+ code
+ }
 };
 
 // This inside lambda refers to the outer object
 ```
 - Notes
-    - The move constructor is used instead of the copy constructor, if the object has type "rvalue-reference" (Type &&).
+    - The move constructor is used instead of the copy constructor if the object has type "rvalue-reference" (Type &&).
 
 ### References
 - [lambda from scratch](https://www.youtube.com/watch?v=3jCOwajNch0)
 - [Print variable type in C](https://stackoverflow.com/questions/81870/is-it-possible-to-print-a-variables-type-in-standard-c)
- 
-

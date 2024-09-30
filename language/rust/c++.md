@@ -9,16 +9,16 @@
 
 - [CppCon 2015: Scott Schurr “constexpr: Introduction”](https://youtu.be/fZjYCQ8dzTc)
     - Moving computation from runtime to compile time
-    - No syncronization concern
+    - No synchronization concern
     - Can be applied in `value` or `computations`
     - [Incomplete]
 
-### Template meta programming
-- Vector push is defensive is case of move operation, using `no except` optimizes a lot
-- If not fallback to pre c++11 and use copy
+### Template meta-programming
+- Vector push is defensive in case of the move operation, using `no except` optimizes a lot
+- If not fall to pre-c++11 and use a copy
 - Perfect forwarding
 - Reflection
-- `free` call free the memory but not the pointer to that. So in production codebase `free Null` pattern arises
+- The `free` call frees the memory but not the pointer to that. So in production codebase `free Null` pattern arises
 - Before, `move` semantics, `static_case<std::string&&>` would do the same
 - `Literals` are assignable
 
@@ -27,34 +27,34 @@
 
 ### Backlogs
 
-- By default `C++` exception do not capture their execution context (backtrace), so when a generic exception occurs you don’t know what code actually generated it.
+- By default `C++` exception does not capture their execution context (backtrace), so when a generic exception occurs you don’t know what code generated it.
 
-- C++ has lot of unsafe API and its extremely easy to do unsafe operations like accessing a forbidden area in memory thanks to pointer of trying to acces an array/vector past its allocated area. This lead to instability and lot of time spent trying to find and fix the code.
+- C++ has a lot of unsafe APIs and it is extremely easy to do unsafe operations like accessing a forbidden area in memory thanks to the pointer of trying to access an array/vector past its allocated area. This led to instability and a lot of time spent trying to find and fix the code.
 
-- C++ has 3 ways to deal with objects: objects, references and pointers. Each one has its pro and cons, its not as obvious to use as you might think. Lot of errors are made using the wrong one and you spend more time thinking about this kind of stuff than in other languages.
+- C++ has 3 ways to deal with objects: objects, references, and pointers. Each one has its pros and cons, it's not as obvious to use as you might think. A lot of errors are made using the wrong one and you spend more time thinking about this kind of stuff than in other languages.
 
-- C++ polymorphism is a pain in the ass to use. Its only fully work on smart pointer or shared pointer. C++ reference works, but only partially.. And having to use pointers everywhere is annoying.
+- C++ polymorphism is a pain in the ass to use. It only fully works on smart pointers or shared pointers. C++ reference works, but only partially. And having to use pointers everywhere is annoying.
 
-- C++ template are extremely powerful but they are also very complex to use correctly and lot of complexity comes with it.
+- C++ templates are extremely powerful but they are also very complex to use correctly and a lot of complexity comes with it.
 
-- C++ lack interfaces and true modules. The header mechanism is inefficient, verbose and the namespace mechanism is not as standardized and clear as in many other languages.
+- C++ lacks interfaces and true modules. The header mechanism is inefficient and verbose and the namespace mechanism is not as standardized and clear as in many other languages.
 
-There no standard package managers and repositories. If you stick to an operating system you can use say debian packages and docker as an example. But nothing universal or self contained in the language.
+There are no standard package managers and repositories. If you stick to an operating system you can use say Debian packages and docker as an example. But nothing universal or self-contained in the language.
 
-- Until recently (C++ 11) C++ had no lambda. Until C++ 14 lambda where quite verbose. They are still annoying to use and expressing something as callable for example is not as straightforward as it should be, in particular if you want to return a callable.
+- Until recently (C++ 11) C++ had no lambda. Until C++ 14 lambda were quite verbose. They are still annoying to use and expressing something as callable for example is not as straightforward as it should be, in particular if you want to return a callable.
 
 - C++ has still no easy introspection library.
 
-- C++ compilation is very slow and C++ debugging too. Outside of very basic code, each time you debug a program or unit test you lose time compared to doing it in language like java or C++. Also the available C++ build systems are more complex to use than what you find in other programming languages.
+- C++ compilation is very slow and C++ debugging too. Outside of very basic code, each time you debug a program or unit test you lose time compared to doing it in a language like Java or C++. Also, the available C++ build systems are more complex to use than what you find in other programming languages.
 
-- If C++ uses AVL for it’s std::map and Rust uses red/black for it’s equivalent, then C++ would have faster lookups where Rust would have faster insert/remove.
+- If C++ uses AVL for its std::map and Rust uses red/black for its equivalent, then C++ would have faster lookups whereas Rust would have faster insert/remove.
 
 - An intrusive list is one where the pointer to the next list node is stored in the same structure as the node data. This is normally A Bad Thing, as it ties the data to the specific list implementation. Most class libraries (for example, the C++ Standard Library) use non-intrusive lists, where the data knows nothing about the list (or other container) implementation.
 
 ### Snippet
 
-```shell
-g++ -fdump-class-heirarchy a.cpp
+``` shell
+g++ -fdump-class-hierarchy a.cpp
 ```
 
 ![](./screen/rule-Of-five.png)
@@ -62,7 +62,7 @@ g++ -fdump-class-heirarchy a.cpp
 ### References
 
 - [Just Rust](https://www.youtube.com/watch?v=YtUfK3ZP3No&list=PLFCH6yhq9yAH28S_oGUtqO46eI7IAWdEO)
-    - `Valgrind` can find memory error, race condition
+    - `Valgrind` can find memory errors, race condition
     - `Covety` static analysis, defect finding tool
 
 - [Quroa c++ backlog](https://www.quora.com/Instead-of-inventing-a-ton-of-high-level-programming-languages-why-dont-people-implemented-C-C-frameworks-to-perform-high-level-repetitive-tasks)
@@ -76,15 +76,15 @@ g++ -fdump-class-heirarchy a.cpp
 - [lvalue rvalue](https://www.internalpointers.com/post/understanding-meaning-lvalues-and-rvalues-c)
 
 - [Resource Management](https://www.youtube.com/watch?v=7Qgd9B1KuMQ)
-    - Explains various c++ resource management
-    - Free in destructor
+    - Explains various C++ resource management
+    - Free from a destructor
     - Copy constructor to copy heap
     - Assignment, copy and swap
     - Should have no exception thrown between allocation and free
     - Disable logging, then enable it should have no code or return in between
 
 - [C++ Memory Model](https://www.youtube.com/watch?v=UNJrgsQXvCA)
-    - Talks mainly about c++ memory model
+    - Talks mainly about the C++ memory model
     - `move semantics` use case explain
     - `byte ordering` for c++
 
@@ -94,34 +94,34 @@ g++ -fdump-class-heirarchy a.cpp
 
 - [CPPCon Slide Collection: ](https://github.com/CppCon/CppCon2019) contains cpp conference presentations on variour topic
 
-- [CppCon 2017: Fedor Pikus “C++ atomics, from basic to advanced. What do they really do?”](https://youtu.be/ZQFzMfHIxng)
-    - Used for lock free programming
+- [CppCon 2017: Fedor Pikus “C++ atomics, from basic to advanced. What do they do?”](https://youtu.be/ZQFzMfHIxng)
+    - Used for lock-free programming
     - Presentation application based
         - Mutex based
-        - Lock free / Wait free
+        - Lock-free / Wait-free
     - Any trivially copyable type can be made atomic
         - `x *= 2` is not atomic
         - `x = x + 1` is not atomic, same as `x++` unless x is atomic
-        - `x = x * 2`  is not atomic, these are two separate  atomic operation
+        - `x = x * 2` is not atomic, these are two separate  atomic operation
         - no atomicity for floating point numbers.
-        - Explicit `load`, `store`, `exchange`, `compare_and_swap` available
-    - The concept of atomicity scales from single instruction to whole program
+        - Explicit `load`, `store`, `exchange`, and `compare_and_swap` are available
+    - The concept of atomicity scales from a single instruction to whole program
         - Single add operation
-        - Client seeing db state before after update
+        - Client seeing db state before after an update
     - Algorithm rules supreme
-        - Should not delve into details of implementation too soon. Algorithm decides everything.
-    - Lock free but not wait free version
+        - Should not delve into details of implementation too soon. The algorithm decides everything.
+    - Lock-free but not wait-free version
         - ```c++
             std: atomic<int> x { 0 };
             int x0 = x;
             while( !x.compare_and_swap(x0, x0 + 1); )
-           ```
-        - Will continue while other change and add with the latest value only. Supports all sort of operations
-    - Atomics and locks generally provide thread safe way to do things
-    - Benchmark different operations in lock vs mutex, `atomic operaions vs normal vs spinlock`
+ ```
+        - Will continue while others change and add with the latest value only. Supports all sorts of operations
+    - Atomics and locks generally provide a thread-safe way to do things
+    - Benchmark different operations in lock vs mutex, `atomic operations vs normal vs spinlock`
     - Memory barriers
 
-- More generally, this seems to be a common pattern in Rust ecosystem:
+- More generally, this seems to be a common pattern in the Rust ecosystem:
     - A crate uses Mutex or other synchronization mechanism from std
     - Someone asks for `#[no_std]` support
     - Mutex is swapped for some variation of spinlock.

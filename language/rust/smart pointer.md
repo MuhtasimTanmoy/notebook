@@ -3,7 +3,7 @@
 - `unique_ptr`
     - Use it for exclusive ownership resource management
     - When we are done with heap allocation we need to call delete, the destructor of unique_ptr  does that for us.
-    - Rust owership is basically transferring `unique_ptr` because if it is copyable, and two pointer reference to same address, it is unclear who may have the responsibility to clear it
+    - Rust ownership is basically transferring `unique_ptr` because if it is copyable, and two pointer reference to the same address, it is unclear who may have the responsibility to clear it
     - It is `move` only, makes ownership clearer
     - Smart pointer should be treated like regular pointer, pass by value, return by value. 8 byte.
 
@@ -11,19 +11,19 @@
 
 template<class T, class Deleter = std:: default_delete<T>>
 class unique_ptr {
-    T *p_ = nullptr;
-    Deleter d_;
+ T *p_ = nullptr;
+ Deleter d_;
 
     ~unique_ptr() {
         if (p_) d_(p_);
-    }
+ }
 }
 
 template<class T>
 struct default_delete {
     void operator()(T* p) const {
         delete p
-    }
+ }
 }
 
 // Need to override default close function
@@ -32,8 +32,8 @@ struct FileCloser {
     void operator()(FILE *fp) const {
         if (fp !=  nullptr) {
             fclose(fp);
-        }
-    }
+ }
+ }
 }
 
 FILE *fp = fopen("INPUT.txt", "r");

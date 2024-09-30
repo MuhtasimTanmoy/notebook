@@ -1,6 +1,6 @@
 # Distributed Systems
 
-A distributed system is basically a network of autonomous systems/servers connected using a middleware which can share resources, capabilities, files and so on.
+A distributed system is a network of autonomous systems/servers connected using a middleware that can share resources, capabilities, files, and so on.
 
 
 Distributed System Categories 
@@ -12,10 +12,10 @@ Distributed System Categories
 6. Distributed Ledgers
 
 
-### Concensus
+### Consensus
 - State machine replication based on log
 - State Machine Replication Principle:
-    -  Physical logging means logging the contents of each row that is changed. 
+    - Physical logging means logging the contents of each row that is changed. 
     - Logical logging means logging not the changed rows but the SQL commands that lead to the row changes
 
 - Symmetric
@@ -26,7 +26,7 @@ Distributed System Categories
     - Raft 
 
 - Distributed Data Stores
-    - The concensus part can be separated as a service with ZooKeeper
+    - The consensus part can be separated as a service with ZooKeeper
     - Consistency Model
         - ACID
             - eg. HBase, Couchbase, Redis, Zookeeper.
@@ -42,7 +42,7 @@ Distributed System Categories
         
 - Distributed Application
     - Bittorent
-        - Trackerless torrent: Protocol that did not rely on centralized trackers for gathering metadata and finding peers, but instead uses new algorithms. 
+        - Trackerless torrent: Protocol that does not rely on centralized trackers for gathering metadata and finding peers, but instead uses new algorithms. 
         - One such instance is Kademlia `Mainline DHT`, a distributed hash table (DHT) that allows you to find peers through other peers. 
         - In effect, each user performs a tracker’s duties.
 
@@ -54,12 +54,12 @@ Distributed System Categories
 
 - Preserves symmetry and avoids having a centralized registry for storing membership and node liveness information.
 
-- Data replication is at the heart of making data durable and available in the presence of hardware failures such as machine crashes, disk failures, network partitions and clock skews.
+- Data replication is at the heart of making data durable and available in the presence of hardware failures such as machine crashes, disk failures, network partitions, and clock skews.
 
 - Popular implementations include those from `etcd` and `consul`. 
 - Next-generation distributed databases such as YugaByte DB, CockroachDB and TiDB use Raft for both leader election and data replication
 
-- The final value has to determined non-deterministically using heuristics such as Last-Writer-Wins (LWW) and Conflict Free Replicated Data Types (CRDT).
+- The final value has to be determined non-deterministically using heuristics such as Last-Writer-Wins (LWW) and Conflict Free Replicated Data Types (CRDT).
 
 - Distributed systems are kept weakly consistent for performance
   - Input Speculation
@@ -71,12 +71,12 @@ Distributed System Categories
  - But another possible approach is optimistic replication, where all concurrent updates are allowed to go through, with inconsistencies possibly created, and the results are merged or "resolved" later. 
  - In this approach, consistency between the replicas is eventually re-established via "merges" of differing replicas.
   - Operation based 
-  - State based 
+  - State-based 
   - However, there are practical differences. 
-  - State-based CRDTs are often simpler to design and to implement; their only requirement from the communication substrate is some kind of gossip protocol. 
+  - State-based CRDTs are often simpler to design and implement; their only requirement from the communication substrate is some kind of gossip protocol. 
   - Their drawback is that the entire state of every CRDT must be transmitted eventually to every other replica, which may be costly. 
   - In contrast, operation-based CRDTs transmit only the update operations, which are typically small. 
-  - However, operation-based CRDTs require guarantees from the communication middleware;that the operations are not dropped or duplicated when transmitted to the other replicas, and that they are delivered in causal order.
+  - However, operation-based CRDTs require guarantees from the communication middleware; that the operations are not dropped or duplicated when transmitted to the other replicas, and that they are delivered in causal order.
 
 
 ### Network Time Protocol
@@ -86,7 +86,7 @@ Distributed System Categories
 - It is very useful in situations like bank transactions. Assume the following situation without the presence of NTP. - Suppose you carry out a transaction, where your computer reads the time at 2:30 PM while the server records it at 2:28 PM. 
 - The server can crash very badly if it’s out of sync.
 
-- Google's spanner database uses GPS syncronized atomic clock
+- Google's Spanner database uses GPS-synchronized atomic clock
 
 - Netdate - update instantly ( A unix package) 
 
@@ -103,13 +103,13 @@ As category 1 Stratum is not publicly available, we can get from 2
 - Drift > clock frequency different > sync
 - Jitter >   difference between time provider & time consumer since the last time polling
 - conf - server pool.ntp.org
-- ntpdate to update in reasonable window
+- update to update in a reasonable window
 
 ### Gossip Protocol
-- A, B has some state. A sends it's state with version / timestamp. 
-- B checks updated, update it's and send back the one A lacks. 
-- A updates and sends acknowledgement
-- Kubernates depends on etcd
+- A and B have some states. A sends its state with version/timestamp. 
+- B checks updated, update it, and send back the one A lacks. 
+- A updates and sends an acknowledgment
+- Kubernetes depends on etcd
 - Kafka, elastic search on zookeeper
 - Three requirements for P2P
   - Group Membership
@@ -125,10 +125,10 @@ As category 1 Stratum is not publicly available, we can get from 2
     - Status 
   - Heartbeat state
   - Endpoint state 
-    - Collection of above two  
+    - Collection of the above two  
 - Seed node added only at cluster setup
 - Timeout value dynamically calculated
-- Akka has cluster singleton
+- Akka has a cluster of singleton
 - Consul extension lifeguard
 
  ### References
@@ -138,7 +138,7 @@ As category 1 Stratum is not publicly available, we can get from 2
 - [Implementing chubby a distributed lock](https://medium.com/princeton-systems-course/implementing-chubby-a-distributed-lock-service-8cf3c026c672)
 - [HashiCorp Memberlist](https://github.com/hashicorp/memberlist)
 - [Rapid](https://github.com/lalithsuresh/rapid) 
-  - Gossip with concensus
+  - Gossip with consensus
   - Kafka moving away from zookeeper which used for membership, failure detection 
 - [Gossip Protocol](https://www.youtube.com/watch?v=MPfAekq4f5I&ab_channel=DistributedSystemsConference)
 - [Gossip Protocol Attibutes](https://www.youtube.com/watch?v=FuP1Fvrv6ZQ&ab_channel=PlanetCassandra )

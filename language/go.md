@@ -20,12 +20,12 @@ go test folder_name/*.go
 
 ### Code snippet
  ```go
- // Go code will not run with redundent import
+ // Go code will not run with redundant import
  // Remove imports and sort
 goimports -w *.go
 
 type Person struct {
-    name string
+ name string
 }
 
 func (p *Person) Info() string {
@@ -33,7 +33,7 @@ func (p *Person) Info() string {
 }
 
 var test *Person
-// Here reciever treated as first parameter
+// Here receiver treated as the first parameter
 test.Info()
 Info(test)
 

@@ -4,6 +4,6 @@
 - Gossipsub
 - Peer scoring
 - Adaptive gossip dissemination
-- Oppurtunistic grafting
+- Opportunistic grafting
 - Peer quotas
 - Graylisting

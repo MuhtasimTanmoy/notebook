@@ -12,7 +12,7 @@
     - Cant distinguish concurrent event
 
 ### Vector Clock
-- Just array of lamport
+- Just an array of Lamport
 - CRDT
 - Causally Related 
     - One must be less and others equal or less
@@ -21,7 +21,7 @@
 
 ### Interval Tree Clock
 - Version Vectors or Interval Tree Clocks
-- All unique identifier coming together modifying
+- All unique identifiers coming together modifying
 - We need to track causality. 
 - In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events `happened before` the other one.
 
