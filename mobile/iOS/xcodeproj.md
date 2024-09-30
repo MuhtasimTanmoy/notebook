@@ -5,7 +5,7 @@ Here is the list of elements contained in the file format:
 - Root Element
 
 - PBXBuildFile
-    - This element indicate a file reference that is used in a PBXBuildPhase (either as an include or resource).
+    - This element indicates a file reference that is used in a PBXBuildPhase (either as an include or resource).
 
 - PBXBuildPhase - This element is an abstract parent for specialized build phases.
     - PBXAppleScriptBuildPhase
@@ -13,7 +13,7 @@ Here is the list of elements contained in the file format:
         - This is the element for the copy file build phase.
     - PBXFrameworksBuildPhase
     - PBXHeadersBuildPhase
-        - This is the element for the framewrok link build phase.
+        - This is the element for the framework link build phase.
     - PBXResourcesBuildPhase
         - This is the element for the resources copy build phase.
     - PBXShellScriptBuildPhase
@@ -37,20 +37,20 @@ Here is the list of elements contained in the file format:
         - This is the element for a build target that aggregates several others.
     - PBXLegacyTarget
     - PBXNativeTarget
-        - This is the element for a build target that produces a binary content (application or library).
+        - This is the element for a build target that produces binary content (application or library).
 
 - PBXProject
-    - This is the element for a build target that produces a binary content (application or library).
+    - This is the element for a build target that produces binary content (application or library).
 
 - PBXTargetDependency
-    - This is the element for referencing other target through content proxies.
+    - This is the element for referencing another target through content proxies.
 
 - XCBuildConfiguration
 
 - XCConfigurationList
     - This is the element for listing build configurations.
 
-- Remove Occurences of null
+- Remove Occurrences of null
     - `sed -i '' '/(null) in Sources /d' YOURPROJECT.xcodeproj/project.pbxproj`
     - `sed -i '' '/(null) in Resources /d' ProjectName.xcodeproj/project.pbxproj`
     - `sed -i '' '/(null) in Frameworks /d' ProjectName.xcodeproj/project.pbxproj`

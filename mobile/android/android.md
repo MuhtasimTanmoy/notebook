@@ -7,14 +7,14 @@
   - Linux
 
 There are four different types of app components
--   Activities
--   Services
--   Broadcast receivers
--   Content 
+- Activities
+- Services
+- Broadcast receivers
+- Content 
 
 - These are the entry points. 
   - One component triggers another. 
-  - The representation of an executing application in Java is the android.app. 
+  - The representation of an executing application in Java is the Android app.
   - Application object, which is instantiated upon application start and destroyed when the application stops.
 
 - Android runs on top of Dalvik VM. 
@@ -31,7 +31,7 @@ There are four different types of app components
 
 ### Process vs thread?
 
-- An important distinction between processes and threads is that processes don’t share address space with each other, but threads share the address space within a process.
+- An important distinction between processes and threads is that processes don’t share address space, but threads share the address space within a process.
 
 - This memory sharing makes it a lot faster to communicate between threads than between processes, which require remote procedure calls that take up more overhead.
 
@@ -40,14 +40,14 @@ There are four different types of app components
 
 ### Thread
 
-- Android-specific asynchronous mechanisms that applications can utilize to simplify the thread management:
+- Android-specific asynchronous mechanisms that applications can utilize to simplify thread management:
 
 - HandlerThread 
-  - Dedicated alltime running api callback processor
+  - Dedicated time running API callback processor
 
 - AsyncTask 
-  - One api call 
-  - Has separate dedicated worker thread. 
+  - One API call 
+  - Has a separate dedicated worker thread. 
 
 - IntentService
   - Service with thread
@@ -68,20 +68,20 @@ There are four different types of app components
 ### Intent
 
 - [Intents](http://developer.android.com/reference/android/content/Intent.html) are messages which components can send and receive. It is a universal mechanism of passing data between processes. 
-- With help of the intents one can start services or activities, invoke broadcast receivers and so on.
+- With the help of the intents one can start services or activities, invoke broadcast receivers, and so on.
 
 
 ### Android Test
 
 - Local unit tests 
-  - Tests which can run on the JVM.
+  - Tests that can run on the JVM.
 - Instrumented unit tests 
-  - Tests which require the Android system.
+  - Tests that require the Android system.
 
 
 ### IPC 
 
-- Inter process communication
+- Interprocess communication
 
 Traditional Linux techniques for IPC
 
@@ -91,15 +91,15 @@ Traditional Linux techniques for IPC
 - Pipes
 - D-bus  
 
-IPC techniques available in Andorid
+IPC techniques available on Android
 - Messenger
 - Intent
 - AIDL 
 - IBinder interface  
 
-- In the background, all of these are based on Binder. 2 process should be `bound` to each other with the help of IBinder interface (Intent, AIDL, IBinder, Messenger, does not matter).
+- In the background, all of these are based on Binder. 2 processes should be `bound` to each other with the help of the IBinder interface (Intent, AIDL, IBinder, Messenger, does not matter).
 
-- IPC between apps restricted by permission element. Can have signature level protection.
+- IPC between apps restricted by permission element. Can have signature-level protection.
 
 
 ### AIDL
@@ -111,7 +111,7 @@ IPC techniques available in Andorid
 
 ### Binder Driver
 
-- As said above, binder driver is a software components, which loads in the Kernel space, and is responsible for transferring the data from the memory are of one process to the other. 
+- As said above, a binder driver is a software components, which loads in the Kernel space and is responsible for transferring the data from the memory of one process to the other. 
 - It can be accessed by `ioctl()` calls.
 
 
@@ -134,7 +134,7 @@ IPC techniques available in Andorid
 - Weak reference for memory leak
 - Inner class accessing outer class keeping a reference causes memory leak
 - Asynctask keeping object reference even after onDestroy calls
-- Make inner class static to avoid accessing an outer class that can cause memory leak
+- Make the inner class static to avoid accessing an outer class that can cause a memory leak
 
 
 ### Others

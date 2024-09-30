@@ -14,16 +14,16 @@
 
 - A Unix domain socket or IPC socket (inter-process communication socket) is a data communications endpoint for exchanging data between processes executing on the same host operating system.
 
-- A pair of process communicating over a network employ a pair of sockets.
+- A pair of processes communicating over a network employ a pair of sockets.
 
 - Socket = IP + Port Number
 - Like named pipes, Unix domain sockets support:
 
 - Types
-    - Transmission of a reliable stream of bytes (SOCK_STREAM, compare to TCP).
-    - Ordered and reliable transmission of datagrams (SOCK_SEQPACKET, compare to SCTP)
-    - Unordered and unreliable transmission of datagrams (SOCK_DGRAM, compare to UDP).
-    The Unix domain socket facility is a standard component of POSIX operating systems.
+    - Transmission of a reliable stream of bytes (SOCK_STREAM, compared to TCP).
+    - Ordered and reliable transmission of datagrams (SOCK_SEQPACKET, compared to SCTP)
+    - Unordered and unreliable transmission of datagrams (SOCK_DGRAM, compared to UDP).
+ The Unix domain socket facility is a standard component of POSIX operating systems.
 
 ### Why use UDP instead of TCP
 
@@ -38,7 +38,7 @@
 
 - As a result, it is much easier to regulate which users have access to a UNIX domain socket than it is for a TCP socket
 
-- Note that concurrent connections are not the same as requests per second, though they are similar: handling many requests per second requires high throughput (processing them quickly), while high number of concurrent connections requires efficient scheduling of connections.
+- Note that concurrent connections are not the same as requests per second, though they are similar: handling many requests per second requires high throughput (processing them quickly), while a high number of concurrent connections requires efficient scheduling of connections.
 
 - In other words, handling many requests per second is concerned with the speed of handling requests.
 
