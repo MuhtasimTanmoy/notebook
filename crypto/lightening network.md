@@ -1,6 +1,6 @@
 # State Channel
 - Micro Payment Channels 
-    - Micro Payment channel is a subset of state channel
+    - Micro Payment channel is a subset of the state channel
     - Bitcoin Lightning Network
     - Duplex Micro-Payment Channels 
     - Use Cases

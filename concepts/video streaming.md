@@ -13,8 +13,8 @@
     - iframe the image
     - pframe the block move instruction
     - bframe prediction
-- Bitrate is the amount of bits per second 
-    - bitrate = file size / duration  
+- Bitrate is the number of bits per second 
+    - bitrate = file size/duration  
 
 ### FFMPEG
 
@@ -61,29 +61,29 @@ ffmpeg -f avfoundation -list_devices true -i ""
 
 # Streamign RTMP packet
 ffmpeg \
-    -f avfoundation \
+ -f avfoundation \
     -r 30 \
-    -i "0:0" \
+ -i "0:0" \
     -deinterlace \
-    -vcodec libx264 \
+ -vcodec libx264 \
     -pix_fmt yuv420p \
-    -preset medium \
+ -preset medium \
     -g 60 -b:v 2500k \
-    -acodec libmp3lame \
+ -acodec libmp3lame \
     -ar 44100 \
-    -threads 6 \
+ -threads 6 \
     -qscale 3 -b:a 712000 \
-    -bufsize 512k \
+ -bufsize 512k \
     -f flv rtmp://localhost/live/abc123
 
 ffmpeg \
-  -f avfoundation \
+ -f avfoundation \
   -video_size 640x480 \
-  -framerate 30 \
+ -framerate 30 \
   -i "0:0" -ac 2 \
-  -vcodec libx264 -maxrate 2000k \
+ -vcodec libx264 -maxrate 2000k \
   -bufsize 2000k -acodec libmp3lame -ar 44100 -b:a 128k \
-  -f flv "rtmp://localhost/live/abc123"
+ -f flv "rtmp://localhost/live/abc123"
 
 # working
 ffmpeg -f avfoundation -i ":1" -acodec libmp3lame -ab 32k -ac 1 -f flv "rtmp://localhost/live/abc123"
@@ -120,4 +120,4 @@ ffmpeg -ss 00:00:25 -t 00:00:00.04 -i YOURMOVIE.MP4 -r 25.0 YOURIMAGE%4d.jpg
 ### References
 - [FFMEPG, Preset](https://trac.ffmpeg.org/wiki/Encode/H.264)
 - [Rate control](https://slhck.info/video/2017/03/01/rate-control.html)
-- [FFMPEG](https://ffmpeg.org/ffmpeg.html)         
+- [FFMPEG](https://ffmpeg.org/ffmpeg.html)

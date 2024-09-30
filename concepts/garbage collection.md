@@ -1,10 +1,9 @@
 # Garbage Collection
-Garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program. In large servers sometiems there is GC pause to reclaim memory.
-
+Garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program. In large servers sometimes there is a GC pause to reclaim memory.
 
 ### [Rethinking Garbage Collection](https://www.youtube.com/watch?v=Fte2pKMjgG0)
 
-- Java compilation and execution goes through th below steps
+- Java compilation and execution goes through the below steps
     - JAVA Source File 
     - Static Compiler 
     - Class file
@@ -22,7 +21,7 @@ Creating a new programming language
 - Usage Tradeoff
     - Highly Engineered Perforamant System - Exact and Tracing
         - Java, .NET
-    - Non Performance Critical - Reference Counting and Conservative
+    - Non-Performance Critical - Reference Counting and Conservative
         - PHP, Python
 
 - GC Fundamental
@@ -32,19 +31,19 @@ Creating a new programming language
 
 - Allocator
     - Free list
-        - Class Based Object Allocation
+        - Class-Based Object Allocation
     - Bump counting
-        - Just a full heap. Allocation by incrementing pointer
+        - It's just a full heap. Allocation by incrementing pointer
 
 - Identification
     - Tracing (Mark and Sweep)
-        - Start from top (DFS). Those which are not reached garbage collected
+        - Start from the top (DFS). Those which are not reached garbage collected
         - Know about full heap
     - Reference Counting
         - Incoming reference count
         - Know about one object
 
-- Reclaimation
+- Reclamation
   - Sweep to Free
   - Defragment Compaction > Mark compact
   - Evacuate
@@ -66,16 +65,16 @@ Creating a new programming language
         - Nursery
         - Mature
 - Immix
-    - An upper level hiererchy
+    - An upper-level hierarchy
     - Decrease checking
 - Most object size 8-16 bytes
-- Specification in software . Never think about implementation.
-- Reference counting 30% slower than tracing
+- Specification in software. Never think about implementation.
+- Reference counting is 30% slower than tracing
 - RC immix - rust - bitc
-- Tracing > cant identify dead object only live
-- Concurrent real time system garbage collection
+- Tracing > cant identify dead objects only live
+- Concurrent real-time system garbage collection
 
-- Exapmple
+- Example
     - Mostly copying collector - Apple UI Kit
     - BDW collector - Chakra VM - Mark sweep  - Free list
 

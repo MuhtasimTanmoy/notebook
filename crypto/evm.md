@@ -4,10 +4,10 @@
 
 - [EVM: From Solidity to byte code, memory and storage](https://www.youtube.com/watch?v=RxL_1AfV7N4)
     - Solidity and viper EVM language which generates `.bin` and `.abi`
-    - Transactions are not part of world state or state tree
-        - It will be part of information that gets linked to block header which is summary of all transactions
-    - Contract is transaction with no to address, and only data
-    - Full flow walkthrough
+    - Transactions are not part of the world state or state tree
+        - It will be part of the information that gets linked to the block header which is a summary of all transactions
+    - Contract is the transaction with no address, and only data
+    - Full-flow walkthrough
 
 - [Reversing Ethereum Smart Contracts to find out what's behind EVM bytecode (Devcon4)](https://www.youtube.com/watch?v=IEvRRszoTeE)
 
@@ -18,11 +18,11 @@
         - Loader code
             - Execute once to store runtime code
         - Runtime code
-            - Can map bytecode to evm assembly
-            - Reconstruct control flow graph
-            - Runtime code entry point is dispatcher function
-                - Switch to first four bytes of transaction payload
-                - Execute associated code with given function signature
+            - Can map bytecode to EVM assembly
+            - Reconstruct the control flow graph
+            - Runtime code entry point is the dispatcher function
+                - Switch to the first four bytes of the transaction payload
+                - Execute associated code with the given function signature
                 - Signature Database - https://www.4byte.directory
                 - Security Analysis Tool
                     - https://github.com/pventuzelo/octopus
@@ -40,10 +40,10 @@
     - CrossChain Protocol Stack
         - Application
             - Built on function
-        - Funciton Call
+        - Function Call
             - Execution
         - Messaging
-            - Verificaiton
+            - Verification
     - Ethereum Event
         - Event can be proven to come from certain blockchain 
     - Hash Timelock Contracts (HTLC) 
@@ -55,7 +55,7 @@
 
 - [SputnikVM: Rust Ethereum Virtual Machine Implementation](https://github.com/rust-blockchain/evm)
 
-- [Gossipsub - A gossip-based pubsub protocol By Yiannis Psaras @ Paris P2P Festival #1](https://youtu.be/VEEEaf8B35w)
+- [Gossipsub - A gossip-based pub-sub protocol By Yiannis Psaras @ Paris P2P Festival #1](https://youtu.be/VEEEaf8B35w)
     - Floodsub -> RandomSub -> GossipSub
     - Eager push
     - Lazy pull 
@@ -70,8 +70,8 @@
     - Covert flash Attack
 
 - [Gossipsub v1.1 - A scalable, extensible & hardened P2P PubSub Router protocol with David Dias](https://youtu.be/H9Eb4uftrSA)
-    - p2p pubsub system
-    - randomsub
+    - p2p pub-sub system
+    - random sub
     - Peer excahnge on prune
     - Epidemic broadcast tree
     - Bitswap

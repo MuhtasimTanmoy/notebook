@@ -6,13 +6,13 @@
 ### Namespace
 - Isolation of global system resources between independent processes.
 
-- Namespaces do not restrict access to physical resources such as CPU, memory and disk. That access is metered and restricted by a kernel feature called `cgroups`.
+- Namespaces do not restrict access to physical resources such as CPU, memory, and disk. That access is metered and restricted by a kernel feature called `cgroups`.
 
 - 7 Namespace available
     - `Mount` 
         - isolate filesystem mount points
     - `UTS` 
-        - isolate hostname and domainname
+        - isolate hostname and domain name
     - `IPC` 
         - isolate interprocess communication (IPC) resources
     - `PID`
@@ -46,7 +46,7 @@
 
 `Storage drivers` allow you to create data in the writable layer of your container. 
 
-The files won’t be persisted after the container is deleted, and both read and write speeds are lower than native file system performance. Transferring similar to rsync.
+The files won’t persist after the container is deleted, and both read and write speeds are lower than native file system performance. Transferring similar to rsync.
 
 - When you use the FROM command in a Dockerfile you are referring to a base image. Rather than copy everything in a new image, you will share the contents (a.k.a. fs layers); this is what is known as a **copy-on-write** (holy cow!) filesystem. 
 
@@ -67,10 +67,10 @@ The files won’t be persisted after the container is deleted, and both read and
 - VFS
 
  ### Cgroups
- - Control the resource utilization. Keep a limit memory, CPU. 
+ - Control the resource utilization. Keep a limited memory and CPU. 
 
  ### Seccomps
- - Sort of `bpf` based hook that happen before syscall.
+ - Sort of `bpf` based hook that happens before syscall.
 
 ### References
 - [The Linux Programming Interface](https://man7.org/tlpi/)

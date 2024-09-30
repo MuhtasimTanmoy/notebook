@@ -3,7 +3,7 @@
 - Stack Machine
     - In the stack machine, data is available at the top of the stack by default. 
     - The stack acts as a source and destination, push and pop instructions are used to access instructions and data from the stack.
-    - There is no need to pass the source and destination address because the default address is top of the stack. 
+    - There is no need to pass the source and destination address because the default address is on top of the stack. 
     - In the stack machine, there is no need to pass explicit addresses in the instruction. 
     - Therefore the instruction format consists only of the `OPCODE (Operation Code)` field. 
     - This instruction format is known as Zero address instruction
@@ -11,16 +11,16 @@
     - Stack machines boast better code density than register machines
     - Stack machine is much simpler than register machines
     - Examples: WebAssembly, TelegramVM, EthereumVM
-    - Traditional stack machine codegens are `AST-based`
+    - Traditional stack machine code gens are `AST-based`
     - Missing aggressive optimizations
     - LLVM is missing some key infrastructures for stack machine codegen
-    -  Repurposing LLVM to emit stack code is intuitively challenging (but doable)
-    -  Public `WASM` backend is an attempt but its methodology is rudimentary and not canonical
-    -  LLVM is not traditionally good with code size optimization -- need a lot of tunings.
+    - Repurposing LLVM to emit stack code is intuitively challenging (but doable)
+    - Public `WASM` backend is an attempt but its methodology is rudimentary and not canonical
+    - LLVM is not traditionally good with code size optimization -- need a lot of tunings.
 
 - EVM ( Ethereum Virtual Machine )
     - Stack machine with 256-bit word length
-    - Deterministic: no heap, gc, multithreading, floating point, external variables, dynamic jumps
+    - Deterministic: no heap, GC, multithreading, floating point, external variables, dynamic jumps
     - Has blockchain-specific instructions
     - Executing each bytecode instruction costs “gas”
 
@@ -29,7 +29,7 @@
     - Vyper is simplistic and Python-based
     - After 5 years we are still not seeing other DSLs emerging. Mostly because the platform needs something like LLVM
 
--  Most stack machines are designed for size-sensitive scenarios: (eg. blockchain)
+- Most stack machines are designed for size-sensitive scenarios: (eg. blockchain)
 
 - Register allocation pass is replaced by Stackification pass
     - Register-based Instr

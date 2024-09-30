@@ -1,5 +1,5 @@
 # eBPF
-- Packet filerting done in kernel space without context switch.
+- Packet filtering is done in kernel space without a context switch.
 - On link driver -> BPF + Protocol Stack 
 - eBBF - parse modify packet - filter before
 - TCPDump uses BPF
@@ -20,11 +20,11 @@
 - tcpdump greater 64
 - tcpdump <= 128
 - -d to get assembly line
-- To limit no of packet capture -c
+- To limit the packet capture -c
 - -nn to ip reveal
 - tcpdump port 80 -w capture_file ( Writing to pcap file )
     - Other capture method
-        - sudo spctl --master-disableo
+        - sudo spctl --master-disable
         - airport -s
         - airport en0 sniff 13
         - JamWifi
@@ -35,13 +35,13 @@
 - tcpdump -nnvvS src 10.5.2.3 and dst port 3389
 - tcpdump -vvAls0 | grep 'User-Agent:' (User agents isolate)   
 - Packet format
-    - Packet headers information 
-    - 08:41:13.729687 IP 192.168.64.28.22 > 192.168.64.1.41916: Flags [P.], seq 196:568, ack 1, win 309, options [nop,nop,TS val 117964079 ecr 816509256], length 372
-    - S	SYN	Connection Start
-    - F	FIN	Connection Finish
-    - P	PUSH Data push
-    - R	RST	Connection reset
-    - .	ACK	Acknowledgment
+    - Packet header information 
+    - 08:41:13.729687 IP 192.168.64.28.22 > 192.168.64.1.41916: Flags [P.], seq 196:568, ack 1, win 309, options [nop, nop, TS val 117964079 ecr 816509256], length 372
+    - S SYN Connection Start
+    - F FIN Connection Finish
+    - P PUSH Data push
+    - R RST Connection reset
+    - ACK Acknowledgment
 - Packet Content
     - -X to print content in hex, and ASCII or -A to print the content in ASCII.      
 - Capturing ssh session
@@ -54,7 +54,7 @@
 - Kprobes / Uprobes
 - Static tracepoint
 - Debugging replaces instruction with jump
-- Anything platform independent introduce virtual machine
+- Anything platform independent introduces virtual machine
 
 ### IP Table
 - Table, Chain, Target
@@ -62,7 +62,7 @@
 
 ### Netcut
 - TCP UDP packet generate
-- Or ping for control packet
+- Or ping for a control packet
 
 ### Reference 
 - [Talk on BPF](https://www.youtube.com/watch?v=4SiWL5tULnQ)
@@ -74,6 +74,6 @@
 - [Hacking: Aircrack-ng on Mac OsX | Cracking wi-fi without kali in parallels](https://martinsjean256.wordpress.com/2018/02/12/hacking-aircrack-ng-on-mac-cracking-wi-fi-without-kali-in-parallels)
 - [What is ICMP and How ICMP works || Explained](https://www.youtube.com/watch?v=jQm-J-8iPVw)
 - https://en.wikipedia.org/wiki/Network_socket
-- [The	Amazing	World of Kprobes](https://www.cs.dartmouth.edu/~sergey/cs258/2016/kprobes-2016.pdf)
+- [The  Amazing World of Kprobes](https://www.cs.dartmouth.edu/~sergey/cs258/2016/kprobes-2016.pdf)
 - [Linux Networking Explained](https://events.static.linuxfound.org/sites/events/files/slides/2016%20-%20Linux%20Networking%20explained_0.pdf)
 - [An introduction to using tcpdump at the Linux command line](https://opensource.com/article/18/10/introduction-tcpdump)

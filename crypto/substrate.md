@@ -7,10 +7,10 @@
     - `P2P` Network
         - JsonRPC
             - Submit transaction
-            - Get data about events that happen onchain
-            - Read some of the storage onchain
+            - Get data about events that happen on-chain
+            - Read some of the storage on the chain
         - libp2p
-            - one node in the network connect with another
+            - one node in the network connects with another
     - Block Authoring
     - Fork Choice Rules
     - Transaction Handling
@@ -18,10 +18,10 @@
     - State Transition Function ( Runtime )
         - Compiled down to `wasm`
         - Runs on all platforms
-        - Store `wasm` on chain which allows `forkless runtime update`
-        - Upgrade blockchain without hard fork, putting runtime logic there
+        - Store `wasm` on a chain which allows `forkless runtime update`
+        - Upgrade blockchain without a hard fork, putting runtime logic there
         - Sudo pallet for testing
-    - Concensus
+    - Consensus
         - Authoring
             - PoW
             - Aura

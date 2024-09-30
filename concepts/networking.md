@@ -4,7 +4,7 @@
 
 |  |  |  |
 |--|--|--|
-|								| PROTOCOL DATA UNIT | Devices | 
+|                               | PROTOCOL DATA UNIT | Devices | 
  |  Process/Application Layer          | Data |  App Firewalls , SSL,VPN. Proxy
 | Host-to-Host/Transport Layer   | Segments / datagrams |  Traditional Load Balancing/ Network Firewalls
 | Network Layer                         |       Packets  |   Routers (Broadcast Domain) |    
@@ -16,7 +16,7 @@ HOST LAYER - MEDIA LAYER
 - Connect two separate network namespaces (through tap)
     - Network namespace
         - Logically isolated network stack
-- Connect a container or VM or virtual switch
+- Connect a container VM or virtual switch
     - Adding veth pair. Visible in ip link.
     - > ip link add tap1 type veth peer name tap2
     - Namespace add. (/var/run/netns/)

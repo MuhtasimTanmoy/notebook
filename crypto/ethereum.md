@@ -4,7 +4,7 @@
     - Full Node
         - Decentralized, but storage heavy
     - Infura
-        - Can co relate IP with transaction, centralised
+        - Can co-relate IP with transaction, centralised
     - Portal Network
         - Decentralized
         - LES was decentralized but bottlenecked

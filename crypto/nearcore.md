@@ -1,10 +1,10 @@
 # Near
 
-- Concensus
+- Consensus
     - Nightshade, Starlight incoming
     - Aurora VM EVM gives EVM compatibility
     - Rainbow bridge used for asset transfer
-    - Each block contains chunk produced by shard
+    - Each block contains a chunk produced by a shard
 
 - [NEAR Core | Episode 01: Runtime Overview](https://www.youtube.com/watch?v=Xi_8PapFCjo)
 

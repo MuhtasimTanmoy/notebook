@@ -7,37 +7,37 @@
 - General Philosophy
 
 ### RPC and Threads
-- Threads vs event driven asyncronous programming
-- To get Parrelalism + IO Concurrency fill all thread equal to core with event driven loop
-- Go threads are cleverly run on one os thread
-- Code snippets in go crawler explained
+- Threads vs event-driven asynchronous programming
+- To get Parrelalism + IO Concurrency fill all threads equal to the core with an event-driven loop
+- Go threads are cleverly run on one OS thread
+- Code snippets in Go Crawler explained
 
 ### GFS
-- Two phase commit
+- Two-phase commit
 
 ### Primary-Backup Replication
-- Multi core bad for replicated state machine
+- Multi-core bad for replicated state machine
 
 ### Blockstack
 - Cryptographic ACL needs Public Key Infrastructure
-- Burn Address gets some fee for registering name
+- Burn Address gets some fee for registering the name
 - Certificate Transparency
 
 ### Fault Tolerance
-- Use of leader in distributed concensus
-    - Original Paxos dont have a leader
+- Use of leader in distributed consensus
+    - Original Paxos don't have a leader
     - First round to elect a leader, second to decide
-    - In raft, leader elected. So speeds up by factor of two
-    - Sequence of leaders identified by followers using term
+    - In the raft, the leader is elected. So speeds up by a factor of two
+    - Sequence of leaders identified by followers using the term
     - Back up. Fast
     - Log Compaction
     - Linearizability 
-        - All concurrent parallal requests map to one dimention.
+        - All concurrent parallel requests map to one dimension.
 
 ### ZooKeeper
-- Raft usage requires explicit use in application which gives distributed concensus
-- Zookeeper gives same as a co oord ination service
-- zookeeper zab, raft like
+- Raft usage requires explicit use in the application which gives distributed consensus
+- Zookeeper gives the same as a coordination service
+- zookeeper Zab, raft-like
 - Writes linearizable, gives zxID, Read fifo client with zxID
 - Primary backup system, not state machine replication.
 - Configuration management through read locking `ready` file
@@ -46,7 +46,7 @@
     - Test and Set
 - Api involves a naming system called 'zNodes'
     - Regular permanent zNode
-    - Ephimeral zNode - Client need to continuously end heartbeat to keep it
+    - Ephemeral zNode - The client needs to continuously end the heartbeat to keep it
     - Sequential
 - Herd effect    
 
@@ -54,18 +54,18 @@
 - Chain Replication
 - Maintains linearizability unlike zookeeper
 - Uses configuration manager. Raft, Paxos, ZooKeeper.
-- No worry about partition, split brain
+- No worry about partition, split-brain
   
 ### Aurora
-- In each machine, Virtual machine monitor to monitor ec2
+- In each machine, a Virtual machine monitor to monitor ec2
 - Website is constructed of stateless services that get persistent data from DB.
-- EC2 not good for DB. As not stateless like service.
-- EBS volume are servers using CRAQ.
-- Database on network generates lots of traffic.
+- EC2 is not good for DB. As not stateless like service.
+- EBS volumes are servers using CRAQ.
+- Database on the network generates lots of traffic.
 - DB
-    - Transation
+    - Transaction
     - Crash   Recovery 
-- Instead of RDS architecture, aurora just sends log entries, ack from quoram only.    
+- Instead of RDS architecture, Aurora just sends log entries, ack from quoram only.    
 
 ### Frangipani
   - Cache coherence
@@ -74,22 +74,22 @@
 - Shared read lock
 - Exclusive write lock 
 - Cache coherence lock to how updated write, Transactional to delay
-- WAL for crash recoverable transaction, Log on petal
+- WAL for the crash recoverable transaction, Log on the petal
  
 ### Distributed Transaction
 - Transaction
     - Concurrency control
         - Pessimistic 
             - Locking 
-                - More conflict then use it 
-            - Two phase locking 
+                - More conflict than use it 
+            - Two-phase locking 
                 - Lock and release at end.
-            - Two phase commit 
-                - Distributed xaction 
-                - When the content of atomic commit in different server.
+            - Two-phase commit 
+                - Distributed transaction 
+                - When the content of the atomic commit is in a different server.
             - Transaction Coordinator 
                 - Log update as early as possible
-            - Two phase commit and raft 
+            - Two-phase commit and raft 
         - Optimistic
      - Atomic commit
 - Serializable or atomic
@@ -99,21 +99,21 @@
 - CockroachDB uses a lot of design
 - Sharding 
     - Key design
-- Transactions over multiple shrad 
-- Paxos replecated
+- Transactions over multiple shared 
+- Paxos replicated
 - Transaction
     - Read Write Transaction
-    - Read only transaction
+    - Read-only transaction
         - Serializable
         - Snapshot isolation
             - TimeStamp 
                 - R/W Transaction - Commit Time
                 - R/O Transaction - Start Time 
-        - In case in minority paxos group, delay until
+        - In the case of the minority paxos group, delay until
 ![](./screen/Snapshot_isolation.png)                  
-        - External Consistency
-            - RO/RW transactions should not see stale data
-            - Multi version DB
+ - External Consistency
+ - RO/RW transactions should not see stale data
+ - Multi-version DB
 ![](./screen/RW_Transaction.png)
 - Data across data centers
 
@@ -130,7 +130,7 @@
     - Narrow dependency
     - Wide dependency - Distinct
 - Not good for stream processing
-- Instead of GFS writing in mapreduce, rdd can be retained in memory.
+- Instead of GFS writing in MapReduce, rdd can be retained in memory.
 
 ### Cache consistency
 - Four architecture
@@ -139,24 +139,24 @@
     - Multiple Server + Sharded DB Server (Hotspot problem)
     - Multiple Server + Cached
 - Look aside cache
-- Look through cache
+- Look through the cache
 - In cache of memcache failure dramatic increase in DB Server
-- Asyncronous log replicated scheme for replication
+- Asynchronous log replicated scheme for replication
 - RPC call to memcache
     - Cache invalidate scheme - better
     - Cache update scheme    
  partition:
-    + more memory-efficient (one copy of each k/v)
-    + works well if no key is very popular
-    - each web server must talk to many mc servers (overhead)
-  replication:
-    + good if a few keys are very popular
-    + fewer TCP connections
-    - less total data can be cached
-- When adding a new cluster, no cache can cause a lot of problem
+ + more memory-efficient (one copy of each k/v)
+ + works well if no key is very popular
+ - each web server must talk to many MC servers (overhead)
+ replication:
+ + good if a few keys are very popular
+ + fewer TCP connections
+ - less total data can be cached
+- When adding a new cluster, no cache can cause a lot of problems
     - Solution: Cold Mode
 - Thundering Herd
-    - Solve by using lease. Just a flag.
+    - Solve by using a lease. Just a flag.
 - Gutter Server
 - Race condition
     - Read, miss, but before set write, invalidate happens      
@@ -169,8 +169,8 @@
 
 - Photo put, List get example.
 - Sync to maintain order. Too slow. 
-- Better approach log server. But centralizaed log means heavy load.
-- Dependency maintain. Better approach.
+- Better approach log server. But centralized log means heavy load.
+- Dependency maintenance. Better approach.
 
 ### Certificate Transparency 
 - Merkle inclusion proof
@@ -193,40 +193,40 @@
 
 ### Lecture 2
 - Distributed Systems = Partial Failure + Unbounded Latency
-- Pysical Clock 
+- Physical Clock 
     - Time of day clock
         - Synced with NTP
         - Bad for duration, time label
-    - Monototic clock
+    - Monotonic clock
         - Counter
         - Bad for time label
         - Good for duration
 - Logical Clock
-    - Only orderinig of event
+    - Only ordering of event
 
 ### Lecture 3
 
 Lamport Diagrams / Space Time Diagrams
 
 A -> B when,
-- A happens before B in same machine
+- A happens before B in the same machine
 - A send B receive in different machine
 - Transitive closure
 - Causal anomaly
 
 Network mode
-- Syncrobous 
-- Asyncronous
+- Synchronous 
+- Asynchronous
 
 
 # Waterloo
  
 ### Lecture 1
 
-- Any big thing structure. Hiererchy 
+- Any big thing structure. Hierarchy 
 - DNS
 - Implicit hierarchy
-- Ip addr geographically dispered
+- Ip address geographically dispersed
 - Split up geo or data center 
 - Topology
 
@@ -244,12 +244,12 @@ Network mode
 **Lecture 6**
 
 - SOCKET TABLE
-    - SOCKET is an index to socket table, which has all information necessary.
+    - SOCKET is an index to socket table, which has all the information necessary.
     - SOCKET File Descriptor is an index. Just integer.
 - SOCK ADDR_IN
     - Address family
         - AF_INET
-        - AF_unix (Client server on same machine)
+        - AF_unix (Client-server on same machine)
     - IP address
         - From client - Server IP
         - From server - Any
@@ -257,7 +257,7 @@ Network mode
         - From client - Server's port
         - From server - Listen on port
 - HOST ENT
-    - Destinition
+    - Destination
         - What is returned by DNS?
 - TCP - SOCK_STREAM - CONNECTION ORIENTED
 - UDP - SOCK_DGRAM - DATAGRAM
@@ -269,6 +269,6 @@ Network mode
 - [Princeton systems course](https://medium.com/princeton-systems-course)
 
 **Lecture 7**
-- Flow control part of transport layer
-- Congestion control part of network layer
+- Flow control part of the transport layer
+- Congestion control part of the network layer
 - Ports are 16 bits
