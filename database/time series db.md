@@ -1,4 +1,4 @@
-# Time series Database
+# Time Series Database
 
 ### References
 - [InfluxDB Storage Engine Internals | Metamarkets](https://www.youtube.com/watch?v=rtEalnKT25I)
