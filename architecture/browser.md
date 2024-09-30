@@ -25,18 +25,18 @@ Rendering steps for a browser
     - Bytecode
 
 - JS engine comes with `JIT`, Garbage collector
-- Runtime the stuff language put that you actually dont wrote. ( translation cost occurs one )
+- Runtime, the pieces of code language add that you don't write. ( translation cost occurs one )
 
 ### Interpretation and compilation
 - Compiled is fast interpreted is repeated
-- Compilers can optimize ahead as they have full picture
+- Compilers can optimize ahead as they have the full picture
 - Interpreters in js introduced monitor warm functions
 - Stub > Chunks > += with similar datatypes on both side
 eventually optimizing translation time
 
 ### Notes
 - Polyfill backward compatibility
-- Perforamnce Measure
+- Performance Measure
     - Critical rendering path optimize
     - Time to first meaningful paint
 
@@ -49,22 +49,22 @@ eventually optimizing translation time
     - Speed
     - Simplicity
 
-- Multi process makes sure
+- Multi-process makes sure
     - Stability
     - Security
     - Speed
     
-- In order to ensure multiprocess
+- To ensure multiprocess
     - IPC 
-        - Inter Process Communication
+        - Inter-Process Communication
     - Message Passing for short objects, shared memory for larger.
-    - Every process has different priviledges, so need security review.
-    - These processing must be asyncronous.
-    - As untrusted code runs, `sandboxing` required.
+    - Every process has different privileges, so needs security review.
+    - These processing must be asynchronous.
+    - As untrusted code runs, `sandboxing` is required.
 
-- Splitted into components
+- Split into components
     - iOS support, blink replacements
-    - extension has different process
+    - the extension has a different process
     - Mojo for IPC 
 
 - Directory Structure
@@ -74,9 +74,9 @@ eventually optimizing translation time
     - content: multi-process sandboxed browser platform
     - ios: our iOS browser
     - net: networking library
-    - services: micro services
+    - services: microservices
     - third_party/Blink: Blink rendering engine
-    - ui: user interface frameworks, helper classes
+    - UI: user interface frameworks, helper classes
     - v8: JavaScript engine
 
 - [Life of a pixel](https://www.youtube.com/watch?v=m-J-tbAlFic&ab_channel=GoogleChromeDevelopers)
@@ -86,7 +86,7 @@ eventually optimizing translation time
     - Sandboxed renderer process
     - `Content` gets converted to `pixel`.
     - Content
-        - HTMl
+        - HTML
         - CSS
         - JS
         - Image
@@ -94,10 +94,10 @@ eventually optimizing translation time
         - OpenGL
         - `DirectX` for windows
         - Vulkan - Next generation Open GL
-    - Overall goal of rendering is to turn html, css, javascript inot right opengl call.
+    The overall goal of rendering is to turn HTML, CSS, and JavaScript into the right OpenGL call.
         - Dom
         - Style
         - Layout
         - Paint
         - Raster
-        - Gpu
+        - GPU

@@ -9,16 +9,16 @@
 ### Kademelia
 
 - Kademlia is not a consensus algorithm, it’s a `DHT` 
-- It is way to structure `p2p` networks, and to store and look up data on them, which means it can tolerate a whole lot more failures than raft can
+- It is a way to structure `p2p` networks, and to store and look up data on them, which means it can tolerate a whole lot more failures than Raft can
 - It is usually used to store data that never changes
-- Many implementations don’t necessarily replicate data and by itself it doesn’t have any consistency guarantees
+- Many implementations don’t necessarily replicate data and by themselves, it doesn’t have any consistency guarantees
 - Kademelia has `xor` matrics
     - b | a
-- Each node has routing table
+- Each node has a routing table
     - It contains more info on nodes closer to it
 - When finding just need binary lookup
 - Leaving is simple in kademelia
-- In case of crash ping
+- In case of a crash ping
 
 ### Chord
 
@@ -31,9 +31,9 @@
 - Chord GUID Distance
     - (b-a + 2^n) % 2^n
     - 7 to 8 and 8 to 7 not same
-- For kademelia order dont matter
+- For Kademelia order doesn't matter
 - Each node has a successor and a predecessor
-- The successor to a node is the next node in the identifier circle in a clockwise direction. The predecessor is counter clockwise. 
+- The successor to a node is the next node in the identifier circle in a clockwise direction. The predecessor is counterclockwise. 
 - If there is a node for each possible ID, the successor of node 0 is node 1, and the predecessor of node 0 is node `2^m - 1`; however, normally there are "holes" in the sequence.
 - The successor of node 153 may be node 167 (and nodes from 154 to 166 do not exist); in this case, the predecessor of node 167 will be node 153
 

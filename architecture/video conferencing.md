@@ -15,33 +15,33 @@
 ### SFU
 - In the SFU architecture, every participant sends his or her media stream to a centralized server (SFU) and receives streams from all other participants via the same central server. 
 - The architecture allows the call participant to send multiple media streams to the SFU, where the SFU may decide which of the media streams should be forwarded to the other call participants. 
-- SFU fallback to lowest quality in the network.
+- SFU fallback to the lowest quality in the network.
 - Without the issue of legacy endpoints, the SFU architecture provides better scaling properties. 
-- It requires far less computing power on the server, since the computing requirements are delegated to the endpoints, which may be quite heavy for some mobile clients. 
+- It requires far less computing power on the server since the computing requirements are delegated to the endpoints, which may be quite heavy for some mobile clients. 
 - It is also closer to the end-to-end principle, upon which the Internet is built. 
 - On the other hand, the SFU architecture has higher requirements on network bandwidth than the MCU architecture, as the number of media streams sent and received is usually higher.
 
 ### Turn Server vs SFU
 - SFU
     - For each PeerConnection the SFU will listen on a random UDP (and sometimes TCP port)
-    - This IP/Port combination is giving to each peer who then attempts to contact the SFU.
-    - The SFU then checks the incoming packets if they contain a valid hash (determined by upwd). This ensures there is no attacker connecting to this port.
+    - This IP/Port combination is given to each peer who then attempts to contact the SFU.
+    - The SFU then checks the incoming packets if they contain a valid hash (determined by upwd). This ensures no attacker is connecting to this port.
 
 - Turn Server
     - Provides a single allocation port that peers can connect to
-    - You can use UDP, DTLS, TCP or TLS. You need a valid username / password
+    - You can use UDP, DTLS, TCP, or TLS. You need a valid username/password
     - Once authenticated you send packets via this connection and the TURN server relays them for you
     - The TURN server will then listen on a random port so that others can then send stuff back to the Peer
     - You only have to listen on a single public port
-    - You can also make your service available via UDP, DTLS, TCP and TLS. Most ICE implementations only support UDP.
+    - You can also make your service available via UDP, DTLS, TCP, and TLS. Most ICE implementations only support UDP.
     - You have networks that only allow TLS traffic over port 443. So a TURN server is your only solution 
  
 ### MCU
 - The MCU architecture assumes that each conference participant sends his or her stream to the MCU. 
 - The MCU decodes each received stream, rescales it, composes a new stream from all received streams, encodes it, and sends a single to all other participants.
 - The MCU approach requires very little intelligence in device endpoints, as the majority of the logic is located in the MCU itself. 
-- The unit can generate output streams with different quality for different participants depending on their specific downlink conditions. 
-- This makes MCUs a solid solution for low capacity networks.
+- The unit can generate output streams with different qualities for different participants depending on their specific downlink conditions. 
+- This makes MCUs a solid solution for low-capacity networks.
 
 ### Adaptive Bitrate
 - Adaptive bitrate streaming is the adjustments to video quality according to the network quality. 
@@ -68,7 +68,7 @@
 
 ### Notes
 - For the media streams, WebRTC is RTP under the hood.
-- Janus plugin based, Medooze bare minimum.
+- Janus plugin-based, Medooze bare minimum.
 - Jitsi supports last N.
 
 ### References
