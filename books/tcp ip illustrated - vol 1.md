@@ -7,7 +7,7 @@ Effective communication depends on the use of a common language.
 
 - The design that specifies how various protocols of a protocol suite relate to each other and divide up tasks to be accomplished is called the architecture or reference model for the protocol suite.
 
--  Goals
+- Goals
     - Internet communication must continue despite loss of networks or gateways.
     - The Internet must support multiple types of communication services.
     - The Internet architecture must accommodate a variety of networks.
@@ -23,19 +23,19 @@ Effective communication depends on the use of a common language.
 - When packets are received at a packet switch, they are ordinarily stored in buffer memory or queue and processed in a first-come-first-served (FCFS) fashion.
     - Statistical Multiplexing
         - In statistical multiplexing, traffic is mixed together based on the arrival statistics or timing pattern of the traffic. 
-        - Such multiplexing is simple and efficient, because if there is any network capacity to be used and traffic to use it, the network will be busy (high utilization) at every bottleneck or choke point.
+        - Such multiplexing is simple and efficient because if there is any network capacity to be used and traffic to use it, the network will be busy (high utilization) at every bottleneck or choke point.
         - The downside of this approach is limited predictability the performance seen by any particular application depends on the statistics of other applications that are sharing the network.
         - Statistical multiplexing is like a highway where the cars can change lanes and ultimately intersperse in such a way that any point of constriction is as busy as it can be.
     - Time Division Multiplexing
     - Static Multiplexing
         - Although such techniques can lead to more predictability, a feature useful for supporting constant bit rate telephone calls, they may not fully utilize the network capacity because reserved bandwidth may go unused.
 
-    - Virtual circuits (VCs) that exhibit many of the behaviors of circuits but do not depend on physical circuit switches can be implemented atop connection oriented packets. 
+    - Virtual circuits (VCs) that exhibit many of the behaviors of circuits but do not depend on physical circuit switches can be implemented atop connection-oriented packets. 
     - This is the basis for a protocol known as `X.25` that was popular until about the early 1990s when it was largely replaced with Frame Relay and ultimately digital subscriber line (DSL) technology and cable modems supporting Internet connectivity.
         - In X.25 the 12-bit logical channel identifier (LCI) or logical channel number (LCN) serves this purpose. 
         - At each switch, the LCI or LCN is used in conjunction with the per-flow state in each switch to determine the next switch along the path for the packet. 
-        - The per flow state is established prior to the exchange of data on a VC using a signaling protocol that supports connection establishment, clearing, and status information. Such networks are consequently called connection-oriented. 
-        - In the late 1960s, another option was developed known as the datagram. Attributed in origin to the CYCLADES [P73] system, a datagram is a special type of packet in which all the identify- ing information of the source and final destination resides inside the packet itself (instead of in the packet switches). 
+        - The per-flow state is established prior to the exchange of data on a VC using a signaling protocol that supports connection establishment, clearing, and status information. Such networks are consequently called connection-oriented. 
+        - In the late 1960s, another option was developed known as the datagram. Attributed in origin to the CYCLADES [P73] system, a datagram is a special type of packet in which all the identifying- ing information of the source and final destination resides inside the packet itself (instead of in the packet switches). 
         - Although this tends to require larger packets, perconnection state at packet switches is no longer required and a connectionless network could be built, eliminating the need for a (complicated) signaling protocol. 
         - Datagrams were eagerly embraced by the designers of the early Internet, and this decision had profound implications for the rest of the protocol suite.
 
@@ -47,11 +47,11 @@ Effective communication depends on the use of a common language.
 
     - As a result, applications may need to implement their own methods to indicate a sender’s message boundaries if this capability is required.
         - Datagram preserves
-        - TCP dont
-    - Low level should not iplement error control, encryption, delivery acknowledgment
+        - TCP done
+    - Low level should not implement error control, encryption, delivery acknowledgment
     - The end-to-end argument tends to support a design with a “dumb” network and “smart” systems connected to the network.
 
-    - Fate Sharing: Fate sharing suggests placing all the necessary state to maintain an active communication association (e.g., virtual connection) at the same location with the communicating endpoints. 
+    - Fate Sharing: Fate sharing suggests placing all the necessary states to maintain an active communication association (e.g., virtual connection) at the same location with the communicating endpoints. 
 
     - With this reasoning, the only type of failure that destroys communication is one that also destroys one or more of the endpoints, which obviously destroys the overall communication anyhow. 
 
@@ -85,8 +85,8 @@ Effective communication depends on the use of a common language.
     - UDP provides is a set of port numbers for multiplexing and demultiplexing data, plus a data integrity checksum.
     - Datagram Congestion Control Protocol (DCCP), specified in [RFC4340]. It provides a type of service midway between TCP and UDP: connection-oriented exchange of unreliable datagrams but with congestion control.
     - Stream Control Transmission Protocol (SCTP), specified in [RFC4960]. SCTP provides reliable delivery like TCP but does not require the sequencing of data to be strictly maintained.
-    - At each layer there is an identifier that allows a receiving system to determine which protocol or data stream belongs together.
-    - An arriving Ethernet frame contains a 48-bit destination address (also called a link-layer or MAC Media Access Control—address) and a 16-bit field called the Ethernet type.
+    - At each layer, there is an identifier that allows a receiving system to determine which protocol or data stream belongs together.
+    - An arriving Ethernet frame contains a 48-bit destination address (also called a link layer or MAC Media Access Control—address) and a 16-bit field called the Ethernet type.
     - The TCP/IP stack uses a combination of addressing information and protocol demultiplexing identifiers to determine if a datagram has been received correctly and, if so, what entity should process it. 
     - Several layers also check numeric values (e.g., checksums) to ensure that the contents have not been damaged in transit.
     - The value of 4 (and 41, which indicates IPv6) is interesting because it indicates the possibility that an IP datagram may appear inside the payload area of an IP datagram. 
@@ -113,54 +113,54 @@ Effective communication depends on the use of a common language.
     - To address the problem, it was natural to consider a way that a site attached to the Internet could be allocated a network number centrally that could then be subdivided locally by site administrators.
 - Directed broadcasts were found to be such a big problem from a security point of view that they are effectively disabled on the Internet today
 - The special use address 255.255.255.255 is reserved as the local net broadcast (also called limited broadcast), which is never forwarded by routers.
-- Broadcast addresses are typically used with protocols such as UDP/IP (Chapter 10) or ICMP (Chapter 8) because these protocols do not involve two party conversations as in TCP/IP. IPv6 lacks any broadcast addresses; for places where broadcast addresses might be used in IPv4, IPv6 instead uses exclusively multicast addresses
-- Important examples of scopes include node- local (the address can be used only for communication on the same computer), link-local (used only among nodes on the same network link or IPv6 prefix), or global (Internet-wide). - 2.3.6.1
-- Classless Inter Domain Routing (CIDR)
+- Broadcast addresses are typically used with protocols such as UDP/IP (Chapter 10) or ICMP (Chapter 8) because these protocols do not involve two-party conversations as in TCP/IP. IPv6 lacks any broadcast addresses; for places where broadcast addresses might be used in IPv4, IPv6 instead uses exclusively multicast addresses
+- Important examples of scopes include node-local (the address can be used only for communication on the same computer), link-local (used only among nodes on the same network link or IPv6 prefix), or global (Internet-wide). - 2.3.6.1
+- Classless Inter-Domain Routing (CIDR)
     - Using CIDR, any address range is not predefined as being part of a class but instead requires a mask similar to a subnet mask, sometimes called a CIDR mask. 
     - CIDR masks are not limited to a site but are instead visible to the global routing system.
-- To dramatically reduce the number of routing table entrie s while maintaining shortest path routes to all destinations in the Internet. 
+- To dramatically reduce the number of routing table entries while maintaining shortest path routes to all destinations on the Internet. 
 - The best-known approach was published in a study of hierarchical routing
 - The hierarchical routing idea can be used in a specific way to reduce the number of Internet routing entries that would be required otherwise. 
 - This is accomplished by a procedure known as route aggregation.
-- The network topology were arranged as a tree1 and addresses were assigned in a way that was “sensitive” to this topology, very small routing tables could be used while still maintaining shortest-path routes to all destinations.
--  Scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administra- tive.
+- The network topology was arranged as a tree1 and addresses were assigned in a way that was “sensitive” to this topology, very small routing tables could be used while still maintaining shortest-path routes to all destinations.
+- Scopes include node-local (same computer), link-local (same subnet), site-local (applicable to some site), global (entire Internet), and administrative.
 
 ### Link Layer
 - Frame as PDU
 - Link-layer protocols can be carried inside other (link or higher-layer) protocols, a technique known as tunneling.
-- The particular method, known as carrier sense, multiple access with collision detection (CSMA/CD), mediates which computers can access the shared medium (cable) without any other special agree- ment or synchronization. 
+- The particular method, known as carrier sense, multiple access with collision detection (CSMA/CD), mediates which computers can access the shared medium (cable) without any other special agreement or synchronization. 
 - With CSMA/CD, a station (e.g., computer) first looks for a signal currently being sent on the network and sends its own frame when the network is free. This is the “carrier sense” portion of the protocol. 
-- If some other station happens to send at the same time, the resulting overlapping electrical signal is detected as a collision. In this case, each station waits a random amount of time before try- ing again. The amount of time is selected by drawing from a uniform probability distribution that doubles in length each time a subsequent collision is detected.
+- If some other station happens to send at the same time, the resulting overlapping electrical signal is detected as a collision. In this case, each station waits a random amount of time before trying again. The amount of time is selected by drawing from a uniform probability distribution that doubles in length each time a subsequent collision is detected.
 - A switched Ethernet network consists of one or more stations, each of which is attached to a switch port using a dedicated wiring path. 
 - In most cases where switched Ethernet is used, the network operates in a full-duplex fashion and the CSMA/CD algorithm is not required. Switches may be cascaded to form larger Ethernet LANs by interconnecting switch ports, sometimes called “uplink” ports.
 - LLC and MAC are “sublayers” of the link layer, where the LLC (mostly frame format) is generally common to each type of network and the MAC layer may be somewhat different. 
 - While the original Ethernet made use of CSMA/CD, for example, WLANs often make use of CSMA/CA
 - The original Ethernet encoded bits using a Manchester Phase Encoding (MPE) with two voltage levels.
 - “MAC address,” “link-layer address,” “802 address,” “hardware address,” or “physical address.”
-- VLAN to divide network into smaller broadcast domain
+- VLAN to divide the network into smaller broadcast domain
 - When multiple VLANs must span multiple switches (trunking), it becomes necessary to label Ethernet frames with the VLAN to which they belong before they are sent to another switch. Support for this capability uses a tag called the VLAN tag
     - vconfig add eth1 2
     - ethtool
 
 - In Linux, the Wake-On values are zero or more bits indicating whether receiving the following types of frames trigger a wake-up from a low-power state: any physical-layer (PHY) activity (p), unicast frames destined for the station (u), multicast frames (m), broadcast frames (b), ARP frames (a), magic packet frames (g), and magic packet frames including a password.
-    -  ethtool –s eth0 wol umgb
-    -  brctl addbr br0 
-    -  brctl addif br0 eth0 
-    -  brctl addif br0 eth1 
-    -  ifconfig eth0 up 
-    -  ifconfig eth1 up 
-    -  ifconfig br0 up
+    - ethtool –s eth0 wol umgb
+    - brctl addbr br0 
+    - brctl addif br0 eth0 
+    - brctl addif br0 eth1 
+    - ifconfig eth0 up 
+    - ifconfig eth1 up 
+    - ifconfig br0 up
 
 - Clients may wish to communicate with servers on the same computer using Internet protocols such as TCP/IP.
 
 - To enable this, most implementations support a network layer loopback capability that typically takes the form of a virtual loopback network interface.
 
-- `Maximum transmission unit` (MTU) is the size of the largest `protocol data unit` (PDU) that can be communicated in a single network
+- The maximum transmission unit` (MTU) is the size of the largest `protocol data unit` (PDU) that can be communicated in a single network
 
 - **Tunneling** In some cases it is useful to establish a virtual link between one computer and another across the Internet or other network. VPNs, for example, offer this type of service. The method most commonly used to implement these types of services is called `tunneling`   
 
 ### ARP
-- ARP is used with IPv4 only; IPv6 uses the Neigh- bor Discovery Protocol, which is incorporated into ICMPv6
+- ARP is used with IPv4 only; IPv6 uses the Neighbor Discovery Protocol, which is incorporated into ICMPv6
 - ARP Broadcast
 
 ### [TCP Connection Walkthrough](https://www.youtube.com/watch?v=F27PLin3TV0)

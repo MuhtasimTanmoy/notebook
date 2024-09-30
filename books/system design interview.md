@@ -17,22 +17,22 @@
 
 - Vertical Scaling
     - Vertical scaling has a hard limit. It is impossible to add unlimited CPU and memory to a single server.
-    -  Vertical scaling does not have failover and redundancy. If one server goes down, the website/app goes down with it completely.
+    - Vertical scaling does not have failover and redundancy. If one server goes down, the website/app goes down with it completely.
 
-- Load balancer with private IP to support webtier
+- Load balancer with private IP to support website
 - Data tier
     - Master slave
 - Cache tier
-    - Read through cache
+    - Read through the cache
 - CDN
     - Cache static assets
 - Stateless web tier
-    - NoSQl to handle session data
+    - NoSQL to handle session data
 - Data centers
     - geo-DNS routed
 - Message Queue
 - Logging, metrics, automation
-- Database shrad
+- Database shard
     - Celebrity problem
     - Join and de-normalization
 

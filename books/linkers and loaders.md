@@ -1,7 +1,7 @@
 # [Linkers and loaders](https://wh0rd.org/books/linkers-and-loaders/linkers_and_loaders.pdf)
 
--  Large C++ programs are prone to develop hard-to-diagnose bugs due to unexpected things that happen at link time. (The best known are static constructors that run in an an order the programmer wasn’t expecting.)
-- Global variable declarations are happen by a separate segment.
+- Large C++ programs are prone to develop hard-to-diagnose bugs due to unexpected things that happen at link time. (The best known are static constructors that run in an order the programmer wasn’t expecting.)
+- Global variable declarations happen by a separate segment.
 
 ### Linking and Loading
 
@@ -9,7 +9,7 @@
 
 - The program had to share the computer’s memory with the operating system and perhaps even with other programs, This means that the actual addresses at which the program would be running weren’t known until the operating system loaded the program into memory, deferring final address binding past link time to load time. 
 
-- Linkers and loaders now divided up the work, with linkers doing part of the address binding, assigning relative addresses within each program, and the loader doing a final relocation step to assign actual addresses.
+- Linkers and loaders now divide up the work, with linkers doing part of the address binding, assigning relative addresses within each program, and the loader doing a final relocation step to assign actual addresses.
 
 - Program loading
     - Copy
@@ -21,10 +21,10 @@
 - Shared Libraries
     - Shared libraries complicate this task a little by moving some of the work from link time to load time. 
     - The linker identifies the shared libraries that resolve the undefined names in a linker run, but rather than linking anything into the program.
-    - The linker notes in the output file the names of the libraries in which the symbols were found, so that the shared library can be bound in when the program is loaded.
+    - The linker notes in the output file the names of the libraries in which the symbols were found so that the shared library can be bound in when the program is loaded.
 
 ```asm
-this snippet of x86 code that moves the contents of variable a to variable b using the eax register.
+this snippet of x86 code moves the contents of variable a to variable b using the eax register.
 
 mov a,%eax
 mov %eax,b
@@ -34,7 +34,7 @@ If a is defined in the same file at location 1234 hex and b is imported from som
 A1 34 12 00 00 mov a,%eax
 A3 00 00 00 00 mov %eax,b
 
-Each instruction contains a one-byte operation code followed by a four- byte address. The first instruction has a reference to 1234 (byte reversed, since the x86 uses a right to left byte order) and the second a reference to zero since the location of b is unknown.
+Each instruction contains a one-byte operation code followed by a four-byte address. The first instruction has a reference to 1234 (byte reversed since the x86 uses a right-to-left byte order) and the second is a reference to zero since the location of b is unknown.
 
 Now assume that the linker links this code so that the section in which a is located is relocated by hex 10000 bytes, and b turns out to be at hex 9A12. The linker modifies the code to be:
 
@@ -56,12 +56,12 @@ An object file contains five kinds of information.
 
 • `Symbols:` Global symbols defined in this module, symbols to be imported from other modules or defined by the linker.
 
-• `Debugging information:` Other information about the object code not needed for linking but of use to a debugger. This includes source file and line number information, local symbols, descrip- tions of data structures used by the object code such as C structure definitions.
+• `Debugging information:` Other information about the object code not needed for linking but of use to a debugger. This includes source file and line number information, local symbols, descriptions of data structures used by the object code such as C structure definitions.
 (Some object files contain even more than this, but these are plenty to keep us occupied in this chapter.)
 
 #### Storage allocation
 
-Storage layout is a two-pass process, since the location of each segment can’t be assigned until the sizes of all segments that logically precede it are known.
+Storage layout is a two-pass process since the location of each segment can’t be assigned until the sizes of all segments that logically precede it are known.
 
 #### Symbol management
 
@@ -77,7 +77,7 @@ Storage layout is a two-pass process, since the location of each segment can’t
 
 #### Advanced techniques
 
-- C++ presents three challege to linker
+- C++ presents three challenges to the linker
     - Complicated naming rules
     - Global initializers and destructors
     - Templates and "extern inline" procedures
@@ -86,8 +86,8 @@ Storage layout is a two-pass process, since the location of each segment can’t
 - Incremental Linking
     - The first time their linker runs, it links a conventional statically linked executable.
     - Then stays active in the background as a daemon with the program’s symbol table remaining in memory.
-    - On subseqent links, it only treats the input files that have changed.
-    - Replacing their code in-place in the output file but leaving everything else alone other than fixing up references to symbols that have moved.
+    - On subsequent links, it only treats the input files that have changed.
+    - Replacing their code in place in the output file but leaving everything else alone other than fixing up references to symbols that have moved.
     - Since segment sizes in the recompiled files usually don’t change very much from one link to the next, they build the initial version of the output file with a small amount of slop space between the input file segments.
     - On each subsequent link, so long as the changed input files’ segments haven’t grown more than the slop amount, the changed files’ segments replace the previous versions in the output file. 
     - If they have grown past the end of the slop space, the linker moves the subsequent segments in the output file using their slop space. 
@@ -95,8 +95,8 @@ Storage layout is a two-pass process, since the location of each segment can’t
     - Creating the output file’s symbol table, which is essential for debugging, was as much work as creating the segments,
 
 - Optimization
-    - A programmer can turn each of the object files linked into a pro- gram into a library with one procedure per library member, then link from those libraries so the linker pulls in procedures as needed, but skips the ones with no references.
-    - In a language with class inheritance, calls to class methods generally use indirect calls since a method may be overridden in a subclass. But if there aren’t any subclasses, or there are subclasses but none of them override a particular method, the calls can be direct. A link- er could make special case optimizations like this to avoid some of the in- efficiencies otherwise inherent in object oriented languages.
+    - A programmer can turn each of the object files linked into a program into a library with one procedure per library member, then link from those libraries so the linker pulls in procedures as needed, but skips the ones with no references.
+    - In a language with class inheritance, calls to class methods generally use indirect calls since a method may be overridden in a subclass. But if there aren’t any subclasses, or there are subclasses but none of them override a particular method, the calls can be direct. A linker could make special case optimizations like this to avoid some of the inefficiencies otherwise inherent in object-oriented languages.
 
 
 ### References

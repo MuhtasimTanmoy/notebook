@@ -1,7 +1,6 @@
 # Masrtering Ethereum
 
 Account
-
 - An object containing an address, balance, nonce, and optional storage and code.
 An account can be a contract account or an externally owned account (EOA).
 
@@ -25,17 +24,15 @@ expressed in numeric format.
 
 - HD wallet seed
 
-A value used to generate the master private key and master chain code for an HD
+A value is used to generate the master private key and master chain code for an HD
 wallet. The wallet seed can be represented by mnemonic words, making it easier
 for humans to copy, back up, and restore private keys.
 
 Ethereum is a deterministic but practically
 unbounded state machine, consisting of a globally accessible singleton state and a virtual machine that applies changes to that state.
 
-Ethereum is an open source, globally decentral‐
-ized computing infrastructure that executes programs called smart contracts. It uses a
-blockchain to synchronize and store the system’s state changes, along with a crypto‐
-currency called ether to meter and constrain execution resource costs.
+Ethereum is an open-source, globally decentralized computing infrastructure that executes programs called smart contracts. It uses a
+blockchain to synchronize and store the system’s state changes, along with a crypto‐currency called ether to meter and constrain execution resource costs.
 
 - A peer-to-peer network connecting participants
 - A Byzantine fault–tolerant consensus algorithm for synchronization of state updates (a proof-of-work blockchain)

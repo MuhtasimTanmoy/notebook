@@ -6,7 +6,7 @@
 - Messaging enables data or commands to be sent across the network using a “send and forget” approach where the caller sends the information and then goes on to other work while the information is transmitted by the messaging system. Optionally, the caller can later be notified of the result through a callback.
 - Fundamental challenges:
     - Networks are unreliable. Integration solutions have to transport data from one computer to another across networks. Compared to a process running on a single computer, distributed computing has to be prepared to deal with a much larger set of possible problems. 
-    - Often times, two systems to be integrated are separated by continents and data between them has to travel through phone-lines, LAN segments, routers, switches, public networks, and satellite links. Each of these steps can cause delays or interruptions.
+    - Oftentimes, two systems to be integrated are separated by continents, and data between them has to travel through phone lines, LAN segments, routers, switches, public networks, and satellite links. Each of these steps can cause delays or interruptions.
     - Networks are slow. Sending data across a network is multiple orders of magnitude slower than making a local method call. Designing a widely distributed solution the same way you would approach a single application could have disastrous performance implications.
     - Any two applications are different. Integration solutions need to transmit information between systems that use different programming languages, operating platforms, and data formats. 
     - An integration solution needs to be able to interface with all these different technologies.
