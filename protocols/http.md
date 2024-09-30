@@ -1,8 +1,8 @@
 # HTTP
 
-- In case of Ajax request 'X-Requested-With' headers added. This type of request not something from browser typed.
+- In case of Ajax request 'X-Requested-With' headers are added. This type of request is not something from the browser typed.
 
-- Response is ok if `HTTP status code` between 200-299 and if cached status code 304.
+- Response is ok if the `HTTP status code` is between 200-299 and if the cached status code is 304.
 
 - The Host is the domain the request is being sent to. This header was introduced so hosting sites could include multiple domains on a single IP.
 
@@ -18,15 +18,15 @@
 
 - The cross-domain server can permit reading of the response when credentials are passed to it by setting the CORS Access-Control-Allow-Credentials header to true.
 
-- Some web servers dynamically create Access-Control-Allow-Origin headers based upon the client-specified origin. This is a workaround for CORS constraints that is not secure.
+- Some web servers dynamically create Access-Control-Allow-Origin headers based on the client-specified origin. This is a workaround for CORS constraints that is not secure.
 
-- Testing CORS. Run a server. Access from the devtool console while on different server.
+- Testing CORS. Run a server. Access from the devtool console while on a different server.
 
 - Preflight options request.
 
-- Use a proxy to set appropiate headers to access content. https://cors-anywhere.herokuapp.com
+- Use a proxy to set appropriate headers to access content. https://cors-anywhere.herokuapp.com
 
-- Use of JSONP. Which loads by passing callback. 
+- Use of JSONP. Which loads by passing a callback. 
 
 ### References
 - [CORS and the Access-Control-Allow-Origin response header](https://portswigger.net/web-security/cors/access-control-allow-origin)

@@ -69,35 +69,35 @@
 
 - Here in case of first it works. In second it does not.
 
-- My console with IP address `192.168.0.1` hosts a game using port `57433`. It connects to Xbox live to advertise this information.
+- My console with IP address `192.168.0.1` hosts a game using port `57433`. It connects to Xbox Live to advertise this information.
 
 - Xbox Live (using STUN) detects my public IP address of `56.45.32.5` and public port of `57433` and informs my console of this.
 
-- My console updates this information and advertises these details on Xbox live.
-Another person browses Xbox live for my game. 
+- My console updates this information and advertises these details on Xbox Live.
+Another person browses Xbox Live for my game. 
 
 - Once he clicks “join” his console retrieves my public IP address and port and attempts to connect directly. 
 
 - It tries to connect on `56.45.32.5` with port `57433`. The initial connection will be blocked by a port-restricted NAT because I haven’t yet sent any data to that console. 
 
-- My console now sends data to the remote console (IP and port learned through Xbox live) using source port `57433` with source IP `5.45.32.5`.
+- My console now sends data to the remote console (IP and port learned through Xbox Live) using source port `57433` with source IP `5.45.32.5`.
 
 - All subsequent packets sent from the remote console to `56.45.32.5` using port `57433` will now be accepted by my port-restricted NAT as I have now sent packets to it and it connects to me successfully.
 
-- My console with IP address `192.168.0.1` hosts a game using port `57433`. It connects to Xbox live to advertise this information.
+- My console with IP address `192.168.0.1` hosts a game using port `57433`. It connects to Xbox Live to advertise this information.
 
 - Xbox Live (using STUN) detects my public IP address of `56.45.32.5` and public port of `57433` and informs my console of this.
 
-- My console updates this information and advertises these details on Xbox live.
-Another person browses Xbox live for my game. 
+- My console updates this information and advertises these details on Xbox Live.
+Another person browses Xbox Live for my game. 
 
 - Once he clicks “join” his console retrieves my public IP address and port and attempts to connect directly. 
 
 - It tries to connect on `56.45.32.5` with port `57433`. Like a port-restricted NAT, the initial connection will be blocked because I haven’t yet sent any data to that console. 
 
-- My console now sends data to the remote console (IP and port learned through Xbox live) but a new mapping is used using port `45654` with source IP `56.45.32.5`.
+- My console now sends data to the remote console (IP and port learned through Xbox Live) but a new mapping is used using port `45654` with source IP `56.45.32.5`.
 
-- The information the remote console received from Xbox live was that the game is hosted on `57433` but the symmetric NAT opened up the port `45654` for this connection and not `57433`. The remote console fails to connect. 
+- The information the remote console received from Xbox Live was that the game is hosted on `57433` but the symmetric NAT opened up the port `45654` for this connection and not `57433`. The remote console fails to connect. 
  
 - How peer-to-peer game connects and arcitecture is available here [Game server](../architecture/game%20server.md)
 
@@ -150,7 +150,7 @@ Another person browses Xbox live for my game.
 
 - Typically, a `STUN` server is needed. 
 
-- A `STUN` client can send messages to the STUN server to get information about public IP and ports and retrieve that information. 
+- A `STUN` client can send messages to the STUN server to get information about public IPs and ports and retrieve that information. 
 
 - This protocol does not work for symmetric `NATs`, however. Symmetric NATs generate ports that are random for bindings. 
 
@@ -176,7 +176,7 @@ Another person browses Xbox live for my game.
     - ICE NAT Traversal
     - Secure RTP
 - `ICE Hole Punching` can establish direct `p2p` sessions between browsers behind different NAT
-- If both browsers are behind same `NAT hole punching` establish connection that never leaves
+- If both browsers are behind the same `NAT hole punching` establish a connection that never leaves
 - In some cases, hole punching fails, `TURN Relay` can work
 - Some website serves static assets from another peer
 

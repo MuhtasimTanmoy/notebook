@@ -1,6 +1,6 @@
 # Tokio
 
-Tokio is an asyncronous runtime for rust programming language.
+Tokio is an asynchronous runtime for the Rust programming language.
 
 ```rust
 async fn print() {
@@ -8,7 +8,7 @@ async fn print() {
     println!("Done sleeping");
 }
 
-// await part is divide into two poritons
+// await part is divided into two portions
 enum Task {
     Init,
     AwaitSleep(sleep),
@@ -16,11 +16,11 @@ enum Task {
 ```
 
 How it works under the hood?
-- The compiler turns asyncrounous task into state machine
-- Java program cant have segfault but can have data reces
-- ARC gives smart pointer. Mutex lock provides another smart pointer. When it goes out of scope it is unlocked autometically.
+- The compiler turns the asynchronous task into a state machine
+- Java programs cant have segfault but can have data races
+- ARC gives a smart pointer. Mutex lock provides another smart pointer. When it goes out of scope it is unlocked automatically.
 - `MutexLockGuard` is a smart pointer.
-    - Gives multiple reference to the data inside.
+    - Gives multiple references to the data inside.
 
 ```rust
 struct Database(Arc <Mutex <HashMap <String,Byte> > >)
@@ -38,10 +38,10 @@ async fn main() -> io::Result<()> {
         tokio::spawn( async move {
             let cmd = conn.recv_frame().await?;
             let response = cmd.apply(&db);
-            socket.write_frame(&response).await?;
+ socket.write_frame(&response).await?;
             // socket.write_all(b"Hello world").await
-        });
-    }
+ });
+ }
 }
 
 fn get(db: &Db, key: String) -> Frame {
@@ -49,23 +49,23 @@ fn get(db: &Db, key: String) -> Frame {
     let locked = db.lock();
     if let Some(value) = locked.find(key) {
         Frame::bulk(value)
-    } else {
+ } else {
         Frame::Null
-    }
+ }
 }
 
 fn put(db: &Db, key: String, value: Byte) -> Frame {
     let locked = db.lock();
 
-    locked.insert(key, value);
+ locked.insert(key, value);
 
     Frame::Simple("Ok")
 }
 
 // epoll provides io events
 // kqueue bsd
-// iopc windows
+// topic windows
 ```
 
 ### Reference
-- [AWS re:Invent 2020: Next-gen networking infrastructure with Rust and Tokio ](https://www.youtube.com/watch?v=MZyleK8elPk&ab_channel=AWSEvents)
+- [AWS re: Invent 2020: Next-gen networking infrastructure with Rust and Tokio ](https://www.youtube.com/watch?v=MZyleK8elPk&ab_channel=AWSEvents)

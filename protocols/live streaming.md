@@ -12,10 +12,10 @@
 
 - HLS uses AES in cipher block chaining (CBC) mode. 
 - This means each block is encrypted using the cipher text of the preceding block, but this gives us a problem: how do we encrypt the first block? There is no block before it! 
-- To get around this problem we use what is known as an initialisation vector (IV). In this instance, it’s a 16-byte random value that is used to intialize the encryption process. It doesn’t need to be kept secret for the encryption to be secure.
+- To get around this problem we use what is known as an initialization vector (IV). In this instance, it’s a 16-byte random value that is used to initialize the encryption process. It doesn’t need to be kept secret for the encryption to be secure.
 
 ### RTMP
-RTMP stands for real time media protocol and it’s the transport layer protocol. There’s one variance of the RTMP - RTMPT, that is the application level protocol, which runs over HTTP(s).
+RTMP stands for real-time media protocol and it’s the transport layer protocol. There’s one variance of the RTMP - RTMPT, which is the application-level protocol, which runs over HTTP(s).
 
 ### MPEG Dash
 Similar to HLS

@@ -1,7 +1,7 @@
 # NATS
 
 ### Side-Car architecture
-- It is a binary protocol over the NATS protocol utlilizing protobuf for serialization. 
+- It is a binary protocol over the NATS protocol utilizing protobuf for serialization. 
 
 ### References
 - [Understanding NATS Architecture](https://github.com/nats-io/nats-general/blob/master/architecture/ARCHITECTURE.md)
