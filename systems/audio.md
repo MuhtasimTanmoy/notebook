@@ -1,26 +1,26 @@
 # Audio Signal
 
-- Audio signals are normally in time domain. 
+- Audio signals are normally in the time domain. 
 - If you read the samples that make the audio from left to right, you travel in time, and the values you read signify how much to push or pull your loudspeaker cone at that point in time.
 
-- When you use `FFT`, you transform your time-domain audio signal to frequency domain.
+- When you use `FFT`, you transform your time-domain audio signal to the frequency domain.
 
 - As a result of `FFT`, you should get several bins filled with magnitudes and phases. 
 
 - You can discard the phases for this purpose; you are interested in the magnitudes.
 
 - Human ears typically can hear sounds as low as 20Hz to as high as 20000Hz in frequency. 
-- In a typical CD quality audio data, you have 44100 samples per second (in time domain, remember) which can encode information from 0Hz to 22050Hz (half the sampling rate basically; if you're interested in why, check out the "nyquist theorem").
+- In a typical CD quality audio data, you have 44100 samples per second (in the time domain, remember) which can encode information from 0Hz to 22050Hz (half the sampling rate basically; if you're interested in why, check out the "Nyquist theorem").
 
-- The magnitudes in FFT bins gives you the energy of sound between different frequencies. 
-- So depending on how you setup your FFT solver, say you end up with 100 bins. 
-- First bin gives you the energy between (say) 0 and 50Hz, the second bin gives you the energy between 50Hz and 100Hz and so on. 
+- The magnitudes in FFT bins give you the energy of sound between different frequencies. 
+- So depending on how you set up your FFT solver, say you end up with 100 bins. 
+The first bin gives you the energy between (say) 0 and 50Hz, the second bin gives you the energy between 50Hz and 100Hz, and so on. 
 
-- You want to plug those magnitudes to the height of lines in your visualisation. 
+- You want to plug those magnitudes to the height of lines in your visualization. 
 - The leftmost lines track the lower frequencies, and the rightmost lines track the highest frequencies.
 
 Two main factors determining sound
-- Sample Frequency ( X axis )
+- Sample Frequency ( X-axis )
 - Bit Depth ( Y axis )
  
 Bit Rate = Bit Depth * Sample Rate * Number of Channels
@@ -31,7 +31,7 @@ Bit Rate = Bit Depth * Sample Rate * Number of Channels
 - iPhone does not encode mp3
 - `AAC` is your format choice if you want interop between Android and iPhone devices
 - `PCM` is decodable on iPhone and Android and most cellphones at the expense of larger filesize.
-- But you can't create a file and save to the system with `mp3`, on iPhone. You can play back, but not save.
+- But you can't create a file and save it to the system with `mp3`, on iPhone. You can play back, but not save.
 - All smartphones can play WAV files (even Android as of 2.2). These are known as "Linear PCM" in iOS and "PCM/WAVE" in Android.
 - `ffprobe -hide_banner -stats -i ios-aac.m4a`
 - It does support hardware `AAC/m4a` encoding which is in many ways superior to mp3.

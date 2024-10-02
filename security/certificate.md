@@ -2,13 +2,13 @@
 
 ### SSL / TLS Handshake
 
-The Secure Socket Layer protocol was created by Netscape to ensure secure transactions between web servers and browsers. The protocol uses a third party, a Certificate Authority (CA), to identify one end or both end of the transactions. This is in short how it works.
+The Secure Socket Layer protocol was created by Netscape to ensure secure transactions between web servers and browsers. The protocol uses a third party, a Certificate Authority (CA), to identify one end or both ends of the transactions. This is in short how it works.
 
 - A browser requests a secure page, usually `https://`
 
 - The web server sends its public key with its certificate.
 
-- The browser checks that the certificate was issued by a trusted party (usually a trusted root CA), that the certificate is still valid and that the certificate is related to the site contacted.
+- The browser checks that the certificate was issued by a trusted party (usually a trusted root CA), that the certificate is still valid, and that the certificate is related to the site contacted.
 
 - The browser then uses the public key, to encrypt a random symmetric encryption key and sends it to the server with the encrypted URL required as well as other encrypted http data.
 
@@ -19,12 +19,12 @@ The Secure Socket Layer protocol was created by Netscape to ensure secure transa
 - The browser decrypts the http data and html document using the symmetric key and displays the information.
 
 - TLS 1.2 uses ECDHE_RSA
-- In case of TLS why not use only RSA. Because of perfect forward secracy. 
-- Diffie hellman does the sesison shared secret key. RSA verifies it. Out put a session key which is symmetric and fast unlike RSA.
+- In the case of TLS why not use only RSA? Because of perfect forward secrecy. 
+- Diffie Hellman does the session shared secret key. RSA verifies it. Output a session key that is symmetric and fast, unlike RSA.
 
 
 ### SSH
-- Simple TCP connection. Can be any reliable protocol.
+- Simple TCP connection. It can be any reliable protocol.
 - Transfer packets. 
 - ssh -v server
 
@@ -38,19 +38,19 @@ message authentication code
 
 ### Certificate
 
-- How do you know that you are dealing with the right person or rather the right web site. This someone, you have to implicitly trust: you have his/her certificate loaded in your browser (a root Certificate). 
+- How do you know that you are dealing with the right person or rather the right website? This is someone, you have to implicitly trust: you have his/her certificate loaded in your browser (a root Certificate). 
 
-- A certificate, contains information about the owner of the certificate, like e-mail address, owner's name, certificate usage, duration of validity, resource location or Distinguished Name (DN) which includes the Common Name (CN) (web site address or e-mail address depending of the usage) and the certificate ID of the person who certifies (signs) this information. 
+- A certificate, contains information about the owner of the certificate, like e-mail address, owner's name, certificate usage, duration of validity, resource location, or Distinguished Name (DN) which includes the Common Name (CN) (website address or e-mail address depending of the usage) and the certificate ID of the person who certifies (signs) this information. 
 
 - It contains also the public key and finally a hash to ensure that the certificate has not been tampered with. 
 
 - As you made the choice to trust the person who signs this certificate, therefore you also trust this certificate. 
 
-- This is a certificate trust tree or certificate path. Usually your browser or application has already loaded the root certificate of well known Certification Authorities (CA) or root CA Certificates. 
+- This is a certificate trust tree or certificate path. Usually, your browser or application has already loaded the root certificate of well-known Certification Authorities (CA) or root CA Certificates. 
 
 - The `CA` maintains a list of all signed certificates as well as a list of revoked certificates. A certificate is insecure until it is signed, as only a signed certificate cannot be modified. 
 
-- You can sign a certificate using itself, it is called a self signed certificate. All root CA certificates are self signed.
+- You can sign a certificate using itself, it is called a self-signed certificate. All root CA certificates are self-signed.
 
 - PEM - base64 encoded DER(Binary) cert
 
@@ -65,20 +65,20 @@ message authentication code
 - DER 
     - binary encoded
 - PEM 
-    - Governed by RFCs, its used preferentially by open-source software. It can have a variety of extensions (.pem, .key, .cer, .cert, more)
+    - Governed by RFCs, it's used preferentially by open-source software. It can have a variety of extensions (.pem, .key, .cer, .cert, more)
 
 - PKCS7 
     - An open standard used by Java and supported by Windows. Does not contain private key material.
 
 - PKCS12 
-    - A Microsoft private standard that was later defined in an RFC that provides enhanced security versus the plain-text PEM format. This can contain private key material. Its used preferentially by Windows systems, and can be freely converted to PEM format through use of openssl.
+    - A Microsoft private standard that was later defined in an RFC that provides enhanced security versus the plain-text PEM format. This can contain private key material. It's used preferentially by Windows systems and can be freely converted to PEM format through the use of OpenSSL.
 
 - DER 
     - The parent format of PEM. It's useful to think of it as a binary version of the base64-encoded PEM file. Not routinely used very much outside of Windows.
 
 - .csr 
-    - This is a Certificate Signing Request. Some applications can generate these for submission to certificate-authorities. 
-    - The actual format is PKCS10 which is defined in RFC 2986. It includes some/all of the key details of the requested certificate such as subject, organization, state, whatnot, as well as the public key of the certificate to get signed. 
+    - This is a Certificate Signing Request. Some applications can generate these for submission to certificate authorities. 
+    - The actual format is PKCS10 which is defined in RFC 2986. It includes some/all of the key details of the requested certificate such as subject, organization, state, and whatnot, as well as the public key of the certificate to get signed. 
     - These get signed by the CA and a certificate is returned. The returned certificate is the public certificate (which includes the public key but not the private key), which itself can be in a couple of formats.
 
 - .pem 
@@ -87,28 +87,28 @@ message authentication code
     - The name is from Privacy Enhanced Mail (PEM), a failed method for secure email but the container format it used lives on, and is a base64 translation of the x509 ASN.1 keys.
 
 - .key 
-    - This is a PEM formatted file containing just the private-key of a specific certificate and is merely a conventional name and not a standardized one. 
+    - This is a PEM formatted file containing just the private key of a specific certificate and is merely a conventional name and not a standardized one. 
     - In Apache installs, this frequently resides in /etc/ssl/private. 
     - The rights on these files are very important, and some programs will refuse to load these certificates if they are set wrong.
 
 - .pkcs12 .pfx .p12 
     - Originally defined by RSA in the Public-Key Cryptography Standards (abbreviated PKCS), the "12" variant was originally enhanced by Microsoft, and later submitted as RFC 7292. 
     - This is a passworded container format that contains both public and private certificate pairs. Unlike .pem files, this container is fully encrypted. 
-    - Openssl can turn this into a .pem file with both public and private keys: openssl pkcs12 -in file-to-convert.p12 -out converted-file.pem -nodes
+    - Openssl can turn this into a .pem file with both public and private keys: OpenSSL pkcs12 -in file-to-convert.p12 -out converted-file.pem -nodes
 
 ### Chain of trust
 - Root CA -> ICA ( Intermediate Certificate ) -> Certificate
-- For practical, visit https site, see cert in browser and open `Keychain access` to see root that signs.
+- For practical, visit the HTTPS site, see the cert in the browser, and open `Keychain access` to see the root that signs.
 So when requested two or more certificates are returned.
 ![TLS](screen/TLS.png)
 
 
 ### Public Key Infrastructure
 - The framework to associate a public key with an individual
-- Trust on first sight. (SSH)
+- Trust at first sight. (SSH)
 - Web of trust (Omemo encryption)
-- Trust the machine (Lets encrypt)
-    - Vendor distributes CA colelction to clients
+- Trust the machine (Let encrypt)
+    - Vendor distributes CA collection to clients
     - Server distributes cert and intermediates
     - Clients validate the collection
 
@@ -140,7 +140,7 @@ Certificate Signature (Encrypted hash code)
 Certificate Standard
 
 - CA - Certificate Authority issues and signs
-- RA - Registration authority
+- RA - Registration Authority
 
 Full process
 
@@ -162,17 +162,17 @@ In public key infrastructure (PKI) systems, a certificate signing request (also 
 Contents and Public Key
 
 ```
-CN	Common Name
-O	Business name / Organization
-OU	Department Name / Organizational Unit
-L	Town / City
-ST	Province, Region, County or State
-C	Country
+CN  Common Name
+O   Business Name / Organization
+OU  Department Name / Organizational Unit
+L   Town / City
+ST  Province, Region, County or State
+C   Country
 MAIL    Email address
 ```
 
 ### Adding SSL in Nginx
-Adding SSL protection is very easy now. We just need to install certbot and use it.
+Adding SSL protection is very easy now. We just need to install Certbot and use it.
 
 ```
 # First install certbot

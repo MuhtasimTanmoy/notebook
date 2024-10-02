@@ -10,19 +10,19 @@ And asymmetric for authentication.
 Example: TLS.
 
 - Diffie Hellman Key Exchange
-	- Prime Modulus and Generator `( G % P )`. Available to all.
-	- A generates random and send  `G ^ R_A % P`. SEND_IT_TO_ALL. Available to all.
-	- B generates random and send `G ^ R_B % P` . 
-	SEND_IT_TO_ALL. Available to all.
-	- Now as `G ^ R_A ^ R_B % P` is calculated and the secret key.
-	- Others do not have R_A R_B.
+    - Prime Modulus and Generator `( G % P )`. Available to all.
+    - A generates random and sends `G ^ R_A % P`. SEND_IT_TO_ALL. Available to all.
+    - B generates random and sends `G ^ R_B % P`. 
+ SEND_IT_TO_ALL. Available to all.
+    - Now as `G ^ R_A ^ R_B % P` is calculated and the secret key.
+    - Others do not have R_A R_B.
 
 - *Drawback*
-    - In case of multiple people communication . OVERHEAD.
+    - In case of multiple people communication. OVERHEAD.
     - Extra communication. Round trip time.
 
 ### RSA
-Public Private key based Encryption
+Public Private key-based Encryption
 - Formula
 
 ```
@@ -31,19 +31,19 @@ ed == 1 (mod phi( N ))
 ```
 
 - Prime Factorization
-	- Given any number get the two primes which multiplies it. 
-	- ed = very big prime factorization
+    - Given any number get the two primes that multiply it. 
+    - ed = very big prime factorization
 
 - Eulers Totient Function
 
-	- phi(N) = how many number less then or equal to N that do not share any common factor.
-	- Example : phi(8)
-    	- Numbers to consider 
-        	- 1 2 3 4 5 6 7 8
-        	- 1 3 5 7 -> has one factor common which is 1.
-        	- So, phi(8) = 4
-	- phi(prime number) = p - 1
-    	- As no number less than share common factor.
+    - phi(N) = how many numbers less than or equal to N that do not share any common factor.
+    - Example : phi(8)
+        - Numbers to consider 
+            - 1 2 3 4 5 6 7 8
+            - 1 3 5 7 -> has one factor common which is 1.
+            - So, phi(8) = 4
+    - phi(prime number) = p - 1
+        - As no number less than share a common factor.
 
 N = p1*p2 > big prime factorization
 phi (N) = (p1-1) * (p2-1)
@@ -54,25 +54,25 @@ m ^ phi(n) congruent to =  1 mod n
 m ^ (k * phi(n)  +1)  ==  m mod n
 
 - Walkthrough
-	- Generate two prime number.           [ 3 and 11 ]
-	- Multiply > prime factorization       [ N = 33 ]
-	- phi(N) > toteint                     [ phi(N) = 20 ]
-	- Choose exponent between 1 - phi(N) 
-		- E = odd and Co prime             [ E coprime to phi(N) and N]
-	- N & E public key                     [ (E,N) ]
-	- D = ( 2 * phi (N) + 1 ) / E          [ (D,N) ]
-	- ( data ^ e ) % N = encrypted text    
-	- ( encrypted text ^ d ) % N  = data
+    - Generate two prime numbers.           [ 3 and 11 ]
+    - Multiply > prime factorization       [ N = 33 ]
+    - phi(N) > toteint                     [ phi(N) = 20 ]
+    - Choose an exponent between 1 - phi(N) 
+        - E = odd and Co prime             [ E coprime to phi(N) and N]
+    - N & E public key                     [ (E, N) ]
+    - D = ( 2 * phi (N) + 1 ) / E          [ (D, N) ]
+    - ( data ^ e ) % N = encrypted text    
+    - ( encrypted text ^ d ) % N  = data
 
 ### AES
 
-- Chacha cypher
-	- Replacement for aes
-	- Works well on low end device
+- Chacha cipher
+    - Replacement for Aes
+    - Works well on the low-end device
 
 
 ### Salt
-- A salt is random data that is used as an additional input to a one-way function that hashes data, a password or passphrase.
+- A salt is random data that is used as an additional input to a one-way function that hashes data, a password, or a passphrase.
 - Salts are closely related to the concept of a cryptographic nonce.
 - Protects against rainbow attack.
 
@@ -86,16 +86,16 @@ m ^ (k * phi(n)  +1)  ==  m mod n
 
 ### MAC (Message Authentication Code)
 - H(key, message) = Hash
-- Here, key & message available on both end denoting integrity of data.
+- Here, the key & message are available on both ends denoting the integrity of the data.
 
 ### Secrecy
 
 - Forward secrecy = Perfect Forward Secrecy, 
 - Backward secrecy = Future Secrecy.
 
-- The above terms are often discussed in the setting of secure channel establishment protocols, e.g., TLS, Signal, etc. In such a protocol, consider two parties, a client and a server, try to communicate with each other securely.
+- The above terms are often discussed in the setting of secure channel establishment protocols, e.g., TLS, Signal, etc. In such a protocol, consider two parties, a client and a server, trying to communicate with each other securely.
 
-- The server (and the client if client-authentication is needed) is granted a certificate that shows its public key, and the server (and the client) itself knows the corresponding private key (a.k.a. the long-term secret).
+- The server (and the client if client authentication is needed) is granted a certificate that shows its public key, and the server (and the client) itself knows the corresponding private key (a.k.a. the long-term secret).
 
 - They essentially use the long-term secret and some randomness to compute and share a secret session key (only used within a session) and establish a secure communication channel based on the session key, e.g., using an authenticated encryption (with associated data) scheme.
 

@@ -2,8 +2,8 @@
 
 JPEG stands for `Joint Photographic Expert Group`
 
-The major steps in JPEG compression involves.
-1. Compressing at block level (8*8)
+The major steps in JPEG compression involve.
+1. Compressing at the block level (8*8)
 2. Colour space transform and subsampling (RGB->YCbCr)
 3. DCT (Discrete Cosine Transform)
 4. Quantisation
@@ -12,7 +12,7 @@ The major steps in JPEG compression involves.
 7. RLE(Run Length Encoding) on AC Components
 8. Entropy coding — Huffman or arithmetic
 
-###  Implemetation
+###  Implementation
 - https://github.com/MuhtasimTanmoy/jpeg-codec
 
 ### Conversion 
@@ -25,7 +25,7 @@ The major steps in JPEG compression involves.
             - Chrominance Blue ( -127 - 128)
         - Cr 
             - Chrominance Red ( -127 - 128)
-    - YCbCr used for downsampling of colour components
+    - YCbCr used for downsampling of color components
 
 
 ```
@@ -50,10 +50,10 @@ Cr = g*R + h*G + i*B
     - CD Quality Audio requires 16-bit sampling at 44.1 KHz Even higher audiophile rates
 - Video
     - Raw video can be regarded as being a series of single images. 
-    - There are typically 25, 30 or 50 frames per second
+    - There are typically 25, 30, or 50 frames per second
 
 ### Huffman Coding
-- Number of Zero preceeding, Symbol, Value
+- Number of Zero preceding, Symbol, Value
 - Marker
     - Two Byte values (FFXX )
     - Determines what is coming next
@@ -72,7 +72,7 @@ Cr = g*R + h*G + i*B
                     - First 4 bits - Quantization table 8 bits/ 16 bits
                     - Table type - Luminance Table / Chrominance Table
                 - Table Values (64 Bytes / 128 Bytes)
-                - The chrominance channel is quantized more heavily then luminance channel.
+                - The chrominance channel is quantized more heavily than the luminance channel.
             - FFCX - Start of frame
                 - 13 markers
                 - FFC0 - Baseline DCT
@@ -81,7 +81,7 @@ Cr = g*R + h*G + i*B
                     - Precision (1 Byte) Value 8
                     - Height (2 Byte)
                     - Width (2 Byte)
-                    - Channels, Number of Componenets
+                    - Channels, Number of Components
                         - 1 - Grayscale
                         - 3 - YCbCr
                         - 4 - CmYk
@@ -98,14 +98,14 @@ Cr = g*R + h*G + i*B
             - Huffman Table (FFC4)
                 - Length (2 Byte)    
                 - Table Info
-                    -  AC/DC | Table ID 
+                    - AC/DC | Table ID 
                 - [16 bytes] - Number of codes of each length                  
                 - Symbols themselves    
-                - Codes are what we actually encounter in huffman coded bitstream, we callculate those codes. Codes will be of variable length.
-                - Symbol will be 8 bits, descriptor of codes.
+                - Codes are what we encounter in Huffman coded bitstream, we calculate those codes. Codes will be of variable length.
+                - The symbol will be 8 bits, which is a descriptor of codes.
                 - Huffman Symbols
                     - 1 Byte 
-                        - 4 bits - how many zero preceeding
+                        - 4 bits - how many zeros preceding
                         - 4 bits - length of co-efficient. eg. 5 -> 3
                     - 160 possible symbols
                     - 2 special Symbol
@@ -117,7 +117,7 @@ Cr = g*R + h*G + i*B
                 - Length
                 - Number of color channels/ Components
                     - Baseline JPEG 
-                        - equal to total number of color components
+                        - equal to the total number of color components
                     - Progressive
                         - May define one color channel  
                     - Component ID
@@ -126,12 +126,12 @@ Cr = g*R + h*G + i*B
                         - Lower Nibble - AC Huffman Table ID       
                 - Start of selection - 0 (Same for baseline jpeg)
                 - End of selection - 63 (Same for baseline jpeg)
-                - Succesive appoximation (For base line both nibble 0)
+                - Successive approximation (For baseline both nibble 0)
 
 
 ```c++
 // Nondifferential Huffman-coding frame
-const bytebits SOF0 = (bytebits)0xc0; // baseline dct
+const byte bits SOF0 = (byte bits)0xc0; // baseline dct
 const bytebits SOF1 = (bytebits)0xc1; // extended dct
 const bytebits SOF2 = (bytebits)0xc2; // progressive dct
 const bytebits SOF3 = (bytebits)0xc3; //  Lossless (Sequential)
@@ -142,7 +142,7 @@ const bytebits SOF6 = (bytebits)0xc6; // Progressive DCT
 const bytebits SOF7 = (bytebits)0xc7; // lossless
 
 // Nondifferential Arithmetic-coding frame
-const bytebits SOF9 = (bytebits)0xc9;  // extended dct
+const bytebits SOF9 = (bytebits)0xc9; // extended dct
 const bytebits SOF10 = (bytebits)0xca; // progressive dct
 const bytebits SOF11 = (bytebits)0xcb; // lossless
 
@@ -172,7 +172,7 @@ const bytebits SOI = (bytebits)0xd8;
 /// End of Image
 const bytebits EOI = (bytebits)0xd9;
 
-/// Define Number of Lines
+/// Define the Number of Lines
 const bytebits DNL = (bytebits)0xdc;
 
 // JFIF identifiers
@@ -209,7 +209,7 @@ const bytebits RST6 = (bytebits)0xd6;
 const bytebits RST7 = (bytebits)0xd7;
 ```
 
-- Baseline jepg renders line by line while progressive jpeg renders blur then makes it clear.
+- Baseline jpeg renders line by line while progressive jpeg renders blur then makes it clear.
 
 # References
 - [Image Processing](https://users.cs.cf.ac.uk/Dave.Marshall/Multimedia/)

@@ -1,6 +1,6 @@
 # XMPP Framework
 
--   **X :** It means eXtensible. XMPP is an open-source project which can be changed or extended according to the need.
+-   **X :** It means eXtensible. XMPP is an open-source project that can be changed or extended according to the need.
 -   **M:** XMPP is designed for sending messages in real-time. It has a very efficient push mechanism compared to other protocols.
 -   **P:** It determines whether you are online/offline/busy. It indicates the state.
 -   **P:** XMPP is a protocol, that is, a set of standards that allow systems to communicate with each other
@@ -27,7 +27,7 @@ The original protocol for XMPP is [Transmission Control Protocol](https://www.ge
 - Like HTTP, XMPP is a client-server protocol, but it differs from HTTP by allowing either side to send data to the other asynchronously.
 - XMPP connections are long-lived, and data is pushed instead of pulled.
 - Not invented here syndrome does not fall in.
-- XMPP is an awful and heavyweight protocol (streaming XML?;). Its spec is so big that there is no complete implementation of it. The most complete and most scalable implementation is ejabberd.
+- XMPP is an awful and heavyweight protocol (streaming XML?;). Its spec is so big that it has no complete implementation. The most complete and most scalable implementation is ejabberd.
 - XMPP is essentially a streaming protocol that makes it possible to exchange XML fragments between any two network endpoints.
 
 
@@ -80,7 +80,7 @@ Stanzas have three possible names( XML tag names) in XMPP, these can be a Messag
      - <iq type=”error”/> stanza when something has gone wrong with your request
    - jabber:iq:roster XML namespace
    - An XML namespace is a way of giving more details about what the stanza is meant to do. For example, the server upon receiving the iq from the client ( the one with a C: on the left), first sees that it is a get IQ and it knows the stanza is asking for some information. Looking at the XML namespace ( xmlns) it knows exactly what is being asked for:” the contact list for the JID where the stanza comes from “. The XMPP engine in the server is programmed to know that when a client sends jabber:iq: roster namespaced IQ, it wants to retrieve its contact list. There are other namespaces in XMPP for other uses and you will surely come across them in your XMPPing journey.
-   -.A jid is valid if it contains one “@” character and passwords of more than four characters are supported. This is a simple policy that comes by default with the code that Android Studio has generated for us. We leave it that way for this tutorial.
+ -.A jid is valid if it contains one “@” character and passwords of more than four characters are supported. This is a simple policy that comes by default with the code that Android Studio has generated for us. We leave it that way for this tutorial.
    - [https://www.blikoontech.com/](https://www.blikoontech.com/)
 
 - These stanza types provide three different communication primitives: a "push" mechanism for generalized messaging, a specialized "publish-subscribe" mechanism for broadcasting information about network availability, and a "request-response" mechanism for more structured exchanges of data (similar to [HTTP]).
@@ -99,17 +99,17 @@ There is no TLS usage in the xmpp stream as it does not support raw data only fr
 - The process whereby a client connects to a server, exchanges XML stanzas, and ends the connection is:
    - Determine the IP address and port at which to connect, typically
  based on the resolution of a fully qualified domain name (Section 3.2)
-    - Open a Transmission Control Protocol [TCP] connection
-    - Open an XML stream over TCP (Section 4.2)
-    - Preferably negotiate Transport Layer Security [TLS] for channel
+ - Open a Transmission Control Protocol [TCP] connection
+ - Open an XML stream over TCP (Section 4.2)
+ - Preferably negotiate Transport Layer Security [TLS] for channel
  encryption (Section 5)
-    - Authenticate using a Simple Authentication and Security Layer
+ - Authenticate using a Simple Authentication and Security Layer
  [SASL] mechanism (Section 6)
-    - Bind a resource to the stream (Section 7)
-    - Exchange an unbounded number of XML stanzas with other entities
+ - Bind a resource to the stream (Section 7)
+ - Exchange an unbounded number of XML stanzas with other entities
  on the network (Section 8)
-    - Close the XML stream (Section 4.4)
-    - Close the TCP connection
+ - Close the XML stream (Section 4.4)
+ - Close the TCP connection
 - https://tools.ietf.org/html/rfc7395
 - https://tools.ietf.org/html/rfc6455
 

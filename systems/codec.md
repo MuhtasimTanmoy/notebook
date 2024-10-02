@@ -1,12 +1,12 @@
 # Codec
 
-The video format is a container that contains all required part to play back specific file.
+The video format is a container that contains all the required parts to play back specific files.
 - Video Stream
 - Audio Stream
 - Metadata
     - Bitrate
     - Type
-    - Resoulution
+    - Resolution
     - Subtitle
     - Device
     - Time of creation
@@ -17,5 +17,5 @@ The video format is a container that contains all required part to play back spe
         - H.264 / HEVC (50% smaller, 3x computation overhead, better image quality)
         - VP8
         - VP9 (50% smaller, streaming more consistent, container - webm, ivf)
-        - AAC (Advance audio coding, best for video)
+        - AAC (advanced audio coding, best for video)
         - mp3

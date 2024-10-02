@@ -22,9 +22,9 @@
 
 - Huffman (Entropy) Coding
     - Entropy means the minimum number of bits needed per symbol on average
-    - Count all occurences of symbol
-    - Take smallest pair and work until one left
-    -  Prefex free
+    - Count all occurrences of the symbol
+    - Take the smallest pair and work until one left
+    - Prefix free
         - Unary Code
         - Gamma code
         - Delta code
@@ -33,7 +33,7 @@
         - Omega code
 
 - Lempel Ziv Coding
-    - Dictionary based encoding
+    - Dictionary-based encoding
     - Two steps:
         - Building index dictionary
         - Compressing words with index
@@ -68,7 +68,7 @@ Represent the symbols using the minimum number of bits.
 zlib, LZO, LZF, FastLZ, and QuickLZ.
 
 # Snappy
-- Ported to many language
+- Ported to many languages
 
 # MPEG Video Compression
 # MPEG Audio Compression
